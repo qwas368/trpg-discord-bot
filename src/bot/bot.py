@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import logging
+import shutil
+import subprocess
+import sys
 
 import discord
 from discord.ext import commands
@@ -97,10 +100,33 @@ class TRPGBot(commands.Bot):
                 await message.channel.send("⚠️ 處理訊息時發生錯誤，請稍後再試。")
 
 
+def _ensure_copilot_auth() -> None:
+    """Ensure the user is authenticated with Copilot CLI before starting."""
+    cli = shutil.which("copilot")
+    if not cli:
+        log.error("Copilot CLI not found in PATH. Please install it first.")
+        sys.exit(1)
+
+    log.info("Checking Copilot CLI authentication...")
+    # `copilot login` is idempotent — exits quickly if already logged in,
+    # otherwise shows the device flow interactively in the terminal.
+    result = subprocess.run(
+        [cli, "login"],
+        stdin=sys.stdin,
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+    if result.returncode != 0:
+        log.error("Copilot CLI login failed (exit code %d).", result.returncode)
+        sys.exit(1)
+    log.info("Copilot CLI authentication OK.")
+
+
 def run_bot() -> None:
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)-8s %(name)s: %(message)s",
     )
+    _ensure_copilot_auth()
     bot = TRPGBot()
     bot.run(DISCORD_TOKEN)
