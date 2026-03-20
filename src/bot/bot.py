@@ -4,12 +4,11 @@ from __future__ import annotations
 
 import faulthandler
 import logging
-import shutil
-import subprocess
 import sys
 import threading
 
 import discord
+from discord import app_commands
 from discord.ext import commands
 
 from bot.config import DISCORD_TOKEN
@@ -40,6 +39,18 @@ def _chunk_message(text: str, limit: int = DISCORD_MAX_LENGTH) -> list[str]:
     return chunks
 
 
+class _AutocompleteExpiredFilter(logging.Filter):
+    """Suppress 'Unknown interaction' errors from autocomplete handlers."""
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        if record.levelno >= logging.ERROR and "autocomplete" in record.getMessage().lower():
+            if record.exc_info and record.exc_info[1]:
+                exc = record.exc_info[1]
+                if isinstance(exc, discord.NotFound) and exc.code == 10062:
+                    return False
+        return True
+
+
 class TRPGBot(commands.Bot):
     def __init__(self) -> None:
         intents = discord.Intents.default()
@@ -47,9 +58,34 @@ class TRPGBot(commands.Bot):
         super().__init__(command_prefix="!", intents=intents)
         self.session_manager = SessionManager()
 
+        # Suppress noisy "Unknown interaction" errors from autocomplete
+        # These occur when Discord's 3-second timeout expires before the bot responds,
+        # typically due to rapid field switching. Harmless and not actionable.
+        _tree_logger = logging.getLogger("discord.app_commands.tree")
+        _tree_logger.addFilter(_AutocompleteExpiredFilter())
+
     async def setup_hook(self) -> None:
         await self.session_manager.start()
         await self.load_extension("bot.cogs.hosting")
+
+        # Global error handler for expired interactions (code 10062)
+        @self.tree.error
+        async def on_app_command_error(
+            interaction: discord.Interaction,
+            error: app_commands.AppCommandError,
+        ) -> None:
+            if isinstance(error, app_commands.CommandInvokeError):
+                original = error.original
+                if isinstance(original, discord.NotFound) and original.code == 10062:
+                    log.debug(
+                        "Interaction expired for '/%s' (user=%s)",
+                        interaction.command.name if interaction.command else "?",
+                        interaction.user,
+                    )
+                    return
+            log.error("Unhandled error in command '/%s'",
+                      interaction.command.name if interaction.command else "?",
+                      exc_info=error)
 
         # Clear stale per-guild commands from previous bot configurations
         for guild in self.guilds:
@@ -145,39 +181,6 @@ class TRPGBot(commands.Bot):
                 await message.channel.send("⚠️ 處理訊息時發生錯誤，請稍後再試。")
 
 
-def _ensure_copilot_auth() -> None:
-    """Ensure the user is authenticated with Copilot CLI before starting."""
-    cli = shutil.which("copilot")
-    if not cli:
-        log.error("Copilot CLI not found in PATH. Please install it first.")
-        sys.exit(1)
-
-    log.info("Checking Copilot CLI authentication...")
-
-    # Quick check: run a trivial prompt to see if already authenticated.
-    check = subprocess.run(
-        [cli, "-p", "ok", "--allow-all-tools", "-s"],
-        capture_output=True,
-        timeout=30,
-    )
-    if check.returncode == 0:
-        log.info("Copilot CLI authentication OK (already logged in).")
-        return
-
-    # Not authenticated — run interactive login with device flow.
-    log.info("Not authenticated, starting login flow...")
-    result = subprocess.run(
-        [cli, "login"],
-        stdin=sys.stdin,
-        stdout=sys.stdout,
-        stderr=sys.stderr,
-    )
-    if result.returncode != 0:
-        log.error("Copilot CLI login failed (exit code %d).", result.returncode)
-        sys.exit(1)
-    log.info("Copilot CLI authentication OK.")
-
-
 def run_bot() -> None:
     logging.basicConfig(
         level=logging.INFO,
@@ -197,7 +200,6 @@ def run_bot() -> None:
 
     threading.excepthook = _thread_excepthook
 
-    _ensure_copilot_auth()
     bot = TRPGBot()
     try:
         bot.run(DISCORD_TOKEN)

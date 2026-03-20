@@ -4,6 +4,9 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import shutil
+import subprocess
+import sys
 from typing import Any
 
 from copilot import CopilotClient, PermissionHandler
@@ -38,6 +41,54 @@ class SessionManager:
         self._client = CopilotClient()
         await self._client.start()
         log.info("Copilot SDK client started")
+
+        # Verify authentication via SDK
+        auth = await self._client.get_auth_status()
+        if auth.isAuthenticated:
+            log.info(
+                "Copilot authenticated (user=%s, type=%s)",
+                auth.login or "unknown",
+                auth.authType or "unknown",
+            )
+            return
+
+        # Not authenticated — stop the client and run interactive login
+        log.warning("Copilot is not authenticated: %s", auth.statusMessage or "no details")
+        await self._client.stop()
+        self._client = None
+
+        cli = shutil.which("copilot")
+        if not cli:
+            log.error("Copilot CLI not found in PATH. Cannot run login flow.")
+            sys.exit(1)
+
+        is_interactive = sys.stdin is not None and sys.stdin.isatty()
+        if not is_interactive:
+            log.error(
+                "Copilot is not authenticated and stdin is not a terminal. "
+                "Please run 'copilot login' manually first, then restart the bot."
+            )
+            sys.exit(1)
+
+        log.info("Starting Copilot login flow...")
+        result = subprocess.run(
+            [cli, "login"],
+            stdin=sys.stdin,
+            stdout=sys.stdout,
+            stderr=sys.stderr,
+        )
+        if result.returncode != 0:
+            log.error("Copilot login failed (exit code %d).", result.returncode)
+            sys.exit(1)
+
+        # Restart the client after login
+        self._client = CopilotClient()
+        await self._client.start()
+        auth = await self._client.get_auth_status()
+        if not auth.isAuthenticated:
+            log.error("Still not authenticated after login. Exiting.")
+            sys.exit(1)
+        log.info("Copilot authenticated after login (user=%s)", auth.login or "unknown")
 
     async def stop(self) -> None:
         for key in list(self._sessions):
