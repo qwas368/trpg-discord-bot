@@ -57,6 +57,17 @@ class TRPGBot(commands.Bot):
 
     async def on_ready(self) -> None:
         log.info("Bot ready as %s (ID: %s)", self.user, self.user.id if self.user else "?")
+        if self.guilds:
+            for guild in self.guilds:
+                log.info("  Connected to server: %s (ID: %d, members: %d)", guild.name, guild.id, guild.member_count or 0)
+        else:
+            log.info("  Not connected to any servers.")
+
+    async def on_guild_join(self, guild: discord.Guild) -> None:
+        log.info("Joined server: %s (ID: %d)", guild.name, guild.id)
+
+    async def on_guild_remove(self, guild: discord.Guild) -> None:
+        log.info("Left server: %s (ID: %d)", guild.name, guild.id)
 
     async def on_message(self, message: discord.Message) -> None:
         if message.author.bot or not message.guild:
@@ -72,6 +83,12 @@ class TRPGBot(commands.Bot):
         if not self.session_manager.is_hosting(guild_id, channel_id):
             return
 
+        channel_name = getattr(message.channel, "name", str(channel_id))
+        log.info(
+            "Message from %s in #%s (guild=%d, channel=%d)",
+            message.author.display_name, channel_name, guild_id, channel_id,
+        )
+
         async with message.channel.typing():
             # Collect recent context
             context_lines: list[str] = []
@@ -80,6 +97,7 @@ class TRPGBot(commands.Bot):
                 context_lines.append(f"[{author}]: {msg.content}")
             context_lines.reverse()
             context = "\n".join(context_lines) if context_lines else None
+            log.info("  Collected %d context messages", len(context_lines))
 
             # Remove the bot mention from the user's message
             user_text = message.content
@@ -88,15 +106,17 @@ class TRPGBot(commands.Bot):
 
             display_name = message.author.display_name
             prompt = f"[{display_name}]: {user_text}" if user_text else f"[{display_name}] 提及了你"
+            log.info("  Sending to Copilot: %s", prompt[:100])
 
             try:
                 reply = await self.session_manager.send_message(
                     guild_id, channel_id, prompt, context
                 )
+                log.info("  Copilot replied (%d chars)", len(reply))
                 for chunk in _chunk_message(reply):
                     await message.channel.send(chunk)
             except Exception:
-                log.exception("Error processing message in %s/%s", guild_id, channel_id)
+                log.exception("Error processing message in #%s (guild=%d, channel=%d)", channel_name, guild_id, channel_id)
                 await message.channel.send("⚠️ 處理訊息時發生錯誤，請稍後再試。")
 
 

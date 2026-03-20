@@ -88,6 +88,7 @@ class HostingCog(commands.Cog):
             return
 
         if sm.is_hosting(guild_id, channel.id):
+            log.warning("/host: already hosting in #%s (guild=%d)", channel.name, guild_id)
             await interaction.response.send_message(
                 f"已經在 {channel.mention} 主持中了！請先使用 `/leave` 離開。",
                 ephemeral=True,
@@ -98,6 +99,7 @@ class HostingCog(commands.Cog):
         try:
             host_config = load_host(host_type)
         except FileNotFoundError:
+            log.error("/host: host type '%s' not found", host_type)
             available = ", ".join(list_hosts()) or "(無)"
             await interaction.response.send_message(
                 f"找不到主持人類型 `{host_type}`。可用類型：{available}",
@@ -108,11 +110,16 @@ class HostingCog(commands.Cog):
         await interaction.response.defer()
 
         chosen_model = ai_model or "claude-sonnet-4.6"
+        log.info(
+            "/host: user=%s channel=#%s host=%s ai_model=%s game_module=%s (guild=%d)",
+            interaction.user.display_name, channel.name, host_type, chosen_model, model or "(none)", guild_id,
+        )
 
         try:
             # Try to resume first
             active = await sm.resume_session(guild_id, channel.id, host_config, chosen_model)
             if active:
+                log.info("/host: resumed session in #%s (guild=%d)", channel.name, guild_id)
                 await interaction.followup.send(
                     f"🎲 已恢復 {channel.mention} 的 **{host_type}** 遊戲！\n"
                     f"🤖 模型：`{chosen_model}`\n"
@@ -120,12 +127,13 @@ class HostingCog(commands.Cog):
                 )
                 return
         except Exception:
-            log.debug("Resume failed, creating new session", exc_info=True)
+            log.debug("/host: resume failed for #%s, creating new session", channel.name, exc_info=True)
 
         try:
             await sm.create_session(
                 guild_id, channel.id, host_config, chosen_model, model
             )
+            log.info("/host: new session created in #%s (guild=%d)", channel.name, guild_id)
             parts = [
                 f"🎲 開始在 {channel.mention} 主持 **{host_type}** TRPG！",
                 f"🤖 模型：`{chosen_model}`",
@@ -135,7 +143,7 @@ class HostingCog(commands.Cog):
             parts.append("在該頻道 @我 即可開始遊戲。")
             await interaction.followup.send("\n".join(parts))
         except Exception:
-            log.exception("Failed to create session")
+            log.exception("/host: failed to create session in #%s (guild=%d)", channel.name, guild_id)
             await interaction.followup.send("⚠️ 建立遊戲 session 失敗，請稍後再試。")
 
     @app_commands.command(name="leave", description="離開指定頻道的 TRPG 主持")
@@ -152,12 +160,14 @@ class HostingCog(commands.Cog):
             return
 
         if not sm.is_hosting(guild_id, channel.id):
+            log.warning("/leave: not hosting in #%s (guild=%d)", channel.name, guild_id)
             await interaction.response.send_message(
                 f"目前沒有在 {channel.mention} 主持。", ephemeral=True
             )
             return
 
         await sm.close_session(guild_id, channel.id)
+        log.info("/leave: stopped hosting #%s (guild=%d, user=%s)", channel.name, guild_id, interaction.user.display_name)
         await interaction.response.send_message(
             f"👋 已離開 {channel.mention} 的主持。遊戲進度已保存，可用 `/host` 恢復。"
         )
