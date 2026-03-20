@@ -90,14 +90,25 @@ class TRPGBot(commands.Bot):
         )
 
         async with message.channel.typing():
-            # Collect recent context
+            active = self.session_manager.get_session(guild_id, channel_id)
+            if not active:
+                return
+
+            # Collect recent context, skipping messages already sent to the session
             context_lines: list[str] = []
+            new_msg_ids: list[int] = []
             async for msg in message.channel.history(limit=CONTEXT_MESSAGE_COUNT, before=message):
+                if msg.id in active.sent_message_ids:
+                    continue
                 author = msg.author.display_name
-                context_lines.append(f"[{author}]: {msg.content}")
+                uid = msg.author.id
+                context_lines.append(f"[{author} (id:{uid})]: {msg.content}")
+                new_msg_ids.append(msg.id)
             context_lines.reverse()
+            new_msg_ids.reverse()
             context = "\n".join(context_lines) if context_lines else None
-            log.info("  Collected %d context messages", len(context_lines))
+            log.info("  Collected %d new context messages (%d skipped as already sent)",
+                     len(context_lines), CONTEXT_MESSAGE_COUNT - len(context_lines) - 1)
 
             # Remove the bot mention from the user's message
             user_text = message.content
@@ -105,13 +116,17 @@ class TRPGBot(commands.Bot):
                 user_text = user_text.replace(f"<@{self.user.id}>", "").replace(f"<@!{self.user.id}>", "").strip()
 
             display_name = message.author.display_name
-            prompt = f"[{display_name}]: {user_text}" if user_text else f"[{display_name}] 提及了你"
+            uid = message.author.id
+            prompt = f"[{display_name} (id:{uid})]: {user_text}" if user_text else f"[{display_name} (id:{uid})] 提及了你"
             log.info("  Sending to Copilot: %s", prompt[:100])
 
             try:
                 reply = await self.session_manager.send_message(
                     guild_id, channel_id, prompt, context
                 )
+                # Mark all context messages + current message as sent
+                active.sent_message_ids.update(new_msg_ids)
+                active.sent_message_ids.add(message.id)
                 log.info("  Copilot replied (%d chars)", len(reply))
                 for chunk in _chunk_message(reply):
                     await message.channel.send(chunk)

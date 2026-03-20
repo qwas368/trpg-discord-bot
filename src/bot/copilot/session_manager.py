@@ -26,6 +26,7 @@ class ActiveSession:
         self.host_type = host_type
         self.ai_model = ai_model
         self.model_name = model_name
+        self.sent_message_ids: set[int] = set()
 
 
 class SessionManager:
@@ -77,9 +78,16 @@ class SessionManager:
 
         system_content = "\n\n---\n\n".join(system_parts)
 
-        # Prepend language instruction
+        # Prepend language and format instructions
         system_content = (
-            "你是一位 TRPG 主持人，請使用繁體中文回應所有對話。\n\n"
+            "你是一位 TRPG 主持人，請使用繁體中文回應所有對話。\n"
+            "你的回覆會直接發送到 Discord 頻道，請遵守 Discord 的文字格式：\n"
+            "- 使用 **粗體**、*斜體*、~~刪除線~~ 等 Markdown 語法\n"
+            "- 使用 > 引用文字\n"
+            "- 使用 ```區塊``` 來顯示程式碼或特殊排版\n"
+            "- 不要使用 HTML 標籤\n"
+            "- 不要使用 # 標題語法（Discord 不支援）\n"
+            "- 頻道中有多位玩家，每則訊息會標註玩家名稱與 ID，請注意區分不同玩家\n\n"
             + system_content
         )
 
