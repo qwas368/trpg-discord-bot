@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import faulthandler
 import logging
 import shutil
 import subprocess
 import sys
+import threading
 
 import discord
 from discord.ext import commands
@@ -181,6 +183,26 @@ def run_bot() -> None:
         level=logging.INFO,
         format="%(asctime)s %(levelname)-8s %(name)s: %(message)s",
     )
+
+    # Enable faulthandler to print tracebacks on segfaults / aborts
+    faulthandler.enable()
+
+    # Catch unhandled exceptions in threads (e.g. Copilot SDK reader thread)
+    def _thread_excepthook(args: threading.ExceptHookArgs) -> None:
+        log.error(
+            "Unhandled exception in thread %s",
+            args.thread.name if args.thread else "unknown",
+            exc_info=(args.exc_type, args.exc_value, args.exc_traceback),
+        )
+
+    threading.excepthook = _thread_excepthook
+
     _ensure_copilot_auth()
     bot = TRPGBot()
-    bot.run(DISCORD_TOKEN)
+    try:
+        bot.run(DISCORD_TOKEN)
+    except Exception:
+        log.exception("Bot crashed with unhandled exception")
+        raise
+    finally:
+        log.info("Bot process exiting.")

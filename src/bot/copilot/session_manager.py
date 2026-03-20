@@ -201,6 +201,9 @@ class SessionManager:
         try:
             await session.send({"prompt": prompt})
             await asyncio.wait_for(done.wait(), timeout=timeout)
+        except asyncio.TimeoutError:
+            log.error("Copilot session timed out after %.1f seconds", timeout)
+            return "\n\n".join(replies) if replies else "⚠️ 回覆逾時，請再試一次。"
         finally:
             unsubscribe()
 
