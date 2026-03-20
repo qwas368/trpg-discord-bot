@@ -39,7 +39,7 @@ A Discord bot that acts as a TRPG Game Master (GM/Keeper), powered by GitHub Cop
 | Command | Description |
 |---------|-------------|
 | `/host [channel] [host_type] [model] [ai_model]` | 在指定頻道開始主持 TRPG |
-| `/leave [channel]` | 離開指定頻道的主持 |
+| `/unhost [channel]` | 離開指定頻道的主持 |
 
 ## Project Structure
 

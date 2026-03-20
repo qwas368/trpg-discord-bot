@@ -146,7 +146,7 @@ class HostingCog(commands.Cog):
             log.exception("/host: failed to create session in #%s (guild=%d)", channel.name, guild_id)
             await interaction.followup.send("⚠️ 建立遊戲 session 失敗，請稍後再試。")
 
-    @app_commands.command(name="leave", description="離開指定頻道的 TRPG 主持")
+    @app_commands.command(name="unhost", description="離開指定頻道的 TRPG 主持")
     @app_commands.describe(channel="要離開的頻道")
     async def leave(
         self,
@@ -166,9 +166,10 @@ class HostingCog(commands.Cog):
             )
             return
 
+        await interaction.response.defer()
         await sm.close_session(guild_id, channel.id)
         log.info("/leave: stopped hosting #%s (guild=%d, user=%s)", channel.name, guild_id, interaction.user.display_name)
-        await interaction.response.send_message(
+        await interaction.followup.send(
             f"👋 已離開 {channel.mention} 的主持。遊戲進度已保存，可用 `/host` 恢復。"
         )
 

@@ -91,12 +91,13 @@ class SessionManager:
             + system_content
         )
 
-        session = await self._client.create_session(
-            on_permission_request=PermissionHandler.approve_all,
-            model=chosen_model,
-            session_id=key,
-            system_message={"mode": "replace", "content": system_content},
-        )
+        session = await self._client.create_session({
+            "session_id": key,
+            "model": chosen_model,
+            "working_directory": str(host_config.host_dir),
+            "on_permission_request": PermissionHandler.approve_all,
+            "system_message": {"mode": "replace", "content": system_content},
+        })
 
         active = ActiveSession(session, host_config.name, chosen_model, model_name)
         self._sessions[key] = active
@@ -135,8 +136,10 @@ class SessionManager:
         try:
             session = await self._client.resume_session(
                 session_id=key,
-                on_permission_request=PermissionHandler.approve_all,
-                model=chosen_model,
+                config={
+                    "model": chosen_model,
+                    "on_permission_request": PermissionHandler.approve_all,
+                },
             )
             active = ActiveSession(session, host_config.name, chosen_model, None)
             self._sessions[key] = active
@@ -196,7 +199,7 @@ class SessionManager:
 
         unsubscribe = session.on(on_event)
         try:
-            await session.send(prompt)
+            await session.send({"prompt": prompt})
             await asyncio.wait_for(done.wait(), timeout=timeout)
         finally:
             unsubscribe()

@@ -23,6 +23,7 @@ class HostConfig:
     name: str
     instructions: str
     agents: list[AgentInfo] = field(default_factory=list)
+    host_dir: Path = field(default_factory=lambda: Path("."))
 
 
 _FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
@@ -72,7 +73,9 @@ def load_host(host_type: str) -> HostConfig:
         for f in sorted(agents_dir.glob("*.agent.md")):
             agents.append(_parse_agent_file(f))
 
-    return HostConfig(name=host_type, instructions=instructions, agents=agents)
+    host_dir = HOSTS_DIR / host_type
+
+    return HostConfig(name=host_type, instructions=instructions, agents=agents, host_dir=host_dir)
 
 
 def list_models() -> list[str]:

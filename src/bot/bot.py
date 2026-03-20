@@ -48,6 +48,14 @@ class TRPGBot(commands.Bot):
     async def setup_hook(self) -> None:
         await self.session_manager.start()
         await self.load_extension("bot.cogs.hosting")
+
+        # Clear stale per-guild commands from previous bot configurations
+        for guild in self.guilds:
+            self.tree.clear_commands(guild=guild)
+            await self.tree.sync(guild=guild)
+            log.info("Cleared guild-specific commands for: %s", guild.name)
+
+        # Sync global commands (registers current commands, removes old ones)
         synced = await self.tree.sync()
         log.info("Synced %d slash commands", len(synced))
 
@@ -143,8 +151,19 @@ def _ensure_copilot_auth() -> None:
         sys.exit(1)
 
     log.info("Checking Copilot CLI authentication...")
-    # `copilot login` is idempotent — exits quickly if already logged in,
-    # otherwise shows the device flow interactively in the terminal.
+
+    # Quick check: run a trivial prompt to see if already authenticated.
+    check = subprocess.run(
+        [cli, "-p", "ok", "--allow-all-tools", "-s"],
+        capture_output=True,
+        timeout=30,
+    )
+    if check.returncode == 0:
+        log.info("Copilot CLI authentication OK (already logged in).")
+        return
+
+    # Not authenticated — run interactive login with device flow.
+    log.info("Not authenticated, starting login flow...")
     result = subprocess.run(
         [cli, "login"],
         stdin=sys.stdin,
