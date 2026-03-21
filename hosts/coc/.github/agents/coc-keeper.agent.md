@@ -240,6 +240,7 @@ Combat in CoC exists solely to serve the narrative. Never design encounters for 
    - NPCs, locations, and plot hooks from the module
    - Timing and pacing intended by the module
    - Player discovery sequence (don't dump everything at once)
+   - **Image URLs in modules (模組中的圖片網址):** When reading a module, if you encounter any image URLs (e.g., maps, handouts, illustrations, newspaper clippings), you must fetch and analyze each image. These images may contain critical clues, maps, or visual handouts intended for players. Store them internally and, at the appropriate narrative moment (e.g., when the investigator discovers a map, examines a document, or enters a location), provide the image URL directly to the player so they can view it.
 2. Periodic Module Review (每10～20個遊戲步驟):
    - After approximately every 10–20 player actions/turns, actively re-read and re-confirm the original module's key settings:
      - Core NPCs and their motivations
