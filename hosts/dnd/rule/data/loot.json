@@ -1,0 +1,3848 @@
+{
+	"individual": [
+		{
+			"name": "挑战等级 0-4",
+			"ENG_name": "Challenge 0-4",
+			"source": "DMG",
+			"page": 136,
+			"mincr": 0,
+			"maxcr": 4,
+			"table": [
+				{
+					"min": 1,
+					"max": 30,
+					"coins": {
+						"cp": "5d6"
+					}
+				},
+				{
+					"min": 31,
+					"max": 60,
+					"coins": {
+						"sp": "4d6"
+					}
+				},
+				{
+					"min": 61,
+					"max": 70,
+					"coins": {
+						"ep": "3d6"
+					}
+				},
+				{
+					"min": 71,
+					"max": 95,
+					"coins": {
+						"gp": "3d6"
+					}
+				},
+				{
+					"min": 96,
+					"max": 100,
+					"coins": {
+						"pp": "1d6"
+					}
+				}
+			]
+		},
+		{
+			"name": "挑战等级 5-10",
+			"ENG_name": "Challenge 5-10",
+			"source": "DMG",
+			"page": 136,
+			"mincr": 5,
+			"maxcr": 10,
+			"table": [
+				{
+					"min": 1,
+					"max": 30,
+					"coins": {
+						"cp": "4d6*100",
+						"ep": "1d6*10"
+					}
+				},
+				{
+					"min": 31,
+					"max": 60,
+					"coins": {
+						"sp": "6d6*10",
+						"gp": "2d6*10"
+					}
+				},
+				{
+					"min": 61,
+					"max": 70,
+					"coins": {
+						"ep": "3d6*10",
+						"gp": "2d6*10"
+					}
+				},
+				{
+					"min": 71,
+					"max": 95,
+					"coins": {
+						"gp": "4d6*10"
+					}
+				},
+				{
+					"min": 96,
+					"max": 100,
+					"coins": {
+						"gp": "2d6*10",
+						"pp": "3d6"
+					}
+				}
+			]
+		},
+		{
+			"name": "挑战等级 11-16",
+			"ENG_name": "Challenge 11-16",
+			"source": "DMG",
+			"page": 136,
+			"mincr": 11,
+			"maxcr": 16,
+			"table": [
+				{
+					"min": 1,
+					"max": 20,
+					"coins": {
+						"sp": "4d6*100",
+						"gp": "1d6*100"
+					}
+				},
+				{
+					"min": 21,
+					"max": 35,
+					"coins": {
+						"ep": "1d6*100",
+						"gp": "1d6*100"
+					}
+				},
+				{
+					"min": 36,
+					"max": 75,
+					"coins": {
+						"gp": "2d6*100",
+						"pp": "1d6*10"
+					}
+				},
+				{
+					"min": 76,
+					"max": 100,
+					"coins": {
+						"gp": "2d6*100",
+						"pp": "2d6*10"
+					}
+				}
+			]
+		},
+		{
+			"name": "挑战等级 17+",
+			"ENG_name": "Challenge 17+",
+			"source": "DMG",
+			"page": 136,
+			"mincr": 17,
+			"maxcr": 30,
+			"table": [
+				{
+					"min": 1,
+					"max": 15,
+					"coins": {
+						"ep": "2d6*1000",
+						"gp": "8d6*100"
+					}
+				},
+				{
+					"min": 16,
+					"max": 55,
+					"coins": {
+						"gp": "1d6*1000",
+						"pp": "1d6*100"
+					}
+				},
+				{
+					"min": 56,
+					"max": 100,
+					"coins": {
+						"gp": "1d6*1000",
+						"pp": "2d6*100"
+					}
+				}
+			]
+		}
+	],
+	"hoard": [
+		{
+			"name": "挑战等级 0-4",
+			"ENG_name": "Challenge 0-4",
+			"source": "DMG",
+			"page": 137,
+			"mincr": 0,
+			"maxcr": 4,
+			"coins": {
+				"cp": "6d6*100",
+				"sp": "3d6*100",
+				"gp": "2d6*10"
+			},
+			"table": [
+				{
+					"min": 1,
+					"max": 6
+				},
+				{
+					"min": 7,
+					"max": 16,
+					"gems": {
+						"type": 10,
+						"amount": "2d6"
+					}
+				},
+				{
+					"min": 17,
+					"max": 26,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					}
+				},
+				{
+					"min": 27,
+					"max": 36,
+					"gems": {
+						"type": 50,
+						"amount": "2d6"
+					}
+				},
+				{
+					"min": 37,
+					"max": 44,
+					"gems": {
+						"type": 10,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "A",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 45,
+					"max": 52,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "A",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 53,
+					"max": 60,
+					"gems": {
+						"type": 50,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "A",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 61,
+					"max": 65,
+					"gems": {
+						"type": 10,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "B",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 66,
+					"max": 70,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "B",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 71,
+					"max": 75,
+					"gems": {
+						"type": 50,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "B",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 76,
+					"max": 78,
+					"gems": {
+						"type": 10,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 79,
+					"max": 80,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 81,
+					"max": 85,
+					"gems": {
+						"type": 50,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 86,
+					"max": 92,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "F",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 93,
+					"max": 97,
+					"gems": {
+						"type": 50,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "F",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 98,
+					"max": 99,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"gems": {
+						"type": 50,
+						"amount": "2d6"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d1"
+					}
+				}
+			]
+		},
+		{
+			"name": "挑战等级 5-10",
+			"ENG_name": "Challenge 5-10",
+			"source": "DMG",
+			"page": 137,
+			"mincr": 5,
+			"maxcr": 10,
+			"coins": {
+				"cp": "2d6*100",
+				"sp": "2d6*1000",
+				"gp": "6d6*100",
+				"pp": "3d6*10"
+			},
+			"table": [
+				{
+					"min": 1,
+					"max": 4
+				},
+				{
+					"min": 5,
+					"max": 10,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					}
+				},
+				{
+					"min": 11,
+					"max": 16,
+					"gems": {
+						"type": 50,
+						"amount": "3d6"
+					}
+				},
+				{
+					"min": 17,
+					"max": 22,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					}
+				},
+				{
+					"min": 23,
+					"max": 28,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					}
+				},
+				{
+					"min": 29,
+					"max": 32,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "A",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 33,
+					"max": 36,
+					"gems": {
+						"type": 50,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "A",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 37,
+					"max": 40,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "A",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 41,
+					"max": 44,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "A",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 45,
+					"max": 49,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "B",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 50,
+					"max": 54,
+					"gems": {
+						"type": 50,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "B",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 55,
+					"max": 59,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "B",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 60,
+					"max": 63,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "B",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 64,
+					"max": 66,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 67,
+					"max": 69,
+					"gems": {
+						"type": 50,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 70,
+					"max": 72,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 73,
+					"max": 74,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 75,
+					"max": 76,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 77,
+					"max": 78,
+					"gems": {
+						"type": 50,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 79,
+					"max": 79,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 80,
+					"max": 80,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 81,
+					"max": 84,
+					"artobjects": {
+						"type": 25,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "F",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 85,
+					"max": 88,
+					"gems": {
+						"type": 50,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "F",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 89,
+					"max": 91,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "F",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 92,
+					"max": 94,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "F",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 95,
+					"max": 96,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 97,
+					"max": 98,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"gems": {
+						"type": 100,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d1"
+					}
+				}
+			]
+		},
+		{
+			"name": "挑战等级 11-16",
+			"ENG_name": "Challenge 11-16",
+			"source": "DMG",
+			"page": 138,
+			"mincr": 11,
+			"maxcr": 16,
+			"coins": {
+				"gp": "4d6*1000",
+				"pp": "5d6*100"
+			},
+			"table": [
+				{
+					"min": 1,
+					"max": 3
+				},
+				{
+					"min": 4,
+					"max": 6,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					}
+				},
+				{
+					"min": 7,
+					"max": 9,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					}
+				},
+				{
+					"min": 10,
+					"max": 12,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					}
+				},
+				{
+					"min": 13,
+					"max": 15,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					}
+				},
+				{
+					"min": 16,
+					"max": 19,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "A,B",
+						"amount": "1d4,1d6"
+					}
+				},
+				{
+					"min": 20,
+					"max": 23,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "A,B",
+						"amount": "1d4,1d6"
+					}
+				},
+				{
+					"min": 24,
+					"max": 26,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "A,B",
+						"amount": "1d4,1d6"
+					}
+				},
+				{
+					"min": 27,
+					"max": 29,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "A,B",
+						"amount": "1d4,1d6"
+					}
+				},
+				{
+					"min": 30,
+					"max": 35,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 36,
+					"max": 40,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 41,
+					"max": 45,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 46,
+					"max": 50,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 51,
+					"max": 54,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 55,
+					"max": 58,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 59,
+					"max": 62,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 63,
+					"max": 66,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 67,
+					"max": 68,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 69,
+					"max": 70,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 71,
+					"max": 72,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 73,
+					"max": 74,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 75,
+					"max": 76,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "F,G",
+						"amount": "1d1,1d4"
+					}
+				},
+				{
+					"min": 77,
+					"max": 78,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "F,G",
+						"amount": "1d1,1d4"
+					}
+				},
+				{
+					"min": 79,
+					"max": 80,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "F,G",
+						"amount": "1d1,1d4"
+					}
+				},
+				{
+					"min": 81,
+					"max": 82,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "F,G",
+						"amount": "1d1,1d4"
+					}
+				},
+				{
+					"min": 83,
+					"max": 85,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 86,
+					"max": 88,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 89,
+					"max": 90,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 91,
+					"max": 92,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 93,
+					"max": 94,
+					"artobjects": {
+						"type": 250,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 95,
+					"max": 96,
+					"artobjects": {
+						"type": 750,
+						"amount": "2d4"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 97,
+					"max": 98,
+					"gems": {
+						"type": 500,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d1"
+					}
+				},
+				{
+					"min": 99,
+					"max": 100,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d1"
+					}
+				}
+			]
+		},
+		{
+			"name": "挑战等级 17+",
+			"ENG_name": "Challenge 17+",
+			"source": "DMG",
+			"page": 137,
+			"mincr": 17,
+			"maxcr": 30,
+			"coins": {
+				"gp": "12d6*1000",
+				"pp": "8d6*1000"
+			},
+			"table": [
+				{
+					"min": 1,
+					"max": 2
+				},
+				{
+					"min": 3,
+					"max": 5,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d8"
+					}
+				},
+				{
+					"min": 6,
+					"max": 8,
+					"artobjects": {
+						"type": 2500,
+						"amount": "1d10"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d8"
+					}
+				},
+				{
+					"min": 9,
+					"max": 11,
+					"artobjects": {
+						"type": 7500,
+						"amount": "1d4"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d8"
+					}
+				},
+				{
+					"min": 12,
+					"max": 14,
+					"gems": {
+						"type": 5000,
+						"amount": "1d8"
+					},
+					"magicitems": {
+						"type": "C",
+						"amount": "1d8"
+					}
+				},
+				{
+					"min": 15,
+					"max": 22,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 23,
+					"max": 30,
+					"artobjects": {
+						"type": 2500,
+						"amount": "1d10"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 31,
+					"max": 38,
+					"artobjects": {
+						"type": 7500,
+						"amount": "1d4"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 39,
+					"max": 46,
+					"gems": {
+						"type": 5000,
+						"amount": "1d8"
+					},
+					"magicitems": {
+						"type": "D",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 47,
+					"max": 52,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 53,
+					"max": 58,
+					"artobjects": {
+						"type": 2500,
+						"amount": "1d10"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 59,
+					"max": 63,
+					"artobjects": {
+						"type": 7500,
+						"amount": "1d4"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 64,
+					"max": 68,
+					"gems": {
+						"type": 5000,
+						"amount": "1d8"
+					},
+					"magicitems": {
+						"type": "E",
+						"amount": "1d6"
+					}
+				},
+				{
+					"min": 69,
+					"max": 69,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 70,
+					"max": 70,
+					"artobjects": {
+						"type": 7500,
+						"amount": "1d10"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 71,
+					"max": 71,
+					"artobjects": {
+						"type": 7500,
+						"amount": "1d4"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 72,
+					"max": 72,
+					"gems": {
+						"type": 5000,
+						"amount": "1d8"
+					},
+					"magicitems": {
+						"type": "G",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 73,
+					"max": 74,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 75,
+					"max": 76,
+					"artobjects": {
+						"type": 2500,
+						"amount": "1d10"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 77,
+					"max": 78,
+					"artobjects": {
+						"type": 7500,
+						"amount": "1d4"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 79,
+					"max": 80,
+					"gems": {
+						"type": 5000,
+						"amount": "1d8"
+					},
+					"magicitems": {
+						"type": "H",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 81,
+					"max": 85,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 86,
+					"max": 90,
+					"artobjects": {
+						"type": 2500,
+						"amount": "1d10"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 91,
+					"max": 95,
+					"artobjects": {
+						"type": 7500,
+						"amount": "1d4"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d4"
+					}
+				},
+				{
+					"min": 96,
+					"max": 100,
+					"gems": {
+						"type": 1000,
+						"amount": "3d6"
+					},
+					"magicitems": {
+						"type": "I",
+						"amount": "1d4"
+					}
+				}
+			]
+		}
+	],
+	"gemstones": [
+		{
+			"name": "价值 10金币 的宝石",
+			"ENG_name": "10 gp Gemstones",
+			"source": "DMG",
+			"page": 134,
+			"type": 10,
+			"table": [
+				"{@item 蓝铜矿} (不透光 深蓝色斑驳纹理)",
+				"{@item 条纹玛瑙} (透光 棕、蓝、白、或红色条纹)",
+				"{@item 青石英} (透光 淡蓝色)",
+				"{@item 眼状玛瑙} (透光 灰色、白色、棕色、蓝色、或绿色圆形花纹)",
+				"{@item 赤铁矿} (不透光 灰黑色)",
+				"{@item 青金石} (不透光 深浅蓝混色带黄斑)",
+				"{@item 孔雀石} (不透光 带纹深浅绿混色)",
+				"{@item 苔纹玛瑙} (透光 粉红色或黄白色带灰或绿色的藓状斑纹)",
+				"{@item 黑曜石} (不透光 黑色)",
+				"{@item 红纹石} (不透光 浅粉红色)",
+				"{@item 虎眼石} (透光 棕中带金)",
+				"{@item 绿松石} (不透光 浅蓝绿色)"
+			]
+		},
+		{
+			"name": "价值 50金币 的宝石",
+			"ENG_name": "50 gp Gemstones",
+			"source": "DMG",
+			"page": 134,
+			"type": 50,
+			"table": [
+				"{@item 血石} (不透光 带红斑的深灰色)",
+				"{@item 红玉髓} (不透光 橙色到红棕色)",
+				"{@item 玉髓} (不透光 乳白色)",
+				"{@item 绿玉髓} (不透光 绿色)",
+				"{@item 黄水晶} (透光 淡黄褐色)",
+				"{@item 碧玉} (不透光 蓝色、黑色、或棕色)",
+				"{@item 月长石} (透光 淡蓝色光辉的白色)",
+				"{@item 缟玛瑙} (不透光 黑白相间、纯黑、或纯白)",
+				"{@item 石英} (透光 白色、烟灰色、或黄色)",
+				"{@item 红缟玛瑙} (不透光 红白带状纹路)",
+				"{@item 星光粉晶} (透光 玫瑰色中央带有白色星形纹路)",
+				"{@item 锆石} (透光 淡蓝绿色)"
+			]
+		},
+		{
+			"name": "价值 100金币 的宝石",
+			"ENG_name": "100 gp Gemstones",
+			"source": "DMG",
+			"page": 134,
+			"type": 100,
+			"table": [
+				"{@item 琥珀} (透光 水金色到贵金色)",
+				"{@item 紫晶} (透光 深紫色)",
+				"{@item 金绿宝石} (透光 黄绿色到淡绿色)",
+				"{@item 珊瑚} (不透光 绯红色)",
+				"{@item 石榴石} (透光 红色、棕绿色、或紫色)",
+				"{@item 翡翠} (透光 浅绿色、深绿色、或白色)",
+				"{@item 煤玉} (不透光 深黑色)",
+				"{@item 珍珠} (不透光 带光泽的白色、黄色、或粉红色)",
+				"{@item 尖晶石} (透光 红色、红棕色、或深绿色)",
+				"{@item 电气石} (透光 淡绿色、蓝色、褐色、或红色)"
+			]
+		},
+		{
+			"name": "价值 500金币 的宝石",
+			"ENG_name": "500 gp Gemstones",
+			"source": "DMG",
+			"page": 134,
+			"type": 500,
+			"table": [
+				"{@item 亚历山大变石} (透光 深绿色)",
+				"{@item 海蓝宝石} (透光 淡青绿色)",
+				"{@item 黑珍珠} (不透光 纯黑色)",
+				"{@item 蓝尖晶石} (透光 深蓝色)",
+				"{@item 橄榄石} (透光 贵橄榄绿色)",
+				"{@item 黄玉} (透光 金黄色)"
+			]
+		},
+		{
+			"name": "价值 1,000金币 的宝石",
+			"ENG_name": "1,000 gp Gemstones",
+			"source": "DMG",
+			"page": 134,
+			"type": 1000,
+			"table": [
+				"{@item 黑蛋白石} (透光 带有黑色和金色斑纹的暗绿色)",
+				"{@item 青蓝宝石} (透光 蓝白色至中等蓝色)",
+				"{@item 绿宝石} (透光 深翠绿色)",
+				"{@item 火蛋白石} (透光火红色)",
+				"{@item 蛋白石} (透光 带绿和金点的淡蓝色)",
+				"{@item 星彩红宝石} (透光 中央带有白色星形纹路的红宝石)",
+				"{@item 星彩蓝宝石} (透光 中央带有白色星形纹路的蓝宝石)",
+				"{@item 黄宝石} (透光 焰黄色或黄绿色)"
+			]
+		},
+		{
+			"name": "价值 5,000金币 的宝石",
+			"ENG_name": "5,000 gp Gemstones",
+			"source": "DMG",
+			"page": 134,
+			"type": 5000,
+			"table": [
+				"{@item 黑蓝宝石} (半透光 闪耀着高亮光泽的黑色)",
+				"{@item 钻石} (透光 蓝白色、鲜黄色、粉红色、棕色、或蓝色)",
+				"{@item 红锆石} (透光 焰橘色)",
+				"{@item 红宝石} (透光 透红色到深绯色)"
+			]
+		}
+	],
+	"artobjects": [
+		{
+			"name": "25 gp Art Objects",
+			"source": "DMG",
+			"page": 134,
+			"type": 25,
+			"table": [
+				"{@item 银质水壶}",
+				"{@item 骨制雕像}",
+				"{@item 黄金小手镯}",
+				"{@item 金丝编织的法衣}",
+				"{@item 由银丝缝制的漆黑天鹅绒面具}",
+				"{@item 银丝装饰的铜制酒杯}",
+				"{@item 一对骨制骰子}",
+				"{@item 镶在彩绘木框中的小镜子}",
+				"{@item 绣花丝绸手帕}",
+				"{@item 内部绘有彩绘肖像的黄金链坠盒}"
+			]
+		},
+		{
+			"name": "250 gp Art Objects",
+			"source": "DMG",
+			"page": 135,
+			"type": 250,
+			"table": [
+				"{@item 镶有血石的黄金戒指}",
+				"{@item 象牙雕像}",
+				"{@item 黄金大手镯}",
+				"{@item 附有宝石坠饰的银制项链}",
+				"{@item 青铜王冠}",
+				"{@item 带有金色刺绣的丝绸长袍}",
+				"{@item 做工精良的大型织锦}",
+				"{@item 镶有翡翠的黄铜马克杯}",
+				"{@item 一盒绿松石制的动物雕像}",
+				"{@item 珀金丝装饰的黄金鸟笼}"
+			]
+		},
+		{
+			"name": "750 gp Art Objects",
+			"source": "DMG",
+			"page": 135,
+			"type": 750,
+			"table": [
+				"{@item 镶有月长石的银质酒杯}",
+				"{@item 剑柄镶有煤玉的钢质镀银长剑}",
+				"{@item 异国木材雕制且镶有象牙和锆石的竖琴}",
+				"{@item 小型黄金神像}",
+				"{@item 镶有红色石榴石作为眼睛的金龙梳}",
+				"{@item 压印着金箔叶并镶有紫晶的软木瓶塞}",
+				"{@item 柄端镶有黑珍珠的珀金仪式匕首}",
+				"{@item 银白银和黄金制的胸针}",
+				"{@item 镶有金饰和嵌物的黑曜石雕像}",
+				"{@item 金漆战争面具}"
+			]
+		},
+		{
+			"name": "2,500 gp Art Objects",
+			"source": "DMG",
+			"page": 135,
+			"type": 2500,
+			"table": [
+				"{@item 镶有火蛋白石的纯金链条}",
+				"{@item 古老的名画}",
+				"{@item 绣花丝绸和天鹅绒编织并镶有许多月长石的披风}",
+				"{@item 镶有一颗蓝宝石的铂金手镯}",
+				"{@item 镶有珠宝片的绣花丝绸手套}",
+				"{@item 镶有珠宝的脚镯}",
+				"{@item 黄金音乐盒}",
+				"{@item 镶有四颗海蓝宝石的黄金项链}",
+				"{@item 镶有蓝宝石和月长石的单边眼罩}",
+				"{@item 串着粉红小珍珠的项链}"
+			]
+		},
+		{
+			"name": "7,500 gp Art Objects",
+			"source": "DMG",
+			"page": 135,
+			"type": 7500,
+			"table": [
+				"{@item 镶有珠宝的黄金王冠}",
+				"{@item 镶有珠宝的铂金戒指}",
+				"{@item 镶有红宝石的小型黄金雕像}",
+				"{@item 镶有绿宝石的黄金杯}",
+				"{@item 铂金丝装饰的黄金首饰盒}",
+				"{@item 金漆儿童石棺}",
+				"{@item 翡翠棋盘和纯金棋子}",
+				"{@item 镶有珠宝的金丝象牙角杯}"
+			]
+		}
+	],
+	"magicitems": [
+		{
+			"name": "魔法物品表A",
+			"ENG_name": "Magic Item Table A",
+			"source": "DMG",
+			"page": 144,
+			"type": "A",
+			"table": [
+				{
+					"min": 1,
+					"max": 50,
+					"item": "{@item 治疗药水}"
+				},
+				{
+					"min": 51,
+					"max": 60,
+					"item": "{@item 法术卷轴(戏法)}",
+					"spellLevel": 0
+				},
+				{
+					"min": 61,
+					"max": 70,
+					"item": "{@item 攀爬药水}"
+				},
+				{
+					"min": 71,
+					"max": 90,
+					"item": "{@item 法术卷轴(1环)}",
+					"spellLevel": 1
+				},
+				{
+					"min": 91,
+					"max": 94,
+					"item": "{@item 法术卷轴(2环)}",
+					"spellLevel": 2
+				},
+				{
+					"min": 95,
+					"max": 98,
+					"item": "{@item 良效治疗药水}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 次元袋}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 漂浮光球}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表B",
+			"ENG_name": "Magic Item Table B",
+			"source": "DMG",
+			"page": 144,
+			"type": "B",
+			"table": [
+				{
+					"min": 1,
+					"max": 15,
+					"item": "{@item 良效治疗药水}"
+				},
+				{
+					"min": 16,
+					"max": 22,
+					"item": "{@item 火焰吐息药水}"
+				},
+				{
+					"min": 23,
+					"max": 29,
+					"choose": {
+						"fromGroup": [
+							"抗性药水"
+						]
+					}
+				},
+				{
+					"min": 30,
+					"max": 34,
+					"choose": {
+						"fromGeneric": [
+							"+1 弹药"
+						]
+					}
+				},
+				{
+					"min": 35,
+					"max": 39,
+					"item": "{@item 化兽为友药水}"
+				},
+				{
+					"min": 40,
+					"max": 44,
+					"item": "{@item 山丘巨人之力药水}"
+				},
+				{
+					"min": 45,
+					"max": 49,
+					"item": "{@item 成长药水}"
+				},
+				{
+					"min": 50,
+					"max": 54,
+					"item": "{@item 水下呼吸药水}"
+				},
+				{
+					"min": 55,
+					"max": 59,
+					"item": "{@item 法术卷轴(2环)}",
+					"spellLevel": 2
+				},
+				{
+					"min": 60,
+					"max": 64,
+					"item": "{@item 法术卷轴(3环)}",
+					"spellLevel": 3
+				},
+				{
+					"min": 65,
+					"max": 67,
+					"item": "{@item 次元袋}"
+				},
+				{
+					"min": 68,
+					"max": 70,
+					"item": "{@item 卡夫统灵药}"
+				},
+				{
+					"min": 71,
+					"max": 73,
+					"item": "{@item 滑溜之油}"
+				},
+				{
+					"min": 74,
+					"max": 75,
+					"item": "{@item 无踪尘}"
+				},
+				{
+					"min": 76,
+					"max": 77,
+					"item": "{@item 干燥尘}"
+				},
+				{
+					"min": 78,
+					"max": 79,
+					"item": "{@item 喷嚏窒息尘}"
+				},
+				{
+					"min": 80,
+					"max": 81,
+					"item": "{@item 元素宝石}"
+				},
+				{
+					"min": 82,
+					"max": 83,
+					"item": "{@item 迷情媚药}"
+				},
+				{
+					"min": 84,
+					"max": 84,
+					"item": "{@item 炼金壶}"
+				},
+				{
+					"min": 85,
+					"max": 85,
+					"item": "{@item 水下呼吸帽}"
+				},
+				{
+					"min": 86,
+					"max": 86,
+					"item": "{@item 魟鱼斗篷}"
+				},
+				{
+					"min": 87,
+					"max": 87,
+					"item": "{@item 漂浮光球}"
+				},
+				{
+					"min": 88,
+					"max": 88,
+					"item": "{@item 夜视护目镜}"
+				},
+				{
+					"min": 89,
+					"max": 89,
+					"item": "{@item 通晓语言头盔}"
+				},
+				{
+					"min": 90,
+					"max": 90,
+					"item": "{@item 不动权杖}"
+				},
+				{
+					"min": 91,
+					"max": 91,
+					"item": "{@item 显像提灯}"
+				},
+				{
+					"min": 92,
+					"max": 92,
+					"choose": {
+						"fromGeneric": [
+							"水手护甲"
+						]
+					}
+				},
+				{
+					"min": 93,
+					"max": 93,
+					"choose": {
+						"fromGeneric": [
+							"秘银护甲"
+						]
+					}
+				},
+				{
+					"min": 94,
+					"max": 94,
+					"item": "{@item 剧毒药水}"
+				},
+				{
+					"min": 95,
+					"max": 95,
+					"item": "{@item 游泳戒指}"
+				},
+				{
+					"min": 96,
+					"max": 96,
+					"item": "{@item 杂货法袍}"
+				},
+				{
+					"min": 97,
+					"max": 97,
+					"item": "{@item 攀爬绳}"
+				},
+				{
+					"min": 98,
+					"max": 98,
+					"item": "{@item 骑兵鞍座}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 侦测魔法魔杖}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 探秘魔杖}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表C",
+			"ENG_name": "Magic Item Table C",
+			"source": "DMG",
+			"page": 145,
+			"type": "C",
+			"table": [
+				{
+					"min": 1,
+					"max": 15,
+					"item": "{@item 强效治疗药水}"
+				},
+				{
+					"min": 16,
+					"max": 22,
+					"item": "{@item 法术卷轴(4环)}",
+					"spellLevel": 4
+				},
+				{
+					"min": 23,
+					"max": 27,
+					"choose": {
+						"fromGeneric": [
+							"+2 弹药"
+						]
+					}
+				},
+				{
+					"min": 28,
+					"max": 32,
+					"item": "{@item 锐眼药水}"
+				},
+				{
+					"min": 33,
+					"max": 37,
+					"item": "{@item 缩小药水}"
+				},
+				{
+					"min": 38,
+					"max": 42,
+					"item": "{@item 气化形体药水}"
+				},
+				{
+					"min": 43,
+					"max": 47,
+					"item": "{@item 霜巨人之力药水}"
+				},
+				{
+					"min": 48,
+					"max": 52,
+					"item": "{@item 石巨人之力药水}"
+				},
+				{
+					"min": 53,
+					"max": 57,
+					"item": "{@item 英雄气概药水}"
+				},
+				{
+					"min": 58,
+					"max": 62,
+					"item": "{@item 无敌药水}"
+				},
+				{
+					"min": 63,
+					"max": 67,
+					"item": "{@item 读心药水}"
+				},
+				{
+					"min": 68,
+					"max": 72,
+					"item": "{@item 法术卷轴(5环)}",
+					"spellLevel": 5
+				},
+				{
+					"min": 73,
+					"max": 75,
+					"item": "{@item 健康灵药}"
+				},
+				{
+					"min": 76,
+					"max": 78,
+					"item": "{@item 乙太化之油}"
+				},
+				{
+					"min": 79,
+					"max": 81,
+					"item": "{@item 火巨人之力药水}"
+				},
+				{
+					"min": 82,
+					"max": 84,
+					"item": "{@item 夸尔羽符}"
+				},
+				{
+					"min": 85,
+					"max": 87,
+					"item": "{@item 防护卷轴}"
+				},
+				{
+					"min": 88,
+					"max": 89,
+					"item": "{@item 魔豆之袋}"
+				},
+				{
+					"min": 90,
+					"max": 91,
+					"item": "{@item 力场珠}"
+				},
+				{
+					"min": 92,
+					"max": 92,
+					"item": "{@item 开门钟琴}"
+				},
+				{
+					"min": 93,
+					"max": 93,
+					"item": "{@item 无尽水瓶}"
+				},
+				{
+					"min": 94,
+					"max": 94,
+					"item": "{@item 微视镜片}"
+				},
+				{
+					"min": 95,
+					"max": 95,
+					"item": "{@item 折叠船}"
+				},
+				{
+					"min": 96,
+					"max": 96,
+					"item": "{@item 霍华德的便利袋}"
+				},
+				{
+					"min": 97,
+					"max": 97,
+					"item": "{@item 加速马蹄铁}"
+				},
+				{
+					"min": 98,
+					"max": 98,
+					"item": "{@item 火球项链}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 健康护身符}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 传讯石}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表D",
+			"ENG_name": "Magic Item Table D",
+			"source": "DMG",
+			"page": 145,
+			"type": "D",
+			"table": [
+				{
+					"min": 1,
+					"max": 20,
+					"item": "{@item 极效治疗药水}"
+				},
+				{
+					"min": 21,
+					"max": 30,
+					"item": "{@item 隐形药水}"
+				},
+				{
+					"min": 31,
+					"max": 40,
+					"item": "{@item 速度药水}"
+				},
+				{
+					"min": 41,
+					"max": 50,
+					"item": "{@item 法术卷轴(6环)}",
+					"spellLevel": 6
+				},
+				{
+					"min": 51,
+					"max": 57,
+					"item": "{@item 法术卷轴(7环)}",
+					"spellLevel": 7
+				},
+				{
+					"min": 58,
+					"max": 62,
+					"choose": {
+						"fromGeneric": [
+							"+3 弹药"
+						]
+					}
+				},
+				{
+					"min": 63,
+					"max": 67,
+					"item": "{@item 锋锐之油}"
+				},
+				{
+					"min": 68,
+					"max": 72,
+					"item": "{@item 飞行药水}"
+				},
+				{
+					"min": 73,
+					"max": 77,
+					"item": "{@item 云巨人之力药水}"
+				},
+				{
+					"min": 78,
+					"max": 82,
+					"item": "{@item 延寿药水}"
+				},
+				{
+					"min": 83,
+					"max": 87,
+					"item": "{@item 活力药水}"
+				},
+				{
+					"min": 88,
+					"max": 92,
+					"item": "{@item 法术卷轴(8环)}",
+					"spellLevel": 8
+				},
+				{
+					"min": 93,
+					"max": 95,
+					"item": "{@item 西风马蹄铁}"
+				},
+				{
+					"min": 96,
+					"max": 98,
+					"item": "{@item 诺泽尔的惊奇颜料}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 吞噬袋}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 便携式次元洞}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表E",
+			"ENG_name": "Magic Item Table E",
+			"source": "DMG",
+			"page": 145,
+			"type": "E",
+			"table": [
+				{
+					"min": 1,
+					"max": 30,
+					"item": "{@item 法术卷轴(8环)}",
+					"spellLevel": 8
+				},
+				{
+					"min": 31,
+					"max": 55,
+					"item": "{@item 风暴巨人之力药水}"
+				},
+				{
+					"min": 56,
+					"max": 70,
+					"item": "{@item 极效治疗药水}"
+				},
+				{
+					"min": 71,
+					"max": 86,
+					"item": "{@item 法术卷轴(9环)}",
+					"spellLevel": 9
+				},
+				{
+					"min": 86,
+					"max": 93,
+					"item": "{@item 万溶剂}"
+				},
+				{
+					"min": 94,
+					"max": 98,
+					"item": "{@item 屠杀箭}"
+				},
+				{
+					"min": 99,
+					"max": 100,
+					"item": "{@item 至尊胶}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表F",
+			"ENG_name": "Magic Item Table F",
+			"source": "DMG",
+			"page": 146,
+			"type": "F",
+			"table": [
+				{
+					"min": 1,
+					"max": 15,
+					"choose": {
+						"fromGeneric": [
+							"+1 武器"
+						]
+					}
+				},
+				{
+					"min": 16,
+					"max": 18,
+					"item": "{@item +1 盾牌}"
+				},
+				{
+					"min": 19,
+					"max": 21,
+					"item": "{@item 哨卫之盾}"
+				},
+				{
+					"min": 22,
+					"max": 23,
+					"item": "{@item 反侦测定位护符}"
+				},
+				{
+					"min": 24,
+					"max": 25,
+					"item": "{@item 精灵之靴}"
+				},
+				{
+					"min": 26,
+					"max": 27,
+					"item": "{@item 跑跳之靴}"
+				},
+				{
+					"min": 28,
+					"max": 29,
+					"item": "{@item 射手护腕}"
+				},
+				{
+					"min": 30,
+					"max": 31,
+					"item": "{@item 护盾胸针}"
+				},
+				{
+					"min": 32,
+					"max": 33,
+					"item": "{@item 飞天扫帚}"
+				},
+				{
+					"min": 34,
+					"max": 35,
+					"item": "{@item 精灵斗篷}"
+				},
+				{
+					"min": 36,
+					"max": 37,
+					"item": "{@item 防护斗篷}"
+				},
+				{
+					"min": 38,
+					"max": 39,
+					"item": "{@item 食人魔力量护手}"
+				},
+				{
+					"min": 40,
+					"max": 41,
+					"item": "{@item 易容帽}"
+				},
+				{
+					"min": 42,
+					"max": 43,
+					"item": "{@item 闪电标枪}"
+				},
+				{
+					"min": 44,
+					"max": 45,
+					"item": "{@item 法力再生珍珠}"
+				},
+				{
+					"min": 46,
+					"max": 47,
+					"item": "{@item +1 掌契者权杖}"
+				},
+				{
+					"min": 48,
+					"max": 49,
+					"item": "{@item 蛛行拖鞋}"
+				},
+				{
+					"min": 50,
+					"max": 51,
+					"item": "{@item 蝰蛇法杖}"
+				},
+				{
+					"min": 52,
+					"max": 53,
+					"item": "{@item 巨蟒法杖}"
+				},
+				{
+					"min": 54,
+					"max": 55,
+					"choose": {
+						"fromGeneric": [
+							"复仇之剑"
+						]
+					}
+				},
+				{
+					"min": 56,
+					"max": 57,
+					"item": "{@item 命令鱼类三叉戟}"
+				},
+				{
+					"min": 58,
+					"max": 59,
+					"item": "{@item 魔法飞弹魔杖}"
+				},
+				{
+					"min": 60,
+					"max": 61,
+					"item": "{@item +1 战法师魔杖}"
+				},
+				{
+					"min": 62,
+					"max": 63,
+					"item": "{@item 蛛网魔杖}"
+				},
+				{
+					"min": 64,
+					"max": 65,
+					"choose": {
+						"fromGeneric": [
+							"警戒武器"
+						]
+					}
+				},
+				{
+					"min": 66,
+					"max": 66,
+					"item": "{@item 精金锁子甲}"
+				},
+				{
+					"min": 67,
+					"max": 67,
+					"item": "{@item 精金链甲衫}"
+				},
+				{
+					"min": 68,
+					"max": 68,
+					"item": "{@item 精金鳞甲}"
+				},
+				{
+					"min": 69,
+					"max": 69,
+					"item": "{@item 魔术袋，灰色}"
+				},
+				{
+					"min": 70,
+					"max": 70,
+					"item": "{@item 魔术袋，铁锈色}"
+				},
+				{
+					"min": 71,
+					"max": 71,
+					"item": "{@item 魔术袋，棕褐色}"
+				},
+				{
+					"min": 72,
+					"max": 72,
+					"item": "{@item 雪地之靴}"
+				},
+				{
+					"min": 73,
+					"max": 73,
+					"item": "{@item 爆裂头饰}"
+				},
+				{
+					"min": 74,
+					"max": 74,
+					"item": "{@item 幻象牌组}"
+				},
+				{
+					"min": 75,
+					"max": 75,
+					"item": "{@item 无尽烟壶}"
+				},
+				{
+					"min": 76,
+					"max": 76,
+					"item": "{@item 魅惑镜片}"
+				},
+				{
+					"min": 77,
+					"max": 77,
+					"item": "{@item 鹰眼镜片}"
+				},
+				{
+					"min": 78,
+					"max": 78,
+					"item": "{@item 异能塑像，白银渡鸦}"
+				},
+				{
+					"min": 79,
+					"max": 79,
+					"item": "{@item 光彩夺目宝石}"
+				},
+				{
+					"min": 80,
+					"max": 80,
+					"item": "{@item 避矢夺箭手套}"
+				},
+				{
+					"min": 81,
+					"max": 81,
+					"item": "{@item 游泳攀爬手套}"
+				},
+				{
+					"min": 82,
+					"max": 82,
+					"item": "{@item 窃贼手套}"
+				},
+				{
+					"min": 83,
+					"max": 83,
+					"item": "{@item 智力头带}"
+				},
+				{
+					"min": 84,
+					"max": 84,
+					"item": "{@item 心灵感应头盔}"
+				},
+				{
+					"min": 85,
+					"max": 85,
+					"item": "{@item 吟游诗人乐器，安眠鲁特琴}"
+				},
+				{
+					"min": 86,
+					"max": 86,
+					"item": "{@item 吟游诗人乐器，佛克路坎三弦琴}"
+				},
+				{
+					"min": 87,
+					"max": 87,
+					"item": "{@item 吟游诗人乐器，麦克-弗瑞米西特琴}"
+				},
+				{
+					"min": 88,
+					"max": 88,
+					"item": "{@item 读心勋章}"
+				},
+				{
+					"min": 89,
+					"max": 89,
+					"item": "{@item 适应项链}"
+				},
+				{
+					"min": 90,
+					"max": 90,
+					"item": "{@item 愈合护身符}"
+				},
+				{
+					"min": 91,
+					"max": 91,
+					"item": "{@item 颤栗之笛}"
+				},
+				{
+					"min": 92,
+					"max": 92,
+					"item": "{@item 唤鼠排笛}"
+				},
+				{
+					"min": 93,
+					"max": 93,
+					"item": "{@item 跳跃戒指}"
+				},
+				{
+					"min": 94,
+					"max": 94,
+					"item": "{@item 心灵护盾戒指}"
+				},
+				{
+					"min": 95,
+					"max": 95,
+					"item": "{@item 温暖戒指}"
+				},
+				{
+					"min": 96,
+					"max": 96,
+					"item": "{@item 水行戒指}"
+				},
+				{
+					"min": 97,
+					"max": 97,
+					"item": "{@item 艾罗娜的箭袋}"
+				},
+				{
+					"min": 98,
+					"max": 98,
+					"item": "{@item 幸运石}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 造风之扇}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 飞翼之靴}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表G",
+			"ENG_name": "Magic Item Table G",
+			"source": "DMG",
+			"page": 147,
+			"type": "G",
+			"table": [
+				{
+					"min": 1,
+					"max": 11,
+					"choose": {
+						"fromGeneric": [
+							"+2 武器"
+						]
+					}
+				},
+				{
+					"min": 12,
+					"max": 14,
+					"item": "异能塑像",
+					"table": [
+						{
+							"min": 1,
+							"item": "{@item 异能塑像，青铜狮鹫}"
+						},
+						{
+							"min": 2,
+							"item": "{@item 异能塑像，黑檀木苍蝇}"
+						},
+						{
+							"min": 3,
+							"item": "{@item 异能塑像，黄金狮子}"
+						},
+						{
+							"min": 4,
+							"item": "{@item 异能塑像，象牙山羊}"
+						},
+						{
+							"min": 5,
+							"item": "{@item 异能塑像，大理石象}"
+						},
+						{
+							"min": 6,
+							"max": 7,
+							"item": "{@item 异能塑像，玛瑙犬}"
+						},
+						{
+							"min": 8,
+							"item": "{@item 异能塑像，蛇纹石猫头鹰}"
+						}
+					]
+				},
+				{
+					"min": 15,
+					"max": 15,
+					"item": "{@item 精金护胸甲}"
+				},
+				{
+					"min": 16,
+					"max": 16,
+					"item": "{@item 精金条板甲}"
+				},
+				{
+					"min": 17,
+					"max": 17,
+					"item": "{@item 健康护符}"
+				},
+				{
+					"min": 18,
+					"max": 18,
+					"choose": {
+						"fromGroup": [
+							"易伤护甲"
+						]
+					}
+				},
+				{
+					"min": 19,
+					"max": 19,
+					"item": "{@item 捕箭盾}"
+				},
+				{
+					"min": 20,
+					"max": 20,
+					"item": "{@item 矮人腰带}"
+				},
+				{
+					"min": 21,
+					"max": 21,
+					"item": "{@item 山丘巨人力量腰带}"
+				},
+				{
+					"min": 22,
+					"max": 22,
+					"choose": {
+						"fromGeneric": [
+							"狂战士之斧"
+						]
+					}
+				},
+				{
+					"min": 23,
+					"max": 23,
+					"item": "{@item 浮空之靴}"
+				},
+				{
+					"min": 24,
+					"max": 24,
+					"item": "{@item 速度之靴}"
+				},
+				{
+					"min": 25,
+					"max": 25,
+					"item": "{@item 命令水元素水钵}"
+				},
+				{
+					"min": 26,
+					"max": 26,
+					"item": "{@item ​防御护腕}"
+				},
+				{
+					"min": 27,
+					"max": 27,
+					"item": "{@item 命令火元素火盆}"
+				},
+				{
+					"min": 28,
+					"max": 28,
+					"item": "{@item 郎中披肩}"
+				},
+				{
+					"min": 29,
+					"max": 29,
+					"item": "{@item 控制气元素香炉}"
+				},
+				{
+					"min": 30,
+					"max": 30,
+					"item": "{@item +1 锁子甲}"
+				},
+				{
+					"min": 31,
+					"max": 31,
+					"item": "抗性锁子甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性锁子甲",
+							"冷冻抗性锁子甲",
+							"火焰抗性锁子甲",
+							"力场抗性锁子甲",
+							"闪电抗性锁子甲",
+							"黯蚀抗性锁子甲",
+							"毒素抗性锁子甲",
+							"心灵抗性锁子甲",
+							"光耀抗性锁子甲",
+							"雷鸣抗性锁子甲"
+						]
+					}
+				},
+				{
+					"min": 32,
+					"max": 32,
+					"item": "{@item +1 链甲衫}"
+				},
+				{
+					"min": 33,
+					"max": 33,
+					"item": "抗性链甲衫",
+					"choose": {
+						"fromItems": [
+							"强酸抗性链甲衫",
+							"冷冻抗性链甲衫",
+							"火焰抗性链甲衫",
+							"力场抗性链甲衫",
+							"闪电抗性链甲衫",
+							"黯蚀抗性链甲衫",
+							"毒素抗性链甲衫",
+							"心灵抗性链甲衫",
+							"光耀抗性链甲衫",
+							"雷鸣抗性链甲衫"
+						]
+					}
+				},
+				{
+					"min": 34,
+					"max": 34,
+					"item": "{@item 位移斗篷}"
+				},
+				{
+					"min": 35,
+					"max": 35,
+					"item": "{@item 蝙蝠斗篷}"
+				},
+				{
+					"min": 36,
+					"max": 36,
+					"item": "{@item 力场魔方}"
+				},
+				{
+					"min": 37,
+					"max": 37,
+					"item": "{@item 戴恩的瞬间要塞}"
+				},
+				{
+					"min": 38,
+					"max": 38,
+					"item": "{@item 淬毒匕首}"
+				},
+				{
+					"min": 39,
+					"max": 39,
+					"item": "{@item 次元镣铐}"
+				},
+				{
+					"min": 40,
+					"max": 40,
+					"choose": {
+						"fromGeneric": [
+							"屠龙者"
+						]
+					}
+				},
+				{
+					"min": 41,
+					"max": 41,
+					"item": "{@item 精灵链甲}"
+				},
+				{
+					"min": 42,
+					"max": 42,
+					"choose": {
+						"fromGeneric": [
+							"焰舌"
+						]
+					}
+				},
+				{
+					"min": 43,
+					"max": 43,
+					"item": "{@item 真视宝石}"
+				},
+				{
+					"min": 44,
+					"max": 44,
+					"choose": {
+						"fromGeneric": [
+							"巨人杀手"
+						]
+					}
+				},
+				{
+					"min": 45,
+					"max": 45,
+					"item": "{@item 幻惑镶钉皮甲}"
+				},
+				{
+					"min": 46,
+					"max": 46,
+					"item": "{@item 传送头盔}"
+				},
+				{
+					"min": 47,
+					"max": 47,
+					"item": "{@item 音爆号角}"
+				},
+				{
+					"min": 48,
+					"max": 48,
+					"item": "瓦尔哈拉号角 ({@item 瓦尔哈拉号角，白银|dmg|白银} 或 {@item 瓦尔哈拉号角，黄铜|dmg|黄铜})"
+				},
+				{
+					"min": 49,
+					"max": 49,
+					"item": "{@item 吟游诗人乐器，凯纳斯曼陀林}"
+				},
+				{
+					"min": 50,
+					"max": 50,
+					"item": "{@item 吟游诗人乐器，科里里拉琴}"
+				},
+				{
+					"min": 51,
+					"max": 51,
+					"item": "{@item 艾恩石，警觉}"
+				},
+				{
+					"min": 52,
+					"max": 52,
+					"item": "{@item 艾恩石，防护}"
+				},
+				{
+					"min": 53,
+					"max": 53,
+					"item": "{@item 艾恩石，储法}"
+				},
+				{
+					"min": 54,
+					"max": 54,
+					"item": "{@item 艾恩石，维生}"
+				},
+				{
+					"min": 55,
+					"max": 55,
+					"item": "{@item 比拉罗的铁索}"
+				},
+				{
+					"min": 56,
+					"max": 56,
+					"item": "{@item +1 皮甲}"
+				},
+				{
+					"min": 57,
+					"max": 57,
+					"item": "抗性皮甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性皮甲",
+							"冷冻抗性皮甲",
+							"火焰抗性皮甲",
+							"力场抗性皮甲",
+							"闪电抗性皮甲",
+							"黯蚀抗性皮甲",
+							"毒素抗性皮甲",
+							"心灵抗性皮甲",
+							"光耀抗性皮甲",
+							"雷鸣抗性皮甲"
+						]
+					}
+				},
+				{
+					"min": 58,
+					"max": 58,
+					"item": "{@item 瓦解之锤}"
+				},
+				{
+					"min": 59,
+					"max": 59,
+					"item": "{@item 打击之锤}"
+				},
+				{
+					"min": 60,
+					"max": 60,
+					"item": "{@item 恐惧之锤}"
+				},
+				{
+					"min": 61,
+					"max": 61,
+					"item": "{@item 法术抗性披肩}"
+				},
+				{
+					"min": 62,
+					"max": 62,
+					"item": "{@item 念珠项链}"
+				},
+				{
+					"min": 63,
+					"max": 63,
+					"item": "{@item 辟毒护身符}"
+				},
+				{
+					"min": 64,
+					"max": 64,
+					"item": "{@item 支配动物戒指}"
+				},
+				{
+					"min": 65,
+					"max": 65,
+					"item": "{@item 闪避戒指}"
+				},
+				{
+					"min": 66,
+					"max": 66,
+					"item": "{@item 羽落戒指}"
+				},
+				{
+					"min": 67,
+					"max": 67,
+					"item": "{@item 自由行动戒指}"
+				},
+				{
+					"min": 68,
+					"max": 68,
+					"item": "{@item 防护戒指}"
+				},
+				{
+					"min": 69,
+					"max": 69,
+					"choose": {
+						"fromGeneric": [
+							"抗性戒指"
+						]
+					}
+				},
+				{
+					"min": 70,
+					"max": 70,
+					"item": "{@item 法术保存戒指}"
+				},
+				{
+					"min": 71,
+					"max": 71,
+					"item": "{@item 公羊戒指}"
+				},
+				{
+					"min": 72,
+					"max": 72,
+					"item": "{@item X光视觉戒指}"
+				},
+				{
+					"min": 73,
+					"max": 73,
+					"item": "{@item 百眼法袍}"
+				},
+				{
+					"min": 74,
+					"max": 74,
+					"item": "{@item 统治权杖}"
+				},
+				{
+					"min": 75,
+					"max": 75,
+					"item": "{@item +2 掌契者权杖}"
+				},
+				{
+					"min": 76,
+					"max": 76,
+					"item": "{@item 纠缠绳}"
+				},
+				{
+					"min": 77,
+					"max": 77,
+					"item": "{@item +1 鳞甲}"
+				},
+				{
+					"min": 78,
+					"max": 78,
+					"item": "抗性鳞甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性鳞甲",
+							"冷冻抗性鳞甲",
+							"火焰抗性鳞甲",
+							"力场抗性鳞甲",
+							"闪电抗性鳞甲",
+							"黯蚀抗性鳞甲",
+							"毒素抗性鳞甲",
+							"心灵抗性鳞甲",
+							"光耀抗性鳞甲",
+							"雷鸣抗性鳞甲"
+						]
+					}
+				},
+				{
+					"min": 79,
+					"max": 79,
+					"item": "{@item +2 盾牌}"
+				},
+				{
+					"min": 80,
+					"max": 80,
+					"item": "{@item 飞弹吸引之盾}"
+				},
+				{
+					"min": 81,
+					"max": 81,
+					"item": "{@item 魅惑法杖}"
+				},
+				{
+					"min": 82,
+					"max": 82,
+					"item": "{@item 治愈法杖}"
+				},
+				{
+					"min": 83,
+					"max": 83,
+					"item": "{@item 虫群法杖}"
+				},
+				{
+					"min": 84,
+					"max": 84,
+					"item": "{@item 林地法杖}"
+				},
+				{
+					"min": 85,
+					"max": 85,
+					"item": "{@item 凋零法杖}"
+				},
+				{
+					"min": 86,
+					"max": 86,
+					"item": "{@item 控制土元素之石}"
+				},
+				{
+					"min": 87,
+					"max": 87,
+					"item": "{@item 阳炎剑}"
+				},
+				{
+					"min": 88,
+					"max": 88,
+					"choose": {
+						"fromGeneric": [
+							"窃命之剑"
+						]
+					}
+				},
+				{
+					"min": 89,
+					"max": 89,
+					"choose": {
+						"fromGeneric": [
+							"重创之剑"
+						]
+					}
+				},
+				{
+					"min": 90,
+					"max": 90,
+					"item": "{@item 触手权杖}"
+				},
+				{
+					"min": 91,
+					"max": 91,
+					"choose": {
+						"fromGeneric": [
+							"恶毒武器"
+						]
+					}
+				},
+				{
+					"min": 92,
+					"max": 92,
+					"item": "{@item 定身魔杖}"
+				},
+				{
+					"min": 93,
+					"max": 93,
+					"item": "{@item 搜敌魔杖}"
+				},
+				{
+					"min": 94,
+					"max": 94,
+					"item": "{@item 恐惧魔杖}"
+				},
+				{
+					"min": 95,
+					"max": 95,
+					"item": "{@item 火球魔杖}"
+				},
+				{
+					"min": 96,
+					"max": 96,
+					"item": "{@item 闪电束魔杖}"
+				},
+				{
+					"min": 97,
+					"max": 97,
+					"item": "{@item 麻痹魔杖}"
+				},
+				{
+					"min": 98,
+					"max": 98,
+					"item": "{@item +2 战法师魔杖}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 惊奇魔杖}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 飞行之翼}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表H",
+			"ENG_name": "Magic Item Table H",
+			"source": "DMG",
+			"page": 148,
+			"type": "H",
+			"table": [
+				{
+					"min": 1,
+					"max": 10,
+					"choose": {
+						"fromGeneric": [
+							"+3 武器"
+						]
+					}
+				},
+				{
+					"min": 11,
+					"max": 12,
+					"item": "{@item 位面护符}"
+				},
+				{
+					"min": 13,
+					"max": 14,
+					"choose": {
+						"fromGroup": [
+							"飞天魔毯"
+						]
+					}
+				},
+				{
+					"min": 15,
+					"max": 16,
+					"item": "{@item 水晶球}"
+				},
+				{
+					"min": 17,
+					"max": 18,
+					"item": "{@item 再生戒指}"
+				},
+				{
+					"min": 19,
+					"max": 20,
+					"item": "{@item 流星戒指}"
+				},
+				{
+					"min": 21,
+					"max": 22,
+					"item": "{@item 心灵遥控戒指}"
+				},
+				{
+					"min": 23,
+					"max": 24,
+					"item": "{@item 虹光法袍}"
+				},
+				{
+					"min": 25,
+					"max": 26,
+					"item": "{@item 星辰法袍}"
+				},
+				{
+					"min": 27,
+					"max": 28,
+					"item": "{@item 吸收权杖}"
+				},
+				{
+					"min": 29,
+					"max": 30,
+					"item": "{@item 警示权杖}"
+				},
+				{
+					"min": 31,
+					"max": 32,
+					"item": "{@item 庇护权杖}"
+				},
+				{
+					"min": 33,
+					"max": 34,
+					"item": "{@item +3 掌契者权杖}"
+				},
+				{
+					"min": 35,
+					"max": 36,
+					"item": "{@item 急速弯刀}"
+				},
+				{
+					"min": 37,
+					"max": 38,
+					"item": "{@item +3 盾牌}"
+				},
+				{
+					"min": 39,
+					"max": 40,
+					"item": "{@item 火焰法杖}"
+				},
+				{
+					"min": 41,
+					"max": 42,
+					"item": "{@item 冰霜法杖}"
+				},
+				{
+					"min": 43,
+					"max": 44,
+					"item": "{@item 威力法杖}"
+				},
+				{
+					"min": 45,
+					"max": 46,
+					"item": "{@item 强袭法杖}"
+				},
+				{
+					"min": 47,
+					"max": 48,
+					"item": "{@item 雷霆闪电法杖}"
+				},
+				{
+					"min": 49,
+					"max": 50,
+					"choose": {
+						"fromGeneric": [
+							"锋锐之剑"
+						]
+					}
+				},
+				{
+					"min": 51,
+					"max": 52,
+					"item": "{@item 变形魔杖}"
+				},
+				{
+					"min": 53,
+					"max": 54,
+					"item": "{@item +3 战法师魔杖}"
+				},
+				{
+					"min": 55,
+					"max": 55,
+					"item": "{@item 精金半身板甲}"
+				},
+				{
+					"min": 56,
+					"max": 56,
+					"item": "{@item 精金全身板甲}"
+				},
+				{
+					"min": 57,
+					"max": 57,
+					"item": "{@item 活化盾}"
+				},
+				{
+					"min": 58,
+					"max": 58,
+					"item": "{@item 火巨人力量腰带}"
+				},
+				{
+					"min": 59,
+					"max": 59,
+					"item": "{@item 霜巨人力量腰带|dmg|霜} 或 {@item 石巨人力量腰带|dmg|石}巨人力量腰带",
+					"choose": {
+						"fromItems": [
+							"霜巨人力量腰带",
+							"石巨人力量腰带"
+						]
+					}
+				},
+				{
+					"min": 60,
+					"max": 60,
+					"item": "{@item +1 护胸甲}"
+				},
+				{
+					"min": 61,
+					"max": 61,
+					"item": "抗性护胸甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性护胸甲",
+							"冷冻抗性护胸甲",
+							"火焰抗性护胸甲",
+							"力场抗性护胸甲",
+							"闪电抗性护胸甲",
+							"黯蚀抗性护胸甲",
+							"毒素抗性护胸甲",
+							"心灵抗性护胸甲",
+							"光耀抗性护胸甲",
+							"雷鸣抗性护胸甲"
+						]
+					}
+				},
+				{
+					"min": 62,
+					"max": 62,
+					"item": "{@item 祈神蜡烛}"
+				},
+				{
+					"min": 63,
+					"max": 63,
+					"item": "{@item +2 锁子甲}"
+				},
+				{
+					"min": 64,
+					"max": 64,
+					"item": "{@item +2 链甲衫}"
+				},
+				{
+					"min": 65,
+					"max": 65,
+					"item": "{@item 节肢斗篷}"
+				},
+				{
+					"min": 66,
+					"max": 66,
+					"choose": {
+						"fromGeneric": [
+							"舞空剑"
+						]
+					}
+				},
+				{
+					"min": 67,
+					"max": 67,
+					"item": "{@item 恶魔护甲}"
+				},
+				{
+					"min": 68,
+					"max": 68,
+					"choose": {
+						"fromGroup": [
+							"龙鳞甲"
+						]
+					}
+				},
+				{
+					"min": 69,
+					"max": 69,
+					"item": "{@item 矮人板甲}"
+				},
+				{
+					"min": 70,
+					"max": 70,
+					"item": "{@item 矮人飞锤}"
+				},
+				{
+					"min": 71,
+					"max": 71,
+					"item": "{@item 火巨灵囚瓶}"
+				},
+				{
+					"min": 72,
+					"max": 72,
+					"item": "{@item 异能塑像，黑曜石驹}"
+				},
+				{
+					"min": 73,
+					"max": 73,
+					"item": "{@item 霜铭}",
+					"choose": {
+						"fromGeneric": [
+							"霜铭"
+						]
+					}
+				},
+				{
+					"min": 74,
+					"max": 74,
+					"item": "{@item 光辉头盔}"
+				},
+				{
+					"min": 75,
+					"max": 75,
+					"item": "{@item 瓦尔哈拉号角，青铜}"
+				},
+				{
+					"min": 76,
+					"max": 76,
+					"item": "{@item 吟游诗人乐器，安斯翠瑟竖琴}"
+				},
+				{
+					"min": 77,
+					"max": 77,
+					"item": "{@item 艾恩石，吸收},"
+				},
+				{
+					"min": 78,
+					"max": 78,
+					"item": "{@item 艾恩石，机敏},"
+				},
+				{
+					"min": 79,
+					"max": 79,
+					"item": "{@item 艾恩石，坚韧},"
+				},
+				{
+					"min": 80,
+					"max": 80,
+					"item": "{@item 艾恩石，洞悉}"
+				},
+				{
+					"min": 81,
+					"max": 81,
+					"item": "{@item 艾恩石，才智}"
+				},
+				{
+					"min": 82,
+					"max": 82,
+					"item": "{@item 艾恩石，统御}"
+				},
+				{
+					"min": 83,
+					"max": 83,
+					"item": "{@item 艾恩石，力量}"
+				},
+				{
+					"min": 84,
+					"max": 84,
+					"item": "{@item +2 皮甲}"
+				},
+				{
+					"min": 85,
+					"max": 85,
+					"item": "{@item 强身健体手册}"
+				},
+				{
+					"min": 86,
+					"max": 86,
+					"item": "{@item 增益锻炼手册}"
+				},
+				{
+					"min": 87,
+					"max": 87,
+					"choose": {
+						"fromGroup": [
+							"魔像手册"
+						]
+					}
+				},
+				{
+					"min": 88,
+					"max": 88,
+					"item": "{@item 迅捷行动手册}"
+				},
+				{
+					"min": 89,
+					"max": 89,
+					"item": "{@item 摄心魔镜}"
+				},
+				{
+					"min": 90,
+					"max": 90,
+					"item": "{@item 九转夺命剑}"
+				},
+				{
+					"min": 91,
+					"max": 91,
+					"item": "{@item 誓仇弓}"
+				},
+				{
+					"min": 92,
+					"max": 92,
+					"item": "{@item +2 鳞甲}"
+				},
+				{
+					"min": 93,
+					"max": 93,
+					"item": "{@item 抗法盾牌}"
+				},
+				{
+					"min": 94,
+					"max": 94,
+					"item": "{@item +1 条板甲}"
+				},
+				{
+					"min": 95,
+					"max": 95,
+					"item": "抗性条板甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性条板甲",
+							"冷冻抗性条板甲",
+							"火焰抗性条板甲",
+							"力场抗性条板甲",
+							"闪电抗性条板甲",
+							"黯蚀抗性条板甲",
+							"毒素抗性条板甲",
+							"心灵抗性条板甲",
+							"光耀抗性条板甲",
+							"雷鸣抗性条板甲"
+						]
+					}
+				},
+				{
+					"min": 96,
+					"max": 96,
+					"item": "{@item +1 镶钉皮甲}"
+				},
+				{
+					"min": 97,
+					"max": 97,
+					"item": "抗性镶钉皮甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性镶钉皮甲",
+							"冷冻抗性镶钉皮甲",
+							"火焰抗性镶钉皮甲",
+							"力场抗性镶钉皮甲",
+							"闪电抗性镶钉皮甲",
+							"黯蚀抗性镶钉皮甲",
+							"毒素抗性镶钉皮甲",
+							"心灵抗性镶钉皮甲",
+							"光耀抗性镶钉皮甲",
+							"雷鸣抗性镶钉皮甲"
+						]
+					}
+				},
+				{
+					"min": 98,
+					"max": 98,
+					"item": "{@item 清澈思想卷册}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 统御影响卷册}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 通晓卷册}"
+				}
+			]
+		},
+		{
+			"name": "魔法物品表I",
+			"ENG_name": "Magic Item Table I",
+			"source": "DMG",
+			"page": 149,
+			"type": "I",
+			"table": [
+				{
+					"min": 1,
+					"max": 5,
+					"choose": {
+						"fromGeneric": [
+							"防御者"
+						]
+					}
+				},
+				{
+					"min": 6,
+					"max": 10,
+					"item": "{@item 雷神之锤}"
+				},
+				{
+					"min": 11,
+					"max": 15,
+					"choose": {
+						"fromGeneric": [
+							"吉兆之刃"
+						]
+					}
+				},
+				{
+					"min": 16,
+					"max": 20,
+					"choose": {
+						"fromGroup": [
+							"应答之剑"
+						]
+					}
+				},
+				{
+					"min": 21,
+					"max": 23,
+					"choose": {
+						"fromGeneric": [
+							"神圣复仇者"
+						]
+					}
+				},
+				{
+					"min": 24,
+					"max": 26,
+					"item": "{@item 气巨灵召唤戒指}"
+				},
+				{
+					"min": 27,
+					"max": 29,
+					"item": "{@item 隐身戒指}"
+				},
+				{
+					"min": 30,
+					"max": 32,
+					"item": "{@item 法术反转戒指}"
+				},
+				{
+					"min": 33,
+					"max": 35,
+					"item": "{@item 王者力量权杖}"
+				},
+				{
+					"min": 36,
+					"max": 38,
+					"item": "{@item 贤者法杖}"
+				},
+				{
+					"min": 39,
+					"max": 41,
+					"item": "{@item 斩首之剑}"
+				},
+				{
+					"min": 42,
+					"max": 43,
+					"item": "{@item 云巨人力量腰带}"
+				},
+				{
+					"min": 44,
+					"max": 45,
+					"item": "{@item +2 护胸甲}"
+				},
+				{
+					"min": 46,
+					"max": 47,
+					"item": "{@item +3 锁子甲}"
+				},
+				{
+					"min": 48,
+					"max": 49,
+					"item": "{@item +3 链甲衫}"
+				},
+				{
+					"min": 50,
+					"max": 51,
+					"item": "{@item 隐形斗篷}"
+				},
+				{
+					"min": 52,
+					"max": 53,
+					"item": "水晶球(传说版本)",
+					"choose": {
+						"fromItems": [
+							"读心水晶球",
+							"心灵感应水晶球",
+							"真知水晶球"
+						]
+					}
+				},
+				{
+					"min": 54,
+					"max": 55,
+					"item": "{@item +1 半身板甲}"
+				},
+				{
+					"min": 56,
+					"max": 57,
+					"item": "{@item 收妖瓶}"
+				},
+				{
+					"min": 58,
+					"max": 59,
+					"item": "{@item +3 皮甲}"
+				},
+				{
+					"min": 60,
+					"max": 61,
+					"item": "{@item +1 全身板甲}"
+				},
+				{
+					"min": 62,
+					"max": 63,
+					"item": "{@item 大法师法袍}"
+				},
+				{
+					"min": 64,
+					"max": 65,
+					"item": "{@item 复活权杖}"
+				},
+				{
+					"min": 66,
+					"max": 67,
+					"item": "{@item +1 鳞甲}"
+				},
+				{
+					"min": 68,
+					"max": 69,
+					"item": "{@item 防护圣甲虫}"
+				},
+				{
+					"min": 70,
+					"max": 71,
+					"item": "{@item +2 条板甲}"
+				},
+				{
+					"min": 72,
+					"max": 73,
+					"item": "{@item +2 镶钉皮甲}"
+				},
+				{
+					"min": 74,
+					"max": 75,
+					"item": "{@item 诸界之井}"
+				},
+				{
+					"min": 76,
+					"max": 76,
+					"item": "魔法护甲",
+					"table": [
+						{
+							"min": 1,
+							"max": 2,
+							"item": "{@item +2 半身板甲}"
+						},
+						{
+							"min": 3,
+							"max": 4,
+							"item": "{@item +2 全身板甲}"
+						},
+						{
+							"min": 5,
+							"max": 6,
+							"item": "{@item +3 镶钉皮甲}"
+						},
+						{
+							"min": 7,
+							"max": 8,
+							"item": "{@item +3 护胸甲}"
+						},
+						{
+							"min": 9,
+							"max": 10,
+							"item": "{@item +3 条板甲}"
+						},
+						{
+							"min": 11,
+							"max": 11,
+							"item": "{@item +3 半身板甲}"
+						},
+						{
+							"min": 12,
+							"max": 12,
+							"item": "{@item +3 全身板甲}"
+						}
+					]
+				},
+				{
+					"min": 77,
+					"max": 77,
+					"item": "{@item 夸力许设备}"
+				},
+				{
+					"min": 78,
+					"max": 78,
+					"item": "{@item 坚不可摧护甲}"
+				},
+				{
+					"min": 79,
+					"max": 79,
+					"item": "{@item 风暴巨人力量腰带}"
+				},
+				{
+					"min": 80,
+					"max": 80,
+					"item": "{@item 界门魔方}"
+				},
+				{
+					"min": 81,
+					"max": 81,
+					"item": "{@item 万象无常牌}"
+				},
+				{
+					"min": 82,
+					"max": 82,
+					"item": "{@item 火巨灵链甲}"
+				},
+				{
+					"min": 83,
+					"max": 83,
+					"item": "抗性半身板甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性半身板甲",
+							"冷冻抗性半身板甲",
+							"火焰抗性半身板甲",
+							"力场抗性半身板甲",
+							"闪电抗性半身板甲",
+							"黯蚀抗性半身板甲",
+							"毒素抗性半身板甲",
+							"心灵抗性半身板甲",
+							"光耀抗性半身板甲",
+							"雷鸣抗性半身板甲"
+						]
+					}
+				},
+				{
+					"min": 84,
+					"max": 84,
+					"item": "{@item 瓦尔哈拉号角，黑铁}"
+				},
+				{
+					"min": 85,
+					"max": 85,
+					"item": "{@item 吟游诗人乐器，奥莱姆竖琴}"
+				},
+				{
+					"min": 86,
+					"max": 86,
+					"item": "{@item 艾恩石，强效吸收}"
+				},
+				{
+					"min": 87,
+					"max": 87,
+					"item": "{@item 艾恩石，精通}"
+				},
+				{
+					"min": 88,
+					"max": 88,
+					"item": "{@item 艾恩石，再生}"
+				},
+				{
+					"min": 89,
+					"max": 89,
+					"item": "{@item 乙太化板甲}"
+				},
+				{
+					"min": 90,
+					"max": 90,
+					"item": "抗性全身板甲",
+					"choose": {
+						"fromItems": [
+							"强酸抗性全身板甲",
+							"冷冻抗性全身板甲",
+							"火焰抗性全身板甲",
+							"力场抗性全身板甲",
+							"闪电抗性全身板甲",
+							"黯蚀抗性全身板甲",
+							"毒素抗性全身板甲",
+							"心灵抗性全身板甲",
+							"光耀抗性全身板甲",
+							"雷鸣抗性全身板甲"
+						]
+					}
+				},
+				{
+					"min": 91,
+					"max": 91,
+					"item": "{@item 命令气元素戒指}"
+				},
+				{
+					"min": 92,
+					"max": 92,
+					"item": "{@item 命令土元素戒指}"
+				},
+				{
+					"min": 93,
+					"max": 93,
+					"item": "{@item 命令火元素戒指}"
+				},
+				{
+					"min": 94,
+					"max": 94,
+					"item": "{@item 三愿戒指}"
+				},
+				{
+					"min": 95,
+					"max": 95,
+					"item": "{@item 命令水元素戒指}"
+				},
+				{
+					"min": 96,
+					"max": 96,
+					"item": "{@item 湮灭法球}"
+				},
+				{
+					"min": 97,
+					"max": 97,
+					"item": "{@item 纯善护符}"
+				},
+				{
+					"min": 98,
+					"max": 98,
+					"item": "{@item 法球护符}"
+				},
+				{
+					"min": 99,
+					"max": 99,
+					"item": "{@item 至恶护符}"
+				},
+				{
+					"min": 100,
+					"max": 100,
+					"item": "{@item 静语卷册}"
+				}
+			]
+		}
+	]
+}

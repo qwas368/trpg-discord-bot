@@ -1,0 +1,324 @@
+{
+	"monster": [
+		{
+			"source": "PHB",
+			"name": "活化物体(巨型)",
+			"ENG_name": "Animated Object (Huge)",
+			"page": 213,
+			"size": "H",
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 80,
+				"formula": "80d1"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 6,
+			"con": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 6,
+			"trait": [
+				{
+					"name": "活化",
+					"entries": [
+						"若这个物体没有脚或其他可用来移动的构造，则它将改为具有30尺的飞行速度并且可以浮空。若这个物体被牢牢固定再某个表面或更大的物体上，例如一条被栓在墙上的锁链，则它的移动速度为0尺。",
+						"当这个活化物体的生命值归零，它将回复它原本的物体型态，且剩余的伤害将被带到它原本的型态。",
+						"根据物体的型态，DM可能会裁定某个特定物体的猛击攻击将造成挥砍或穿刺伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "猛击",
+					"entries": [
+						"{@atk mw} 命中{@hit 8}，触及5尺，单一目标。{@h}16 ({@damage 2d12 + 4})钝击伤害。"
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"source": "PHB",
+			"name": "活化物体(大型)",
+			"ENG_name": "Animated Object (Large)",
+			"page": 213,
+			"size": "L",
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 50,
+				"formula": "50d1"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 6,
+			"trait": [
+				{
+					"name": "活化",
+					"entries": [
+						"若这个物体没有脚或其他可用来移动的构造，则它将改为具有30尺的飞行速度并且可以浮空。若这个物体被牢牢固定再某个表面或更大的物体上，例如一条被栓在墙上的锁链，则它的移动速度为0尺。",
+						"当这个活化物体的生命值归零，它将回复它原本的物体型态，且剩余的伤害将被带到它原本的型态。",
+						"根据物体的型态，DM可能会裁定某个特定物体的猛击攻击将造成挥砍或穿刺伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "猛击",
+					"entries": [
+						"{@atk mw} 命中{@hit 6}，触及5尺，单一目标。{@h}12 ({@damage 2d10 + 2})钝击伤害。"
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"source": "PHB",
+			"name": "活化物体(中型)",
+			"ENG_name": "Animated Object (Medium)",
+			"page": 213,
+			"size": "M",
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 40,
+				"formula": "40d1"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"盲视 30 尺（超过半径范围则视作目盲）"
+			],
+			"passive": 6,
+			"trait": [
+				{
+					"name": "活化",
+					"entries": [
+						"若这个物体没有脚或其他可用来移动的构造，则它将改为具有30尺的飞行速度并且可以浮空。若这个物体被牢牢固定再某个表面或更大的物体上，例如一条被栓在墙上的锁链，则它的移动速度为0尺。",
+						"当这个活化物体的生命值归零，它将回复它原本的物体型态，且剩余的伤害将被带到它原本的型态。",
+						"根据物体的型态，DM可能会裁定某个特定物体的猛击攻击将造成挥砍或穿刺伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "猛击",
+					"entries": [
+						"{@atk mw} 命中{@hit 5}，触及5尺，单一目标。{@h}7 ({@damage 2d6 + 1})钝击伤害。"
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"source": "PHB",
+			"name": "活化物体(小型)",
+			"ENG_name": "Animated Object (Small)",
+			"page": 213,
+			"size": "S",
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 25,
+				"formula": "25d1"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"盲视 30 尺（超过半径范围则视作目盲）"
+			],
+			"passive": 6,
+			"trait": [
+				{
+					"name": "活化",
+					"entries": [
+						"若这个物体没有脚或其他可用来移动的构造，则它将改为具有30尺的飞行速度并且可以浮空。若这个物体被牢牢固定再某个表面或更大的物体上，例如一条被栓在墙上的锁链，则它的移动速度为0尺。",
+						"当这个活化物体的生命值归零，它将回复它原本的物体型态，且剩余的伤害将被带到它原本的型态。",
+						"根据物体的型态，DM可能会裁定某个特定物体的猛击攻击将造成挥砍或穿刺伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "猛击",
+					"entries": [
+						"{@atk mw} 命中{@hit 6}，触及5尺，单一目标。{@h}6 ({@damage 1d8 + 2})钝击伤害。"
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"source": "PHB",
+			"name": "活化物体(微型)",
+			"ENG_name": "Animated Object (Tiny)",
+			"page": 213,
+			"size": "T",
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"average": 20,
+				"formula": "20d1"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 4,
+			"dex": 18,
+			"con": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"盲视 30 尺（超过半径范围则视作目盲）"
+			],
+			"passive": 6,
+			"trait": [
+				{
+					"name": "活化",
+					"entries": [
+						"若这个物体没有脚或其他可用来移动的构造，则它将改为具有30尺的飞行速度并且可以浮空。若这个物体被牢牢固定再某个表面或更大的物体上，例如一条被栓在墙上的锁链，则它的移动速度为0尺。",
+						"当这个活化物体的生命值归零，它将回复它原本的物体型态，且剩余的伤害将被带到它原本的型态。",
+						"根据物体的型态，DM可能会裁定某个特定物体的猛击攻击将造成挥砍或穿刺伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "猛击",
+					"entries": [
+						"{@atk mw} 命中{@hit 8}，触及5尺，单一目标。{@h}6 ({@damage 1d4 + 4})钝击伤害。"
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			]
+		}
+	]
+}

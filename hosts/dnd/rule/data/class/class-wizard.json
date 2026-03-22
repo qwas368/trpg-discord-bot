@@ -1,0 +1,4815 @@
+{
+	"class": [
+		{
+			"name": "法师",
+			"ENG_name": "Wizard",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"hd": {
+				"number": 1,
+				"faces": 6
+			},
+			"proficiency": [
+				"int",
+				"wis"
+			],
+			"spellcastingAbility": "int",
+			"casterProgression": "full",
+			"preparedSpells": "<$level$> + <$int_mod$>",
+			"cantripProgression": [
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			],
+			"spellsKnownProgressionFixed": [
+				6,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"spellsKnownProgressionFixedAllowLowerLevel": true,
+			"startingProficiencies": {
+				"weapons": [
+					"{@item dagger|phb|匕首}",
+					"{@item dart|phb|飞镖}",
+					"{@item sling|phb|投石索}",
+					"{@item quarterstaff|phb|长棍}",
+					"{@item light crossbow|phb|轻弩}"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"history",
+								"insight",
+								"investigation",
+								"medicine",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a)一把{@item 长棍|phb} 或 (b)一把{@item 匕首|phb}",
+					"(a)一个{@item 材料包|phb} 或 (b)一个{@item 奥术法器|phb}",
+					"(a)一套{@item 学者套装|phb} 或 (b)一套{@item 探索者套装|phb}",
+					"一本{@item 法术书|phb}"
+				],
+				"goldAlternative": "{@dice 4d4×10|4d4 × 10|起始金钱}",
+				"defaultData": [
+					{
+						"a": [
+							"quarterstaff|phb"
+						],
+						"b": [
+							"dagger|phb"
+						]
+					},
+					{
+						"a": [
+							"component pouch|phb"
+						],
+						"b": [
+							"arcane focus|phb"
+						]
+					},
+					{
+						"a": [
+							"scholar's pack|phb"
+						],
+						"b": [
+							"explorer's pack|phb"
+						]
+					},
+					{
+						"_": [
+							"spellbook|phb"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"int": 13
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter 已知戏法|spells|level=0|class=Wizard}"
+					],
+					"rows": [
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						]
+					]
+				},
+				{
+					"title": "法术位/每环",
+					"colLabels": [
+						"{@filter 1环|spells|level=1|class=Wizard}",
+						"{@filter 2环|spells|level=2|class=Wizard}",
+						"{@filter 3环|spells|level=3|class=Wizard}",
+						"{@filter 4环|spells|level=4|class=Wizard}",
+						"{@filter 5环|spells|level=5|class=Wizard}",
+						"{@filter 6环|spells|level=6|class=Wizard}",
+						"{@filter 7环|spells|level=7|class=Wizard}",
+						"{@filter 8环|spells|level=8|class=Wizard}",
+						"{@filter 9环|spells|level=9|class=Wizard}"
+					],
+					"rows": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							2,
+							1,
+							1
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"奥术恢复|Wizard||1",
+				"施法|Wizard||1",
+				"Cantrip Versatility|Wizard||1|UAClassFeatureVariants",
+				{
+					"classFeature": "奥法学派|Wizard||2",
+					"gainSubclassFeature": true
+				},
+				"戏法公式|Wizard||3|TCE",
+				"属性值提升|Wizard||4",
+				"Proficiency Versatility|Wizard||4|UAClassFeatureVariants",
+				{
+					"classFeature": "奥法学派能力|Wizard||6",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|Wizard||8",
+				"Proficiency Versatility|Wizard||8|UAClassFeatureVariants",
+				{
+					"classFeature": "奥法学派能力|Wizard||10",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|Wizard||12",
+				"Proficiency Versatility|Wizard||12|UAClassFeatureVariants",
+				{
+					"classFeature": "奥法学派能力|Wizard||14",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|Wizard||16",
+				"Proficiency Versatility|Wizard||16|UAClassFeatureVariants",
+				"法术精通|Wizard||18",
+				"属性值提升|Wizard||19",
+				"Proficiency Versatility|Wizard||19|UAClassFeatureVariants",
+				"招牌法术|Wizard||20"
+			],
+			"subclassTitle": "Arcane Tradition",
+			"subclasses": [
+				{
+					"name": "防护学派",
+					"ENG_name": "School of Abjuration",
+					"shortName": "防护",
+					"ENG_shortName": "Abjuration",
+					"source": "PHB",
+					"page": 115,
+					"subclassFeatures": [
+						"防护学派|Wizard||Abjuration||2",
+						"投射防护|Wizard||Abjuration||6",
+						"精通防护|Wizard||Abjuration||10",
+						"法术抗性|Wizard||Abjuration||14"
+					]
+				},
+				{
+					"name": "咒法学派",
+					"ENG_name": "School of Conjuration",
+					"shortName": "咒法",
+					"ENG_shortName": "Conjuration",
+					"source": "PHB",
+					"page": 116,
+					"subclassFeatures": [
+						"咒法学派|Wizard||Conjuration||2",
+						"移形换位|Wizard||Conjuration||6",
+						"咒法专注|Wizard||Conjuration||10",
+						"强韧召唤|Wizard||Conjuration||14"
+					]
+				},
+				{
+					"name": "预言学派",
+					"ENG_name": "School of Divination",
+					"shortName": "预言",
+					"ENG_shortName": "Divination",
+					"source": "PHB",
+					"page": 116,
+					"subclassFeatures": [
+						"预言学派|Wizard||Divination||2",
+						"预言专家|Wizard||Divination||6",
+						"天眼通|Wizard||Divination||10",
+						"高等预兆|Wizard||Divination||14"
+					]
+				},
+				{
+					"name": "惑控学派",
+					"ENG_name": "School of Enchantment",
+					"shortName": "惑控",
+					"ENG_shortName": "Enchantment",
+					"source": "PHB",
+					"page": 117,
+					"subclassFeatures": [
+						"惑控学派|Wizard||Enchantment||2",
+						"本能魅惑|Wizard||Enchantment||6",
+						"分散惑控|Wizard||Enchantment||10",
+						"改动记忆|Wizard||Enchantment||14"
+					]
+				},
+				{
+					"name": "塑能学派",
+					"ENG_name": "School of Evocation",
+					"shortName": "塑能",
+					"ENG_shortName": "Evocation",
+					"source": "PHB",
+					"page": 117,
+					"srd": true,
+					"subclassFeatures": [
+						"塑能学派|Wizard||Evocation||2",
+						"强力戏法|Wizard||Evocation||6",
+						"强效塑能|Wizard||Evocation||10",
+						"重载导魔|Wizard||Evocation||14"
+					]
+				},
+				{
+					"name": "幻术学派",
+					"ENG_name": "School of Illusion",
+					"shortName": "幻术",
+					"ENG_shortName": "Illusion",
+					"source": "PHB",
+					"page": 118,
+					"additionalSpells": [
+						{
+							"prepared": {
+								"1": [
+									"minor illusion"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						"幻术学派|Wizard||Illusion||2",
+						"可塑幻象|Wizard||Illusion||6",
+						"幻象步|Wizard||Illusion||10",
+						"亦真亦幻|Wizard||Illusion||14"
+					]
+				},
+				{
+					"name": "死灵学派",
+					"ENG_name": "School of Necromancy",
+					"shortName": "死灵",
+					"ENG_shortName": "Necromancy",
+					"source": "PHB",
+					"page": 118,
+					"subclassFeatures": [
+						"死灵学派|Wizard||Necromancy||2",
+						"不死奴仆|Wizard||Necromancy||6",
+						"不死适应|Wizard||Necromancy||10",
+						"命令不死生物|Wizard||Necromancy||14"
+					]
+				},
+				{
+					"name": "变化学派",
+					"ENG_name": "School of Transmutation",
+					"shortName": "变化",
+					"ENG_shortName": "Transmutation",
+					"source": "PHB",
+					"page": 119,
+					"subclassFeatures": [
+						"变化学派|Wizard||Transmutation||2",
+						"变化师之石|Wizard||Transmutation||6",
+						"变形者|Wizard||Transmutation||10",
+						"变化宗师|Wizard||Transmutation||14"
+					]
+				},
+				{
+					"name": "Artificer (UA)",
+					"shortName": "Artificer (UA)",
+					"source": "UAEberron",
+					"page": 3,
+					"subclassFeatures": [
+						"Artificer|Wizard||Artificer (UA)|UAEberron|2",
+						"Infuse Weapons and Armor|Wizard||Artificer (UA)|UAEberron|6",
+						"Superior Artificer|Wizard||Artificer (UA)|UAEberron|10",
+						"Master Artificer|Wizard||Artificer (UA)|UAEberron|14"
+					]
+				},
+				{
+					"name": "Technomancy (UA)",
+					"shortName": "Technomancy (UA)",
+					"source": "UAModernMagic",
+					"page": 3,
+					"subclassFeatures": [
+						"Technomancy|Wizard||Technomancy (UA)|UAModernMagic|2",
+						"Program Spell|Wizard||Technomancy (UA)|UAModernMagic|6",
+						"Online Casting|Wizard||Technomancy (UA)|UAModernMagic|10",
+						"Chained Device|Wizard||Technomancy (UA)|UAModernMagic|14"
+					]
+				},
+				{
+					"name": "Lore Mastery (UA)",
+					"shortName": "Lore Mastery (UA)",
+					"source": "UAWarlockAndWizard",
+					"page": 5,
+					"subclassFeatures": [
+						"Lore Mastery|Wizard||Lore Mastery (UA)|UAWarlockAndWizard|2",
+						"Alchemical Casting|Wizard||Lore Mastery (UA)|UAWarlockAndWizard|6",
+						"Prodigious Memory|Wizard||Lore Mastery (UA)|UAWarlockAndWizard|10",
+						"Master of Magic|Wizard||Lore Mastery (UA)|UAWarlockAndWizard|14"
+					]
+				},
+				{
+					"name": "Theurgy (UA)",
+					"shortName": "Theurgy (UA)",
+					"source": "UAWizardRevisited",
+					"page": 1,
+					"subclassFeatures": [
+						"Theurgy|Wizard||Theurgy (UA)|UAWizardRevisited|2",
+						"Arcane Acolyte|Wizard||Theurgy (UA)|UAWizardRevisited|6",
+						"Arcane Priest|Wizard||Theurgy (UA)|UAWizardRevisited|10",
+						"Arcane High Priest|Wizard||Theurgy (UA)|UAWizardRevisited|14"
+					]
+				},
+				{
+					"name": "War Magic (UA)",
+					"shortName": "War (UA)",
+					"source": "UAWizardRevisited",
+					"page": 2,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"War Magic|Wizard||War (UA)|UAWizardRevisited|2",
+						"Power Surge|Wizard||War (UA)|UAWizardRevisited|6",
+						"Durable Magic|Wizard||War (UA)|UAWizardRevisited|10",
+						"Durable Magic|Wizard||War (UA)|UAWizardRevisited|14"
+					]
+				},
+				{
+					"name": "战争魔法",
+					"ENG_name": "War Magic",
+					"shortName": "战争",
+					"ENG_shortName": "War",
+					"source": "XGE",
+					"page": 59,
+					"subclassFeatures": [
+						"战争魔法|Wizard||War|XGE|2",
+						"力量涌动|Wizard||War|XGE|6",
+						"耐久魔法|Wizard||War|XGE|10",
+						"偏斜罩幕|Wizard||War|XGE|14"
+					]
+				},
+				{
+					"name": "School of Invention (UA)",
+					"shortName": "Invention (UA)",
+					"source": "UAThreeSubclasses",
+					"page": 2,
+					"subclassFeatures": [
+						"School of Invention|Wizard||Invention (UA)|UAThreeSubclasses|2",
+						"Alchemical Casting|Wizard||Invention (UA)|UAThreeSubclasses|6",
+						"Prodigious Inspiration|Wizard||Invention (UA)|UAThreeSubclasses|10",
+						"Controlled Chaos|Wizard||Invention (UA)|UAThreeSubclasses|14"
+					]
+				},
+				{
+					"name": "Onomancy (UA)",
+					"shortName": "Onomancy (UA)",
+					"source": "UAClericDruidWizard",
+					"page": 4,
+					"subclassFeatures": [
+						"Onomancy|Wizard||Onomancy (UA)|UAClericDruidWizard|2",
+						"Resonant Utterance|Wizard||Onomancy (UA)|UAClericDruidWizard|6",
+						"Inexorable Pronouncement|Wizard||Onomancy (UA)|UAClericDruidWizard|10",
+						"Relentless Naming|Wizard||Onomancy (UA)|UAClericDruidWizard|14"
+					]
+				},
+				{
+					"name": "Psionics (UA)",
+					"shortName": "Psionics (UA)",
+					"source": "UAFighterRogueWizard",
+					"page": 3,
+					"subclassFeatures": [
+						"Psionics|Wizard||Psionics (UA)|UAFighterRogueWizard|2",
+						"Thought Form|Wizard||Psionics (UA)|UAFighterRogueWizard|6",
+						"Mental Discipline|Wizard||Psionics (UA)|UAFighterRogueWizard|10",
+						"Empowered Psionics|Wizard||Psionics (UA)|UAFighterRogueWizard|10",
+						"Thought Travel|Wizard||Psionics (UA)|UAFighterRogueWizard|14"
+					]
+				},
+				{
+					"name": "时间魔法",
+					"ENG_name": "Chronurgy Magic",
+					"shortName": "时间",
+					"ENG_shortName": "Chronurgy",
+					"source": "EGW",
+					"page": 184,
+					"subclassFeatures": [
+						"时间魔法|Wizard||Chronurgy|EGW|2",
+						"瞬时静止|Wizard||Chronurgy|EGW|6",
+						"奥法暂滞|Wizard||Chronurgy|EGW|10",
+						"收束未来|Wizard||Chronurgy|EGW|14"
+					]
+				},
+				{
+					"name": "重力魔法",
+					"ENG_name": "Graviturgy Magic",
+					"shortName": "重力",
+					"ENG_shortName": "Graviturgy",
+					"source": "EGW",
+					"page": 185,
+					"subclassFeatures": [
+						"重力魔法|Wizard||Graviturgy|EGW|2",
+						"重力井|Wizard||Graviturgy|EGW|6",
+						"狂暴牵引|Wizard||Graviturgy|EGW|10",
+						"事件视界|Wizard||Graviturgy|EGW|14"
+					]
+				},
+				{
+					"name": "Order of Scribes (UA)",
+					"shortName": "Scribes (UA)",
+					"source": "UA2020SubclassesRevisited",
+					"page": 4,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"Order of Scribes|Wizard||Scribes (UA)|UA2020SubclassesRevisited|2",
+						"Master Scrivener|Wizard||Scribes (UA)|UA2020SubclassesRevisited|6",
+						"Manifest Mind|Wizard||Scribes (UA)|UA2020SubclassesRevisited|10",
+						"One with the Word|Wizard||Scribes (UA)|UA2020SubclassesRevisited|14"
+					]
+				},
+				{
+					"name": "剑咏传承",
+					"ENG_name": "Bladesinging",
+					"shortName": "剑咏",
+					"ENG_shortName": "Bladesinging",
+					"source": "TCE",
+					"page": 76,
+					"otherSources": [
+						{
+							"source": "SCAG",
+							"page": 141
+						}
+					],
+					"subclassFeatures": [
+						"剑咏传承|Wizard||Bladesinging|TCE|2",
+						"额外攻击|Wizard||Bladesinging|TCE|6",
+						"守御之歌|Wizard||Bladesinging|TCE|10",
+						"胜利之歌|Wizard||Bladesinging|TCE|14"
+					]
+				},
+				{
+					"name": "书士会",
+					"ENG_name": "Order of Scribes",
+					"shortName": "书士",
+					"ENG_shortName": "Scribes",
+					"source": "TCE",
+					"page": 77,
+					"subclassFeatures": [
+						"书士会|Wizard||Scribes|TCE|2",
+						"神识显现|Wizard||Scribes|TCE|6",
+						"书士宗师|Wizard||Scribes|TCE|10",
+						"书人合一 |Wizard||Scribes|TCE|14"
+					]
+				}
+			],
+			"fluff": [
+				{
+					"name": "Wizard",
+					"type": "section",
+					"entries": [
+						"Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of fire toward the enemy ranks, where it erupts into a conflagration that engulfs the soldiers.",
+						"Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond.",
+						"Crouching on the floor in a dungeon intersection, a gnome tosses a handful of small bones inscribed with mystic symbols, muttering a few words of power over them. Closing his eyes to see the visions more clearly, he nods slowly, then opens his eyes and points down the passage to his left.",
+						"Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, and brute-force mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals to other worlds.",
+						{
+							"type": "entries",
+							"name": "Scholars of the Arcane",
+							"entries": [
+								"Wild and enigmatic, varied in form and function, the power of magic draws students who seek to master its mysteries. Some aspire to become like the gods, shaping reality itself. Though the casting of a typical spell requires merely the utterance of a few strange words, fleeting gestures, and sometimes a pinch or clump of exotic materials, these surface components barely hint at the expertise attained after years of apprenticeship and countless hours of study.",
+								"Wizards live and die by their spells. Everything else is secondary. They learn new spells as they experiment and grow in experience. They can also learn them from other wizards, from ancient tomes or inscriptions, and from ancient creatures (such as the fey) that are steeped in magic."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "The Lure of Knowledge",
+							"entries": [
+								"Wizards' lives are seldom mundane. The closest a wizard is likely to come to an ordinary life is working as a sage or lecturer in a library or university, teaching others the secrets of the multiverse. Other wizards sell their services as diviners, serve in military forces, or pursue lives of crime or domination.",
+								"But the lure of knowledge and power calls even the most unadventurous wizards out of the safety of their libraries and laboratories and into crumbling ruins and lost cities. Most wizards believe that their counterparts in ancient civilizations knew secrets of magic that have been lost to the ages, and discovering those secrets could unlock the path to a power greater than any magic available in the present age."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Creating a Wizard",
+							"entries": [
+								"Creating a wizard character demands a backstory dominated by at least one extraordinary event. How did your character first come into contact with magic? How did you discover you had an aptitude for it? Do you have a natural talent, or did you simply study hard and practice incessantly? Did you encounter a magical creature or an ancient tome that taught you the basics of magic?",
+								"What drew you forth from your life of study? Did your first taste of magical knowledge leave you hungry for more? Have you received word of a secret repository of knowledge not yet plundered by any other wizard? Perhaps you're simply eager to put your newfound magical skills to the test in the face of danger.",
+								{
+									"type": "entries",
+									"name": "Quick Build",
+									"entries": [
+										"You can make a wizard quickly by following these suggestions. First, Intelligence should be your highest ability score, followed by Constitution or Dexterity. If you plan to join the School of Enchantment, make Charisma your next-best score. Second, choose the {@background sage} background. Third, choose the {@spell 法师之手}, {@spell 光亮术}, and {@spell 冷冻射线} cantrips, along with the following 1st-level spells for your spellbook: {@spell 燃烧之手}, {@spell 魅惑人类}, {@spell 羽落术}, {@spell 法师护甲}, {@spell 魔法飞弹}, and {@spell 睡眠术}."
+									]
+								}
+							]
+						}
+					],
+					"page": 112,
+					"source": "PHB"
+				},
+				{
+					"type": "section",
+					"entries": [
+						{
+							"type": "quote",
+							"entries": [
+								"Wizardry requires understanding. The knowledge of how and why magic works, and our efforts to broaden that understanding, have brought about the key advances in civilization over the centuries."
+							],
+							"by": "Gimble the illusionist"
+						},
+						"Only a select few people in the world are wielders of magic. Of all those, wizards stand at the pinnacle of the craft. Even the least of them can manipulate forces that flout the laws of nature, and the most accomplished among them can cast spells with world-shaking effects.",
+						"The price that wizards pay for their mastery is that most valuable of commodities: time. It takes years of study, instruction, and experimentation to learn how to harness magical energy and carry spells around in one's own mind. For adventuring wizards and other spellcasters who aspire to the highest echelons of the profession, the studying never ends, nor does the quest for knowledge and power.",
+						"If you're playing a wizard, take advantage of the opportunity to make your character more than just a stereotypical spell-slinger. Use the advice that follows to add some intriguing details to how your wizard interacts with the world.",
+						{
+							"type": "entries",
+							"name": "Spellbook",
+							"entries": [
+								"Your wizard character's most prized possession\u2014your spellbook\u2014might be an innocuous-looking volume whose covers show no hint of what's inside. Or you might display some flair, as many wizards do, by carrying a spellbook of an unusual sort. If you don't own such an item already, one of your goals might be to find a spellbook that sets you apart by its appearance or its means of manufacture.",
+								{
+									"type": "table",
+									"caption": "Spellbooks",
+									"colLabels": [
+										"{@dice d6}",
+										"Spellbook"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 1
+												}
+											},
+											"A tome with pages that are thin sheets of metal, spells etched into them with acid"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 2
+												}
+											},
+											"Long straps of leather on which spells are written, wrapped around a staff for ease of transport"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 3
+												}
+											},
+											"A battered tome filled with pictographs that only you can understand"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 4
+												}
+											},
+											"Small stones inscribed with spells and kept in a cloth bag"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 5
+												}
+											},
+											"A scorched book, ravaged by dragon fire, with the script of your spells barely visible on its pages"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 6
+												}
+											},
+											"A tome full of black pages whose writing is visible only in dim light or darkness"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Ambition",
+							"entries": [
+								"Few aspiring wizards undertake the study of magic without some personal goal in mind. Many wizards use their spells as a tool to produce a tangible benefit, in material goods or in status, for themselves or their companions. For others, the theoretical aspect of magic might have a strong appeal, pushing those wizards to seek out knowledge that supports new theories of the arcane or confirms old ones.",
+								"Beyond the obvious, why does your wizard character study magic, and what do you want to achieve? If you haven't given these questions much thought, you can do so now, and the answers you come up with will likely affect how your future unfolds.",
+								{
+									"type": "table",
+									"caption": "Ambitions",
+									"colLabels": [
+										"{@dice d6}",
+										"Ambition"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 1
+												}
+											},
+											"You will prove that the gods aren't as powerful as folk believe."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 2
+												}
+											},
+											"Immortality is the end goal of your studies."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 3
+												}
+											},
+											"If you can fully understand magic, you can unlock its use for all and usher in an era of equality."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 4
+												}
+											},
+											"Magic is a dangerous tool. You use it to protect what you treasure."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 5
+												}
+											},
+											"Arcane power must be taken away from those who would abuse it."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 6
+												}
+											},
+											"You will become the greatest wizard the world has seen in generations."
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Eccentricity",
+							"entries": [
+								"Endless hours of solitary study and research can have a negative effect on anyone's social skills. Wizards, who are a breed apart to begin with, are no exception. An odd mannerism or two is not necessarily a drawback, though; an eccentricity of this sort is usually harmless and could provide a source of amusement or serve as a calling card of sorts.",
+								"If your character has an eccentricity, is it a physical tic or a mental one? Are you well known in some circles because of it? Do you fight to overcome it, or do you embrace this minor claim to fame of yours?",
+								{
+									"type": "table",
+									"caption": "Eccentricities",
+									"colLabels": [
+										"{@dice d6}",
+										"Eccentricity"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 1
+												}
+											},
+											"You have the habit of tapping your foot incessantly, which often annoys those around you."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 2
+												}
+											},
+											"Your memory is quite good, but you have no trouble pretending to be absentminded when it suits your purposes."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 3
+												}
+											},
+											"You never enter a room without looking to see what's hanging from the ceiling."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 4
+												}
+											},
+											"Your most prized possession is a dead worm that you keep inside a potion vial."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 5
+												}
+											},
+											"When you want people to leave you alone, you start talking to yourself. That usually does the trick."
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 6
+												}
+											},
+											"Your fashion sense and grooming, or more accurately lack thereof, sometimes cause others to assume you are a beggar."
+										]
+									]
+								}
+							]
+						}
+					],
+					"page": 58,
+					"source": "XGE"
+				}
+			]
+		}
+	],
+	"classFeature": [
+		{
+			"name": "奥术恢复",
+			"ENG_name": "Arcane Recovery",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你学会了通过研读法术书来恢复失去魔法能量的方法。每天一次，当你完成一次短休时，你可以选择已消耗的法术位来恢复。这些法术位的环阶总和必须小于或等于你法师等级的一半（小数点进位），且每个法术位都不能为6环或更高。",
+				"举例来说，若你是个4级法师，你可以恢复最多共计2个环阶的法术位。",
+				"你可以恢复一个2环法术位，或选择恢复二个1环法术位。"
+			]
+		},
+		{
+			"name": "Cantrip Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 12,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 1,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 1st-level wizard feature (enhances Spellcasting)}",
+				"Whenever you gain a level in this class, you can replace one cantrip you learned from this Spellcasting feature with another cantrip from the wizard spell list."
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"作为一介奥术魔法的学生，你拥有一本记载着法术的法术书，展示着你的真正力量的闪耀先兆。请参阅{@book 第十章|PHB|10}以了解关于施法的规则，以及第十一章以查阅{@filter 法师法术列表|spells|class=wizard}。",
+				{
+					"type": "entries",
+					"name": "戏法",
+					"entries": [
+						"在1级时，你知晓三个从{@filter 法师法术列表|spells|class=wizard}自选的戏法。你将在升至更高的法师等级时学会额外的法师戏法，见法师表格中的已知戏法字段。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "法术书",
+					"entries": [
+						"在1级时，你拥有一本载有六个自选的1环{@filter 法师法术|spells|class=wizard}的法术书。你的法术书是保存着你已知法师法术的容器；除了你的戏法之外，戏法则直接被记忆在你的心中。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "准备及施放法术",
+					"entries": [
+						"法师表中显示了你有多少个法术位可以用来施放你一环或更高环的法师法术。要施放其中一个这些法术，你必须消耗一个与该法术环阶相同或更高的法术位。你在完成一次长休后恢复所有你花费掉的法术位。",
+						"你准备一份你所能施放法师法术的列表。当你这么做时，从你的法术书中选择数量等同于你智力调整值 + 你法师等级的法师法术（最少一个法术）。这些法术的环阶都必须符合你所拥有法术位的环阶。",
+						"举例来说，如果你是一个3级的法师，你拥有四个1环和二个2环的法术位。你的智力为16，则你已准备法术的列表中可以包含总共六个1环或2环的法术。若你准备了1环法术{@spell 魔法飞弹}，你可以使用1环和2环的法术位来施放它。施放法术并不会将它从你的准备法术列表中移除。",
+						"你可以在你完成一次长休时改变你的准备法术列表。准备一份新的法师法术列表需要花费时间于研读你的法术书并记忆你施放该法术所必须的咒语和姿势：你需要为你列表上每个法术的每个环阶都花费至少1分钟的时间。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法属性",
+					"entries": [
+						"因为你是通过致力研读与记忆习得你的法师法术，智力是你施展法师法术的施法属性。每当法术提及你的施法属性时，你将使用你的智力。此外，当决定你法师法术的豁免DC、以及使用法师法术进行攻击检定时，你使用你的智力调整值。",
+						{
+							"type": "abilityDc",
+							"name": "法术",
+							"attributes": [
+								"int"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "法术",
+							"attributes": [
+								"int"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "仪式施法",
+					"entries": [
+						"若一个法师法术具有仪式标签且你的法术书中有记载该法术，则你可以将它作为仪式法术施放。你并不需要准备该法术。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法法器",
+					"entries": [
+						"你可以使用一个{@item 奥术法器|phb}（第五章），来作为你施放法师法术的法器。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "习得一环或更高环的法术",
+					"entries": [
+						"每当你提升法师等级时，你可以将二个自选的法师法术加入你的法术书。每个这些法术的环阶都必须符合你所拥有法术位的环阶，如法师表所示。举例来说，当你在此职业升至3级时，你可以学习一个新的1环或2环法术。在你的冒险中，你可能会找到其他可以被加入你法术书的法术（参见「你的法术书」条目）。"
+					]
+				},
+				{
+					"type": "inset",
+					"name": "你的法术书",
+					"entries": [
+						"你在升级时加入法术书中的法术反映着你的自发研究、以及你在理解宇宙奥秘上的突破。你可能会在冒险过程中找到其他法术。举例来说，你可能会发掘一个法术被抄写在一个邪恶法师宝箱中的卷轴，或被记载于远古书库中满布灰尘的典籍。",
+						"法术书中并不包含戏法。",
+						{
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"name": "抄写法术至法术书",
+									"entries": [
+										"当你发现一个1环或更高环的法师法术，若该法术的环阶是你可以准备，且你有时间可以破译并抄写它，则你将可以把它加入你的法术书中。",
+										"将一个法术抄写到你法术书的过程包括了重构法术的基础形式，并破译撰写该法术的法师所使用的独特符号系统。你必须不断练习该法术直到你理解施展它所需的声音或姿势，最后才能使用你自己的符号系统将它抄写到你的法术书中。",
+										"这个过程会需要花费该法术每环阶2个小时的时间和每环阶50金币的开销。这个开销代表着你在实验于掌控该法术时所消耗的材料构才、以及你纪录它时所需要的上好墨水。一旦你消耗了这些时间和金钱，你就可以如同你准备其它法术一样准备该法术。",
+										{
+											"type": "entries",
+											"name": "从法术卷轴中抄写",
+											"ENG_name": "Copying from a Spell Scroll",
+											"source": "DMG",
+											"page": 139,
+											"entries": [
+												"一个记载于法术卷轴中的法师法术可以被如同法术书中的法术一样被抄写。当你从法术卷轴中抄写法术时，你必须成功通过一次智力（{@skill 奥秘}）检定，DC等同于10 + 该法术的环阶。若检定成功，该法术将被成功抄写。无论检定成功或失败，该法术卷轴都将被摧毁。"
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"name": "替换法术书",
+									"entries": [
+										"你可以将法术从你自己的法术书抄录到另一本书中\u2014举例来说，你可能会想要制作一本你的法术书备份。这就如同将新法术抄写到你的法术书中，但因为你理解自己所用的符号系统，且已经知晓如何施放该法术，因此这个过程会更快，也更简单。你需要为抄写法术的每个环阶花费1个小时的时间和10金币的开销。",
+										"若你遗失你的法术书，你可以使用相同的流程以将你已准备的法术抄写到一本新的法术书中。你必须如常找到新的法术才能够填补你法术书剩余的部分。因为这个原因，许多法师会将法术书备份藏在安全的地方。"
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"name": "法术书的外观",
+									"entries": [
+										"你的法术书是一本独一无二的法术总集，有着属于它自己的装饰纹路和边注。它可能会是一本导师赠送给你，简朴实用的皮册、可能会是一本从远古书库中发现的精致金边典籍，甚至可能是你在一次事故中遗失你上一本法术书后匆匆凑起的一叠笔记。"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "奥法学派",
+			"ENG_name": "Arcane Tradition",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"当你升至2级时，你从可选的学派列表中选择一个奥法学派，发展你的魔法实践。你的选择会在2级、6级、10级、和14级的时候赋予你新的能力。"
+			]
+		},
+		{
+			"name": "戏法公式",
+			"ENG_name": "Cantrip Formulas",
+			"source": "TCE",
+			"page": 75,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 3级法师{@variantrule 可选职业特性|tce|可选特性}}",
+				"你在法术书中写下了一套奥法公式，并能借此在心中推演出一个戏法。每当你完成一次长休，你可以查阅法术书中所记的公式，以将你的一个已知法师戏法替换为另一个来自法师法术列表的戏法。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"当你在此职业升至4级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "奥法学派能力",
+			"ENG_name": "Arcane Tradition feature",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"在6级时，你获得一个由你奥法学派所赋予的能力。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"当你在此职业升至8级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 8,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 8th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "奥法学派能力",
+			"ENG_name": "Arcane Tradition feature",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"在10级时，你获得一个由你奥法学派所赋予的能力。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"当你在此职业升至12级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 12,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 12th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "奥法学派能力",
+			"ENG_name": "Arcane Tradition feature",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"在14级时，你获得一个由你奥法学派所赋予的能力。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"当你在此职业升至16级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 16,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 16th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "法术精通",
+			"ENG_name": "Spell Mastery",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"在18级时，你对特定法术已经如此精通，以至于你可以随意施放它们。选择你法术书中的一个1环法术和一个2环法术。若你已经准备这些法术，则你能够以它们的最低环阶施放这些法术而无需消耗法术位。若你想要以更高环阶施放这些法术，则你必须如常消耗法术位。",
+				"借由花费8小时的研读，你可以改变其中一个或这两个所选法术为其他相同环阶的不同法术。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"当你在此职业升至19级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 19,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 19th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "招牌法术",
+			"ENG_name": "Signature Spells",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"当你升至20级时，你精通于二个强力法术而可以不费吹灰之力施放它们。选择你法术书中的二个3环法术作为你的招牌法术。你永远视作已经准备了这些法术，它们不会计入你已准备的法术数量中，且你可以各自施放它们一次而无需消耗法术位。当你这么做后，你直到完成一次短休或长休之前都不能再使用此能力。",
+				"若你想要以更高环阶施放这些法术，则你必须如常消耗法术位。"
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "时间魔法",
+			"ENG_name": "Chronurgy Magic",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"entries": [
+				"追随时间使传承的法师们专注于操纵时间，他们学会了如何按照自己的想法来改写现实的流动。利用可预期的秘迹 dunamis 能量，这些法师可以像熟练的乐师演奏乐器那样扭曲时间的流动，在眨眼间赋予他们自己以及他们的盟友战斗优势。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "时间变幻|Wizard||Chronurgy|EGW|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "现世感知|Wizard||Chronurgy|EGW|2"
+				}
+			]
+		},
+		{
+			"name": "时间变幻",
+			"ENG_name": "Chronal Shift",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级时间魔法特性}",
+				"你可以魔法地获取对单一生物周围的时间流动的有限控制。在你或者30尺内你可以看见的一个生物进行一次攻击检定，属性检定或者豁免检定后，你可以以一个反应迫使该生物重投。你可以在得知该检定是否成功后做出这一反应。该生物必须使用第二次的结果。",
+				"你可以使用这一特性两次。你在完成一次长休后恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "现世感知",
+			"ENG_name": "Temporal Awareness",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级时间魔法特性}",
+				"你的先攻检定获得等同于你的智力调整值的加值。"
+			]
+		},
+		{
+			"name": "瞬时静止",
+			"ENG_name": "Momentary Stasis",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级时间魔法特性}",
+				"以一个动作，你可以魔法性地迫使60尺内你可以看见的一个大型或更小的生物进行一次对抗等于你法术豁免DC的体质豁免检定。若失败，该生物将被禁锢于一个魔法力场中，直至你的下回合结束或者该生物受到任何伤害。当以此法被禁锢时，该生物陷入{@condition 无力}，并且速度被降至0。",
+				"你可以使用这一特性等同于你智力调整值的次数（至少1次）。你在完成一次长休后恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "奥法暂滞",
+			"ENG_name": "Arcane Abeyance",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级时间魔法特性}",
+				"当你消耗一个四环或更低的法术位来施展法术时，你可以将该法术的法力浓缩至一抹微尘中。该法术将冻结在施展的那一刻，并被保存在一个灰色的小珠中，持续一小时。这个小珠是一个拥有15 AC和1点生命值的物件，并免疫毒素和心灵伤害。在持续时间结束或者珠子被摧毁时，它会在光芒一闪中消失，而法术将会失去。",
+				"持握着小珠的生物可以使用他的动作来释放其内的法术，随后小珠将会消失。该法术使用你的法术攻击加值和豁免DC，而在其他方面视为由释放它的生物施展。",
+				"在你以此特性创造一个小珠后，你在完成一次短休或长休前不能再次这样做。"
+			]
+		},
+		{
+			"name": "收束未来",
+			"ENG_name": "Convergent Future",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级时间魔法特性}",
+				"你可以透视可能的未来，并魔法地将其中一个未来引导至你周遭发生的事物上，以确保特定的结果发生。当你或60尺内一个你可以看见的生物进行一次攻击检定，属性检定或者豁免检定时，你可以以你的反应动作来无视掷骰，直接决定骰子结果将会是使检定成功的最低骰值，或者比该骰值低出一点（由你选择）。",
+				"当你使用该特性时，你获得一级{@condition 力竭}。你只能通过长休来移除以此法获取的力竭。"
+			]
+		},
+		{
+			"name": "重力魔法",
+			"ENG_name": "Graviturgy Magic",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"entries": [
+				"理解并掌控着将物体的物质聚合或分离的力量，重力奥术传承的学生们通过学习来更进一步掌控扭曲并操纵重力的狂暴能量来增益自己，或是为他们的敌人带来恐怖的伤害。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "调节密度|Wizard||Graviturgy|EGW|2"
+				}
+			]
+		},
+		{
+			"name": "调节密度",
+			"ENG_name": "Adjust Density",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级重力魔法特性}",
+				"以一个动作，你能魔法性地改一个你可见的位于你30尺内的物件或生物的重量。物件和生物的体型不得大于大型。目标的重量减半或者翻倍，持续至多一分钟，或在你的专注终止（如同你专注法术一样）时提前结束。",
+				"当一个生物的重量通过该效果减半时，该生物的移动速度增加10尺，跳跃距离变为正常的两倍，并且在进行力量检定或者力量豁免时具有劣势。当一个生物的重量通过该效果翻倍时，该生物的移动速度减少10尺，并且在进行力量检定或者力量豁免时具有优势。",
+				"当在该职业升至10级时，你能对一个巨型或更小的物件或生物使用本特性。"
+			]
+		},
+		{
+			"name": "重力井",
+			"ENG_name": "Gravity Well",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级重力魔法特性}",
+				"你学会了如何在一个活体上操纵重力：无论何时你对一个生物施展法术，只要该目标自愿被移动，或是法术攻击命中了该目标，亦或是该目标在对抗这道法术的豁免时失败，你就能让该目标朝着一个由你选择且未被占据的空间移动5尺。"
+			]
+		},
+		{
+			"name": "狂暴牵引",
+			"ENG_name": "Violent Attraction",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级重力魔法特性}",
+				"当一个除你以外，位于你60尺内且你可见的生物被武器攻击命中时，你能用你的反应加快这次攻击的速度，使得被攻击的目标额外受到{@damage 1d10}的该武器类型所造成的伤害。",
+				"此外，如果一个位于你60尺内的生物遭受了坠落伤害，你能用你的反应动作来增加这次坠落所造成的伤害，增加值为{@dice 2d10}。",
+				"你能使用本特性的次数等于你的智力调整值（最少1次）。当你完成一次长休后，你恢复所有已消耗的使用次数。"
+			]
+		},
+		{
+			"name": "事件视界",
+			"ENG_name": "Event Horizon",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级重力魔法特性}",
+				"以一个动作，你能魔法地发散出由重力能量引起的强大力场，力场能把其他生物拖拽至多1分钟，或在你的专注终止（如同你专注法术一样）时结束。在持续时间内，当一个位于你30尺内，且与你敌对的生物开始回合时，该生物必须进行一次力量豁免对抗你的法术DC。当豁免失败时，该生物受到{@damage 2d10}力场伤害，并且移动速度降低至0尺，减速持续直到该生物的下一个回合开始。当豁免成功时，该生物受到一半的伤害，并且每移动一尺就需要额外花费2尺的移动力。",
+				"一旦你使用了本特性，你不能再次使用，直到你完成了一次长休，或花费一个3环或更高的法术位来再次使用。"
+			]
+		},
+		{
+			"name": "防护学派",
+			"ENG_name": "School of Abjuration",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"防护学派强调着阻挡、驱逐、或守护的魔法。诋毁这个学派的人们宣称它的传统充满着否认和拒绝，而非肯定。然而，你明白终止有害效果、守护弱小、并驱逐邪恶的影响绝非虚无的哲学。这是一份值得骄傲且受人尊敬的使命。",
+				"这个学派的成员又被称作防护师，且当邪灵需要被祛除、当重要场所需要被杜绝魔法探测、以及当通向其他存在位面的传送门需要被关闭时，人们总会找上他们。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "防护学者|Wizard||Abjuration||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "奥法防护|Wizard||Abjuration||2"
+				}
+			]
+		},
+		{
+			"name": "防护学者",
+			"ENG_name": "Abjuration Savant",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​防护学派特性}",
+				"你在将防护系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "奥法防护",
+			"ENG_name": "Arcane Ward",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​防护学派特性}",
+				"你可以在你周遭编织魔法以守护自己。当你施放一个{@filter 1环或更高环的防护系法术|spells|school=A|level=!0}时，你可以同时利用该法术的一缕魔法在你身上创造出一道魔法防护结界，持续直到你完成一次长休。这道防护结界具有等同于你法师等级二倍 + 你的智力调整值的生命值。每当你受到伤害时，这道防护结界将代替你承受伤害。若该伤害将这道防护结界的生命值归零，则你将受到任何剩余的伤害。",
+				"当这道防护结界的生命值为0，它将不能再吸收伤害，但它的魔法仍然保留。每当你再施放一个{@filter 1环或更高环的防护系法术|spells|school=A|level=!0}，防护结界将会回复等同于该法术环阶二倍的生命值。",
+				"一旦你创造出防护结界，直到你完成一次长休之前你都不能再创造它。"
+			]
+		},
+		{
+			"name": "投射防护",
+			"ENG_name": "Projected Ward",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级​防护学派特性}",
+				"当一个距离你30尺内且你所能看见的生物受到伤害，你可以使用你的反应以让你的奥法防护吸收该伤害。若该伤害将防护结界的生命值归零，则被防护的生物将受到任何剩余的伤害。"
+			]
+		},
+		{
+			"name": "精通防护",
+			"ENG_name": "Improved Abjuration",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级​防护学派特性}",
+				"当你施放一个在施放过程中需要你进行属性检定的防护系法术时（例如{@spell 反制法术}和{@spell 解除魔法}），你可以将你的熟练加值加入该属性检定中。"
+			]
+		},
+		{
+			"name": "法术抗性",
+			"ENG_name": "Spell Resistance",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级​防护学派特性}",
+				"你在对抗法术的豁免检定中具有优势。",
+				"此外，你对法术伤害具有抗性。"
+			]
+		},
+		{
+			"name": "咒法学派",
+			"ENG_ame": "School of Conjuration",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"作为一名咒法师，你偏好于凭空产生出物体和生物的法术。你可以唤来翻腾的致死云雾、或召唤出来自别处的生物为你作战。随着你的技艺渐趋精熟，你将学会传送法术，并可以将你自己瞬间传送跨越极远的距离，甚至传送到另一个存在位面。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "咒法学者|Wizard||Conjuration||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "次级咒唤|Wizard||Conjuration||2"
+				}
+			]
+		},
+		{
+			"name": "咒法学者",
+			"ENG_name": "Conjuration Savant",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​咒法学派特性}",
+				"你在将咒法系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "次级咒唤",
+			"ENG_name": "Minor Conjuration",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​咒法学派特性}",
+				"你可以使用你的动作以唤出一个无生命物体，让其出现在你手上、或出现在距离你10尺内你所能看见的一处未被占据空间的地面上。这个物体的大小在各边不能超过3尺，重量不能超过10磅，且它的外形必须是一个你曾经见过的非魔法物体。这个物体可以明显被看出是带有魔法的，且它将散发出5尺的微光光照。",
+				"这个物体将在1小时之后，或当你再此使用此能力、它受到任何伤害、或它造成任何伤害时消失。"
+			]
+		},
+		{
+			"name": "移形换位",
+			"ENG_name": "Benign Transposition",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级​咒法学派特性}",
+				"你可以使用你的动作以传送最多30尺距离到一处你所能看见的未被占据空间。或者，你可以选择范围内一处被一个中型或小型生物给占据的空间。若该生物愿意，你们两个可以同时传送，交换位置。",
+				"一旦你使用此能力，则直到你完成一次长休或施放一个1环或更高环的咒法系法术之前，你都不能再使用此能力。"
+			]
+		},
+		{
+			"name": "咒法专注",
+			"ENG_name": "Focused Conjuration",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级​咒法学派特性}",
+				"当你专注于一个咒法系法术时，你的专注并不会因为受到伤害而被中断。"
+			]
+		},
+		{
+			"name": "强韧召唤",
+			"ENG_name": "Durable Summons",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级​咒法学派特性}",
+				"任何你以咒法系法术召唤或创造出的生物都将拥有30点临时生命值。"
+			]
+		},
+		{
+			"name": "预言学派",
+			"ENG_name": "School of Divination",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"不管是王室或平凡人家，大家都在寻求来自预言师的建议，因为所有人都冀望能对过去、现在、和未来有更加深入的理解。作为一名预言师，你致力于揭开时间、空间、和意识的神秘面纱以让你能看得更清楚。你努力掌握那些与识别、远视、超自然知识，和预知未来有关的法术。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "预言学者|Wizard||Divination||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "预兆|Wizard||Divination||2"
+				}
+			]
+		},
+		{
+			"name": "预言学者",
+			"ENG_name": "Divination Savant",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​预言学派特性}",
+				"你在将预言系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "预兆",
+			"ENG_name": "Portent",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​预言学派特性}",
+				"未来一瞬的景象开始出现在你的意识中。当你完成一次长休时，骰二颗{@dice d20}，并将它们骰出来的数字记录下来。你可以将你或一个你所能看见的生物所进行的任意攻击检定、豁免检定、或属性检定的结果替换成其中一颗这些预言骰的结果。你必须在掷骰前选择是否这么做，且你每回合只能用这个方式替换掷骰结果一次。",
+				"每个预言骰只能被使用一次。当你完成一次长休时，你失去所有尚未被使用的预言骰。"
+			]
+		},
+		{
+			"name": "预言专家",
+			"ENG_name": "Expert Divination",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级​预言学派特性}",
+				"施放预言系法术对你而言是那么容易，以至于你只需要花费你一部份的施法能力。当你使用法术位施放一个2环或更高环的预言系法术，你将恢复一个已消耗的法术位。你所恢复法术位的环阶必须低于你所施放的法术，且该法术位的环阶不能超过5环。"
+			]
+		},
+		{
+			"name": "天眼通",
+			"ENG_name": "The Third Eye",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10​级预言学派特性}",
+				"从10级开始，你可以使用你的动作以增强你感知周遭的能力。当你这么做时，从下列好处中选择一项，它将持续直到你陷入{@condition 无力}状态，或直到你进行一次短休或长休。直到你完成一次短休或长休之前你都不能再使用此能力。",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "黑暗视觉",
+							"entries": [
+								"你获得60尺距离的 {@sense 黑暗视觉}"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "乙太视界",
+							"entries": [
+								"你可以看穿距离你60尺内的乙太位面。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "高等理解能力",
+							"entries": [
+								"你可以阅读任何语言。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "识破隐形",
+							"entries": [
+								"你可以看见距离你10尺内且在视野内的{@condition 隐形}生物和物体。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "高等预兆",
+			"ENG_name": "Greater Portent",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级​预言学派特性}",
+				"你梦中的景象变得更加清晰，更精确地在你的意识中描绘出了将要发生的一切。你为你的预兆能力骰三颗骰，而非原本的二颗。"
+			]
+		},
+		{
+			"name": "惑控学派",
+			"ENG_name": "School of Enchantment",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"作为惑控学派的成员，你磨练你的能力于借由魔法迷惑并欺骗其他人和怪物。一部份的惑控师是和平主义者，致力于蛊惑暴力者使之放下武器，并魅惑残忍者使之展现慈悲。另一些惑控师则是暴君，利用魔法强迫不情愿的人们为他工作。而绝大多数的惑控师则介于两者之间。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "惑控学者|Wizard||Enchantment||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "催眠凝视|Wizard||Enchantment||2"
+				}
+			]
+		},
+		{
+			"name": "惑控学者",
+			"ENG_name": "Enchantment Savant",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​惑控学派特性}",
+				"你在将惑控系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "催眠凝视",
+			"ENG_name": "Hypnotic Gaze",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级​惑控学派特性}",
+				"你的柔和言语和魅惑凝视可以用魔法迷住另一个生物。以一个动作，选择一个距离你5尺内且你能看见的生物。若目标可以看见或听见你，则它必须成功通过一次对抗你法师法术豁免DC的感知豁免，否则被你{@condition 魅惑}直到你的下个回合结束。被{@condition 魅惑}生物的移动速度归零，该生物陷入{@condition 无力}状态，且明显茫然的样子。",
+				"在接下来的回合，你可以使用你的动作以维持这个效果，将它的持续时间延到你的下个回合结束。然而，若你移离该生物超过5尺距离、该生物无法看见或听见你、或该生物受到伤害时，则这个效果将会结束。",
+				"一旦这个效果结束，或若该生物成功通过它最初对抗这个效果的豁免检定，则直到你完成一次长休之前，你都无法再对该生物使用此能力。"
+			]
+		},
+		{
+			"name": "本能魅惑",
+			"ENG_name": "Instinctive Charm",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级​惑控学派特性}",
+				"当一个距离你30尺内且你所能看见的生物对你进行一次攻击检定，只要有另一个生物处于该攻击的射程内，你就可以使用你的反应以将该攻击转向。攻击者必须进行一次对抗你法师法术豁免DC的感知豁免。若豁免失败，则攻击者必须指定距离它最近的一个生物（不包括你和它自己）作为目标。若距离它最近的生物有复数个，则由攻击者选择要指定哪一个作为目标。若豁免成功，则直到你完成一次长休之前，你都无法再对该攻击者使用此能力。",
+				"你必须在知道该攻击命中与否之前选择是否使用这个能力。不会被{@condition 魅惑}的生物免疫于这个效果。"
+			]
+		},
+		{
+			"name": "分散惑控",
+			"ENG_name": "Split Enchantment",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级​惑控学派特性}",
+				"当你施放一个只以一个生物作为目标的1环或更高环的惑控系法术时，你可以让该法术指定第二个生物作为目标。"
+			]
+		},
+		{
+			"name": "改动记忆",
+			"ENG_name": "Alter Memories",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级​惑控学派特性}",
+				"你获得让一个生物无法察觉你用魔法影响它的能力。当你施放一个可以魅惑一个或更多生物的惑控系法术时，你可以改动其中一个生物的理解以让它无法查觉自己被{@condition 魅惑}。",
+				"此外，在法术结束之前一次，你可以使用你的动作以尝试让所选生物忘记一段它在被{@condition 魅惑}期间的记忆。该生物必须成功通过一次对抗你法师法术豁免DC的智力豁免，否则将失去等同于1 + 你的魅力调整值（最少为1）的小时数的记忆。你可以让该生物忘记更短时间内的记忆，且这段时间的长度不能超过你惑控法术的持续时间。"
+			]
+		},
+		{
+			"name": "塑能学派",
+			"ENG_name": "School of Evocation",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"你专注于研究能创造出强大元素效果的魔法，诸如刺骨寒冷、炽热火焰、轰隆雷鸣、跃动闪电、和烧灼强酸。有些塑能师会受雇于军队，成为从远方轰炸敌军的砲台。有些会用他们的壮阔法术保护弱者，也有些会为了自己的利益而成为盗匪、冒险者、或胸怀抱负的暴君。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "塑能学者|Wizard||Evocation||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "形塑法术|Wizard||Evocation||2"
+				}
+			]
+		},
+		{
+			"name": "塑能学者",
+			"ENG_name": "Evocation Savant",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级塑能学派特性}",
+				"你在将塑能系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "形塑法术",
+			"ENG_name": "Sculpt Spells",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级塑能学派特性}",
+				"你可以在你塑能系法术的效果范围内创造出相对安全的区域。当你施放一个会影响你所能看见的其他生物的塑能系法术时，你可以从中选择数量等同1 + 该法术环阶的生物。所选生物将自动成功通过对抗该法术的豁免检定，且若它们原本在豁免成功时会受到一半的伤害，则它们改为不受任何伤害。"
+			]
+		},
+		{
+			"name": "强力戏法",
+			"ENG_name": "Potent Cantrip",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级塑能学派特性}",
+				"即使生物避开了你伤害类戏法效果中最主要的冲击，你仍能影响它们。当一个生物成功通过一次对抗你戏法的豁免检定，该生物仍会受到该戏法的伤害（若有）的一半，但并不会承受来自该戏法的额外效果。"
+			]
+		},
+		{
+			"name": "强效塑能",
+			"ENG_name": "Empowered Evocation",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级塑能学派特性}",
+				"你可以将你的智力调整值加入任何你所施放的塑能系法师法术的其中一次伤害骰中。"
+			]
+		},
+		{
+			"name": "重载导魔",
+			"ENG_name": "Overchannel",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级塑能学派特性}",
+				"你可以提升你那些较简单法术的威力。当你施放一个环阶在1环到5环之间，且会造成伤害的法师法术时，你可以让该法术造成最大伤害。",
+				"当你第一次这么做时，你不会承受任何负面效果。若你在完成一次长休之前再次使用此能力，你将在施放该法术后立刻受到该法术每环阶{@damage 2d12}的黯蚀伤害。每次你在完成一次长休之前再次使用此能力，每法术环阶的黯蚀伤害将会再提升{@dice 1d12}。这个伤害无视抗性和免疫。"
+			]
+		},
+		{
+			"name": "幻术学派",
+			"ENG_name": "School of Illusion",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"你专注于研究那些能够扰乱感官、迷惑意识、甚至能欺骗最有智能之人的魔法。你的魔法看似细微，但这些用你敏锐思维创造出来的幻象却能够以假乱真。某些幻术师\u2014包括许多侏儒幻术师\u2014是和善的戏法师，使用他们的法术来娱乐他人。而其他幻术师则是更加邪恶的欺诈大师，为了它们的个人利益而利用幻术恐吓或愚弄他人。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "幻术学者|Wizard||Illusion||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "精通次级幻象|Wizard||Illusion||2"
+				}
+			]
+		},
+		{
+			"name": "幻术学者",
+			"ENG_name": "Illusion Savant",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级幻术学派特性}",
+				"你在将幻术系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "精通次级幻象",
+			"ENG_name": "Improved Minor Illusion",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级幻术学派特性}",
+				"你习得{@spell 次级幻象}戏法。若你已经知晓此戏法，则你习得另一个自选的法师戏法。这个戏法并不会计入你的已知戏法数量。",
+				"当你施放{@spell 次级幻象}，你可以在一次施法中同时创造出声音和影像。"
+			]
+		},
+		{
+			"name": "可塑幻象",
+			"ENG_name": "Malleable Illusions",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级幻术学派特性}",
+				"当你施放一个持续时间为1分钟或更久的幻术系法术时，只要你可以看见该幻象，你就可以使用你的动作以改变该幻象的性质（仍需遵守该法术对该幻象的基本属性描述）。"
+			]
+		},
+		{
+			"name": "幻象步",
+			"ENG_name": "Illusory Step",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级幻术学派特性}",
+				"几乎等同你对危险的本能反应，你可以在瞬间创造出一个你的幻象拷贝体。当一个生物对你进行一次攻击检定，你可以使用你的反应以在你和攻击者之间插入该幻象拷贝体。该攻击将自动失手，且该幻象将接着消散。",
+				"一旦你使用此能力，直到你完成一次短休或长休之前你都不能再使用它。"
+			]
+		},
+		{
+			"name": "亦真亦幻",
+			"ENG_name": "Illusory Reality",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级幻术学派特性}",
+				"你学会幽影魔法的奥秘，并能将之编入你的幻象中以赋予它们半真实的特性。当你施放一个1环或更高环的幻术系法术时，你可以选择一个属于幻象一部份的不可动且非魔法的物体，并让该物体变为真实。你可以在法术持续期间在你的回合以一个附赠动作这么做。该物体将保持真实存在并持续1分钟。举例来说，你可以创造出一道横跨峡谷的幻象桥梁，并使它变为真实以让你的队友们通过。",
+				"该物体无法造成伤害、或以任何方式直接伤害任何人。"
+			]
+		},
+		{
+			"name": "死灵学派",
+			"ENG_name": "School of Necromancy",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"死灵学派探索着生命、死亡、与不死之间的宇宙力量。随着你专注你的研究于这个传统，你学会了操纵那驱动所有活物的能量。随着你的研究深入，你学会在用魔法摧毁一个生物身体的同时削弱它的生命力，并将这股生命能量化作你可以驱使的魔法之力。",
+				"由于死灵学派与死亡的紧密联系，大多数人都认为死灵师是恐怖的，或甚至是邪恶的。并非所有死灵师都是邪恶的，然而他们所操纵的力量在许多社会中都被视作禁忌。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "死灵学者|Wizard||Necromancy||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "残怖收割|Wizard||Necromancy||2"
+				}
+			]
+		},
+		{
+			"name": "残怖收割",
+			"ENG_name": "Grim Harvest",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级死灵学派特性}",
+				"你获得从你以法术杀死的生物那里收割生命能量的能力。每回合一次，当你以1环或更高环的法术杀死一个或更多的生物时，你将获得等同于该法术环阶二倍的生命值，或若该法术属于{@filter 死灵学派|spells|school=N}，则改为回复该法术环阶三倍的生命值。你不会因为杀死构装体或不死生物而获得这个好处。"
+			]
+		},
+		{
+			"name": "死灵学者",
+			"ENG_name": "Necromancy Savant",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级死灵学派特性}",
+				"你在将死灵系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "不死奴仆",
+			"ENG_name": "Undead Thralls",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级死灵学派特性}",
+				"若你的法术书中没有{@spell 活化死尸}法术，则你将它加入你的法术书中。当你施放{@spell 活化死尸}时，你可以指定一具额外的尸体或骨骸，创造出另一个相应的僵尸或骷髅。",
+				"每当你使用一个死灵系法术创造出一个不死生物时，它将获得下列好处：",
+				{
+					"type": "list",
+					"items": [
+						"该生物的生命值最大值增加等同于你法师等级的数值。",
+						"该生物将你的熟练加值加入它的武器伤害骰中。"
+					]
+				}
+			]
+		},
+		{
+			"name": "不死适应",
+			"ENG_name": "Inured to Undeath",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级死灵学派特性}",
+				"你拥有对黯蚀伤害的抗性，且你的生命值最大值不会被减少。你已经耗费了相当长的时间与不死生物和驱使它们的力量打交道，以至于你已经适应了它们其中一些最坏的影响。"
+			]
+		},
+		{
+			"name": "命令不死生物",
+			"ENG_name": "Command Undead",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级死灵学派特性}",
+				"你可以使用魔法让不死生物处于你的控制下，即使这些生物是由另一个法师创造的也一样。以一个动作，你可以选择一个距离你60尺内且你所能看见的不死生物。该生物必须进行一次对抗你法师法术豁免DC的魅力豁免。若它豁免成功，则你无法再对它使用此能力。若它豁免失败，则它将变得对你友善并服从你的命令直到你再次使用此能力。",
+				"具有智能的不死生物会较难以这个方式控制。若目标的智力值为8或更高，它将在此豁免检定中具有优势。若它在此豁免检定中失败且智力值为12或更高，则它可以在每小时结束时重复进行此豁免检定，直到它豁免成功并挣脱你的控制。"
+			]
+		},
+		{
+			"name": "变化学派",
+			"ENG_name": "School of Transmutation",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"你是一名研究着那些改变物质和能量法术的学徒。对你而言，世界并非一成不变，而是具有相当可塑性的东西，且你非常乐意作为推动改变的使者。你驾驭着创造的原始材料，并学习如何改变物理形态和精神性质。你的魔法赋予你工具，使你得以成为现实世界这座锻造场的铁匠。",
+				"有些变化师是恶作剧者和捣蛋鬼，喜欢把人变成蟾蜍、或把铜转变银，以此来取乐或赚点小钱。其他变化师则以极度严肃的态度追求他们的魔法研究，寻求着诸神用以创造或毁灭世界的强大力量。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "变化学者|Wizard||Transmutation||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "次级炼金|Wizard||Transmutation||2"
+				}
+			]
+		},
+		{
+			"name": "次级炼金",
+			"ENG_name": "Minor Alchemy",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级变化学派特性}",
+				"你可以暂时地改变一个非魔法物体的物理性质，将它变成另一种物质。你可以对一个完全由木、石（但非宝石）、铁、铜、或银所构成的物体施展一项特殊的炼金进程，将它转变成上述的另一种材质。你每花费10分钟施展这个炼金进程，你就可以转变最多1立方尺的材质。在1小时之后，或直到你失去你的专注（如同你专注于一个法术），该材质将会变回它原本的物质。"
+			]
+		},
+		{
+			"name": "变化学者",
+			"ENG_name": "Transmutation Savant",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级变化学派特性}",
+				"你在将变化系法术抄写进你的法术书时所必须花费的金钱和时间减半。"
+			]
+		},
+		{
+			"name": "变化师之石",
+			"ENG_name": "Transmuter's Stone",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级变化学派特性}",
+				"你可以花费8小时制造一颗保存着变化系魔法的变化师之石。你可以自己获得这颗石头带来的好处，或将它给予另一个生物。只要这颗石头被一个生物所持有，该生物就能获得你所选的好处。当你创造这颗石头时，从下列选项中选择一项好处：",
+				{
+					"type": "list",
+					"items": [
+						"60尺距离的黑暗视觉，参照第八章的叙述。",
+						"当该生物未处于负载状态时，移动速度增加10尺。",
+						"熟练于体质豁免。",
+						"对强酸、冷冻、火焰、闪电、或雷鸣伤害（每当你选择这个好处时选择一个）的抗性。"
+					]
+				},
+				"每次你施放一个1环或更高环的变化系法术时，若这颗石头在你身上，则你可以改变你的变化师之石的效果。",
+				"若你制造了一颗新的变化师之石，之前那颗将会停止作用。"
+			]
+		},
+		{
+			"name": "变形者",
+			"ENG_name": "Shapechanger",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级变化学派特性}",
+				"若你的法术书中没有{@spell 变形术}法术，则你将它加入你的法术书中。你可以施放{@spell 变形术}而无须消耗法术位。当你这么做时，你只能以自己为目标，且只能转变为一个{@filter 挑战等级为1或更低的野兽|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}。",
+				"一旦你用这个方式施放{@spell 变形术}，则直到你完成一次短休或长休之前你都不能再这么做。不过你仍然可以借由消耗可用的法术位来正常地施放它。"
+			]
+		},
+		{
+			"name": "变化宗师",
+			"ENG_name": "Master Transmuter",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级变化学派特性}",
+				"你可以使用你的动作将保存在变化师之石内的变化系魔法一次耗尽。当你这么做时，从下列效果中选择一项。你的变化师之石将被摧毁，且直到你完成一次长休之前都不能再被重新制造。",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "强效变化",
+							"ENG_name": "Major Transformation",
+							"entries": [
+								"你可以将一个非魔法物体\u2014体积不大于5尺边长立方体\u2014转变成另一个体积和质量相似，且价值相同或更低的非魔法物体。你必须花费10分钟持握住该物体以转变它。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "万灵密药",
+							"ENG_name": "Panacea",
+							"entries": [
+								"你移除一个你以变化师之石触碰的生物身上所有的诅咒、疾病、和毒素。该生物同时回复它所有的生命值。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "起死回生",
+							"ENG_name": "Restore Life",
+							"entries": [
+								"你对一个你以变化师之石触碰的生物施放{@spell 唤醒死者}，无须消耗法术位、且该法术不需要在你的法术书中。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "返老还童",
+							"ENG_name": "Restore Youth",
+							"entries": [
+								"你以变化师之石触碰一个自愿生物，且该生物的表面年龄将被减少{@dice 3d10}年，到最小13岁。这个效果并不会延长该生物的寿命。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "剑咏传承",
+			"ENG_name": "Bladesinging",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"entries": [
+				"剑咏者精通一种将剑术与舞蹈相结合的奥法传承。这门传承最初由精灵开创，后来并非精灵的修习者也开始采用，他们信守精灵传统、同时又加以扩展。在战斗中，剑咏者会使用一系列纷繁优雅的武技，以此偏转攻击并引导魔法化作致命的打击与诡谲的防御。许多目睹过处于战斗之中的剑咏者的人，都会将这伴随歌咏之剑的壮丽舞蹈当作人生中最为美妙的经历之一铭记于心。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战歌训练 (剑咏)|Wizard||Bladesinging|TCE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "剑歌|Wizard||Bladesinging|TCE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "剑咏者风格|Wizard||Bladesinging|TCE|2"
+				}
+			]
+		},
+		{
+			"name": "剑咏者风格",
+			"ENG_name": "Bladesinger Styles",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"type": "inset",
+			"entries": [
+				"从最初作为武术和魔法结合的技艺以来，剑咏与剑，或更准确来说是长剑，之间的关联便密不可分。然而数个世代的研究也因此发展出了多种以近战武器作为基础的不同剑咏风格。这些风格的技术在各个小学派中通过导师代代传承给学徒，其中一些甚至有着专门用于教学的建筑。即使是最新式的风格也有着数百年的历史，但因为精灵漫长的寿命，其创始者仍可以亲自传承他们所创造的风格。大部分的剑咏学派坐落于永聚岛 (Evermeet)或者埃弗拉斯卡 (Evereska)。曾经有一个学派发迹于迷斯卓诺 (Myth Drannor)，但城市的毁灭也让那些幸存下来的学徒们分散在世界各地。",
+				"基于所使用武器种类的不同，剑咏风格被大致区别成数个类别，且每一个类别都有着一个对应的动物类型。在这些类别之中，特定的风格又会基于使用的法术类型、导师的技术、以及特定武器的使用而被以特定的动物类型命名。从师于一名导师的剑咏者学徒通常会得到一个象征他们所选风格的动物纹身。有些剑咏者会学习多种风格并带有多种纹身，通过他们肌肤上那致命技艺的象征警告那些不怀好意的人们。",
+				{
+					"type": "entries",
+					"name": "猫型",
+					"entries": [
+						"应用了刀剑的风格属于这个类别。最古老的狮子学派，训练修行者使用长剑且不偏好任何特定类型的法术。豹学派专注于短剑以及幻象和隐匿的法术。赤虎学派，一个仅三个世纪历史的风格，则让他们的剑咏者使用弯刀，从旋转着的防御性剑舞中突然跳起并发动攻击。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "鸟型",
+					"entries": [
+						"尽管种类繁多，那些专注于使用长柄武器的风格，例如斧头或槌子，都会被归类为鸟型风格。它们全都是相对新式的风格，且使用通常不为精灵所好的武器。山鹰学派的剑咏者使用小型手斧，这个风格中的许多武技都专注于流畅地丢出武器并抽出一把新的。渡鸦学派则使用战镐，且它们所使用的法术让剑咏者在战斗中的动作能够更加灵巧。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "蛇型",
+					"entries": [
+						"这些风格的修行者使用连枷、锁链、或是鞭子。蝮蛇学派所用的武器是长鞭，尽管其作为武器而言有些粗俗，但它却有着与狮子学派同样悠久的历史。这个学派的宗师会在他们的剑歌中以一连串绝妙而迅速的鞭击伴奏，在牵制住众多敌人的同时，让剑咏者得以施放这个风格所偏好，能够造成中毒和疾病的残忍法术。"
+					]
+				}
+			]
+		},
+		{
+			"name": "剑歌",
+			"ENG_name": "Bladesong",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级剑咏传承特性}",
+				"你可咒唤一种名唤\"剑歌\"的精灵魔法，前提是你必须未着装中甲、重甲，也未使用盾牌。这一魔法将使你获得超乎寻常的速度、敏捷与专注。",
+				"你可以用一个附赠动作启动剑歌，并使之维持1分钟。当你陷入{@condition 无力}或完成中甲、重甲、盾牌的着装，又或者用双手发动一次攻击时，你的剑歌将提前终止。你也可以随时随意的解除剑歌（不需要动作）。",
+				"在剑歌激活期间，你获得下列好处：",
+				{
+					"type": "list",
+					"items": [
+						"你的AC获得等同于你智力调整值的加值（最少+1）。",
+						"你的步行速度增加10尺。",
+						"你在敏捷（{@skill 体操}）检定上具有优势。",
+						"你在用以维持法术专注时所进行的任何体质豁免中获得加值。这个加值等同于你的智力调整值（最少+1）。"
+					]
+				},
+				"你能使用本特性的次数等于你的熟练加值。你在完成一次长休后恢复所有消耗掉的使用次数。"
+			]
+		},
+		{
+			"name": "战歌训练 (剑咏)",
+			"ENG_name": "Training in War and Song (Bladesinging)",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级剑咏传承特性}",
+				"你获得轻甲的熟练项，并获得一种自选的单手近战武器熟练项。",
+				"如果你尚未熟练 {@skill 表演} 技能，则还可以获得表演技能的熟练项。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级剑咏传承特性}",
+				"每当你在自己回合执行{@action 攻击}动作时，你可以发动两次攻击，而非一次。此外，你还可以施展一个戏法以替代其中一次攻击。"
+			]
+		},
+		{
+			"name": "守御之歌",
+			"ENG_name": "Song of Defense",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级剑咏传承特性}",
+				"剑歌激活期间，你能够引导自己的魔法为你吸收伤害。受到伤害时，你可以用自己的反应来消耗一个法术位，以使你受到的伤害减少等同于该法术位环阶五倍的数值。"
+			]
+		},
+		{
+			"name": "胜利之歌",
+			"ENG_name": "Song of Victory",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级剑咏传承特性}",
+				"剑歌激活期间，你可以将你的智力调整值（至少为+1）加到你的近战武器伤害上。"
+			]
+		},
+		{
+			"name": "书士会",
+			"ENG_name": "Order of Scribes",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 2,
+			"entries": [
+				"许多人将法师魔法称为\"书之魔法\"，想想法师为研读卷宗与书写魔法理论花费了多少时间，这称呼也是名副其实。旅行中的法师包里，总是撑满书本卷宗；若能一探远古知识，法师愿意赴汤蹈火。",
+				"书士会是法师之间与书卷的联系最为紧密的群体。尽管书士会在不同的世界之间有着不同的形态，但无论位于何处，其主要任务都是同一的：将魔法上的发现记载下来，令法师魔法繁荣昌盛。尽管所有法师都将法术书视为珍宝，书士会的法师却能用魔法唤醒他们的法术书，将其变为值得信赖的伙伴；所有法师都会研习书本，但书士却能与书本对话！",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "法师之笔|Wizard||Scribes|TCE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "觉醒魔典|Wizard||Scribes|TCE|2"
+				}
+			]
+		},
+		{
+			"name": "觉醒魔典",
+			"ENG_name": "Awakened Spellbook",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级书士会特性}",
+				"通过特别准备的墨水和书士会所传承的咒语，你唤醒了法术书中具有智能的奥法存在。",
+				"当你持握法术时，它将为你提供以下增益：",
+				{
+					"type": "list",
+					"items": [
+						"你可以将本书用作施展法师法术的法器。",
+						"当你消耗法术位施展一个法师法术时，你可以将它的伤害类型替换为你法术书内另一个法术的伤害类型：你的法术书用魔法改变了此次施法所用的奥法公式。后一个法术的等级必须与你花费的法术位等级相同。",
+						"当你用仪式施法施展一个法术时，你可以使用法术的正常施法时间，而不用额外增加10分钟。你必须完成一次长休才能再次使用此增益。"
+					]
+				},
+				"如有必要，你可以在一次短休时用你的法师之笔，在空白书本或是你与之同调的魔法法术书上画下奥术魔印。短休结束时，你原本法术书内的意识将会带着旧书它所记载的所有法术转移到新书之中、将其变为你的法术书。如果旧书依旧在某处存在，它上面所记载的所有法术将消失。"
+			]
+		},
+		{
+			"name": "法师之笔",
+			"ENG_name": "Wizardly Quill",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级书士会特性}",
+				"以一个附赠动作，你能用魔法创造一支微型羽毛笔。这支魔法羽毛笔具有以下特性：",
+				{
+					"type": "list",
+					"items": [
+						"这支毛笔不需要墨水。当你用它书写时，它会在用于书写的表面上自行生成墨水，颜色由你选择。",
+						"若你使用这根羽毛笔来将法术抄入法术书，你只需花费每个法术等级2分钟的时间。",
+						"若你用羽毛笔书写的文本在你身边5尺范围之内，你可以用一个附赠动作在文字上方晃动羽毛将其消除。"
+					]
+				},
+				"这根羽毛笔将在你创造另一支笔或是死亡时消失。"
+			]
+		},
+		{
+			"name": "神识显现",
+			"ENG_name": "Manifest Mind",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级书士会特性}",
+				"你能将你觉醒法术书中的意识召唤出来。当你持有该法术书时，你可以以一个附赠动作令书中的意识显现为一个微型的灵体物件，使其悬浮于距离你60尺以内且未被占据的、由你选择的空间中。这一灵体意识是无形的，不会占据其空间，并会在其周围半径10尺范围内发出微光光照。它看上去如同一本灵体卷宗、一摞文字、或是一位历史中的学者（由你选择）。",
+				"显现时，该灵体意识能够听音视物，并具有60尺的{@sense 黑暗视觉}。它能用心灵感应将它所看见和听到的信息分享给你（无需动作）。",
+				"每当你在自己的回合内施放法师法术时，你可以使用灵体意识的感官、如同身处它所在的空间一样释放该法术。你能使用该能力的次数等于你的熟练价值，完成一次长休后，你将重获所有消耗掉的使用次数。",
+				"以一个附赠动作，你可以令灵体意识飘浮到其周围30尺内、你或它可见且未被占据的空间。灵体意识可以穿过生物但不能穿过物件。",
+				"若遇到以下情况之一，灵体意识的显现将会停止：与你的距离超过300尺，成为{@spell 解除魔法}的目标，觉醒魔法书被摧毁，你死亡时，或是你以一个附赠动作将其驱散。",
+				"召唤过灵体意识后，你必须完成一次长休、或是消耗一枚任意环位的法术位，才能再次召唤。"
+			]
+		},
+		{
+			"name": "书士宗师",
+			"ENG_name": "Master Scrivener",
+			"source": "TCE",
+			"page": 78,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级书士会特性}",
+				"每当你完成一次长休，你可以令你的法师笔触碰一张空白的纸张或是羊皮纸，以将你觉醒魔典中的一个法术并复制到这张纸上、并制造一个魔法卷轴。你制造卷轴时，魔典必须在你5尺之内。",
+				"被复制的法术必须是1环或2环法术，且施法时间必须为1个动作。卷轴将增强法术的力量，令其视为比平常高1环阶的法术。你可以以一个动作阅读卷轴来施展其中的法术。卷轴对其他任何人都不可理解，且当你施展其中法术、或是完成下次长休后，卷轴上记载的法术将会消失。",
+				"你同样熟练于制造城主指南第七章中所描述的法术卷轴。若你使用你的法术笔制造卷轴，所需要花费的金币和时间减半。"
+			]
+		},
+		{
+			"name": "书人合一",
+			"ENG_name": "One with the Word",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级书士会特性}",
+				"你和你的觉醒魔法书的联系已经变得如此深刻，以至于你的灵魂已经和它缠结在一起。携带这本书时，你在所有智力（{@skill 奥秘}）检定中具有优势，因为法术书能够帮助你记住魔法学识。",
+				"此外，如果你在法术书的意识处于显现状态时受到伤害，你可以利用你的反应驱散灵体意识、利用其中的魔法来拯救自己，从而避免所有对你的伤害。之后，掷{@dice 3d6}。法术书暂时失去由你自选的法术，其环阶之和必须大于或等于骰值。例如，如果骰值是9，则从书中消失的法术环阶之和至少为9\u2014\u2014或许是一个9环法术，或是三个3环法术，或其他组合方式。如果书中没有足够的法术来支付这个代价，你就会降到0点生命。",
+				"你必须完成{@dice 1d6}次长休，才能再次施放失去的法术；在此期间，即使你在卷轴上或其他法术书中找到这些法术，也不能施展它们。完成所需的长休次数后，法术会重新出现在法术书中。",
+				"用过这个反应之后，你必须完成一次长休才能再次使用。"
+			]
+		},
+		{
+			"name": "Order of Scribes",
+			"source": "UA2020SubclassesRevisited",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes (UA)",
+			"subclassSource": "UA2020SubclassesRevisited",
+			"level": 2,
+			"entries": [
+				"Magic of the book\u2014that's what many spellcasters call wizardry. The name is apt, given how much time wizards spend poring over their spellbooks, penning theories about the nature of magic, and exploring the farthest recesses of libraries. It's rare to see a wizard traveling without books and scrolls sprouting from their bags, and a wizard would go to great lengths to plumb an archive of ancient knowledge.",
+				"Among wizards, the Order of Scribes is the most bookish. It takes many forms in different worlds, but its primary mission is the same everywhere: recording magical discoveries in tomes and scrolls so that wizardry can flourish. And while every wizard values their spellbook, a scribe in the Order of Scribes dedicates themself to magically awakening their book, turning it into a trusted companion. All wizards study their spellbooks, but a wizardly scribe talks to theirs!",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Wizardly Quill|Wizard||Scribes (UA)|UA2020SubclassesRevisited|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Awakened Spellbook|Wizard||Scribes (UA)|UA2020SubclassesRevisited|2"
+				}
+			]
+		},
+		{
+			"name": "Awakened Spellbook",
+			"source": "UA2020SubclassesRevisited",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes (UA)",
+			"subclassSource": "UA2020SubclassesRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Order of Scribes feature}",
+				"Using specially prepared inks and ancient incantations passed down by your wizardly order, you have awakened an arcane sentience within your spellbook.",
+				"While you are holding the book, it grants you the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You can use the book as a spellcasting focus for your wizard spells.",
+						"When you cast a wizard spell with a spell slot, you can temporarily replace its damage type with the damage type of another spell in your spellbook, as your spellbook magically alters the spell's formula for this casting.",
+						"When you cast a wizard spell as a ritual, you can use the spell's normal casting time, rather than adding 10 minutes to it. Once you use this benefit, you can't do so again until you finish a long rest."
+					]
+				},
+				"If necessary, you can replace the book over the course of a short rest by using your Wizardly Quill to write arcane sigils in a blank book or a magic spellbook to which you're attuned. At the end of the rest, your spellbook's consciousness is summoned into the new book, which the consciousness transforms into your spellbook, along with all its spells. If the previous book still existed somewhere, all the spells vanish from its pages."
+			]
+		},
+		{
+			"name": "Wizardly Quill",
+			"source": "UA2020SubclassesRevisited",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes (UA)",
+			"subclassSource": "UA2020SubclassesRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Order of Scribes feature}",
+				"As a bonus action, you can magically create a Tiny quill in your free hand. The magic quill has the following properties:",
+				{
+					"type": "list",
+					"items": [
+						"The quill doesn't require ink. When you write with it, it produces ink in a color of your choice on the writing surface.",
+						"The gold and time you must spend to copy a spell into your spellbook are halved if you use the quill for the transcription.",
+						"You can erase anything you write with the quill if you wave the feather over the text as a bonus action, provided the text is within 5 feet of you."
+					]
+				},
+				"This quill disappears if you create another one or if you die."
+			]
+		},
+		{
+			"name": "Master Scrivener",
+			"source": "UA2020SubclassesRevisited",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes (UA)",
+			"subclassSource": "UA2020SubclassesRevisited",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level Order of Scribes feature}",
+				"Whenever you finish a long rest, you can create one magic scroll by touching your Wizardly Quill to a blank piece of paper or parchment and causing one spell from your Awakened Spellbook to be copied onto the scroll. The spellbook must be within 5 feet of you when you make the scroll.",
+				"The chosen spell must be of 1st or 2nd level and must have a casting time of 1 action. Once in the scroll, the spell's power is enhanced, counting as one level higher than normal. You can cast the spell from the scroll by reading it as an action. The scroll is unintelligible to anyone else, and the spell vanishes from the scroll when you cast it or when you finish your next long rest.",
+				"You are also adept at crafting spell scrolls, which are described in chapter 7 of the Dungeon Master's Guide. The gold and time you must spend to make such a scroll are halved if you use your Wizardly Quill."
+			]
+		},
+		{
+			"name": "Manifest Mind",
+			"source": "UA2020SubclassesRevisited",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes (UA)",
+			"subclassSource": "UA2020SubclassesRevisited",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Order of Scribes feature}",
+				"You are now able to conjure forth the mind of your Awakened Spellbook. As a bonus action while the book is on your person, you can cause the mind to manifest as a Tiny spectral construct, hovering in an unoccupied space of your choice within 60 feet of you. This presence is intangible and doesn't occupy its space, and it sheds dim light in a 10-foot radius. It looks like a ghostly tome, a cascade of text, or a scholar from the past (your choice). The spectral mind has a number of hit points equal to your wizard level plus your Intelligence modifier, and it uses your Armor Class and saving throw modifiers.",
+				"While manifested, the spectral mind can hear and see, and it has {@sense 黑暗视觉} with a range of 60 feet. As an action, you can hear and see using the its senses, instead of your own, until your concentration ends (as if concentrating on a spell).",
+				"Whenever you cast a wizard spell on your turn, you can cast it as if you were in the spectral mind's space, instead of your own, using its senses. You can do so a number of times per day equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
+				"As a bonus action, you can cause the spectral mind to hover up to 30 feet to an unoccupied space that you or it can see. It can pass through creatures but not objects. The spectral mind stops manifesting if it is ever more than 300 feet away from you, if it drops to 0 hit points, if you die, or if you dismiss it as a bonus action."
+			]
+		},
+		{
+			"name": "One with the Word",
+			"source": "UA2020SubclassesRevisited",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes (UA)",
+			"subclassSource": "UA2020SubclassesRevisited",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level Order of Scribes feature}",
+				"Your connection to your Awakened Spellbook has become so profound that your soul has become entwined with it. While you are holding the book and its spectral mind is manifest, you can take an action to cause the two of you to teleport, swapping places. You can teleport in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
+				"Moreover, if you die but at least one spell remains in your Awakened Spellbook, you can return to life 1 minute later within 5 feet of the book. You revive with 1 hit point. Then roll {@dice 3d6}. The book loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination.",
+				"Thereafter, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. The only way to restore your ability to cast one of the lost spells is through the {@spell 祈愿术} spell, which can restore one spell to the book per casting."
+			]
+		},
+		{
+			"name": "Onomancy",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 2,
+			"entries": [
+				"Practitioners of magic well know the power of names, but wizards who follow the tradition of Onomancy use their magic to manipulate the words that encompass existence. Onomancers expand their study into language itself, searching for threads of magical significance that weave through names. Something that is named stands out in the multiverse, distinct from the tapestry of creation all around it.",
+				"That distinction creates power that onomancers seek to tap. By speaking a target's true name, the wizard's spells slip between the cracks of the target's defenses, conforming to its essential nature through the power of its name. To protect themselves, wizards who follow this tradition often hide their true names, typically by adopting monikers and pseudonyms.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "True Names|Wizard||Onomancy (UA)|UAClericDruidWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Wizard||Onomancy (UA)|UAClericDruidWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Extract Name|Wizard||Onomancy (UA)|UAClericDruidWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fateful Naming|Wizard||Onomancy (UA)|UAClericDruidWizard|2"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Onomancy feature}",
+				"You learn one language of your choice and gain proficiency with {@item 书法工具|phb}."
+			]
+		},
+		{
+			"name": "Extract Name",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Onomancy feature}",
+				"You can magically compel a creature to divulge its true name. As a bonus action, you target one creature you can see within 60 feet of you. The target must make a Wisdom saving throw against your spell save DC. On a successful save, you discern that this magic failed, and you can't use this feature on the target again. On a failed save, the target is {@condition 魅惑} by you until the end of your next turn, and you mentally learn the {@condition 魅惑} target's name or the fact that the target lacks a name.",
+				"You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+			]
+		},
+		{
+			"name": "Fateful Naming",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Onomancy feature}",
+				"You can bend magic to assist or hinder creatures through the power of their true names, and even use those names as an anchor to affect others around them. The {@spell 灾祸术} and {@spell 祝福术} spells are wizard spells for you, and you add them to your spellbook. You always have them prepared, yet they don't count against the number of spells you can prepare.",
+				"You can cast either spell without expending a spell slot if you speak the true name of one target of the spell as part of casting it. You can cast the spells in this way a number of times equal to your Intelligence modifier (a minimum of once), and you regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "True Names",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 2,
+			"header": 1,
+			"type": "inset",
+			"entries": [
+				"Onomancy, or naming magic, is a method of spellcasting that uses a creature's true name to enhance a spell's effects. A true name is the name by which a self-aware creature identifies itself. This name might be the name a person was given at birth, or one a person chose or earned later in life. Whatever a name's origin, the simplest way for you to know your true name is to think truthfully about yourself and then think, \"My name is...\" Your true name is how you finish that sentence.",
+				"You can try to hide your true name by using a pseudonym, but you must be wary not to inhabit that false name too deeply. If a false name comes to be the best expression of who you are, it becomes your true name. Changing one's true name is never a quick choice; it's something that happens over time as a name becomes the creature's truth.",
+				"As a quick guide, a creature has a true name if it understands at least one language or it has an alignment."
+			]
+		},
+		{
+			"name": "Resonant Utterance",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level Onomancy feature}",
+				"You learn words of power called Resonants, which allow you to tailor your spells through the use of a target's true name.",
+				{
+					"type": "entries",
+					"name": "Resonants Known",
+					"entries": [
+						"When you gain this feature, you learn two Resonants of your choice, which are detailed in the \"Resonant Options\" section. Each time you gain a level in this class, you can replace one resonant you know with a different one."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Using a Resonant",
+					"entries": [
+						"You can use one Resonant when you cast a wizard spell with a spell slot and speak the true name of one creature targeted by the spell. Speaking the name is part of casting the spell. You can use Resonants a number of times equal to half of your wizard level (round down), and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Resonant Options",
+					"entries": [
+						"Here are your options when choosing a Resonant:",
+						{
+							"type": "options",
+							"style": "list-hang-notitle",
+							"count": 2,
+							"entries": [
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Absorption|UAClericDruidWizard"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Devastation|UAClericDruidWizard"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Dissolution|UAClericDruidWizard"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Nullification|UAClericDruidWizard"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Puppetry|UAClericDruidWizard"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Sympathy|UAClericDruidWizard"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Inexorable Pronouncement",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Onomancy feature}",
+				"You learn two new Resonant s of your choice from your Resonant Utterance feature."
+			]
+		},
+		{
+			"name": "Relentless Naming",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level Onomancy feature}",
+				"You have learned how to bypass a named creature's defenses against certain types of damage. When you cast a spell that deals damage to a creature whose true name you speak as part of casting the spell, you can cause the spell to deal force or psychic damage to the creature, instead of the spell's normal damage type."
+			]
+		},
+		{
+			"name": "Artificer",
+			"source": "UAEberron",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Artificer (UA)",
+			"subclassSource": "UAEberron",
+			"level": 2,
+			"entries": [
+				"Artificers are a key part of the world of Eberron. They illustrate the evolution of magic from a wild, unpredictable force to one that is becoming available to the masses. Magic items are part of everyday life in the Five Nations of Khorvaire; with an artificer in your party, they become part of every adventuring expedition.",
+				"The artificer was a separate class in prior editions of the Eberron setting, a melee combatant who specialized in mystically enhanced arms and armor. The fifth edition rules treat the artificer as a new wizard tradition that focuses on mystical invention, which you can choose starting at 2nd level.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Infuse Potions|Wizard||Artificer (UA)|UAEberron|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Infuse Scrolls|Wizard||Artificer (UA)|UAEberron|2"
+				}
+			]
+		},
+		{
+			"name": "Infuse Potions",
+			"source": "UAEberron",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Artificer (UA)",
+			"subclassSource": "UAEberron",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Starting at 2nd level, you can produce magic potions. You spend 10 minutes focusing your magic on a vial of mundane water and expend a spell slot to transform it into a potion. Once you have expended a spell slot to create a potion, you cannot regain that slot until the potion is consumed or after 1 week, at which time the potion loses its effectiveness. You can create up to three potions at a time; creating a fourth potion causes the oldest currently active one to immediately lose its potency. If that potion has been consumed, its effects immediately end.",
+				"The spell slot you expend determines the type of potion you can create.",
+				{
+					"type": "table",
+					"caption": "Infuse Potions",
+					"colLabels": [
+						"Spell Slot",
+						"Potion Created"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"Climbing, growth, or healing"
+						],
+						[
+							"2nd",
+							"Mind reading or greater healing"
+						],
+						[
+							"3rd",
+							"Invisibility, superior healing, or water breathing"
+						],
+						[
+							"4th",
+							"Resistance"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Infuse Scrolls",
+			"source": "UAEberron",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Artificer (UA)",
+			"subclassSource": "UAEberron",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"At 2nd level, you can also tap into your reserves of magical energy to create spell scrolls. You can use your Arcane Recovery ability to create a scroll instead of regaining expended spell slots.",
+				"You must finish a short rest, then spend 10 minutes with parchment, quill, and ink to create a spell scroll containing one spell chosen from those you know. Subtract the spell's level from the total levels worth of slots you regain using Arcane Recovery. This reduction to your Arcane Recovery applies until you use the scroll and then finish a long rest."
+			]
+		},
+		{
+			"name": "Infuse Weapons and Armor",
+			"source": "UAEberron",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Artificer (UA)",
+			"subclassSource": "UAEberron",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Beginning at 6th level, you can produce magic weapons and armor. You spend 10 minutes focusing your magic on a mundane weapon, suit of armor, shield, or bundle of twenty pieces of ammunition, and expend a spell slot to infuse it with magical energy. The magic item retains its enhancement for 8 hours or until used (in the case of magic ammunition). You can infuse only one item at a time; if you infuse a second one, the first immediately loses its potency. Once you have expended a spell slot to create such an item, you cannot regain that slot until the item becomes nonmagical.",
+				"The spell slot you expend determines the type of weapon, armor, or shield you can create.",
+				{
+					"type": "table",
+					"caption": "Infuse Weapons and Armor",
+					"colLabels": [
+						"Spell Level",
+						"Item Created"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"2nd",
+							"+1 ammunition (20 pieces)"
+						],
+						[
+							"3rd",
+							"+1 weapon or +1 shield"
+						],
+						[
+							"4th",
+							"+1 armor"
+						],
+						[
+							"5th",
+							"+2 weapon or +2 ammunition (20 pieces)"
+						],
+						[
+							"6th",
+							"+2 armor"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Superior Artificer",
+			"source": "UAEberron",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Artificer (UA)",
+			"subclassSource": "UAEberron",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, you can create a second magic weapon, suit of armor, shield, or bundle of ammunition using your Infuse Weapons and Armor ability. Attempting to infuse a third item causes the oldest one to immediately lose its potency.",
+				"You can also create one additional potion or scroll using Infuse Potions or Infuse Scrolls."
+			]
+		},
+		{
+			"name": "Master Artificer",
+			"source": "UAEberron",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Artificer (UA)",
+			"subclassSource": "UAEberron",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"On reaching 14th level, your mastery of arcane magic allows you to produce a variety of magic items. You can create a single item chosen from Magic Item Tables A and B in chapter 7 of the Dungeon Master's Guide (shown below). It takes you 1 week to produce such an item, and you must rest for 1 month before using this ability to craft another item.",
+				{
+					"type": "table",
+					"caption": "Magic Item Table A",
+					"colLabels": [
+						"d100",
+						"Magic Item"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"01-50",
+							"Potion of healing"
+						],
+						[
+							"51-60",
+							"Spell scroll (cantrip)"
+						],
+						[
+							"61-70",
+							"Potion of climbing"
+						],
+						[
+							"71-90",
+							"Spell scroll (1st level)"
+						],
+						[
+							"91-94",
+							"Spell scroll (2nd level)"
+						],
+						[
+							"95-98",
+							"Potion of greater healing"
+						],
+						[
+							"99",
+							"Bag of holding"
+						],
+						[
+							"00",
+							"Driftglobe"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Magic Item Table B",
+					"colLabels": [
+						"d100",
+						"Magic Item"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"01-15",
+							"Potion of greater healing"
+						],
+						[
+							"16-22",
+							"Potion of fire breath"
+						],
+						[
+							"23-29",
+							"Potion of resistance"
+						],
+						[
+							"30-34",
+							"Ammunition +1"
+						],
+						[
+							"35-39",
+							"Potion of animal friendship"
+						],
+						[
+							"40-44",
+							"Potion of hill giant strength"
+						],
+						[
+							"45-49",
+							"Potion of growth"
+						],
+						[
+							"50-54",
+							"Potion of water breathing"
+						],
+						[
+							"55-59",
+							"Spell scroll (2nd level)"
+						],
+						[
+							"60-64",
+							"Spell scroll (3rd level)"
+						],
+						[
+							"65-67",
+							"Bag of holding"
+						],
+						[
+							"68-70",
+							"Keoghtom's ointment"
+						],
+						[
+							"71-73",
+							"Oil of slipperiness"
+						],
+						[
+							"74-75",
+							"Dust of disappearance"
+						],
+						[
+							"76-77",
+							"Dust of dryness"
+						],
+						[
+							"78-79",
+							"Dust of sneezing and choking"
+						],
+						[
+							"80-81",
+							"Elemental gem"
+						],
+						[
+							"82-83",
+							"Philter of love"
+						],
+						[
+							"84",
+							"Alchemy jug"
+						],
+						[
+							"85",
+							"Cap of water breathing"
+						],
+						[
+							"86",
+							"Cloak of the manta ray"
+						],
+						[
+							"87",
+							"Driftglobe"
+						],
+						[
+							"88",
+							"Goggles of night"
+						],
+						[
+							"89",
+							"Helm of comprehending languages"
+						],
+						[
+							"90",
+							"Immovable rod"
+						],
+						[
+							"91",
+							"Lantern of revealing"
+						],
+						[
+							"92",
+							"Mariner's armor"
+						],
+						[
+							"93",
+							"Mithral armor"
+						],
+						[
+							"94",
+							"Potion of poison"
+						],
+						[
+							"95",
+							"Ring of swimming"
+						],
+						[
+							"96",
+							"Robe of useful items"
+						],
+						[
+							"97",
+							"Rope of climbing"
+						],
+						[
+							"98",
+							"Saddle of the cavalier"
+						],
+						[
+							"99",
+							"Wand of magic detection"
+						],
+						[
+							"00",
+							"Wand of secret"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionics",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 2,
+			"entries": [
+				"Wizards study magical power in all its forms, including the magic of psionics. Those wizards who follow the tradition of Psionics hone the magical potential of their own minds. Sometimes called psionicists or mentalists, these wizards interact with the multiverse through the lens of their psionic aptitude and awareness.",
+				"Psionicists channel their magic by focusing their minds. By doing so they can transcend their physical bodies, adopting forms of pure thought, casting spells psionically to bypass the need for components, and perceiving the world with a broader range of senses.",
+				"As a member of the Psionics tradition, you might have awoken your psionic potential through the strain of your esoteric studies, or perhaps you joined a scholarly order dedicated to unlocking the magic of the mind.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Focus|Wizard||Psionics (UA)|UAFighterRogueWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Devotion|Wizard||Psionics (UA)|UAFighterRogueWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Your Psionic Focus|Wizard||Psionics (UA)|UAFighterRogueWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Spells|Wizard||Psionics (UA)|UAFighterRogueWizard|2"
+				}
+			]
+		},
+		{
+			"name": "Psionic Devotion",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Psionics feature}",
+				"Your study of psionics begins to unleash your mind's potential. When you gain this feature, choose one of the following cantrips: friends, mage hand, or message. You learn that cantrip if you don't already know it, and it doesn't count against the number of wizard cantrips you know. While your psionic focus is on your person, you can cast the chosen cantrip as a bonus action, requiring no components, and with the modification listed below:",
+				{
+					"type": "entries",
+					"name": "Friends",
+					"entries": [
+						"When the spell ends, the target doesn't become hostile to you."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Mage Hand",
+					"entries": [
+						"You can make the hand {@condition 隐形} when you cast the spell, and controlling the spell is a bonus action for you."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Message",
+					"entries": [
+						"You don't need to point toward the target or whisper your message out loud."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionic Focus",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Psionics feature}",
+				"You have learned to channel psionic energy through a special object: a psionic focus. You gain the object with this feature (see the \"Your Psionic Focus\" sidebar for how you might have acquired the item).",
+				"While your psionic focus is on your person, you gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"The object is a spellcasting focus for you.",
+						"When you roll psychic or force damage for any of your wizard spells, you can reroll any of those damage dice that rolls a 1, but you must use the new roll."
+					]
+				},
+				"If your psionic focus is lost, you can magically recreate it by meditating for 1 hour during a short or long rest, at the end of which the focus appears in your hand."
+			]
+		},
+		{
+			"name": "Psionic Spells",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 2,
+			"header": 1,
+			"type": "inset",
+			"entries": [
+				"Spell selection is part of what defines a wizard and their individual fields of expertise. When creating your Psionics wizard, consider spells that are thematically appropriate for that tradition. Psionics as a theme generally includes spells that do the following:",
+				{
+					"type": "list",
+					"items": [
+						"contact or manipulate minds",
+						"allow the caster to perceive distant locations or planes",
+						"alter perception",
+						"move objects and creatures",
+						"teleport",
+						"deal psychic or force damage"
+					]
+				}
+			]
+		},
+		{
+			"name": "Your Psionic Focus",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 2,
+			"header": 1,
+			"type": "inset",
+			"entries": [
+				"Every member of the Psionics tradition has a story about how their psionic focus came into their life. Consider how you found yours and what form it takes.",
+				"The event that brought your psionic focus to you probably holds personal significance. Did your master give it to you upon the completion of your apprenticeship? Was it awarded to you when you graduated from your academy of wizardry? Did it call to you in a jeweler's shop? Was it associated with the moment when your psionic powers first manifested? One morning, did you wake up with it humming under your pillow?",
+				"The form your psionic focus takes is also yours to define, likely being a reflection of how your magic came into being, a symbol of your own psyche, or an item you use to focus your thoughts. It is a handheld object that has special meaning to you, but that can't be a weapon or magic item. Perhaps it's a childhood memento, the skull of an alien creature, a crystal that makes you feel a certain way, a coin that only lands on its edge, a firescarred planchette, or any other enigmatic personal relic.",
+				"However the object arrived and whatever form it takes, your psionic focus is now yours, and you decide how to handle it. Will you mount it on a wand or staff? Would you prefer to wear it on a necklace or circlet? Have you embedded it into the cover of your spellbook? Wherever you put it, you can now channel your magic through it, and it is a sign of your membership in the revered tradition of psionic wizardry."
+			]
+		},
+		{
+			"name": "Thought Form",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level Psionics feature}",
+				"While you are carrying your psionic focus, you can use a bonus action to magically transform your body into pure psionic energy. The transformation lasts for 10 minutes, until you use a bonus action to assume your normal form, or until you are {@condition 无力} or die.",
+				"While in thought form, you are a figure of luminous psychic energy, with your psionic focus hovering within. Your form can appear as anything you wish, but it is obviously magical, is the same size as you, and sheds dim light in a 5-foot-radius. Any other equipment you are wearing or carrying transforms with you and melds into your thought form. You also gain the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Psionic Spellcasting",
+							"entry": "When you cast a spell while in thought form, you can cast the spell psionically. If you do so, the spell doesn't require verbal, somatic, or material components that lack a gold cost."
+						},
+						{
+							"type": "item",
+							"name": "Psychic Resilience",
+							"entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+						}
+					]
+				},
+				"You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "Empowered Psionics",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Psionics feature}",
+				"When you deal psychic or force damage with a wizard spell, you can add your Intelligence modifier to the damage against one of the spell's targets."
+			]
+		},
+		{
+			"name": "Mental Discipline",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Psionics feature}",
+				"Your mind's power expands to greater heights. When you gain this feature, choose one of the following spells: {@spell 支配人类}, {@spell 探知}, or {@spell 心灵遥控}. You can add the spell to your spellbook, and you can cast it without components.",
+				"You can also cast the chosen spell once without expending a spell slot. After you do so, you regain the ability to cast the spell without a slot when you finish a long rest."
+			]
+		},
+		{
+			"name": "Thought Travel",
+			"source": "UAFighterRogueWizard",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Psionics (UA)",
+			"subclassSource": "UAFighterRogueWizard",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level Psionics feature}",
+				"While using your Thought Form, you have a flying speed equal to your walking speed and can hover, and you can move through other creatures and objects as if they were difficult terrain.",
+				"You take {@damage 1d10} force damage if you end your turn inside an object. If you return to your normal form while inside an object, you are shunted to the nearest unoccupied space, and you take {@damage 1d10} force damage for every 5 feet traveled."
+			]
+		},
+		{
+			"name": "Technomancy",
+			"source": "UAModernMagic",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Technomancy (UA)",
+			"subclassSource": "UAModernMagic",
+			"level": 2,
+			"entries": [
+				"Unlike the more common arcane traditions based around the schools of magic, the tradition of Technomancy does not focus on a singular type of spellcraft or magical energy. Rather, students of Technomancy concern themselves with how their spells interact with modern technology.",
+				"Technomancers can make use of technology as both a conduit and a storage space for magic. In a campaign using the optional rules for magic item creation (see the Dungeon Master's Guide), a technomancer might craft disposable electronic devices and smartphone apps in lieu of potions and scrolls.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Wizard||Technomancy (UA)|UAModernMagic|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Technological Savant|Wizard||Technomancy (UA)|UAModernMagic|2"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "UAModernMagic",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Technomancy (UA)",
+			"subclassSource": "UAModernMagic",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Beginning when you select this arcane tradition at 2nd level, you gain proficiency with sidearms and hacking tools."
+			]
+		},
+		{
+			"name": "Technological Savant",
+			"source": "UAModernMagic",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Technomancy (UA)",
+			"subclassSource": "UAModernMagic",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Also at 2nd level, you trade out your spellbook for a specially attuned storage device of your choosing, capable of recording magical data. The computing power of this device must be equal to or greater than a tablet computer. Only one storage device can be attuned to you at any given time. Spells can be copied into this device at half the cost of copying spells into a spellbook."
+			]
+		},
+		{
+			"name": "Program Spell",
+			"source": "UAModernMagic",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Technomancy (UA)",
+			"subclassSource": "UAModernMagic",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you can insert a spell within an electronic device of your choosing, so that by touching a key or flicking a switch using an action, the spell activates. All variables of the spell are set at the time of casting. The computing power of this device must be equal to or greater than a mobile phone.",
+				"A programmed spell remains placed in its device for 48 hours, and is gone once it is discharged. You can use this feature to place a programmed spell in only one device at a time, and a device can hold only one programmed spell. Only you can activate the programmed spell in the device. If the device is destroyed, the programmed spell is lost.",
+				"A concentration spell placed in a device cannot be activated while you are concentrating on another spell. Once you use this feature, you can't use it again until you finish a long rest."
+			]
+		},
+		{
+			"name": "Online Casting",
+			"source": "UAModernMagic",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Technomancy (UA)",
+			"subclassSource": "UAModernMagic",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, you can cast spells through networked electronic devices, including cameras, mobile phones, and computers. For example, if a creature is under the observation of a security camera and you can see the video feed from that camera on a computer, you can cast a spell into the computer and out through the security camera to target that creature.",
+				"If the spell requires the caster to be seen, the target must see you or a live image of you. If the spell requires the caster to be heard, the target must be able to hear you or a live audio transmission of you. The spell's range is determined using the distance from you to your device, and then from the target to its device. You must be able to see or otherwise determine the location of the target. This feature can be used to cast only spells that target specific creatures. Spells that affect an area are not subject to online casting.",
+				"This feature can be used a number of times per day equal to your Intelligence modifier (minimum of once)."
+			]
+		},
+		{
+			"name": "Chained Device",
+			"source": "UAModernMagic",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Technomancy (UA)",
+			"subclassSource": "UAModernMagic",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"By 14th level, you have learned to imprint vestiges of your consciousness on electronic devices with significant computing power. When you cast a concentration spell, you can use a device whose computing power is equal to or greater than a tablet computer to maintain concentration of the spell on your behalf. The device must be held or worn by you to maintain this effect. If the device is destroyed, taken from you, dropped, or turned off, the concentration ends. Once you use this feature, you can't use it again until you finish a long rest."
+			]
+		},
+		{
+			"name": "School of Invention",
+			"source": "UAThreeSubclasses",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Invention (UA)",
+			"subclassSource": "UAThreeSubclasses",
+			"level": 2,
+			"entries": [
+				"The School of Invention claims credit for inventing the other schools of magic\u2014a claim other wizards find absurd. Wizards of this school push magic to its limits. They stretch the known laws of arcane power and strive to reveal important truths about the nature of the multiverse.",
+				"Adherents of this school believe that innovation is best served through experimentation. They have a reputation for acting first, thinking second. Most wizards are scholars who have mastered their craft through careful study, rigorous practice, and endless hours of repetition. These wizards would rather throw spells together and see what happens.",
+				"Many wizards of this tradition are gnomes, alchemists, or both, and they take pride in the magic-infused armor they don. The armor not only provides protection, but it is also designed to help the wizard channel magic in unpredictable ways.",
+				"Wizards of this tradition are regarded as savants to their faces, but wizards of other traditions often think of them as lunatics.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tools of the Inventor|Wizard||Invention (UA)|UAThreeSubclasses|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcanomechanical Armor|Wizard||Invention (UA)|UAThreeSubclasses|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Reckless Casting|Wizard||Invention (UA)|UAThreeSubclasses|2"
+				}
+			]
+		},
+		{
+			"name": "Arcanomechanical Armor",
+			"source": "UAThreeSubclasses",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Invention (UA)",
+			"subclassSource": "UAThreeSubclasses",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Innovation is a dangerous practice, at least as far as members of this school practice it. As a shield against this risk, you have developed a suit of arcane armor.",
+				"Starting at 2nd level, you gain proficiency with light armor and gain a suit of arcanomechanical armor\u2014a magic item that only you can attune to. While you are attuned to it and wearing it, it grants you resistance to force damage.",
+				"The armor is light armor and provides an AC of 12 + your Dexterity modifier. It weighs 8 pounds.",
+				"You can create a new suit of it at the end of a long rest by touching a nonmagical suit of studded leather armor, which magically transforms it. Doing so removes the magic from your previous arcanomechanical armor, turning it in to nonmagical studded leather."
+			]
+		},
+		{
+			"name": "Reckless Casting",
+			"source": "UAThreeSubclasses",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Invention (UA)",
+			"subclassSource": "UAThreeSubclasses",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Starting at 2nd level, you can attempt to cast a spell you don't have prepared. When you use this ability, you use your action and choose one of the following options:",
+				{
+					"type": "list",
+					"items": [
+						"Roll on the Reckless Casting table for cantrips and cast the resulting spell as part of this action.",
+						"Expend a spell slot and roll twice on the Reckless Casting table for its level, or the 5th-level table if the slot is 6th level or higher. Pick which of the two results you want to use and cast the resulting spell as part of this action."
+					]
+				},
+				"If the spell you cast isn't a wizard spell, it is nonetheless a wizard spell for you when you cast it with this feature.",
+				{
+					"type": "table",
+					"caption": "Reckless Casting",
+					"colLabels": [
+						"d10",
+						"Cantrip"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"{@spell 酸液溅爆}"
+						],
+						[
+							"2",
+							"{@spell 寒颤之触}"
+						],
+						[
+							"3",
+							"{@spell 火焰箭}"
+						],
+						[
+							"4",
+							"{@spell 光亮术}"
+						],
+						[
+							"5",
+							"{@spell 毒气喷洒}"
+						],
+						[
+							"6",
+							"{@spell 冷冻射线}"
+						],
+						[
+							"7",
+							"{@spell 电爪}"
+						],
+						[
+							"8",
+							"{@spell 圣焰}"
+						],
+						[
+							"9",
+							"{@spell 荆棘之鞭}"
+						],
+						[
+							"10",
+							"Roll twice and cast each cantrip, but if you roll another 10 on either die, you cast nothing, wasting your action."
+						]
+					]
+				},
+				{
+					"type": "table",
+					"colLabels": [
+						"d10",
+						"1st-Level Spell"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"{@spell 燃烧之手}"
+						],
+						[
+							"2",
+							"{@spell 幻色法球}"
+						],
+						[
+							"3",
+							"{@spell 七彩喷射}"
+						],
+						[
+							"4",
+							"{@spell 妖火术}"
+						],
+						[
+							"5",
+							"{@spell 摹造生命}"
+						],
+						[
+							"6",
+							"{@spell 云雾术}"
+						],
+						[
+							"7",
+							"{@spell 跳跃术}"
+						],
+						[
+							"8",
+							"{@spell 魔法飞弹}"
+						],
+						[
+							"9",
+							"{@spell 雷鸣波}"
+						],
+						[
+							"10",
+							"Roll twice and cast each spell, but if you roll another 10 on either die, you cast nothing, wasting your action but not the spell slot."
+						]
+					]
+				},
+				{
+					"type": "table",
+					"colLabels": [
+						"d10",
+						"2nd-Level Spell"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"{@spell 朦胧术}"
+						],
+						[
+							"2",
+							"{@spell 黑暗术}"
+						],
+						[
+							"3",
+							"{@spell 变巨/缩小术}"
+						],
+						[
+							"4",
+							"{@spell 造风术}"
+						],
+						[
+							"5",
+							"{@spell 隐形术}"
+						],
+						[
+							"6",
+							"{@spell 浮空术}"
+						],
+						[
+							"7",
+							"{@spell 马友夫强酸箭}"
+						],
+						[
+							"8",
+							"{@spell 灼热射线}"
+						],
+						[
+							"9",
+							"{@spell 粉碎音波}"
+						],
+						[
+							"10",
+							"Roll twice and cast each spell, but if you roll another 10 on either die, you cast nothing, wasting your action but not the spell slot."
+						]
+					]
+				},
+				{
+					"type": "table",
+					"colLabels": [
+						"d10",
+						"3rd-Level Spell"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"{@spell 闪现术}"
+						],
+						[
+							"2",
+							"{@spell 恐惧术}"
+						],
+						[
+							"3",
+							"{@spell 假死术}"
+						],
+						[
+							"4",
+							"{@spell 火球术}"
+						],
+						[
+							"5",
+							"{@spell 飞行术}"
+						],
+						[
+							"6",
+							"{@spell 气化形体}"
+						],
+						[
+							"7",
+							"{@spell 闪电束}"
+						],
+						[
+							"8",
+							"{@spell 雪雨暴}"
+						],
+						[
+							"9",
+							"{@spell 臭云术}"
+						],
+						[
+							"10",
+							"Roll twice and cast each spell, but if you roll another 10 on either die, you cast nothing, wasting your action but not the spell slot."
+						]
+					]
+				},
+				{
+					"type": "table",
+					"colLabels": [
+						"d10",
+						"4th-Level Spell"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"{@spell 枯萎术}"
+						],
+						[
+							"2",
+							"{@spell 困惑术}"
+						],
+						[
+							"3",
+							"{@spell 艾伐黑触手}"
+						],
+						[
+							"4",
+							"{@spell 火焰护盾}"
+						],
+						[
+							"5",
+							"{@spell 高等隐形术}"
+						],
+						[
+							"6",
+							"{@spell 冰风暴}"
+						],
+						[
+							"7",
+							"{@spell 魅影杀手}"
+						],
+						[
+							"8",
+							"{@spell 石肤术}"
+						],
+						[
+							"9",
+							"{@spell 火墙术}"
+						],
+						[
+							"10",
+							"Roll twice and cast each spell, but if you roll another 10 on either die, you cast nothing, wasting your action but not the spell slot."
+						]
+					]
+				},
+				{
+					"type": "table",
+					"colLabels": [
+						"d10",
+						"5th-Level Spell"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"{@spell 死云术}"
+						],
+						[
+							"2",
+							"{@spell 寒冰锥}"
+						],
+						[
+							"3",
+							"{@spell 湮灭波}"
+						],
+						[
+							"4",
+							"{@spell 焰击术}"
+						],
+						[
+							"5",
+							"{@spell 怪物定身术}"
+						],
+						[
+							"6",
+							"{@spell 疫病虫群}"
+						],
+						[
+							"7",
+							"{@spell 群体治疗伤势}"
+						],
+						[
+							"8",
+							"{@spell 力墙术}"
+						],
+						[
+							"9",
+							"{@spell 石墙术}"
+						],
+						[
+							"10",
+							"Roll twice and cast each spell, but if you roll another 10 on either die, you cast nothing, wasting your action but not the spell slot."
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Tools of the Inventor",
+			"source": "UAThreeSubclasses",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Invention (UA)",
+			"subclassSource": "UAThreeSubclasses",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"At 2nd level, you gain proficiency with two tools of your choice."
+			]
+		},
+		{
+			"name": "Alchemical Casting",
+			"source": "UAThreeSubclasses",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Invention (UA)",
+			"subclassSource": "UAThreeSubclasses",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you learn to channel magic through your arcanomechanical armor to augment spells in a variety of ways. When you cast a spell while wearing that armor and attuned to it, you can expend one additional spell slot of 1st or 2nd level to alter the spell. The effect depends on the spell slot you expend.",
+				"A 1st-level slot allows you to manipulate the spell's energy. When you cast a spell that deals acid, cold, fire, lightning, or thunder damage, you can substitute that damage type for another one from that list.",
+				"A 2nd-level slot increases the spell's raw force. If you roll damage for the spell when you cast it, increase that damage by {@damage 2d10} force damage against one of the spell's targets (your choice) this turn."
+			]
+		},
+		{
+			"name": "Prodigious Inspiration",
+			"source": "UAThreeSubclasses",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Invention (UA)",
+			"subclassSource": "UAThreeSubclasses",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, you have attained a greater mastery of spell preparation. As a bonus action, you can replace one spell you have prepared with another spell from your spellbook. You can't use this ability again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Controlled Chaos",
+			"source": "UAThreeSubclasses",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Invention (UA)",
+			"subclassSource": "UAThreeSubclasses",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, your ability to improvise magic grows stronger. Whenever you roll on a Reckless Casting table for a spell other than a cantrip, you can roll on the table that is one level higher than the expended spell slot."
+			]
+		},
+		{
+			"name": "Lore Mastery",
+			"source": "UAWarlockAndWizard",
+			"page": 5,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore Mastery (UA)",
+			"subclassSource": "UAWarlockAndWizard",
+			"level": 2,
+			"entries": [
+				"Lore Mastery is an arcane tradition fixated on understanding the underlying mechanics of magic. It is the most academic of all arcane traditions. The promise of uncovering new knowledge or proving (or discrediting) a theory of magic is usually required to rouse its practitioners from their laboratories, academies, and archives to pursue a life of adventure.",
+				"Known as savants, followers of this tradition are a bookish lot who see beauty and mystery in the application of magic. The results of a spell are less interesting to them than the process that creates it. Some savants take a haughty attitude toward those who follow a tradition focused on a single school of magic, seeing them as provincial and lacking the sophistication needed to master true magic. Other savants are generous teachers, countering ignorance and deception with deep knowledge and good humor.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Lore Master|Wizard||Lore Mastery (UA)|UAWarlockAndWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Spell Secrets|Wizard||Lore Mastery (UA)|UAWarlockAndWizard|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Altering Spells|Wizard||Lore Mastery (UA)|UAWarlockAndWizard|2"
+				}
+			]
+		},
+		{
+			"name": "Altering Spells",
+			"source": "UAWarlockAndWizard",
+			"page": 5,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore Mastery (UA)",
+			"subclassSource": "UAWarlockAndWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"While the Spell Secrets feature offers increased versatility, at the table its effects can be difficult to spot by the other players. If you're playing a savant, take a moment to describe how you alter your spells. Think of a signature change your character is particularly proud of. Be inventive, and make the game more fun for everyone by playing up the sudden, unexpected tricks you character can employ. For example, a {@spell 火球术} transformed to require a Strength save might become a sphere of burning rock that shatters and slams into its target. A {@spell 魅惑人类} that requires a Constitution save might take the form of a vaporous narcotic that alters the target's mood."
+			]
+		},
+		{
+			"name": "Lore Master",
+			"source": "UAWarlockAndWizard",
+			"page": 5,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore Mastery (UA)",
+			"subclassSource": "UAWarlockAndWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Starting at 2nd level, you become a compendium of knowledge on a vast array of topics. Your proficiency bonus is doubled for any ability check you make that uses the {@skill 奥秘}, {@skill 历史}, {@skill 自然}, or {@skill 宗教} skill if you are proficient in that skill.",
+				"In addition, your analytical abilities are so well-honed that your initiative in combat can be driven by mental agility, rather than physical agility. When you roll initiative, it is either an Intelligence check or a Dexterity check for you (your choice)."
+			]
+		},
+		{
+			"name": "Spell Secrets",
+			"source": "UAWarlockAndWizard",
+			"page": 5,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore Mastery (UA)",
+			"subclassSource": "UAWarlockAndWizard",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"At 2nd level, you master the first in a series of arcane secrets uncovered by your extensive studies.",
+				"When you cast a spell with a spell slot and the spell deals acid, cold, fire, force, lightning, necrotic, radiant, or thunder damage, you can substitute that damage type with one other type from that list (you can change only one damage type per casting of a spell). You replace one energy type for another by altering the spell's formula as you cast it.",
+				"When you cast a spell with a spell slot and the spell requires a saving throw, you can change the saving throw from one ability score to another of your choice. Once you change a saving throw in this way, you can't do so again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Alchemical Casting",
+			"source": "UAWarlockAndWizard",
+			"page": 5,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore Mastery (UA)",
+			"subclassSource": "UAWarlockAndWizard",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you learn to augment spells in a variety of ways. When you cast a spell with a spell slot, you can expend one additional spell slot to augment its effects for this casting, mixing the raw stuff of magic into your spell to amplify it. The effect depends on the spell slot you expend.",
+				"An additional 1st-level spell slot can increase the spell's raw force. If you roll damage for the spell when you cast it, increase the damage against every target by {@damage 2d10} force damage. If the spell can deal damage on more than one turn, it deals this extra force damage only on the turn you cast the spell.",
+				"An additional 2nd-level spell slot can increase the spell's range. If the spell's range is at least 30 feet, it becomes 1 mile.",
+				"An additional 3rd-level spell slot can increase the spell's potency. Increase the spell's save DC by 2."
+			]
+		},
+		{
+			"name": "Prodigious Memory",
+			"source": "UAWarlockAndWizard",
+			"page": 5,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore Mastery (UA)",
+			"subclassSource": "UAWarlockAndWizard",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, you have attained a greater mastery of spell preparation. As a bonus action, you can replace one spell you have prepared with another spell from your spellbook. You can't use this feature again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Master of Magic",
+			"source": "UAWarlockAndWizard",
+			"page": 5,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore Mastery (UA)",
+			"subclassSource": "UAWarlockAndWizard",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, your knowledge of magic allows you to duplicate almost any spell. As a bonus action, you can call to mind the ability to cast one spell of your choice from any class's spell list. The spell must be of a level for which you have spell slots, you mustn't have it prepared, and you follow the normal rules for casting it, including expending a spell slot. If the spell isn't a wizard spell, it counts as a wizard spell when you cast it. The ability to cast the spell vanishes from your mind when you cast it or when the current turn ends.",
+				"You can't use this feature again until you finish a long rest."
+			]
+		},
+		{
+			"name": "Theurgy",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"entries": [
+				"A number of deities claim arcane magic as their domain, for magic is as much a part of the fabric of the cosmos as wind, fire, lightning, and all other primal forces. Just as there are deities of the sea and gods of warfare, the arcane arts feature their own divine patrons.",
+				"Such deities often have clerics, but many gods of magic bid their followers to take up the study of wizardry. These religious magic-users follow the arcane tradition of Theurgy, and are commonly known as theurgists. Such spellcasters are as dedicated and scholarly as any other wizard, but they blend their arcane study with religious devotion.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Divine Inspiration|Wizard||Theurgy (UA)|UAWizardRevisited|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Initiate|Wizard||Theurgy (UA)|UAWizardRevisited|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Channel Arcana|Wizard||Theurgy (UA)|UAWizardRevisited|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Channel Arcana: Divine Arcana|Wizard||Theurgy (UA)|UAWizardRevisited|2"
+				}
+			]
+		},
+		{
+			"name": "Arcane Initiate",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Beginning when you select this tradition at 2nd level, whenever you gain a wizard level, you can replace one of the wizard spells you add to your spellbook with a cleric domain spell for your chosen domain. The spell must be of a level for which you have spell slots.",
+				"If you add all of your domain spells to your spellbook, you can subsequently add any spell from the cleric spell list instead. The spell must still be of a level for which you have spell slots.",
+				"Any cleric spell you gain from this feature is considered a wizard spell for you, but other wizards can't copy cleric spells from your spellbook into their own spellbooks."
+			]
+		},
+		{
+			"name": "Channel Arcana",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"At 2nd level, you gain the ability to channel arcane energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Divine Arcana and the Channel Divinity option granted at 2nd level by your chosen domain. You employ that Channel Divinity option by using your Channel Arcana ability.",
+				"When you use your Channel Arcana, you choose which effect to create. You must then finish a short or long rest to use your Channel Arcana again.",
+				"Some Channel Arcana effects require saving throws. When you use such an effect, the save DC equals your wizard spell save DC.",
+				"Beginning at 6th level, you can use your Channel Arcana twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses.",
+				"If you gain additional Channel Divinity options from your domain, you can employ them by using your Channel Arcana feature."
+			]
+		},
+		{
+			"name": "Channel Arcana: Divine Arcana",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"As a bonus action, you speak a prayer to control the flow of magic around you. The next spell you cast gains a +2 bonus to any attack roll you make for it or to its saving throw DC, as appropriate."
+			]
+		},
+		{
+			"name": "Divine Inspiration",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"When you choose this tradition at 2nd level, choose a domain from your chosen deity's list of eligible domains (see appendix B, \"Gods of the Multiverse,\" in the Player's Handbook for examples). The Knowledge and Light domains are especially appropriate choices for a theurgist."
+			]
+		},
+		{
+			"name": "Arcane Acolyte",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you gain your chosen domain's 1st-level benefits. However, you do not gain any weapon or armor proficiencies from the domain."
+			]
+		},
+		{
+			"name": "Arcane Priest",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"At 10th level, you gain your chosen domain's 6th-level benefits. Your faith and your understanding of magic allow you to delve into your god's secrets."
+			]
+		},
+		{
+			"name": "Arcane High Priest",
+			"source": "UAWizardRevisited",
+			"page": 1,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Theurgy (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, you gain your chosen domain's 17th-level benefits. Your academic nature and understanding of magic and doctrine allow you to master this ability sooner than a cleric of your domain."
+			]
+		},
+		{
+			"name": "War Magic",
+			"source": "UAWizardRevisited",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"entries": [
+				"A variety of arcane colleges specialize in training wizards for war. The tradition of War Magic blends principles of evocation and abjuration. It teaches techniques that empower a caster's spells, while also providing methods for a wizard to bolster their own defenses.",
+				"Followers of this tradition are known as war mages. They see their magic as both a weapon and armor, a resource superior to any flimsy piece of steel. War mages strike fast in battle, using their spells to seize tactical control of a situation. Their spells strike hard, while their defensive skills foil their opponents' attempts to counterattack.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Deflection|Wizard||War (UA)|UAWizardRevisited|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tactical Wit|Wizard||War (UA)|UAWizardRevisited|2"
+				}
+			]
+		},
+		{
+			"name": "Arcane Deflection",
+			"source": "UAWizardRevisited",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"At 2nd level, you have learned to weave your magic to fortify yourself against harm. When you are hit by an attack or fail a Constitution saving throw, you can use your reaction to gain a +2 bonus to your AC against that attack or a +4 bonus to that saving throw.",
+				"When you use this feature, you can't cast spells other than cantrips until the end of your next turn."
+			]
+		},
+		{
+			"name": "Tactical Wit",
+			"source": "UAWizardRevisited",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Starting at 2nd level, your ability to quickly assess tactical situations allows you to act quickly in battle. You gain a bonus to your initiative rolls equal to your Intelligence modifier."
+			]
+		},
+		{
+			"name": "Power Surge",
+			"source": "UAWizardRevisited",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, you can empower your spells that unleash harm on groups of foes. When you force multiple creatures to make saving throws against the damage of one of your spells, you can increase the spell's damage by rolling two more of its damage dice. This increase occurs only on the turn you cast the spell.",
+				"Once you use this feature, you can't use it again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Durable Magic",
+			"source": "UAWizardRevisited",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Beginning at 10th level, the magic you channel helps ward off harm. While you maintain concentration on a spell, you have a +2 bonus to AC and all saving throws."
+			]
+		},
+		{
+			"name": "Durable Magic",
+			"source": "UAWizardRevisited",
+			"page": 2,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War (UA)",
+			"subclassSource": "UAWizardRevisited",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, your Arcane Deflection becomes infused with deadly magic. When you use your Arcane Deflection feature, magical energy arcs from you; each creature of your choice within 10 feet of you takes force damage equal to half your wizard level."
+			]
+		},
+		{
+			"name": "战争魔法",
+			"ENG_name": "War Magic",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 2,
+			"entries": [
+				"许多奥术学院专门培育用于战争的法师。战争魔法的传承融合了塑能与防护学派的理念，而非专精于单一学派。它既传授施法者增强法术威力的技巧，也为法师提供了改良防御能力的手段。",
+				"这个传承的追随着们被称作战法师。他们将他们的魔法视作武器以及盔甲，一种比任何钢铁都更加优越的资源。战法师在战斗中行动迅速，用他们的法术夺取对战况的控制。他们的法术迅猛非常，他们的防守技巧挫败了对手的反击势头。战法师也擅长将其他施法者的魔法能量转为对付他们自己。",
+				"在大战中，战法师经常与塑能师、防护师、以及其他类型的法师一同共事。塑能师最常嗤笑战法师必须分心于攻守之间，而战法师的典型回应是：「死人可丢不了火球。」",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "秘法偏斜|Wizard||War|XGE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战术思维|Wizard||War|XGE|2"
+				}
+			]
+		},
+		{
+			"name": "秘法偏斜",
+			"ENG_name": "Arcane Deflection",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级战争魔法特性}",
+				"你学会编制你的魔法以让你自己在对抗伤害时更加坚韧。当你被一次攻击命中、或在一次豁免检定中失败时，你可以使用你的反应以使你的AC对该次攻击获得+2加值，或在该豁免检定中获得+4加值。",
+				"当你使用此能力，则直到你的下个回合结束前，你都无法施放戏法以外的法术。"
+			]
+		},
+		{
+			"name": "战术思维",
+			"ENG_name": "Tactical Wit",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2级战争魔法特性}",
+				"你对于战局的敏锐掌控让你得以在战斗中迅速行动。你可以让你自己在先攻检定中获得等同于你智力调整值的加值。"
+			]
+		},
+		{
+			"name": "力量涌动",
+			"ENG_name": "Power Surge",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级战争魔法特性}",
+				"你可以将魔法能量保存在你体内以增强你往后施放的伤害性法术。这个能量保存的形式被称作力量涌动。",
+				"你可以保存最多等同于你智力调整值数量的力量涌动（最少1点）。每当你完成一次长休，你所保存的力量涌动数量将被重置为一点。每当你成功以{@spell 解除魔法}或{@spell 反制法术}结束一个法术，随着你从你所破坏的法术中窃取魔法，你将获得一点力量涌动。若你在结束一次短休时没有任何力量涌动，你将获得一点力量涌动。",
+				"每回合一次，当你以一个法师法术对一个生物造成伤害时，你可以消耗一点力量涌动以对目标造成额外的力场伤害。这个额外伤害等同于你法师等级的一半。"
+			]
+		},
+		{
+			"name": "耐久魔法",
+			"ENG_name": "Durable Magic",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10级战争魔法特性}",
+				"你所导引的魔法能够协助阻绝伤害。当你专注于一个法术时，你的AC和所有豁免检定都获得+2加值。"
+			]
+		},
+		{
+			"name": "偏斜罩幕",
+			"ENG_name": "Deflecting Shroud",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级战争魔法特性}",
+				"你的秘法偏斜变得充斥着致命魔法。当你使用你的秘法偏斜能力时，你可以使魔法能量从你身上弧射而出。最多三个距离你60尺内，你所选择且你能看见的生物将各自受到等同于你法师等级一半的力场伤害。"
+			]
+		}
+	]
+}

@@ -1,0 +1,1153 @@
+{
+	"trap": [
+		{
+			"name": "捕熊陷阱",
+			"ENG_name": "Bear Trap",
+			"trapHazType": "SMPL",
+			"tier": 1,
+			"threat": 2,
+			"entries": [
+				"捕熊陷阱看起来像是一副钢铁的利齿，会在被踩上时咬合，夹住生物的腿。这种陷阱被钉在地上，使受害者动弹不得。"
+			],
+			"trigger": [
+				"踩上捕熊陷阱的生物将会触发它。"
+			],
+			"effect": [
+				"近战武器攻击：命中{@hit 8}，触发生物。若命中：5 ({@dice 1d10})穿刺伤害。这个攻击不会承受任何优势或劣势。被这个陷阱命中的生物的移动速度将会归零，且直到它从这个陷阱被释放之前都无法移动，要从这个陷阱脱离，必须要该生物或其他邻近该陷阱的生物成功通过一次DC 15的力量检定。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 10的感知（察觉）检定能够揭露这个陷阱的存在。使用{@item 盗贼工具|phb}并成功通过一次DC 10的敏捷检定能够将其解除。"
+			],
+			"source": "XGE",
+			"page": 113
+		},
+		{
+			"name": "塌方天花板",
+			"ENG_name": "Collapsing Roof",
+			"source": "DMG",
+			"page": 122,
+			"srd": true,
+			"trapHazType": "MECH",
+			"entries": [
+				"这个陷阱使用绊绳以触发，使支撑着天花板中不稳定区块的支柱倒下。",
+				"这条绊绳位于离地3寸之处，且链接在两个支柱之间。发现这条绊绳的DC为10。使用{@item 盗贼工具|phb}成功通过一次DC 15的敏捷检定可以无害地解除这条绊绳。没有{@item 盗贼工具|phb}的角色可以尝试使用任何锋利的武器或工具，并在承受劣势的情况下进行该检定。若检定失败，这个陷阱将被触发。",
+				"任何查看支柱的角色都可以轻易判断出它们仅仅是被脆弱地嵌在其位置上。以一个动作，一个角色可以击倒一根支柱，使这个陷阱被触发。",
+				"绊绳上方的天花板严重失修，且任何可以看见天花板的人都能够判断出它有着崩塌的危险。",
+				"当这个陷阱被触发，不稳固的天花板将会崩塌下来。任何在不稳固区块下方的生物都必须成功通过一次DC 15的敏捷豁免，豁免失败将受到22 ({@dice 4d10})钝击伤害，豁免成功则只受到一半的伤害。一旦这个陷阱被触发，该区域的地面将充斥着碎石块，且变成困难地形。"
+			]
+		},
+		{
+			"name": "强弩陷阱",
+			"ENG_name": "Crossbow Trap",
+			"trapHazType": "SMPL",
+			"tier": 1,
+			"threat": 2,
+			"entries": [
+				"强弩陷阱是狗头人和其他依赖陷阱来保卫自己巢穴的生物们所偏爱的一种陷阱。它是由一条横跨走廊并连接到一对被仔细藏起的重弩上的绊线所构成。这对重弩会向走廊中任何扰动绊线的对象进行射击。"
+			],
+			"trigger": [
+				"经过这条绊线的生物将会触发这个陷阱。"
+			],
+			"effect": [
+				"这个陷阱会对触发生物进行二次攻击。远程武器攻击：命中{@hit 8}，二次攻击；若命中：5 ({@dice 1d10})穿刺伤害。这个攻击不会承受任何优势或劣势。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 15的感知（察觉）检定能够揭露这个陷阱的绊线。使用{@item 盗贼工具|phb}并成功通过一次DC 15的敏捷检定能够解除这个陷阱的绊线，若这个检定在结果与目标值差距5点或更多的情况下失败，则这个陷阱将被触发。"
+			],
+			"source": "XGE",
+			"page": 113
+		},
+		{
+			"name": "落网",
+			"ENG_name": "Falling Net",
+			"source": "DMG",
+			"page": 122,
+			"srd": true,
+			"trapHazType": "MECH",
+			"entries": [
+				"这个陷阱使用绊绳以触发，使一张悬挂在天花板上的捕网落下。",
+				"这条绊绳位于离地3寸之处，且链接在两颗立柱或树木之间。捕网将被蜘蛛网或树叶所隐藏。发现这条绊绳的DC为10。用{@item 盗贼工具|phb}成功通过一次DC 15的敏捷检定可以无害地解除这条绊绳。没有{@item 盗贼工具|phb}的角色可以尝试使用任何锋利的武器或工具，并在承受劣势的情况下进行该检定。若检定失败，这个陷阱将被触发。",
+				"当这个陷阱被触发，捕网将被释放，并覆盖一片10尺平方的区域。这个区域内的生物将被困在捕网下，并陷入{@condition 束缚}状态，且所有在一次DC 10的力量豁免中失败的生物也将被击倒{@condition 伏地}。",
+				"一个生物可以使用它的动作以进行一次DC 10的力量检定，检定成功则释放它自己或另一个处于它触及范围内的生物。这个捕网具有AC 10和20点生命值。",
+				"对这个捕网(AC 10)造成5点挥砍伤害将会摧毁它其中5尺平方的区块，并释放任何被困在该区块中的生物。"
+			]
+		},
+		{
+			"name": "断龙闸",
+			"ENG_name": "Falling Portcullis",
+			"trapHazType": "SMPL",
+			"tier": 1,
+			"threat": 1,
+			"entries": [
+				"对某些建造地下城的家伙而言（例如寻求更多受害者的疯狂法师），他们可不把算让他们受害者们轻易逃脱。断龙闸陷阱可以被设计地特别狡诈，在这个陷阱的压力板被触发时，使一道与压力板有着相当距离的闸门落下。尽管这个陷阱的触发点位于地城深处，这道闸门仍将封锁位于百尺之外的地城出口，这意味着直到冒险者们决定打道回府时，才会意识到他们被深困其中。"
+			],
+			"trigger": [
+				"踩上压力板的生物将会触发这个陷阱。"
+			],
+			"effect": [
+				"一个钢铁闸门从天花板落下，挡住出口或是通道。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 20的感知（察觉）检定能够揭露这个陷阱的压力板。使用{@item 盗贼工具|phb}并成功通过一次DC 20的敏捷检定能够解除这个陷阱，若这个检定在结果与目标值差距5点或更多的情况下失败，则这个陷阱将被触发。"
+			],
+			"source": "XGE",
+			"page": 113
+		},
+		{
+			"name": "爆炎陷阱",
+			"ENG_name": "Fiery Blast Trap",
+			"trapHazType": "SMPL",
+			"tier": 2,
+			"threat": 2,
+			"entries": [
+				"火神皮雷谬思(Pyremius)的神庙总是承受着窃贼们的威胁。为了防止祭司们献给他们神祇的火蛋白石不被窃走，通往圣殿内部的地面上装饰着的马赛克嵌画将会对入侵者们降下烈焰的制裁。"
+			],
+			"trigger": [
+				"任何踩上其马赛克嵌画的生物将会使烈焰从中涌出。那些公开配戴皮雷谬思圣徽的人们则不会触发这个陷阱。"
+			],
+			"effect": [
+				"一道15尺边长立方体的烈焰喷涌而出，覆盖整个压力板以及其周遭的区域。每个在范围内的生物都必须进行一次DC 15的敏捷豁免，豁免失败将受到24 ({@dice 7d6})火焰伤害，豁免成功则只受到一半的伤害。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 15的感知（察觉）检定能够揭露出这个陷阱影响范围内的灰烬和淡淡烧痕的存在。成功通过一次DC 15的智力（宗教）检定能够让角色得以通过毁损马赛克嵌画外围的关键符文以摧毁这个陷阱；若这个检定在结果与目标值差距5点或更多的情况下失败，则这个陷阱将被触发。一个成功施放于符文的{@spell 解除魔法}法术(DC 15)也能够摧毁这个陷阱。"
+			],
+			"source": "XGE",
+			"page": 113
+		},
+		{
+			"name": "喷火雕像",
+			"ENG_name": "Fire-Breathing Statue",
+			"source": "DMG",
+			"page": 122,
+			"srd": true,
+			"trapHazType": "MAG",
+			"entries": [
+				"这个陷阱会在入侵者踩上一个隐藏的压力板时被触发，从一个附近的雕像释放出一团魔法火焰。这个雕像可以是任何样貌，包括一条龙或是正在施法的法师。",
+				"发现这个压力板、以及地板和墙壁上的淡淡灼烧焦痕的DC为15。法术或其他能够侦测到魔法存在的效果（例如{@spell 侦测魔法}），会在雕像周遭揭露出塑能系魔法的灵光。",
+				"这个陷阱会在超过20磅的重量被置于压力板时被触发，并使雕像释放出一道30尺锥形的烈焰。每个在火焰范围内的生物都必须进行一次DC 13的敏捷豁免，豁免失败将受到22 ({@dice 4d10})火焰伤害，豁免成功则只受到一半的伤害。",
+				"将一个大铁钉或其他物品卡在压力板下，可以防止这个陷阱被触发。一个成功施放于雕像的{@spell 解除魔法}法术(DC 13)也能够摧毁这个陷阱。"
+			]
+		},
+		{
+			"name": "捕网陷阱",
+			"ENG_name": "Net Trap",
+			"trapHazType": "SMPL",
+			"tier": 1,
+			"threat": 2,
+			"entries": [
+				"由于地精有着奴役他们敌人的习性，他们偏好使用这种能够不伤害入侵者的陷阱，好让其受害者能被用于他们的矿场或其他场所工作。"
+			],
+			"trigger": [
+				"一条横跨走廊的绊线系着一张大型捕网。若这条绊线被破坏，这张捕网将会落到入侵者身上。一个铁制铃铛同样被系在绊在线，且它会在这个陷阱被触发时叮铃作响，警告附近的守卫。"
+			],
+			"effect": [
+				"一个覆盖10尺x10尺的捕网将以绊线为中心落至地面，且铃铛将随之作响。任何完全处于该范围内的生物都必须成功通过一次DC 15的敏捷豁免，否则将被{@condition 束缚}。一个生物可以使用它的动作进行一次DC 10的力量检定以尝试释放他自己或捕网内的另一个生物。对捕网（AC 10，20点生命值）造成5点挥砍伤害同样可以释放该生物而不会伤害到它。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 15的感知（察觉）检定能够揭露这个陷阱的绊线和捕网。使用{@item 盗贼工具|phb}并成功通过一次DC 15的敏捷检定能够解除这个陷阱的绊线而不会触发捕网或铃铛；若这个检定失败，则这个陷阱将被触发。"
+			],
+			"source": "XGE",
+			"page": 113
+		},
+		{
+			"name": "刀刃之路",
+			"ENG_name": "Path of Blades",
+			"trapHazType": "CMPX",
+			"tier": 1,
+			"threat": 2,
+			"entries": [
+				"深藏在一座标示着失落之城悉尼德西亚(Cynidicea)所在位置的地底金字塔中，这里是亚历山大国王与芝诺比阿女王(King Alexander and Queen Zenobia)的陵墓。通往他们长眠处的入口是一条充斥着陷阱的长廊，只有借由一个巧妙隐藏起来的密门才能进入此处。这座走廊宽20尺，长160尺。这座走廊大部分非常整洁，但在80尺到130尺之间的地面已经毁损且破碎，并被视作困难地形。"
+			],
+			"trigger": [
+				"这个陷阱会在任何非不死生物进入走廊时被触发，且会维持在任何非不死生物待在走廊期间维持启动状态。"
+			],
+			"initiative": 3,
+			"eActive": [
+				"刀刃之路在走廊前80尺的部分布置了一组回旋刀刃；在接下来的50尺有着从天花板反复升起并狠狠砸下的毁灭石柱；而在最后的30尺段落则设置着恐惧符文。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "回旋刀刃 (先攻顺序 20).",
+							"entry": "这组回旋刀刃会攻击每个位于走廊前80尺区域的生物，其攻击检定具有+5加值，且会在命中时造成11 ({@dice 2d10})挥砍伤害。"
+						},
+						{
+							"type": "item",
+							"name": "毁灭石柱 (先攻顺序 10).",
+							"entry": "每个位于走廊80尺至130尺区域的生物都必须进行一次DC 15的敏捷豁免。若豁免失败，该生物将受到11 ({@dice 2d10})钝击伤害，并被击倒{@condition 伏地}。若豁免成功，该生物将只受到一半的伤害且不会被击倒{@condition 伏地}。"
+						},
+						{
+							"type": "item",
+							"name": "恐惧符文 (先攻顺序 10).",
+							"entry": "每个在毁灭石柱区块之后30尺区域内的生物都必须进行一次DC 15的感知豁免。若豁免失败，该生物将因符文而陷入{@condition 恐惧}，且必须立即使用它的反应以向着石柱的方向移动等同于它移动速度的距离。直到陷入{@condition 恐惧}的生物使用它的动作以进行一次DC 15的感知豁免，并成功通过以解除{@condition 恐惧}状态之前，它将无法向着走廊的尽头移动。"
+						}
+					]
+				}
+			],
+			"eDynamic": [
+				"这个陷阱维持启动状态越久，回旋刀刃和恐惧符文就会变得更加危险。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "加速刀刃",
+							"entry": "刀刃的转动速度将越来越快，且只会在命中目标时慢下来。每当回旋刀刃在一次攻击中失手时，它的下一次攻击将会变得更难以闪避。每次攻击失手，回旋刀刃的攻击加值将会增加2，且它的伤害将会增加3 ({@dice 1d6})点。这些好处将持续直到刀刃命中一个目标，且它会在这之后回复原本的数值。"
+						},
+						{
+							"type": "item",
+							"name": "符文防护",
+							"entry": "解除恐惧符文的尝试将会增强这个陷阱的力量。每当尝试解除符文的检定成功，回旋刀刃和毁灭石柱都会因此各增加5 ({@dice 1d10})点伤害，且对抗恐惧符文的豁免DC将会增加1点。"
+						}
+					]
+				}
+			],
+			"eConstant": [
+				"回旋刀刃和恐惧符文会影响每个在它们影响区域内结束回合的生物。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "回旋刀刃",
+							"entry": "任何在刀刃区域内结束它回合的生物都会成为一次攻击的目标：攻击加值+5，若命中则造成5 ({@dice 1d10})挥砍伤害。"
+						},
+						{
+							"type": "item",
+							"name": "恐惧符文",
+							"entry": "任何在距离走廊尽头30尺内区域结束它回合的生物都必须进行一次对抗恐惧符文效果的豁免检定。"
+						}
+					]
+				}
+			],
+			"countermeasures": [
+				"这个陷阱的每个主动要素都可以被特定反制手段给阻挠。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "回旋刀刃：",
+							"entry": "角色们可以猛击刀刃、破坏它的部件、或辨别闪避它们的方式。这些刀刃会在它们的攻击加值降至-8时被解除。降低其攻击加值的方式如下。"
+						},
+						{
+							"type": "itemSub",
+							"name": "智力 (调查), DC 15.",
+							"entry": "以一个动作，一个能够看见回旋刀刃的生物可以尝试进行一次智力（调查）检定。一次成功的检定意味着角色已经得以预料刀刃的移动糢式，在该生物尚未陷入{@condition 无力}状态期间，回旋刀刃对该生物的攻击都将承受劣势。"
+						},
+						{
+							"type": "itemSub",
+							"name": "攻击.",
+							"entry": "一个在区域内的生物可以预备一次攻击，以在其中一片回旋刀刃经过时对其展开打击。该刀刃在对该生物进行的攻击将具有优势，该生物接着将对刀刃进行攻击。每片回旋刀刃具有AC 15和15点生命值。破坏一片刀刃将会使回旋刀刃的攻击加值减少2点。"
+						},
+						{
+							"type": "itemSub",
+							"name": "使用盗贼工具进行敏捷检定, DC 15.",
+							"entry": "生物可以在被回旋刀刃攻击的区域内使用{@item 盗贼工具|phb}以挫败其运作机关。一次成功的检定将会使回旋刀刃的攻击加值减少2点。"
+						},
+						{
+							"type": "item",
+							"name": "毁灭石柱：",
+							"entry": "毁灭石柱没有任何有效的反制手段。"
+						},
+						{
+							"type": "item",
+							"name": "恐惧符文：",
+							"entry": "恐惧符文可以通过成功通过三次DC 15的智力（奥秘）检定以解除。每次检定都需要一个动作。一个生物必须要位于走廊的尽头才能够尝试进行这个检定，且同时只能有一个生物尝试进行这项任务。一旦一个生物为了这项目的而尝试进行这个检定，则直到该生物的下个回合结束前，其他生物都不能尝试这么做。或者，借由对这些符文成功施放三次{@spell 解除魔法}(DC 13)也能够解除恐惧符文。"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 118
+		},
+		{
+			"name": "陷坑陷阱",
+			"ENG_name": "Pit Trap",
+			"trapHazType": "SMPL",
+			"tier": 1,
+			"threat": 1,
+			"entries": [
+				"最简易的陷坑陷阱是由地面上一个10尺直径的坑洞，以及一个将其隐藏起来的破烂帆布所构成，这个帆布上覆盖着树叶和泥土以使其看起来像是结实的地面。这种类型的陷阱在堵住怪物巢穴的入口时相当实用，且通常在边缘有着狭窄的空隙以让他人能够绕过陷坑移动。"
+			],
+			"trigger": [
+				"任何踩上帆布的生物都可能因此坠入陷坑中。"
+			],
+			"effect": [
+				"触发生物必须进行一次DC 10的敏捷豁免。若豁免成功，该生物将能够抓住陷坑的边缘或本能地后退。若豁免失败，该生物将坠入陷坑中并受到源自坠落的3 ({@dice 1d6})钝击伤害。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 10的感知（察觉）检定能够揭露这个陷阱帆布的存在，以及陷坑边缘那能让人安全通过的1尺宽边道。"
+			],
+			"source": "XGE",
+			"page": 114
+		},
+		{
+			"name": "陷坑",
+			"ENG_name": "Pits",
+			"source": "DMG",
+			"page": 122,
+			"srd": true,
+			"trapHazType": "MECH",
+			"entries": [
+				{
+					"type": "entries",
+					"name": "简易陷坑",
+					"ENG_name": "Simple Pit",
+					"entries": [
+						"一个简易陷坑陷阱就是一个在地上挖出的深坑。这个深坑会被大块布料覆盖并固定在深坑的边缘，并使用泥土和杂物进行伪装掩饰。",
+						"发现这个陷坑的DC为10。任何踩上陷坑布料上的人都将与布料一同摔入坑中，并受到基于陷坑深度的坠落伤害（通常为10尺深，但有些陷坑会更深）。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "隐藏陷坑",
+					"ENG_name": "Hidden Pit",
+					"entries": [
+						"通过成功通过一次DC 15的感知（察觉）检定，能够借由这片地面区块上消失的脚印痕迹发现这个陷坑盖板的存在。而通过成功通过一次DC 15的智力（调查）检定则能够确定地面上的活版区块确实是陷坑的盖板。",
+						"当一个生物踩上陷坑盖板时，盖板将如同活板门一样打开，并使入侵者摔入下方的陷坑中。这个陷坑通常为10尺或20尺深，但有些陷坑会更深。",
+						"一旦这个陷坑陷阱被发现后，就可以借由将一根大铁钉或类似物体楔入陷坑盖板和周遭地面之间，以防止这个盖板打开并使他人能够安全的通过它。使用{@spell 秘法锁}或类似法术将这个盖板魔法性的锁闭也可以达到相同的效果。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "锁困陷坑",
+					"ENG_name": "Locking Pit",
+					"entries": [
+						"锁困陷坑与隐藏陷坑大致相同，但有一个关键的差异：这个陷阱的盖板装载着弹簧结构。在一个生物摔入陷坑后，其盖板将会猛然闭合，以将它的受害者关在里头。",
+						"成功通过一次DC 20的力量检定能够将这个盖板给撬开。这个盖板也可以被强行破坏（使用第八章的指引以决定盖板的数据）。只要被困在陷坑中的角色能够看见并触及这个盖板的弹簧机关，则它也可以尝试使用{@item 盗贼工具|phb}并成功通过一次DC 15的敏捷检定，以从内部解除其机关。",
+						"在某些情况中，一个相应的机关也能够打开这个陷坑的盖板（通常会藏在一个附近的暗门里头）。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "尖刺陷坑",
+					"ENG_name": "Spiked Pit",
+					"entries": [
+						"这个陷坑陷阱是以一个简易、隐藏、或锁困陷阱为基底，并搭配设立在底部削尖木头或铁刺所组合而成。摔入这个陷坑的生物除了坠落伤害之外，也将因为这些尖刺而受到额外的11 ({@dice 2d10})穿刺伤害。更为恶毒的版本甚至会在这些尖刺上涂抹毒药，在这种状况下，任何受到来自尖刺所造成的穿刺伤害的生物也都必须进行一次DC 13的体质豁免，豁免失败将受到22 ({@dice 4d10})毒素伤害，豁免成功则只受到一半的毒素伤害。"
+					]
+				}
+			]
+		},
+		{
+			"name": "毒镖",
+			"ENG_name": "Poison Darts",
+			"source": "DMG",
+			"page": 123,
+			"srd": true,
+			"trapHazType": "MECH",
+			"entries": [
+				"当一个生物踩上寝藏的压力板时，数个毒镖将从巧妙镶嵌在附近墙壁内的弹簧机关或加压管线中射出。一个区域内可能包括着复数个压力板，且每个压力板都控制着相对应的一组毒镖。",
+				"墙壁上的微小发射口被尘土和蜘蛛网所屏蔽，或者被精心隐蔽在装饰着墙面的浮雕、墙饰、或壁画之中。发现这些发射口的DC为15。通过成功通过一次DC 15的智力（调查）检定，角色可以借由比对地面上涂装和石质材料的差异以察觉压力板的存在。将大铁钉或其他类似物品楔入压力板下方可以防止这个陷阱被触发，而用布料或蜡封住发射口则能够阻止毒镖从中射出。",
+				"这个陷阱会在超过20磅的重量置于压力板上时被触发，并发射出四发毒镖。每一发毒镖都会对一个距离压力板10尺内的随机目标进行一次命中加值为+8的远程攻击（这个攻击检定不会被视觉影响）。（若区域内没有任何目标，则毒镖不会命中任何事物。）一个被命中的目标将受到2 ({@dice 1d4})穿刺伤害，且必须成功通过一次DC 15的体质豁免，否则豁免失败将受到11 ({@dice 2d10})毒素伤害，豁免成功则只受到一半的毒素伤害。"
+			]
+		},
+		{
+			"name": "毒针",
+			"ENG_name": "Poison Needle",
+			"source": "DMG",
+			"page": 123,
+			"srd": true,
+			"trapHazType": "MECH",
+			"entries": [
+				"一根毒针隐藏在宝箱箱锁内，或其他可能被生物打开的设备中。未使用对应钥匙而打开箱子将会使这根毒针弹出，向开锁者注射一剂毒药。",
+				"当这个陷阱被触发，这根毒针将从锁中伸出3寸距离。一个在射程内的生物将受到1点穿刺伤害以及11 ({@dice 2d10})毒素伤害，且必须成功通过一次DC 15的体质豁免，否则陷入{@condition 中毒}状态长达1小时。",
+				"成功通过一次DC 20的智力（调查）检定能够让角色注意到这个锁为了容纳毒针而做的修改痕迹，借此发现这个陷阱的存在。",
+				"使用{@item 盗贼工具|phb}并成功通过一次DC 15的敏捷检定，能够解除这个陷阱，将毒针从锁中移除。这个陷阱也会在开锁失败时被触发。"
+			]
+		},
+		{
+			"name": "毒针陷阱",
+			"ENG_name": "Poison Needle Trap",
+			"trapHazType": "SMPL",
+			"tier": 1,
+			"threat": 3,
+			"entries": [
+				"埋藏在锁头中的一根微小的毒针是个让掠夺财富的盗贼望而却步的好方法。这类陷阱通常被安置在宝箱或是通往藏宝室的门上。"
+			],
+			"trigger": [
+				"任何尝试开锁的生物将会触发这个陷阱。"
+			],
+			"effect": [
+				"触发生物必须进行一次DC 20的体质豁免。若豁免失败，该生物将受到14 ({@dice 4d6})毒素伤害，且陷入{@condition 中毒}状态长达10分钟。当因为这个方式而陷入{@condition 中毒}时，该生物将同时陷入{@condition 麻痹}状态。若豁免成功，该生物将只受到一半的伤害且不会陷入{@condition 中毒}状态。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 20的感知（察觉）检定能够揭露出这个毒针的存在。使用{@item 盗贼工具|phb}并成功通过一次DC 20的敏捷检定能够解除这个毒针，若这个检定在结果与目标值差距10点或更多的情况下失败，则这个陷阱将被触发。"
+			],
+			"source": "XGE",
+			"page": 114
+		},
+		{
+			"name": "剧毒风暴",
+			"ENG_name": "Poisoned Tempest",
+			"trapHazType": "CMPX",
+			"tier": 3,
+			"threat": 3,
+			"entries": [
+				"这个残忍的陷阱被建造于消灭那些胆敢潜入蛇人神庙的入侵者。这个陷阱是一个各边60尺的方形房间，各墙壁的中央都设有一扇5尺宽的石门。在房间的四个角落各自座落着一尊10尺高的巨蛇雕像，盘旋呈进攻之势。这些雕像的每只眼睛都是价值200金币的红宝石。"
+			],
+			"trigger": [
+				"这个陷阱会在一个红宝石被从雕像中撬出时被触发。每尊雕像的嘴巴将会滑开，露出一根延伸自其喉咙的1尺宽管线。"
+			],
+			"initiative": 3,
+			"eActive": [
+				"这个陷阱会使房间充斥着剧毒气体以及其它致命效果。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "闭锁之门 (先攻顺序 20).",
+							"entry": "房间的四扇门将会猛然关闭，并被魔法锁住。这个效果只会被触发一次，且只会在这个要素第一次被触发时触发。"
+						},
+						{
+							"type": "item",
+							"name": "剧毒气体 (先攻顺序 20).",
+							"entry": "剧毒气体将淹没整个房间。每个房间内的生物都必须进行一次DC 20的体质豁免，豁免失败将受到33 ({@dice 6d10})毒素伤害，豁免成功则只受到一半的伤害。"
+						},
+						{
+							"type": "item",
+							"name": "毒气风暴 (先攻顺序 10).",
+							"entry": "空气和毒气将从陷阱中翻涌而出。骰一颗d6，并查阅下列风暴表。"
+						},
+						{
+							"type": "table",
+							"caption": "风暴效果表",
+							"colLabels": [
+								"{@dice d6}",
+								"效果"
+							],
+							"colStyles": [
+								"col-1 text-align-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 1
+										}
+									},
+									"致幻毒气将扰乱精神与感官。直到毒气风暴的主动要素再次被触发之前，所有在房间内进行的智力和感知检定都将承受劣势。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 2
+										}
+									},
+									"爆炸性气体充斥着整个房间。若有任何人带着明火，它将会爆炸并对房间内的每个人造成22 ({@dice 4d10})火焰伤害（若成功通过DC 20的敏捷豁免只受到一半的伤害）。明火接着将会熄灭。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 3
+										}
+									},
+									"衰弱毒气斥着整个房间。直到毒气风暴的主动要素再次被触发之前，所有在房间内进行的力量和敏捷检定都将承受劣势。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 4
+										}
+									},
+									"狂暴强风将迫使所有在房间内的人都必须成功通过一次DC 20的力量豁免，否则被击倒{@condition 伏地}。。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 5
+										}
+									},
+									"浓烟斥着整个房间。直到毒气风暴的主动要素再次被触发之前，房间内的能见度将被降低到1尺。"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 6
+										}
+									},
+									"额外的剧毒气体涌入房间，效果如同剧毒气体的主动要素。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"eDynamic": [
+				"毒气在房间内滞留越久，它就会变得更加致命。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "毒性增强.",
+							"entry": "在它被启动后每经过一轮，剧毒气体要素的伤害都将再增加11 ({@dice 2d10})点，最高增加至 55 ({@dice 10d10})点伤害。"
+						}
+					]
+				}
+			],
+			"countermeasures": [
+				"有一些手段能够战胜这个陷阱。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "打开房门.",
+							"entry": "打开房门是逃离这个陷阱最快的手段，但这几扇房门都被魔法给守护着。若要打开房门，角色必须先成功通过一次DC 20的感知（察觉）检定以找寻门锁机关。接着，角色需要成功通过一次DC 20的智力（奥秘）检定已解除环绕在门锁周遭的力场球体（{@spell 解除魔法}对其无效）。使用{@item 盗贼工具|phb}成功通过一次DC 20的敏捷检定可以将门锁打开。最后，还需要成功通过一次DC 20的力量（运动）检定以推开房门。上述每个检定都需要花费一个动作。"
+						},
+						{
+							"type": "item",
+							"name": "关停雕像.",
+							"entry": "雕像的机关可以通过将其口中的管线堵塞而被解除。损坏雕像是一个糟糕的主意，因为这么做将会使毒气孔直接暴露敞开。将雕像的生命值归零（AC 17；20点生命值；对火焰、穿刺、挥砍伤害具有抗性；免疫毒素和心灵伤害）、或成功通过一次DC 20的力量检定以破坏它将会使雕像裂损，并使剧毒气体的伤害增加5 ({@dice 1d10})点。使用{@item 盗贼工具|phb}成功通过一次DC 20的敏捷检定、或利用斗篷或类似物体成功通过一次DC 15的力量检定以阻塞雕像的排气，都会使剧毒气体的伤害降低5 ({@dice 1d10})点。一旦角色成功通过该检定，就必须有某个人站在雕像旁边以维持其阻塞效果。当四个雕像都被这种方式阻塞时，这个陷阱将被解除。"
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 120
+		},
+		{
+			"name": "滚石",
+			"ENG_name": "Rolling Sphere",
+			"source": "DMG",
+			"page": 123,
+			"srd": true,
+			"trapHazType": "MECH",
+			"entries": [
+				"当20磅或以上的重量被置于这个陷阱的压力板时，天花板上的隐藏活板门将会打开，并释放出一个10尺直径的实心球状滚石。",
+				"通过成功通过一次DC 15的感知（察觉）检定，生物可以发现这个陷阱的活板门和压力板。",
+				"搜索地面的行动将随着成功通过一次DC 15的智力（调查）检定以揭露出地面上涂装和石质材料的差异，从而暴露出这个压力板的存在。同样的检定也会在检查天花板时被进行，成功则能借由注意到石艺的不同而揭示出活板门的存在。将大铁钉或其他类似物品楔入压力板下方可以防止这个陷阱被触发。",
+				"当滚石陷阱被启动时，所有在场的生物都必须骰各自的先攻。而这个滚石也将以{@hit +8}加值进行自己的先攻检定。在滚石的回合，它将直线移动60尺距离。",
+				"滚石可以移动穿过其他生物的所在空间，且其他生物也可以将其视为困难地形以移动穿过滚石的所在空间。每当滚石进入一个生物的所在空间、或一个生物在它滚动时进入它所在的空间，该生物必须成功通过一次DC 15的敏捷豁免，否则将受到55 ({@dice 10d10})钝击伤害，并被击倒{@condition 伏地}。",
+				"这个滚石会在撞上墙壁或其他类似障碍物时停下。它无法绕过转角，但某些聪明的地城建造者会设计缓变的曲道，以使滚石拐入附近的通道并持续前进。",
+				"以一个动作，一个距离滚石5尺内的生物可以尝试进行一次DC 20的力量检定以将其缓下。若检定成功，该滚石的移动速度将会减少15尺。若滚石的移动速度归零，它将停止移动，且不再被视为威胁。"
+			]
+		},
+		{
+			"name": "镰刃陷阱",
+			"ENG_name": "Scything Blade Trap",
+			"trapHazType": "SMPL",
+			"tier": 2,
+			"threat": 2,
+			"entries": [
+				"这个陷阱使用摆动的刀刃以扫过整个房间，威胁着所有附近的人们。通常来说，一个镰刃陷阱会通过操作拉杆或是其他简易设备而被触发。由于它可以击败大型的生物，因此狗头人特别喜爱这类陷阱。"
+			],
+			"trigger": [
+				"当其拉杆被拉下时，这个陷阱将被触发。"
+			],
+			"effect": [
+				"每个处于一个5尺宽、20尺长的区域内的中型或大型生物都必须进行一次DC 15的敏捷豁免，豁免失败将受到14 ({@dice 4d6})挥砍伤害，豁免成功则只受到一半的伤害。"
+			],
+			"countermeasures": [
+				"这个拉杆并未被隐藏。成功通过一次DC 15的感知（察觉）检定能够在陷阱效果范围内的表面上揭露出刃器划痕以及墙壁和地面上的血迹。使用{@item 盗贼工具|phb}并成功通过一次DC 15的敏捷检定能够解除这个拉杆的作用。"
+			],
+			"source": "XGE",
+			"page": 114
+		},
+		{
+			"name": "长眠陷阱",
+			"ENG_name": "Sleep of Ages Trap",
+			"trapHazType": "SMPL",
+			"tier": 3,
+			"threat": 3,
+			"entries": [
+				"当长眠陷阱被触发，其压力板将会释放出法术，使入侵者们陷入深沉的睡眠中。这让地城守卫们能够更轻易地解决这些睡着的家伙。"
+			],
+			"trigger": [
+				"踩上其压力板将会触发这个陷阱。"
+			],
+			"effect": [
+				"当被触发时，这个陷阱将以压力板为中心施放一个{@spell 睡眠术}法术，使用9环法术位。"
+			],
+			"countermeasures": [
+				"成功通过一次DC 20的感知（察觉）检定能够揭露出这个压力板的存在。在距离压力板5尺内成功通过一次DC 20的智力（奥秘）检定能够让角色解除这个陷阱，而若这个检定在结果与目标值差距10点或更多的情况下失败，则这个陷阱将被触发。一个成功施放于压力板的{@spell 解除魔法}法术(DC 19)也能够摧毁这个陷阱。"
+			],
+			"source": "XGE",
+			"page": 114
+		},
+		{
+			"name": "湮灭法球",
+			"ENG_name": "Sphere of Annihilation",
+			"source": "DMG",
+			"page": 123,
+			"srd": true,
+			"trapHazType": "MAG",
+			"entries": [
+				"一张雕刻在墙壁上石制脸孔咧开的口中充斥着魔法性、无法穿透的黑暗。这个石口是一个直径2尺的粗糙圆形。没有任何声音从中发出，没有任何光线能够照亮内部，且任何进入其中的物质都将立即被消灭。",
+				"成功通过一次DC 20的智力（{@skill 奥秘}）检定能够揭露这个石口中安装着一个{@item 湮灭法球}。除了无法被控制或移动之外，它将视同一个普通的{@item 湮灭法球}，其具体描述请参阅第七章的「宝藏」章节。这个陷阱的某些版本会在石制脸孔上设置一个惑控附魔，用以使生物涌起冲动去接近它并爬入口中。这个效果类似于{@spell 嫌恶/共感术}法术的共感效果。",
+				"一个成功施放的{@spell 解除魔法}法术(DC 18)能够移除这个惑控附魔。"
+			]
+		},
+		{
+			"name": "末日毁灭滚球",
+			"ENG_name": "Sphere of Crushing Doom",
+			"trapHazType": "CMPX",
+			"tier": 2,
+			"threat": 3,
+			"entries": [
+				"宫廷小丑设计了一个致命的陷阱，以阻止任何打算偷走他魔法愚者帽(magical fool's cap)的窃贼。小丑的坟墓位于一座走廊的尽头，走廊宽10尺，长150尺，自北向南向下呈现一个陡峭的斜坡。坟墓的入口是一扇位于斜坡底部，走廊南端尽头的门，镶嵌在东侧的墙面上。"
+			],
+			"trigger": [
+				"这个陷阱会在通往小丑棺材房间的门被打开时触发。一个魔法传送门将会在走廊北端尽头处打开，并释放出一个巨大的铁球，沿着斜坡向下滚动。当铁球抵达斜坡的底部时，第二个传送门将会短暂地出现并将铁球传送至斜坡的顶部，再次重复同样的过程。"
+			],
+			"initiative": 1,
+			"initiativeNote": "但请参照下述的动态要素",
+			"eActive": [
+				"尽管这个陷阱在本质上相当复杂，但它仅具有一个主动要素。这对这个陷阱而言就相当足够了。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "末日毁灭滚球 (先攻顺序 20).",
+							"entry": "这个陷阱的主动要素是一颗几乎占满整个10尺宽走廊的钢铁滚球，并会在它的回合时向着斜坡底部滚动。每个在滚球路径上的生物都必须进行一次DC 20的力量豁免。若豁免失败，该生物将受到22 ({@dice 4d10})钝击伤害，并被击倒{@condition 伏地}。若豁免成功，该生物将只受到一半的伤害且不会被击倒{@condition 伏地}。阻挡滚球的物体（例如一道咒法墙）则会在其冲击下受到最大伤害。"
+						}
+					]
+				}
+			],
+			"eDynamic": [
+				"它滚的越久，滚球就会变得更加致命。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "高速辗杀.",
+							"entry": "在它的回合结束后，滚球的速度将会提升，表现为增加11 ({@dice 2d10})点伤害。当它的伤害变为55 ({@dice 10d10})或更高，则它将会在先攻顺序20 和 先攻顺序10 时行动。"
+						}
+					]
+				}
+			],
+			"countermeasures": [
+				"通过停下滚球或是防止它再次传送，可以使这个陷阱被无效化。",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "停止滚球.",
+							"entry": "将滚球停下是中断这个陷阱最简单的方法。一道{@spell 力墙术}创造的力场墙可以轻易达成这项任务，而任何被摆放在滚球移动路径上，拥有足够生命值以吸收滚球伤害而不至于被摧毁的物体也可以达到同样的效果。"
+						},
+						{
+							"type": "item",
+							"name": "中断传送门.",
+							"entries": [
+								"每个传送门都可以通过成功通过三次DC 20的智力（奥秘）检定以将其无效化，但为了中断传送门所进行的分析过程会需要花上一些时间。位于走廊两端天花板和地面上的黯淡符文涉及了传送门的运作。一个生物必须先使用一个动作以查看这组符文，接着再使用一个动作以尝试破坏这些符文。因为滚球在通过被削弱的传送门时会导致速度减缓，每次成功的检定都会使滚球减少11 ({@dice 2d10})点伤害。",
+								"或者，借由对一组符文成功施放三次{@spell 解除魔法}(DC 19)也能够解除一组符文。",
+								"若南端的传送门被摧毁，则滚球将会猛烈撞上墙闭并停止下来。它会挡住通往小丑坟墓的门，但角色们可以逃脱了。"
+							]
+						}
+					]
+				}
+			],
+			"source": "XGE",
+			"page": 119
+		}
+	],
+	"hazard": [
+		{
+			"name": "Avalanche",
+			"source": "IDRotF",
+			"page": 10,
+			"trapHazType": "WLD",
+			"entries": [
+				"The following rules can be used for rockslides as well as avalanches.",
+				"An avalanche is a mass of snow and debris falling rapidly down a mountainside. A typical avalanche is 300 feet wide, 150 feet long, and 30 feet thick. Creatures in the path of an avalanche can avoid it or escape it if they're close to its edge, but outrunning one is almost impossible.",
+				"When an avalanche occurs, all nearby creatures must roll initiative. Twice each round, on initiative counts 10 and 0, the avalanche travels 300 feet until it can travel no more. When an avalanche moves, any creature in its space moves along with it and falls {@condition 伏地}, and the creature must make a DC 15 Strength saving throw, taking {@dice 1d10} bludgeoning damage on a failed save, or half as much damage on a successful one.",
+				"When an avalanche stops, the snow settles and buries creatures in it. A creature buried in this way is {@condition 目盲} and {@condition 束缚} and has total cover. The creature gains one level of {@condition 力竭} for every 5 minutes it spends buried in the snow. It can try to dig itself free as an action, breaking the surface and ending the blinded and restrained conditions on itself with a successful DC 15 Strength ({@skill 运动}) check. A creature that fails this check three times can't attempt to dig itself out again.",
+				"A creature that is not restrained or {@condition 无力} can spend 1 minute freeing another creature buried in the snow. Once free, that creature is no longer blinded or restrained by the avalanche."
+			]
+		},
+		{
+			"name": "Avalanche",
+			"source": "TCE",
+			"page": 169,
+			"trapHazType": "WLD",
+			"entries": [
+				"A typical avalanche (or rockslide) is 300 feet wide, 150 feet long, and 30 feet thick. Creatures in the path of an avalanche can avoid it or escape it if they're close to its edge, but outrunning one is almost impossible.",
+				"When an avalanche occurs, all nearby creatures must roll initiative. Twice each round, on initiative counts 10 and 0, the avalanche travels 300 feet until it can travel no more. When an avalanche moves, any creature in its space moves along with it and falls {@condition 伏地}, and the creature must make a DC 15 Strength saving throw, taking {@dice 1d10} bludgeoning damage on a failed save, or half as much damage on a successful one.",
+				"When an avalanche stops, the snow and other debris settle and bury creatures. A creature buried in this way is {@condition 目盲} and {@condition 束缚}, and it has total cover. The creature gains 1 level of {@condition 力竭} for every 5 minutes it spends buried. It can try to dig itself free as an action, breaking the surface and ending the {@condition 目盲} and {@condition 束缚} conditions on itself with a successful DC 15 Strength ({@skill 运动}) check. A creature that fails this check three times can't attempt to dig itself out again.",
+				"A creature that is not {@condition 束缚} or {@condition 无力} can spend 1 minute freeing a buried creature. Once free, that creature is no longer {@condition 目盲} or {@condition 束缚} by the avalanche."
+			]
+		},
+		{
+			"name": "Blizzard",
+			"source": "IDRotF",
+			"page": 10,
+			"trapHazType": "WTH",
+			"entries": [
+				"The blizzards that ravage Icewind Dale and harry travelers on the mountain pass are reflections of Auril's self-imposed isolation. A blizzard in Icewind Dale typically lasts {@dice 2d4} hours, and whenever the characters are caught in one, the following rules apply until it ends.",
+				"A blizzard's howling wind limits hearing to a range of 100 feet and imposes disadvantage on ranged weapon attack rolls. It also imposes disadvantage on Wisdom ({@skill 察觉}) checks that rely on hearing. The wind extinguishes open flames, disperses fog, erases tracks in the snow, and makes flying by nonmagical means nearly impossible. A creature falls at the end of its turn if it is flying by nonmagical means and can't hover.",
+				"Visibility in a blizzard is reduced to 30 feet. Creatures without goggles or other eye protection have disadvantage on Wisdom ({@skill 察觉}) checks that rely on sight due to blowing snow.",
+				"Any creature that is concentrating on a spell in a blizzard must succeed on a DC 10 Constitution saving throw at the end of its turn or lose its concentration on the spell unless the creature is sheltered against the elements (for example, in an igloo).",
+				{
+					"type": "entries",
+					"name": "Veering Off Course",
+					"id": "01f",
+					"entries": [
+						"It's easy to veer off course while traveling through a blizzard, and it's also easy for party members to become separated from one another, which is why the wisest course of action is to stay put and wait for the blizzard to pass.",
+						"If the characters travel during a blizzard, have the players designate one party member as the navigator. At the end of each hour of travel through the blizzard, the DM makes a DC 15 Wisdom ({@skill 生存}) check on behalf of the navigator. On a successful check, the party stays on course. On a failed check, the party wanders off course, putting its members no closer to their destination than they were at the start of that hour. If the check fails by 5 or more and the party members aren't tied together, one randomly determined party member becomes lost in the blizzard and separated from the others. If the group tries to reunite with its missing member, have the party members (including the missing one) make a DC 15 Wisdom ({@skill 生存}) group check at the end of each hour. If this group check succeeds, the missing party member is found, but no progress is made toward reaching the group's intended destination that hour. The group check can be repeated after each hour spent searching for the missing party member."
+					]
+				}
+			]
+		},
+		{
+			"name": "棕霉菌",
+			"ENG_name": "Brown Mold",
+			"entries": [
+				"棕霉菌以热量为生，并会从周围吸取热能。一片棕霉菌通常会覆盖着一个10尺平方的方形区域，并使它周遭30尺范围内的温度变得冰冷刺骨。",
+				"当一个生物在一个回合中第一次进入棕霉菌5尺内的范围、或在该处开始它的回合，则它必须进行一次DC 12的体质豁免，豁免失败将受到22 ({@dice 4d10})冷冻伤害，豁免成功则只受到一半的伤害。",
+				"棕霉菌免疫于火焰，且任何形式的火焰在被带到这片棕霉菌5尺范围内时，会使棕霉菌立即向着火焰的方向延展，覆盖一片10尺平方的方形区域（火源将位于该延伸区域的中央）。一片棕霉菌在暴露于任何会造成冷冻伤害的效果时，将会立即被摧毁。"
+			],
+			"source": "DMG",
+			"page": 105
+		},
+		{
+			"name": "Demon Ichor",
+			"source": "BGDIA",
+			"page": 78,
+			"entries": [
+				"Demon ichor is what remains behind after a demon dies. It's a reduction of demonic blood, viscera, and bodily fluids with the consistency and odor of bile.",
+				"Enough demons die in Avernus that their ichor forms pools and small lakes. Although the ichor is harmless on most planes of existence, it can warp creatures on the Lower Planes. Devils and other creatures have found ways to use demon ichor in rituals and to improve the performance of infernal war machines (as described in {@adventure appendix B|BGDIA|11}).",
+				"When a creature comes in direct contact with demon ichor in Avernus, it must make a DC 10 Constitution saving throw. Fiends, oozes, plants, and undead automatically succeed on the saving throw. On a failed save, the creature is magically warped by the ichor, as determined by rolling on the Flesh Warping table. A spell that removes a curse ends all ichor-related warping effects on a creature.",
+				{
+					"type": "entries",
+					"name": "Ichor-Coated Weapons",
+					"entries": [
+						"Demon ichor is sticky enough to adhere to most weapons. A creature in Avernus that takes damage from a weapon coated with demon ichor suffers a flesh-warping transformation if it fails its saving throw (as described above). After hitting its target, the weapon is no longer coated with demon ichor."
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Flesh Warping",
+					"colLabels": [
+						"d100",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"01\u201305",
+							"The color of the target's hair, eyes, and skin becomes blue, red, yellow, or patterned."
+						],
+						[
+							"06\u201310",
+							"The target's eyes push out of its head on the end of stalks."
+						],
+						[
+							"11\u201315",
+							"The target's hands grow claws, which can be used as daggers."
+						],
+						[
+							"16\u201320",
+							"One of the target's legs grows longer than the other, reducing its walking speed by 10 feet."
+						],
+						[
+							"21\u201325",
+							"The target's eyes become beacons, filling a 15-foot cone with dim light when they are open."
+						],
+						[
+							"26\u201330",
+							"A pair of wings, either feathered or leathery, sprout from the target's back, granting it a flying speed of 30 feet."
+						],
+						[
+							"31\u201335",
+							"The target's ears tear free from its head and scurry away; the target is {@condition 耳聋}."
+						],
+						[
+							"36\u201340",
+							"Two of the target's teeth turn into tusks."
+						],
+						[
+							"41\u201345",
+							"The target's skin becomes scabby, granting it a +1 bonus to AC but reducing its Charisma by 2 (to a minimum of 1)."
+						],
+						[
+							"46\u201350",
+							"The target's arms and legs switch places, preventing the target from moving unless it crawls."
+						],
+						[
+							"51\u201355",
+							"The target's arms become tentacles with fingers on the ends, increasing its reach by 5 feet."
+						],
+						[
+							"56\u201360",
+							"The target's legs grow incredibly long and springy, increasing its walking speed by 10 feet."
+						],
+						[
+							"61\u201365",
+							"The target grows a whiplike tail, which it can use as a whip."
+						],
+						[
+							"66\u201370",
+							"The target's eyes turn black, and it gains {@sense 黑暗视觉} out to a range of 120 feet."
+						],
+						[
+							"71\u201375",
+							"The target swells, tripling its weight."
+						],
+						[
+							"76\u201380",
+							"The target becomes thin and skeletal, halving its weight."
+						],
+						[
+							"81\u201385",
+							"The target's head doubles in size."
+						],
+						[
+							"86\u201390",
+							"The target's ears become wings, giving it a flying speed of 5 feet."
+						],
+						[
+							"91\u201395",
+							"The target's body becomes unusually brittle, causing the target to gain vulnerability to bludgeoning, piercing, and slashing damage."
+						],
+						[
+							"96\u201300",
+							"The target grows another head, causing it to have advantage on saving throws against being {@condition 魅惑}, {@condition 恐惧}, or {@condition 震慑}."
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "亵渎之地",
+			"ENG_name": "Desecrated Ground",
+			"trapHazType": "WLD",
+			"entries": [
+				"有些墓园或墓穴充满了远古邪恶那不可见的痕迹。亵渎之地的区域范围可以是任何大小，且在区域内施放的{@spell 侦测善恶}法术将会揭露其本质。",
+				"站在亵渎之地上的不死生物在所有豁免检定中具有优势。",
+				"将一小瓶的{@item 圣水(扁瓶装)|phb|圣水}洒下，可以净化10尺平方区域的亵渎之地，且{@spell 圣居}法术也能够净化其法术范围内的亵渎之地。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "极端严寒",
+			"ENG_name": "Extreme Cold",
+			"trapHazType": "WTH",
+			"entries": [
+				"当温度降到华氏0度或更低时，暴露于寒冷环境中的生物每经过一个小时就必须成功通过一次DC 10的体质豁免，否则将承受一级{@condition 力竭}。对冷冻伤害具有抗性或免疫、穿着御寒装备（厚外套、手套等）、以及天生适应寒冷气候的生物都将自动成功通过这个豁免检定。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "极端酷热",
+			"ENG_name": "Extreme Heat",
+			"trapHazType": "WTH",
+			"entries": [
+				"当温度升至华氏100度或更高时，暴露于高热环境且未能饮水的生物每经过一个小时就必须成功通过一次体质豁免，否则将承受一级{@condition 力竭}。这个豁免检定在第一个小时的DC为5，且每再经过一个小时就会使DC提升1点。",
+				"穿着中甲、重甲、或者厚重衣物的生物在这个豁免检定中具有劣势。对火焰伤害具有抗性或免疫、以及天生适应高温气候的的生物将自动成功通过这个豁免检定。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "Falling into Water",
+			"source": "TCE",
+			"page": 170,
+			"trapHazType": "WLD",
+			"entries": [
+				"A creature that falls into water or another liquid can use its reaction to make a DC 15 Strength ({@skill 运动}) or Dexterity ({@skill 体操}) check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved."
+			]
+		},
+		{
+			"name": "Falling onto a Creature",
+			"source": "TCE",
+			"page": 170,
+			"trapHazType": "WLD",
+			"entries": [
+				"If a creature falls into the space of a second creature and neither of them is Tiny, the second creature must succeed on a DC 15 Dexterity saving throw or be impacted by the falling creature, and any damage resulting from the fall is divided evenly between them. The impacted creature is also knocked {@condition 伏地}, unless it is two or more sizes larger than the falling creature."
+			]
+		},
+		{
+			"name": "Flame Storm",
+			"source": "TCE",
+			"page": 163,
+			"trapHazType": "EST",
+			"entries": [
+				"Sooty thunderclouds shot through with red and orange lightning release a deluge of fiery droplets. Any creature caught in the burning rain takes {@dice 2d6} fire damage at the start of each of its turns. The droplets ignite any flammable objects that aren't being worn or carried; otherwise, the droplets burn out immediately. The smoke, soot, crackle, and low roar of the storm impose disadvantage on Wisdom ({@skill 察觉}) checks and ranged attack rolls.",
+				"A flame storm usually lasts {@dice 2d4} minutes, though the originating storm clouds can persist for days, creating multiple flame storms."
+			]
+		},
+		{
+			"name": "Flaywind",
+			"source": "TCE",
+			"page": 163,
+			"trapHazType": "EST",
+			"entries": [
+				"Supernaturally powerful winds\u2014like those from planes such as Pandemonium or Minethys, the third layer of Carceri\u2014can spawn flaywinds. A flaywind is an intense sandstorm, gathering large rocks and other debris in addition to sand or grit. The area within the storm is heavily obscured, and a creature exposed to the storm takes {@dice 1d4} slashing damage at the start of each of its turns. Only substantial cover or shelter offers protection against the flensing grit.",
+				"A flaywind leaves {@dice 4d6} feet of sand or debris in its wake. A successful DC 15 Intelligence ({@skill 奥秘}) or ({@skill 自然}) check or Wisdom ({@skill 生存}) check allows a character to recognize a flaywind 1 minute before it strikes, allowing time to seek shelter. A flaywind typically lasts {@dice 1d4 × 10} hours."
+			]
+		},
+		{
+			"name": "冰水",
+			"ENG_name": "Frigid Water",
+			"trapHazType": "WLD",
+			"entries": [
+				"一个生物可以浸泡在冰水中等同于其体质值的分钟数，而不至于承受任何负面效果。在这之后每持续待在冰水中一分钟，都会需要该生物成功通过一次DC 10的体质豁免，否则该生物将承受一级{@condition 力竭}。对冷冻伤害具有抗性或免疫、以及天生适应在冰冷水体中生活的生物都将自动成功通过这个豁免检定。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "绿软泥",
+			"ENG_name": "Green Slime",
+			"entries": [
+				"这坨酸性的软泥会吞噬任何接触到的血肉、有机物、和金属。外表呈亮绿色、湿滑而黏稠，绿软泥常常成片攀附在墙壁、地面、和天花板上。",
+				"一片覆盖于5尺平方方形区域的绿软泥具有30尺范围的盲视感官，且会在传感到其下方有移动物时从天花板或墙壁上滑落。除此之外，绿软泥不具备任何移动的能力。一个意识到绿软泥存在的生物可以通过成功通过一次DC 10的敏捷豁免以避开它的袭击。除此之外，该生物将无法避免与滑落的绿软泥接触。",
+				"一个与绿软泥接触的生物将受到5 ({@dice 1d10})强酸伤害。直到绿软泥被刮除或摧毁之前，该生物将在它的每个回合开始时再次受到该伤害。绿软泥每轮会对木材和金属造成11 ({@dice 2d10})强酸伤害，且任何用于刮除绿软泥的非魔法木材或金属制成的武器或工具，都将在使用之后被破坏。",
+				"日光、任何能够治愈疾病的效果、以及任何能够造成冷冻、火焰、或光燿伤害的效果都能够摧毁一片绿软泥。"
+			],
+			"source": "DMG",
+			"page": 105
+		},
+		{
+			"name": "大雨",
+			"ENG_name": "Heavy Precipitation",
+			"trapHazType": "WTH",
+			"entries": [
+				"所有发生大雨或大雪的区域都将被轻度遮蔽，且在区域内的生物将在依赖于视觉的感知（{@skill 察觉}）检定承受劣势。大雨也会熄灭明火，并使依赖于听觉的感知（{@skill 察觉}）检定承受劣势。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "高海拔",
+			"ENG_name": "High Altitude",
+			"trapHazType": "ENV",
+			"entries": [
+				"由于高处的氧气稀薄，旅行至海拔高度10,000尺或更高的区域对于需要呼吸的生物相当费劲。在计算这类生物可以旅行多久的时候，这类生物在高海拔地区旅行每花费一个小时，都将被计为2个小时。",
+				"需要呼吸的生物可以借由在高海拔地区待30天或以上的时间以适应这个地区的环境。除非该生物是该环境的原生生物，否则需要呼吸的生物无法通过这个方式适应海拔高度超过20,000尺的地区。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "即兴伤害",
+			"ENG_name": "Improvised Damage",
+			"trapHazType": "GEN",
+			"entries": [
+				"在某些情况下，你会需要当场决定某些伤害。「即兴伤害表」将在这时提供你一些参考建议。",
+				{
+					"type": "table",
+					"caption": "即兴伤害",
+					"ENG_name": "Improvising Damage",
+					"colLabels": [
+						"伤害骰",
+						"范例"
+					],
+					"colStyles": [
+						"col-2 text-align-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"{@dice 1d10}",
+							"被炭灼伤、被倒下的书柜砸中、被毒针刺中"
+						],
+						[
+							"{@dice 2d10}",
+							"被闪电击中、失足跌入火坑"
+						],
+						[
+							"{@dice 4d10}",
+							"被坍方隧道的落石砸中、跌入一大桶强酸之中"
+						],
+						[
+							"{@dice 10d10}",
+							"被结实的墙壁辗压、被旋转的钢铁刀刃击中、徒步涉过熔岩流"
+						],
+						[
+							"{@dice 18d10}",
+							"被岩浆淹没、被坠毁的飞行要塞砸中"
+						],
+						[
+							"{@dice 24d10}",
+							"被卷入火元素位面中的火焰漩涡、被类神生物或月球体型的怪物一口咬碎"
+						]
+					]
+				},
+				"「伤害严重性与等级表」提示了这些伤害数字对于不同等级的角色而言的致命程度。交叉比对角色等级和造成的伤害，以评估该伤害的严重性。",
+				{
+					"type": "table",
+					"caption": "伤害严重性与等级",
+					"ENG_name": "Damage Severity and Level",
+					"colLabels": [
+						"角色等级",
+						"妨害",
+						"危险",
+						"致命"
+					],
+					"colStyles": [
+						"col-3 text-align-center",
+						"col-3 text-align-center",
+						"col-3 text-align-center",
+						"col-3 text-align-center"
+					],
+					"rows": [
+						[
+							"1级-4级",
+							"{@dice 1d10}",
+							"{@dice 2d10}",
+							"{@dice 4d10}"
+						],
+						[
+							"5级-10级",
+							"{@dice 2d10}",
+							"{@dice 4d10}",
+							"{@dice 10d10}"
+						],
+						[
+							"11级-16级",
+							"{@dice 4d10}",
+							"{@dice 10d10}",
+							"{@dice 18d10}"
+						],
+						[
+							"17级-20级",
+							"{@dice 10d10}",
+							"{@dice 18d10}",
+							"{@dice 24d10}"
+						]
+					]
+				},
+				"足以造成{@b 妨害}程度的伤害很少会使对应等级的角色承受死亡的风险，但已经被严重削弱的角色仍可能会被这类伤害给击倒。",
+				"相对而言，{@b 危险}程度的伤害重视于造成显著的威胁以削弱角色，且可能会杀死对应等级中那些已经失去大量生命值的角色。",
+				"顾名思义，{@b 致命}程度的伤害足以将对应等级的角色的生命值直接归零。这种等级的伤害甚至能够杀死已经受创的强大角色。"
+			],
+			"source": "DMG",
+			"page": 249
+		},
+		{
+			"name": "Necrotic Tempest",
+			"source": "TCE",
+			"page": 163,
+			"trapHazType": "EST",
+			"entries": [
+				"Storms infused with the essence of death roil with dark clouds that manifest leering skulls and bone-white lightning. Any creature exposed to the storm that isn't a construct or an undead must succeed on a DC 13 Constitution saving throw at the end of each minute or take {@dice 3d6} necrotic damage.",
+				"A creature that dies in a necrotic tempest rises as a {@creature skeleton} or {@creature zombie} (your choice) {@dice 1d10} minutes later.",
+				" A necrotic tempest lasts for {@dice 1d4} hours and leaves crops withered and wells undrinkable for {@dice 1d4} days after its passing."
+			]
+		},
+		{
+			"name": "流沙",
+			"ENG_name": "Quicksand",
+			"trapHazType": "WLD",
+			"entries": [
+				"一个流沙坑会在地面上覆盖大约10尺平方的区域，且深度通常为10尺。当一个生物进入这个区域时，他将在流沙中向下陷沉{@dice 1d4+1}尺，并陷入{@condition 束缚}状态。在该生物的每个回合开始时，它都将再下沉{@dice 1d4}尺﹒只要该生物尚未被流沙完全淹没，它就可以使用它的动作并成功通过一次力量检定以从中逃脱。这个检定的DC等同于10加上该生物已沉入流沙的尺数。被流沙完全淹没的生物将无法呼吸（参见{@i 《玩家手册》中的{@book 窒息|phb|8|窒息} 规则}）。",
+				"一个生物可以使用它的动作并成功通过一次力量检定，以将另一个处于它触及范围内的生物从流沙中拉出。这个检定的DC等同于5加上目标生物已沉入流沙的尺数。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "剃刀籐",
+			"ENG_name": "Razorvine",
+			"trapHazType": "WLD",
+			"entries": [
+				"剃刀籐是一种生长在野外缠蔓和树丛中的植物。它也会如同常春籐那样攀附在建筑物或其它表面上。一个10尺高，10尺宽，5尺厚的剃刀籐墙或篱笆具有AC 11，25点生命值，且免疫于钝击、穿刺、和心灵伤害。",
+				"当一个生物在一个回合中第一次直接接触到剃刀籐，该生物必须成功通过一次DC 10的敏捷豁免，否则将因为剃刀籐刀刃般的棘刺而受到5 ({@dice 1d10})挥砍伤害。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "赤褐霉菌",
+			"ENG_name": "Russet Mold",
+			"entries": [
+				"这些以赤褐霉菌闻名的蕈类呈现红棕色，且只会在黑暗、温暖而潮湿的场所被发现。散布在金属物体上的赤褐霉菌很容易被误认自然形成的铁锈，且在这种情况下，必须成功通过一次DC 15的智力（{@skill 自然}）或感知（{@skill 生存}）检定才能用视觉准确地辨认出来。",
+				"任何生物进入赤褐霉菌5尺内的生物，都将随着赤褐霉菌喷出一阵孢子云而必须进行一次DC 13的体质豁免。若豁免失败，该生物将陷入{@condition 中毒}状态。当因为这个方式而{@condition 中毒}时·该生物将在它的每个回合开始时受到7 ({@dice 2d6})毒素伤害，并在其受到伤害时长出霉菌。该生物可以在它的每个回合结束时重复进行这个豁免检定，豁免成功则结束这个效果对它的影响。任何能够中和毒素或治愈疾病的魔法都能够杀死这些寄生菌。一个因为赤褐霉菌的毒素伤害而导致生命值归零的生物将会立即死亡。若死去的生物为野兽、巨人、或是类人生物，则它的尸体将在24小时之后长出一个或多个新生的{@creature 植孢侏儒|vgm}：若尸体的体型为小型则诞生一个，中型尸体则为二个，大型尸体四个，巨型尸体八个，超巨型尸体则为十六个。",
+				"由于武器和大部分的伤害类型对赤褐霉菌都无法造成伤害，因此它们很难被杀死。能够造成强酸、黯蚀、和光燿伤害的效果，每造成1点伤害都能够杀死1平方尺范围的赤褐霉菌。而一磅的盐、一加仑的酒精、或是能够治愈疾病的魔法效果也能够杀死10尺边长平方区域的赤褐霉菌。日光也能够杀死任何暴露于其光照区域的赤褐霉菌。"
+			],
+			"source": "VGM",
+			"page": 196
+		},
+		{
+			"name": "滑溜冰面",
+			"ENG_name": "Slippery Ice",
+			"trapHazType": "WLD",
+			"entries": [
+				"滑溜冰面是困难地形。当一个生物在一个回合中第一次在滑溜冰面上移动时，它必须成功通过一次DC 10的敏捷（{@skill 体操}）检定，否则将摔倒{@condition 伏地}。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "强风",
+			"ENG_name": "Strong Wind",
+			"trapHazType": "WTH",
+			"entries": [
+				"强风将使远程武器攻击、以及依赖于听觉的感知（{@skill 察觉}）检定承受劣势。强风同样会熄灭明火、驱散浓雾、且让通过非魔法手段的飞行变得几乎不可能。在强风中飞行的生物必须在它的回合结束时着陆，否则将因此摔落。",
+				"在沙漠中的强风能够创造出沙尘暴，并使依赖于视觉的感知（{@skill 察觉}）检定承受劣势。"
+			],
+			"source": "DMG",
+			"page": 110
+		},
+		{
+			"name": "薄冰",
+			"ENG_name": "Thin Ice",
+			"trapHazType": "WLD",
+			"entries": [
+				"每10尺平方的薄冰区域能够承受3d10 × 10磅的重量。每当一片薄冰区域承受的总重量超过其上限，区域内薄冰将会破裂。所有在破裂薄冰上的生物都将随之坠落。"
+			],
+			"source": "DMG",
+			"page": 111
+		},
+		{
+			"name": "Thrym's Howl",
+			"source": "TCE",
+			"page": 163,
+			"trapHazType": "EST",
+			"entries": [
+				"These bone-chilling blizzards drive a wall of wind and snow like a living glacier. The storm projects {@book extreme cold|DMG|5|Extreme Cold} (see the {@book Dungeon Master's Guide|DMG}). Due to the howling wind and dense blue-white ice particles, the area in the storm is heavily obscured, and ranged attack rolls and Wisdom ({@skill 察觉}) checks made within it have disadvantage.",
+				"Any creature exposed to the storm at the start of its turn takes {@dice 2d6} cold damage and can't regain hit points until it spends at least 1 hour in a warm environment. A creature that dies in the storm freezes solid. Creatures that are immune to cold damage are immune to the effects of the storm and can see normally within it.",
+				"Thrym's howl typically lasts {@dice 2d10} hours."
+			]
+		},
+		{
+			"name": "蛛网",
+			"ENG_name": "Webs",
+			"entries": [
+				"巨蜘蛛会在通道和陷坑底部编织厚实黏稠的蛛网以捕捉猎物。这些布满蛛网的区域被视为困难地形。之外，一个在回合中第一次进入蛛网区域的生物必须成功通过一次DC 12的敏捷豁免，否则将被这些蛛网给{@condition 束缚}。被{@condition 束缚}的生物可以使用它的动作以尝试逃脱，这么做需要成功通过一次DC 12的力量（{@skill 运动}）或敏捷（{@skill 体操}）检定。",
+				"每10尺边长立方体的巨大蛛网具有AC 10，15点生命值，对火焰易伤，且免疫于钝击、穿刺、和心灵伤害。"
+			],
+			"source": "DMG",
+			"page": 105
+		},
+		{
+			"name": "黄霉菌",
+			"ENG_name": "Yellow Mold",
+			"entries": [
+				"黄霉菌生长于黑暗的场所，且一片黄霉菌会覆盖着一个5尺平方的方形区域。当被触碰时，黄霉菌会喷出一团孢子云，以黄霉菌为中心充斥在一片10尺边长立方体的区域。任何在这个区域内的生物都必须成功通过一次DC 15的体质豁免，否则将受到11 ({@dice 2d10})毒素伤害并陷入{@condition 中毒}状态长达1分钟。当因为这个方式而{@condition 中毒}时·该生物将在它的每个回合开始时受到5 ({@dice 1d10})毒素伤害。该生物可以在它的每个回合结束时重复进行这个豁免检定，豁免成功则结束这个效果对它的影响。",
+				"日光、以及任意数值的火焰伤害都将立即摧毁一片黄霉菌。"
+			],
+			"source": "DMG",
+			"page": 105
+		}
+	]
+}

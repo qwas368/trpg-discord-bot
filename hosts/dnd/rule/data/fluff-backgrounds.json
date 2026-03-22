@@ -1,0 +1,2092 @@
+{
+	"backgroundFluff": [
+		{
+			"name": "Acolyte",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你的一生都在神殿中服侍于特定的神祇或神系。你的作为神圣国度与凡间俗世之间的中介人，运行圣仪并献上祭品以带领崇拜者到神性存在的面前。你并不需要是一名牧师\u2014运行神圣仪式与引导神性能量并不相同。",
+								"选择一名神祇、一个神系、或一些其他具有类似神性的存在，并与你的DM一起讨论关于你宗教侍奉的性质。多元宇宙众神的章节包含一些来自被遗忘国度设置的范例神系。你是否在神殿中担任着低微职务、从幼童时期被扶养长大以协助祭司运行圣仪？或者你一名大祭司，突然受到呼召以用不同的方式来服侍你的神？又或许，你是一个率领着独立于任何已创建神殿结构的小型邪教领袖、或甚至所属于一个服侍于你现在背弃的邪魔宗主的神秘结社。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Anthropologist",
+			"source": "ToA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You have always been fascinated by other cultures, from the most ancient and primeval lost lands to the most modern civilizations. By studying other cultures' customs, philosophies, laws, rituals, religious beliefs, languages, and art, you have learned how tribes, empires, and all forms of society in between craft their own destinies and doom. This knowledge came to you not only through books and scrolls, but also through firsthand observation- by visiting far-flung settlements and exploring local histories and customs."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Archaeologist",
+			"source": "ToA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"An archaeologist learns about the long-lost and fallen cultures of the past by studying their remains-their bones, their ruins, their surviving masterworks, and their tombs. Those who practice archaeology travel to the far corners of the world to root through crumbled cities and lost dungeons, digging in search of artifacts that might tell the stories of monarchs and high priests, wars and cataclysms."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Athlete",
+			"source": "MOT",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You strive to perfect yourself physically and in execution of everything you do. The thrill of competition lights fire in your blood, and the roar of the crowd drives you forward. Tales of your exploits precede you and might open doors or loosen tongues.",
+								"Whether in one of the poleis, between them, or among the nonhuman peoples of Theros, physical contests and those who pursue them command respect bordering on reverence. Athletes arise from all walks of life and all cultures and quite often cross paths with one another."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/MOT/Athlete.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Augen Trust (Spy)",
+			"source": "EGW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Little is known about the Augen Trust, even within the court of the Dwendalian Empire. Only one person knows all the members of this elite network of imperial spies: its leader, Oliver Schreiber, a noble gnome with the ear of King Dwendal.",
+								"If you were favored with membership in the Augen Trust, your entire life was laid bare before the secret spymaster at one point, and you were found to be a loyal servant of the empire with a particular set of skills. Betraying the Trust is high treason against the crown, and defectors are hunted down and quickly slain.",
+								"Most defectors from the Augen Trust flee to the Biting North, beyond the reach of the empire. The Clovis Concord would extradite traitors in a heartbeat to maintain diplomatic relations with the empire, and fleeing to Xhorhas is tantamount to suicide in the present political climate.",
+								"If you are a member of the Trust going on adventures, you are either a traitor who has somehow managed to keep your true identity secret from the greatest spies in the empire\u2014or you are still on active duty. In the latter case, you can work with your DM to figure out why you are traveling with outside adventurers."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Azorius Functionary",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The brutes are at the gate, chaos is looming, and the only thing standing in the way of disaster is the foundation of law and order\u2014as embodied in the Azorius Senate. You're a proud member of the Azorius guild, which both enacts and enforces the laws that make Ravnican society function smoothly and safely."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Acolyte",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"It's said that every faith in the world has a believer in Baldur's Gate. Not only are most established faiths tolerated\u2014even if some of them, including most of the openly evil faiths, are relegated to the Outer City's Twin Songs neighborhood\u2014but new ones arrive constantly, carried by travelers and proselytizers from far-flung lands. A character with this background might aspire to greater things, not for themselves, but for their faith."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Charlatan",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Everybody's always trying to get a leg up on somebody in Baldur's Gate. One group's con artist might be another's revolutionary. Or maybe you're just in it for yourself. In any case, characters with this background have a plan to hit the big time; all they need is audacity and a little time."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Criminal",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"No career criminal in Baldur's Gate operates without being aware of the Guild. Some studiously keep a low profile, carrying just the occasional smuggled load in with legitimate merchandise, or only breaking knees when it can plausibly be claimed as an act of personal revenge. Others join up with crews for protection, or with the Guild itself. A few former Guild members have been cast out of the organization due to incompetence or after offending a more powerful member, and now shuffle for scraps to survive."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/BGDIA/Baldur's Gate Criminal.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Entertainer",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"From the Oasis Theater's spectacular singers and acrobats to the pantomimes and shadow puppeteers of the Wide, Baldur's Gate hosts a colorful array of performers. Good acts can always find ready audiences, and the constant flow of travelers means that both new spectators and new spectacles are always passing through."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Folk Hero",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Baldur's Gate is a city badly in need of heroes, and every so often, one rises from among its own. Ordinary people who rise to greatness are beloved in local history, but the popular imagination can turn on such champions almost as quickly as it anoints them."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Guild Artisan",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Numerous guilds and professional associations exist in Baldur's Gate, covering every imaginable trade and discipline from gravediggers to moneylenders."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Hermit",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"While some might think it strange to find hermits in a bustling city, others know that sometimes the most profound solitude exists in the midst of a crowd. Baldur's Gate holds a handful of souls who manage to find isolation amid its tumult."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Noble",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The patriars of Baldur's Gate live in the Upper City, where they host grand galas and flaunt cosmopolitan fashions, but are walled off from the poverty and squalor of the less fortunate districts and their neighborhoods. Although they might visit prosperous Bloomridge to try a fashionable restaurant or boutique, or watch a spectacle at the Oasis Theater, the patriars have little reason to venture into the dirtier, more dangerous parts of the city. If they do, it is generally as thrill-seeking tourists or enclosed by a retinue of armed guards, not as friends or neighbors. As a result, many patriars are at once acutely attuned to the nuances of royal courts half a continent away and shockingly ignorant of what life is like for the poor outside their own doorsteps.",
+								"This combination of worldly savvy and local blindness characterizes almost all the nobility of Baldur's Gate. As a result, for those who wish to play patriars, the Patriar feature below replaces the Position and Privilege feature of the noble background. Those who wish to use the background's standard feature might have gained their standing in Baldur's Gate from business rather than inheritance."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Outlander",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Coming to Baldur's Gate might seem like a good idea for a spectrum of reasons. Profit, excitement, and cosmopolitan opportunities all present tempting prospects, but rarely does one start on the path to Baldur's Gate fully understanding the complex social morass that awaits. You enter the city an outsider, and it's likely that\u2014no matter how long you spend in the city\u2014you'll leave an outsider, if you leave at all."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Sage",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Baldur's Gate has a modest academic community centered around the libraries of the High Hall and the various temples dedicated to gods of learning and innovation. Lecturers, researchers, and historians all participate with passing scholars from Candlekeep in a lively exchange of ideas, debating and collaborating in book-filled halls across the Upper and Lower City. The city is also rife with opportunities for arcane study, although its masters are dispersed across individual wizards' abodes and lack concentrated communities."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Sailor",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Baldur's Gate was founded by sailors, and its harbor is still the city's beating heart. Several patriars are descended from captains of yore, the commerce of the Lower City is built on the port, and even the Outer City's rhythms are dominated by the ebb and flow of river trade. Because sailors are as fundamental and ubiquitous to Baldur's Gate as the cobbles on its streets, characters with this background are common."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Soldier",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Mercenaries, private guards, Watch soldiers, and members of the Flaming Fist number among just a few of the many soldiers on the streets of Baldur's Gate."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Baldur's Gate Urchin",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Bands of orphans and runaways band together in the Outer City, running after passersby in ragged throngs to plead for scraps. In the Lower City, urchins are often recruited into the lowest echelons of the Guild or pressed into dirty and dangerous work by unscrupulous masters."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Black Fist Double Agent",
+			"source": "ALCurseOfStrahd",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are an informant for the Tears of Virulence who now lord over Phlan, but are also a double agent for original town guard of Phlan, the Black Fists. For the Tears you've been tasked with ferreting out the secrets of Phlan's criminal underworld, insurgency, and the common peoples of Phlan. In exchange for reporting on the activities of dissenters, criminals, and other rebel elements, the Tears of Virulence leave you alone to conduct your affairs in peace.",
+								"In reality you work for the deposed Black Fists, sharing misinformation with the Tears of Virulence that often helps the Black Fists and other Phlan insurgents. Since the evacuation of Phlan, you are even busier today than you ever were previously, as the number of dissenters among the refugees grows daily, while you are afforded many opportunities to spy on the peoples of Mulmaster and Elventree, to the pleasure of your contact(s) within the Tears of Virulence."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Boros Legionnaire",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"As a member of the Boros Legion, your life is devoted to the service of angels and consecrated to the work of establishing justice and peace on the streets of Ravnica. You might be a true believer, inspired by the example of the angels, moved by the plight of the downtrodden, and devoted to the cause of justice. Or you could be a cynic in the ranks, perhaps because you reluctantly followed in the footsteps of a Boros parent, succumbed to the persuasion of a charismatic recruiter's lofty promises, or were drawn in by the prospect of a life of action."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Caravan Specialist",
+			"source": "ALElementalEvil",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are used to life on the road. You pride yourself at having traveled every major trade way in the Moonsea region, including the best backroads and shortcuts. When traveling these roads, you know where the best inns, campsites, and water sources are located, as well as potential locations of danger such as ambush. Having worked the roads as long as you have, you have made many acquaintances and find it easy to pick up information and rumors floating from town to town. You are skilled with beasts of burden and handling and repairing wagons of all kinds."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Celebrity Adventurer's Scion",
+			"source": "AI",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Your family name strikes fear and admiration in the hearts of the common folk\u2014but that's got nothing to do with you. Songs and stories celebrating the adventuring exploits of your famous parent are widely known. Kids across the land grew up wishing they were you. But being the child of a famous adventurer wasn't all hugs and kisses.",
+								"You seldom saw your celebrity-adventurer parent, and when they were around, it was all about them and tales of slaying this demon or vanquishing that dragon. All too often, you'd be woken out of a sound sleep by someone standing outside your home screaming about the latest threat to the town, the region, or the world.",
+								"In the end, all you have to show for your lineage is your name. Most of the family's money went for consumables, from potions of healing and spell scrolls to copious amounts of dwarven ale. And everyone expects you to swing a sword or sling spells like your famous forebear, making it doubly hard for you to prove yourself."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/AI/celebrity-adventurers-scion.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Charlatan",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你对如何与人打交道很有一套。你知道什么东西能让他们行动，你可以通过几分钟的交谈就揭露他们心中的渴望，且你可以利用几个诱导性提问就如同读一本幼儿读本一样读透他们的一切。这是个非常实用的天赋，且你非常乐意用以它来牟取己利、占据上风。",
+								"你知道人们想要什么，且你将把这些给予他们──或者，你承诺要给予他们。常识通常会引导人们远离那些听上去美好到不像真实的事物，但在你周遭，常识就像是供给不足一样，毫无用处。这个瓶子内的粉色液体必然能够治愈你那可怕的疹子，这罐油膏\u2013尽管不过是掺杂了银粉的脂肪\u2013可以让你回复青春活力，另外这座城里刚好有一座大桥正在出售。虽然这些荒谬的言论听上去难以置信，但你可以让它们听起来跟真的没什么两样。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "City Watch",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你服务于你所成长的社会，起身在最前线对抗罪恶。你并不是士兵，你并不需要将你的目光放在外来的潜在敌人。相反的，你在家乡的任务是协助维护当地民众的治安，保护市民们不受不法份子和犯罪者的侵害。",
+								"你可以能会是深水城中城市守卫队(City Watch)，作为光辉之城中挥舞警棍的治安力量，保护着寻常百姓不受窃贼和无赖贵族的危害。或者你可能会是银月城中的其中一名勇敢卫士，作为白银守卫队(Silverwatch)或甚至使用魔法的法术守卫(Spellguard)的其中一名成员。",
+								"或许你来自绝冬城·且曾身为凛冬之盾(Wintershield)的警备员之一，作为新成立的警卫部队以誓言守护巧手之城的安全。",
+								"即使你并不是在城市出生或长大，这个背景仍可以代表你在过去几年内作为执法人员的经历。无论规模如何，大部分的聚落都有着自己的警察和维安部队，而即使是更小的社区团体也有着随时准备保护他们团体的治安官和法警。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Clan Crafter",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"矮人们以他们工艺技术和工艺成品的价值而闻名，而你已受训于这门古老技艺的传承。多年来，你在一名矮人工匠大师手下学习，忍受着长时间的工作以及轻蔑刻薄的对待，为的就是你在今日所拥有的优秀技艺。",
+								"你通常来说会是一个矮人，但这并非必要\u2014尤其在北地，盾矮人氏族很久以前就知道，只有比起手艺更关心自己自尊的骄傲傻瓜才会拒绝充满潜力的学徒，即使他们是其他种族也一样。然而，若你不是矮人，则你将严厉地发誓永远不会在工艺领域中收任何学徒：摩拉丁所钟爱子民的技术绝不能通过非矮人种族传授下去。不过，你能够轻易地找到一位愿意接收你所推荐学徒的矮人大师。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cloistered Scholar",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"在孩提时代，当你的玩伴喧闹并宣泄着独占欲时，你就展现出了强烈的好奇心。在你成长的这些年中，你找到了前往费伦其中一所伟大学院的途径，你在该处被收为学徒，并被教导着知识是远比黄金珠宝更有价值的财富。现在，你已准备好离开你的居所\u2014并非舍弃它，而是为寻求崭新的知识以充实它的知识宝库。",
+								"烛堡(Candlekeep)是费伦最知名的知识泉源之所。这座庞大的图书馆总是会需要工人和陪从，其中也有一些人崛起升格，以取得有着更大责任和声望的角色。你可以会是烛堡中的一员，致力于管理这收藏着世界上最完整知识和历史的团体。",
+								"又或许，你被银月城内圣贤之顶(Vault of the Sages)或地图屋(Map House)的学士们所接受，且现在你已增进了你的学识，并让自己得以帮助那些在其他地方寻求你专业的人们。你可以会是少数几个援助隐士堡(Herald's Holdfast)的成员之一，协助编载整理并维护每天从费伦各地发来的信息记录。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cobalt Scholar (Sage)",
+			"source": "EGW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The Cobalt Soul is an organization of monastic scholars dedicated to preserving knowledge and recorded history, not just across Wildemount but all of Exandria. Its operations are primarily based out of the cities of Zadash and Rexxentrum in the Dwendalian Empire, and you likely studied at one of those sites.",
+								"As a rank-and-file pupil of the Cobalt Soul, you adventure to help expand your mind. Alternatively (and with the DM's permission), you might also take on a more specific role within the organization. Expositors are secret agents who gather information in the field, while archivists are the curators who ensure the well-being of the Cobalt Soul's many Archives. Monks of the Cobalt Soul are enlightened scholars who lead expeditions into ancient and forgotten places, hoping to reclaim their lost knowledge and history."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cormanthor Refugee",
+			"source": "ALRageOfDemons",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are one of hundreds of refugees that were driven from Hillsfar or that fled the destruction of Myth Drannor and who now shelter in hidden camps under the northern eaves of the Cormanthor Forest. If you up grew in the camps, you have never been to a settlement other than the village of Elventree. As a guest of the elves, you have learned their ways and the ways of the forest. You are also a traumatized, as residual wild magic, energies released by the fall of Thultanar upon Myth Drannor, and the constant fear of raids hunting for nonhumans to fight in Hillsfar's Arena have taken their toll on you, as they have on everyone in the camps."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Courtier",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"在你过去的日子，你曾是一名贵族政议院或官僚组织中的重要人士。你可能是或不是来自某个上流社会的家族；是你的才能，而非你出生的背景让你赢得了这个地位。",
+								"你可能曾是银月城政议院中许多官员、侍者、或其他奉迎者中的其中一员，又或者你游走于深水城的杀手公会、贵族、冒险家、或秘密组织之间。你可能曾是一名在柏德之门或绝冬城幕后的执法者或官员，或你可能成长于匕首滩堡垒之中。",
+								"即使你已经不再是那给了你人生开端的团体的正式成员，你与以前同事们之间的人际关机仍能够带给你和你冒险伙伴们一些优势。你可能会和现在的新伙伴们从之前的组织中接到任务，为这个组织带来一些好处。无论如何，你作为朝臣时所磨练的能力将会对你的冒险生活处于更有利的境地。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Criminal",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你是一名曾经违法，经验丰富的罪犯。你花了许多时间与其他罪犯们在一起，且至今仍然与罪犯的地下世界有着联系。你比大多数人更接近那遍布于文明薄弱之处的谋杀、窃盗、和暴力世界，而你也因着藐视社会的规章制度而存活至今。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dimir Operative",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You're a spy. Secrets and misinformation are your stock in trade. You skulk in the shadows, infiltrate other guilds, and steal the most precious secrets, whether they're written in locked journals or hidden away in someone's mind. Even you might not be aware of all the reasons behind the missions you carry out. Sometimes a mission's sole purpose is to conceal the motivation behind another strike performed in a different part of the city, or simply to spread fear.",
+								"As part of your covert work for House Dimir, you maintain a false identity as a member of another guild. You can choose your secondary guild or roll to determine it randomly. This secondary guild membership determines a portion of your starting equipment and is also where most of your contacts come from. You infiltrate your secondary guild to learn its secrets, keep tabs on its activities, or perhaps undermine it from within."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dissenter",
+			"source": "PSA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Even in the carefully constructed and curated city-state of Naktamun, and in the presence of the five gods, some people rebel against the doctrines of the God-Pharaoh. They don't challenge the existence of the gods, of course, for those gods are visible nearly every day in the streets of the city. Nor do they question the fact of life after death, which is plain to see in the anointed mummies that surround them, as well as the marauding mummies outside the Hekma. Rather, these dissenters simply refuse to follow the ordained course of life that leads to the glorious afterlife.",
+								"Some dissenters are spurred by fear, not wanting to subject themselves to a violent death in the trials (or in training for the trials). Some are moved by conscience, unwilling to kill their crop-mates in the trials. For while they cannot deny that the gods exist, they can deny that the gods are just\u2014and can fight to prove that the dictates of an unjust god need not be obeyed. Some believe that one god (probably Bontu) has corrupted the process of the trials and the path to the afterlife. Others correctly intuit that the God-Pharaoh did not actually have the people's best interests in mind when he ordered their society.",
+								"A character who is identified as a dissenter loses the benefit of the initiate's or vizier's background feature. In its place, the character gains the Shelter of Dissenters feature."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dragon Casualty",
+			"source": "ALCurseOfStrahd",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"When the Maimed Virulence descended upon Phlan, you were one of the unfortunate casualties of war. Captured during the initial assault, you have spent the last year of your life as a plaything of a capricious and malevolent overlord. While many of your fellow prisoners fell to the dragon's insatiable fury over the coming months, you and your fellow \"survivors\" were spared only for a worse fate as one of the dragon's magical experiments, leaving you and those who survived the torture scarred and disfigured.",
+								"What reasons the dragon had for releasing you few survivors, nobody knows. You only fear that those who died under his terrible claw were the lucky ones, and you and your fellow Dragonscarred are doomed for a fate worse than death."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Earthspur Miner",
+			"source": "ALElementalEvil",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are a down-on your luck miner from the Earthspur Mountains who is no stranger to hardship. You have spent a great deal of time living among the dwarves, goliaths, and denizens of the Underdark that also work mines in the area. At this point, you're just as comfortable working underground as above. You know how to read a seam, dicker for supplies with the deep gnomes, party with dwarves, and find your way back to the surface afterwards. Unfortunately, you haven't struck it rich...yet. Although you've come to Mulmaster looking for work, the tall peaks and deep mines of the Earthspurs still call to you."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Entertainer",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你在观众面前的表现精彩动人。你知道如何令他们入迷，如何娱乐他们，甚至如何激励他们。你的诗篇可以鼓动听者的内心，唤起悲痛或喜乐，欢笑或忿怒。你的音乐能振奋他们的灵魂或勾起他们的忧愁。你的舞步使人着迷，你的幽默犀利。无论你擅长什么技艺，你的艺术就是你的生命。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Faceless",
+			"source": "BGDIA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Being who you are, you could never be a hero. Whether due to your class, your people, your family, or your sins, something about you prevents you from effectively pursuing the path you've chosen. Even so, that doesn't stop you. You've left your old face behind, taking on a new persona, becoming something more.",
+								"Characters with the faceless background don a disguise\u2014literally or otherwise\u2014as they adventure. This persona might be dramatic or subtle. In a way, though, many characters have such larger than life personalities. Therefore, this background largely focuses on detailing the hero behind the mask."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Faction Agent",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"许多活跃于北地和费伦大陆表面的组织并不受地理位置的限制。这些派系不顾政治界线而追寻着他们的理念，且他们的成员会在任何组织认为有其必要的场所活动。这些团体会雇佣探子、造谣者、走私者、佣兵、秘密守护者（那些专门守护为组织所用的财宝或魔法的守卫们）、港口管理人、和信使等成员。而那些位于派系内核的人们并不仅是为组织运行那些微小的功能，而是作为组织的臂膀、大脑、和心脏。",
+								"作为你冒险生涯的序曲（和为其的准备），你身为费伦中某个特定派系的特工。根据你所属的派系、它的目标、和这些目标与你自身目标的关系，你可能会公开或秘密地行动。成为冒险者并不需要你放弃你派系成员的身分（尽管你仍可以选择这么做），且甚至可能提升你在派系中的地位。",
+								{
+									"type": "entries",
+									"name": "剑湾的派系组织",
+									"entries": [
+										"由于缺乏大型集权的政府，北地和剑湾沿岸的土地上分布着许许多多的秘密组织和阴谋。若你的背景是作为一名位于北地和剑湾的主要派系的特工，以下是一些可能的选项。",
+										{
+											"type": "entries",
+											"name": "竖琴手同盟",
+											"ENG_name": "The Harpers",
+											"entries": [
+												"成立于千年以前，即使经历了多次的解散和重组，竖琴手同盟仍旧是一个有着强大实力的幕后组织，通过知识而非暴力来阻止邪恶、促进公义。竖琴手同盟的特工通常熟练于{@skill 调查}技能，这让他们能够熟练地进行窃听和间谍活动。他们通常会向其他竖琴手、怀抱共同理念的吟游诗人、客栈老板、游侠、以及那些神祇理念与竖琴手同盟相符的神职人员那里寻求援助。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "铁腕教团",
+											"ENG_name": "The Order of the Gauntlet",
+											"entries": [
+												"作为费伦大陆其中一股新起的力量，铁腕教团有着和竖琴手同盟相似的理念。然而，他们运行的手段却截然不同：穿戴铁腕之人是神圣的战士，他们正直的任务是摧毁邪恶并倡导正义，他们从来不会将自己隐藏在阴影之下。教团的特工倾向熟练于{@skill 宗教}技能，且经常会向赞成教团理念的执法部门，以及教团信奉神祇的神职人员们寻求援助。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "翡翠闲庭",
+											"ENG_name": "The Emerald Enclave",
+											"entries": [
+												"维护着自然秩序的平衡并对抗破坏这种平衡的力量，正是翡翠闲庭的两大目标。这个派系的成员通常是野外求生的专家，并依傍土地为生。他们通常熟练于{@skill 自然}技能，并向樵夫、猎人、游侠、野蛮人部落、德鲁伊结社、以及信奉自然诸神的祭司们寻求协助。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "领主联盟",
+											"ENG_name": "The Lords' Alliance",
+											"entries": [
+												"在某种程度上，领主联盟的特工就代表了城市、以及其他组成联盟的政府组织。然而，作为一个其利益与关心超越当地政治和地理性的派系组织，领主联盟拥有属于它自己的干部人员，代表组织展开更广阔的工作。领主联盟的特工被要求俱备{@skill 历史}方面的知识，且他们永远可以依赖属于联盟的组织、以及其他支持联盟理念的领导者和团体的援助。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "散塔林会",
+											"ENG_name": "The Zhentarim",
+											"entries": [
+												"在近年来，随着其团体致力于改善其在寻常民众中的名声，散塔林会在整个世界中也变得更加显眼。这个派系吸收来自各行各业的雇员和合伙人，派遣他们去运行那些服务于暗黑情报网，但并不一定俱备犯罪性质的工作。暗黑情报网人员的特工必须经常暗地作业，且经常熟练于{@skill 欺瞒}技能。他们会向法师、雇佣兵、商人和、与散塔林会结盟的神职人员寻求援助。"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Failed Merchant",
+			"source": "AI",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Maybe you come from a long line of merchants. Perhaps you were an entrepreneur. Regardless, your ventures ended poorly. Whether it was because of outside influences, bad luck, or simply because your business acumen was weak, you lost everything.",
+								"With failure, however, comes experience. You're free of that old life, having made some connections and learned your lessons. Prepared to pursue the life of an adventurer, your insight into the world of commerce brought you into the sphere of Acquisitions Incorporated\u2014and a franchise just might be in your future."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Far Traveler",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"几乎所有你在沿着剑湾和北地所能遇见的普罗大众和其他人们都有着一个共同之处：他们的一生从不曾离开其出生的地点到超过数里远的地方旅行。",
+								"你并非这群人中的一员。",
+								"你来自遥远之处，一个如此偏远以至于鲜少有北地的普通大众知道这个地方的存在，即使你刚好能遇到一些曾听过你家乡的人们，他们也仅知其名，和或许几个惊人的故事。你由于自己个人的理由而来到了费伦的此地，而你可能会、也可能不会和其他人分享这个理由。",
+								"尽管你毫无疑问会发现这片土地上有着一些陌生和令人失望之处，你也能肯定此处人们习以为常的事物，对你来说将会是前所未见的新奇。同样的道理，不管你走到哪里，周围的人们都会对你投以兴趣的目光，无论好坏。",
+								{
+									"type": "entries",
+									"entries": [
+										{
+											"type": "entries",
+											"name": "你来自何处？",
+											"ENG_name": "Where Are You From?",
+											"entries": [
+												"在创建远行者背景时，最重要的决定就是决定你的故乡。这个章节所讨论的地点都与北地和剑湾之间有着足够遥远的距离，并得以为这个背景所使用。",
+												{
+													"type": "entries",
+													"name": "永聚岛(Evermeet)",
+													"entries": [
+														"这座在遥远西方，传说中的精灵岛屿是那些从未到过费伦大陆的精灵们的故乡。当精灵们来到费伦大陆时，他们通常会发现费伦是个比他们预期中更加恶劣的场所。如果你是一名精灵，永聚岛作为你的故乡将会是一个较为合理的选择（尽管这不是强制的）。",
+														"大部分迁离永聚岛的人们要嘛是流亡者，因为违背精灵律法而被迫离开，要嘛是作为使节，为了增进精灵文化或社会的利益而来到费伦大陆。"
+													]
+												},
+												{
+													"type": "entries",
+													"name": "哈鲁阿(Halruaa)",
+													"entries": [
+														"位于光耀之海的南端，群山环绕之处，哈鲁阿的法师之国对费伦中大部分知晓它存在的人而言是个相当奇特的地方。许多人都曾听说过关于那航行于哈鲁阿的奇异飞艇，也有一些人传说着在哈鲁阿即使是小孩都能够施展魔法。",
+														"由于他们的政府严格禁止人民未经许可而参与到其他的国家组织或政治中，哈鲁阿人通常会因为自己个人的理由而展开他们在费伦大陆的旅行。你可能会是一个违反了哈鲁阿其中一条复杂法律而被流放的人，或也可以是一名寻找魔法之神圣地的朝圣者。"
+													]
+												},
+												{
+													"type": "entries",
+													"name": "卡拉图(Kara-Tur)",
+													"entries": [
+														"位于费伦的遥远东方，以卡拉图大陆为家乡的人们有着与剑湾居民截然不同的风俗习惯。若你来自卡拉图，费伦的人们可能会称你为「受族(Shou)」，即使这并非你真正的部族之名，无论如何，这是他们用以称呼所有与你有着相同来源的人们的概括用语。",
+														"卡拉图的人们偶尔会作为外交官或是为了和其他贸易联盟创建贸易关系而旅行至费伦。你可能是以这类代表团成员的身分来到了费伦，并在任务结束之后决定留下来。"
+													]
+												},
+												{
+													"type": "entries",
+													"name": "穆罕瑞德(Mulhorand)",
+													"entries": [
+														"从地形风貌、建筑风格、到统治着这片土地的神王，几乎所有关于穆罕瑞德的一切对于剑湾的人们都是陌生的。当你离开沙漠之家并旅行至你所不熟悉的费伦北地时，你可能也会经历类似的文化冲击。最近在你家乡所发生的事件导致了奴隶制度的废除，并相应增加了穆罕瑞德与遥远费伦之间的交通往来。",
+														"那些为了一睹不同生活而离开穆罕瑞德闷热沙漠和古老金字塔的人们可能会出于许多原因。你来到北地的原因可能只是单纯为了看看这片潮湿土地有多么奇特，亦或是因为你在家乡的沙漠国度中树立了太多的敌人。"
+													]
+												},
+												{
+													"type": "entries",
+													"name": "索萨尔(Sossal)",
+													"entries": [
+														"很少人曾听说过你的故乡，但是许多人会在遇见你后询问关于你故乡的种种。来自索萨尔的人们看起来就像是从冰雪之中精心打造的艺术品，有着洁白如雪的肌肤和雪白的秀发，且通常穿著白色的衣服。",
+														"索萨尔存在于极北遥远之地，紧邻着北边无尽的冷冻，并在它另一侧被延绵数百里的大冰川和大冰海所环绕。如果没有令人信服的理由，没有任何人会因此努力跨越如此巨大的障碍。你必然是因为恐惧着某个真正可怕之物，或是为寻找某个极端重要的事物而离开索萨尔。"
+													]
+												},
+												{
+													"type": "entries",
+													"name": "札卡拉(Zakhara)",
+													"entries": [
+														"就如同在费伦中知道这个地方的人们所流传的俗话：「要前往札卡拉，向南，然后继续向南」。当然，你也是沿着相同长度的路途从你出生之地向着北方前进。尽管对于札卡拉人而言，为了贸易而造访费伦最南边的边疆不是什么罕见的事，但他们之中也很少人会像你一样流浪远离家乡。",
+														"你可能正旅行以发掘那些不同于你家乡中荒漠和剑型山脉的美好，或者你是一名为了理解其他人崇拜诸神的朝圣者，好让你得以更领会你自己所信仰的神祇。"
+													]
+												},
+												{
+													"type": "entries",
+													"name": "幽暗地域(The Underdark)",
+													"entries": [
+														"尽管你的故乡比起上述地区在地理层面上更接近剑湾，它的怪异性质却是更远不可及。你出身自幽暗地域的其中一个聚落，每个这类聚落都拥有自己独特的风俗习惯和法律。若你是这些伟大地底城市或聚落的其中一名本地人，那么你可能会是占据该地的种族中的一员──或者，你可能是在仍为孩童时就被俘虏并带到了这里，并在该处长大成人。",
+														"如果你是一位真正居住在幽暗地域的本地人，那你来到地表的原因可能是作为你们族人的使节、或可能是为了摆脱犯罪行为的指控（不管是否为被通缉）。如果你不是本地人，你离「家」出走的理由可能会与摆脱当下恶劣的处境有关。"
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fisher",
+			"source": "GoS",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You have spent your life aboard fishing vessels or combing the shallows for the bounty of the ocean. Perhaps you were born into a family of fisher folk, working with your kin to feed your village. Maybe the job was a means to an end\u2014a way out of an undesirable circumstance that forced you to take up life aboard a ship. Regardless of how you began, you soon fell in love with the sea, the art of fishing, and the promise of the eternal horizon."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Folk Hero",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你出身自卑微的社会阶级，但你注定要成就更大的事。你故乡的人们已经视你为他们的英雄，你的天命在呼唤你起身对抗那威胁着天下万民的暴君和魔物。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Gambler",
+			"source": "AI",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"All you need to make a lot of gold is a little gold. Except at those times when all you need to have no gold at all is a little gold. Whether you're a good gambler or a bad one rarely matters, because no one can divine the whims of Lady Luck. Sometimes you're up, sometimes you're down. But the thing about gambling is that someone is always willing to take a bet."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Gate Urchin",
+			"source": "ALRageOfDemons",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"All traffic into and out of the City of Trade passes through the Hillsfar Gate, making it the ideal place for the destitute to gather to panhandle, busk, gossip, and pick pockets. You grew up on the streets in the shadow of that great steel edifice, which houses both Red Plumes and Guild Mages. Though you may have moved on, you still have friends among them, and that life has had a lasting impact on you."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Golgari Agent",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are a member of a teeming horde\u2014one small part of a sprawling organism. Just as you are part of the swarm, the swarm is part of a larger ecosystem, a never-ending cycle of life, death, rot, and rebirth. You have spent your life in the slow churn of that ecosystem, in the dark places of the city where the messy parts of existence are on display. There is little squeamishness among the Golgari, no fear of death or taboo about the dead, just a fierce affirmation of the cycle."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Grinner",
+			"source": "EGW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The Golden Grin began in the far-off land of Tal'Dorei, trading secret messages through a network of bards and minstrels to undermine an iron-fisted king's authoritarian rule. Today, Tal'Dorei is a relatively peaceful republic, and some Grinners have grown restless while waiting for tyranny to raise its ugly head again. A contingent of such Grinners traveled to the Menagerie Coast and set up a network of secret bases in the cities of the Clovis Concord, from which they are presently working their way into the highest echelons of the Dwendalian Empire.",
+								"You are a Grinner. Your goals are to spread freedom and inspire hope\u2014or, in time, revolution\u2014in the hearts of the oppressed.",
+								{
+									"type": "entries",
+									"name": "Favorite Code-Song",
+									"entries": [
+										"All members of the Golden Grin have learned a handful of folk songs in their travels, and use those songs to send secret codes and alert fellow Grinners to danger. Choose a favorite song or roll on the Favorite Code-Songs table.",
+										{
+											"type": "table",
+											"colLabels": [
+												"d6",
+												"Favorite Code-Song"
+											],
+											"colStyles": [
+												"col-2 text-center",
+												"col-10"
+											],
+											"rows": [
+												[
+													"1",
+													"Zan's Comin' Back. This hopeful Tal'Dorei folk song declares the inevitable return of a just ruler. Use it to seek out potential allies."
+												],
+												[
+													"2",
+													"Blow Fire Down the Coast. A rowdy fighting song from the Clovis Concord, this ditty talks of blasting up pirate ships. Use it to encourage battle."
+												],
+												[
+													"3",
+													"Hush! Onward Come the Dragons. This Tal'Dorei folk song recounts the terror in the days after the invasion of the red dragon called the Cinder King. Use it to encourage caution in speech and deed."
+												],
+												[
+													"4",
+													"Let the Sword Grow Rust. An antiwar anthem from Marquet, this song has uncertain origins. Use it to help quell violent encounters."
+												],
+												[
+													"5",
+													"Drink Deep, Li'l Hummingbird. A drinking rondo from the Menagerie Coast, this song tells the tale of a young person who drinks so heavily that they awaken to find they've stowed away on a ship. Use it to encourage alertness in social situations."
+												],
+												[
+													"6",
+													"Dirge for the Emerald Fire. This elven song supposedly has thousands of obscure verses. Use the first two verses to spread news of death or defeat."
+												]
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/EGW/Grinner.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Gruul Anarch",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The entire world of Ravnica is a sprawling metropolis, but you are a native of the wild areas that still exist\u2014the abandoned districts, the rubblebelts, the overgrown parks, and the crumbling ruins. You are part of a savage society that clings desperately to the Old Ways\u2014attuned to nature, full of primal rage, and given short shrift by a world consumed with continuing civilization's march of progress."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Guild Artisan",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你是一名工匠公会的成员，专精于特定领域且与其他工匠有着紧密的联系。你是商业社会的基石，因你的天份和财富而从封建阶级的束缚中脱离出来。你作为一名工匠大师的学徒学习手艺，接受公会的赞助，直到你也成为一代宗师。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Harborfolk",
+			"source": "ALElementalEvil",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are one of the hundreds of small-time fishermen and women who haul the bounty of Mulmaster's freshwater harbor to the city's markets each morning. You have spent countless days rowing in the waters in and around Mulmaster and know them and the other fisherfolk, dockworkers, and port inhabitants better than anyone. Though you have left that life behind, you still visit once in a while."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Haunted One",
+			"source": "CoS",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are haunted by something so terrible that you dare not speak of it. You've tried to bury it and run away from it, to no avail. Whatever this thing is that haunts you can't be slain with a sword or banished with a spell. It might come to you as a shadow on the wall, a bloodcurdling nightmare, a memory that refuses to die, or a demonic whisper in the dark. The burden has taken its toll, isolating you from most people and making you question your sanity. You must find a way to overcome it before it destroys you."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/CoS/Haunted One.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Hermit",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你在你生命中的形成阶段都过着隐居生活\u2013无论是在像是修道院那样的避世团体、或是完全独自一人。在这段远离社会喧嚣的时光中，你找到了心中的宁静、孤独、或是一些你所寻求的答案。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Hillsfar Merchant",
+			"source": "ALRageOfDemons",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Before becoming an adventurer, you were a successful merchant operating out Hillsfar, the City of Trade. Your family operated warehouses, organized caravans, managed stores, or owned a ship and has trade contacts throughout the Moonsea region, as well as up and down the length of the Sword Coast. Perhaps they import ore, uncut gems, untreated furs, or grain into the City of Trade, or they export fine cloth, faceted gems, fine furs, or Dragon's Breath, a brandy-like liquor. Regardless, you've largely given that life up for some reason and have chosen to seek adventure instead. Nevertheless, the training you received then, and perhaps the contacts you made, serve you well as an adventurer."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Hillsfar Smuggler",
+			"source": "ALRageOfDemons",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Hillsfar is the City of Trade. However, the Great Law of Trade only protects \"legitimate\" trade, trade that passes through the city's sole gate, which the Red Plumes monitor and tax. And the Great Law of Humanity banishes non-humans from the city altogether. The two Great Laws create great demand and great risk for smugglers, who shepherd illicit goods and non-humans into and out of the city by secret routes. The Rogues Guild tightly controls all of this activity, taking its cut from sanctioned jobs and exacting punishment for independent jobs.",
+								"Perhaps you trafficked Dragon's Breath (a brandy-like liquor) to avoid tariffs or contraband to avoid seizure, or maybe you are a human who sympathizes with the non-humans and worked as part of the network of secret routes and safe houses that helps them pass through Hillsfar. Either way, you have contacts in the smuggling community who can help you slip into and out of the city unnoticed, for a price."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "House Agent",
+			"source": "ERLW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You have sworn fealty to a dragonmarked house. If you have a dragonmark, you're likely a member of one of the house's influential families; otherwise you're an outsider who hopes to make your fortune through the house. Your main task is to serve as the eyes of your house, but you could be called on at any time to act as its hand. Such missions can be perilous but lucrative."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Inheritor",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你是某个具有重大价值之物的继承人\u2014并不只是金币或财富，而是一件托付给你，只属于你一个人的东西。你的继承物可能是因你出身所带来的权利而直接得自你家族的成员，或它可能是你的友人、导师、教师、或某个在你人生中相当重要的人你所遗留给你的东西。你继承务所揭露的真相改变了你的生活，并可能指引你走上了冒险的道路，但它同时也可能带来许多的危险，包括那些贪图你的遗产，并想要从你手中强行夺走它的家伙们。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Initiate",
+			"source": "PSA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are an initiate, on the path to completing the trials of the five gods in the hope of earning a glorified death in the final Trial of Zeal. Some combination of your natural aptitude, your crop's needs, and your teachers' assessment while you were an acolyte led you to focus your training in one particular area of specialization\u2014hand-to-hand combat, long-range combat, or spellcasting. But only a well-rounded initiate can be called truly worthy of the afterlife.",
+								"If you are a hand-to-hand specialist, consider the barbarian, fighter, monk, paladin, or rogue classes. As a long-range combat specialist, you might be a fighter, a ranger, or a rogue. If you are a spellcasting specialist, you might be a bard, sorcerer, or wizard. And beyond this initial choice, you might consider multiclassing or using feats to round out your skills in all three areas."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Inquisitor",
+			"source": "PSI",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Historically, inquisitors were cathar detectives who investigated crimes both mundane and supernatural. They were known for traveling to remote parishes plagued by unexplained murders, and for exposing werewolves living among normal humans. During Avacyn's absence, when the archangel was trapped within the demonic prison known as the Helvault, the inquisitors led a series of brutal forays into Kessig and the Gavony Moorland. They executed suspected lycanthropes with little or no proof, and punished accused heretics in unsanctioned trials. With Avacyn's madness, this savage form of inquisition has become the norm, and inquisitors who still pry into dark mysteries have become a minority."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Investigator",
+			"source": "VRGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You relentlessly seek the truth. Perhaps you're motivated by belief in the law and a sense of universal justice, or maybe that very law has failed you and you seek to make things right. You could have witnessed something remarkable or terrible, and now you must know more about this hidden truth. Or maybe you're a detective for hire, uncovering secrets for well-paying clients. Whether the mysteries you're embroiled in are local crimes or realm-spanning conspiracies, you're driven by a personal need to hunt down even the most elusive clues and reveal what others would keep hidden in the shadows."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/VRGR/Investigator.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Iron Route Bandit",
+			"source": "ALCurseOfStrahd",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The Iron Route, once the primary trade route between Phlan and Zhentil Keep, used to be a site of extensive banditry until the Phlan's recent occupation. Your time as an erstwhile bandit has given you plenty of experience in the saddle and a knack for acquiring and appraising other people's mounts, pets, and vehicles among other things. This particular set of skills has become very lucrative for you by working for the underground as a horse thief for a local guild of thieves and other shadowy organizations."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Izzet Engineer",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Armed with an inventive intellect, a love of magical technology, and an unquenchable energy, you are an enthusiastic participant in the research work of the Izzet League. Though you're likely to begin your career as a mere attendant, you can aspire to become a skilled mage or alchemist, a laboratory supervisor, or even a flamethrower-wielding scorchbringer tasked with defending Izzet laboratories. The Izzet are obsessive, brilliant, inspired, and an unpredictable force of chaos in Ravnica, and you epitomize all of those qualities."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Knight of the Order",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你隶属于某个宣誓达成某种目标的骑士团。这个目标的性质取决于你所服侍的教团，但在你眼中，这无疑是一项重大且光荣的使命。费伦大陆上有着许多不同的骑士团，且所有的骑士团对于他们的行为和责任都有着相似的观点。",
+								"尽管「骑士」这个词会让人联想到骑在马上，有着贵族血统的重装战士，但大部分费伦的骑士团并不会将他们的成员限制在这些人上。对于教团的目标和哲学观的重视远比成员的装备或战斗技巧来的重要，也因此大部分的骑士团并不局限于战斗人员，并开放所有愿意为了教团奋战与牺牲的人们加入。",
+								"在「费伦的骑士团」边栏中详细说明了许多目前正在活动的教团，且被设计为帮助你决定要加入哪一个骑士团。",
+								{
+									"type": "inset",
+									"name": "费伦的骑士团",
+									"entries": [
+										"许多能正当自封「骑士」的人物是因为其身为服侍神祇的教团成员而能得到这个头衔，例如{@diety 凯兰沃}的不朽教团或{@diety 密斯特拉}的秘火骑士团。有些骑士团则服侍于政府、皇室家族、或是作为封建组织的菁英军队，例如瓦萨(Vaasa)残暴的契术师骑士。其他的骑士团则是世俗且非政府的组织，由一群追随特定哲学观的战士组成，或是如同僧侣教团一样将彼此视为一个大家庭。尽管有些组织，像是盾之骑士团，使用了骑士的标志而不一定真的作为战士，但大部分费伦的民众在听到「骑士」这个字眼时，仍会想到全副武装、骑着马匹的战士的形象。以下为一些骑士组织的介绍。",
+										{
+											"type": "entries",
+											"name": "独角兽骑士(Knights of the Unicorn)",
+											"entries": [
+												"独角兽骑士团最初是由柏德之门中官僚家族那些充满浪漫心灵的子女们出于一时流行而创建的教团。出于好玩，他们将独角兽女神拉芮(Lurue)作为他们的吉祥物，并为了寻乐而进行各式各样的冒险。他们最终仍旧体会理解了他们所面对的危险现实，以及拉芮女神的信条。随着时间的推移，这个小团体逐渐成长并传播开来，甚至获得了远自科米尔地区的人们追随。独角兽骑士们是一群有着骑士精神的冒险家，他们追随着浪漫的理念：要享受生活并在欢笑中度日，要敢于探索，要为了达成的强烈惊奇而追寻不可能的梦想，且所有人都应该因他们的力量而得到赞美，为他们的弱点而得着安慰。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "迷斯卓诺骑士(Knights of Myth Drannor)",
+											"entries": [
+												"很久以前，迷斯卓诺骑士团是一个非常有名的冒险团队，多芙·鹰手(Dove Falconhand)，著名的七姐妹之一，就是其中的一员。这个团队的名称是为了纪念这伟大但已经殒落的城市，而如今新成立的迷斯卓诺骑士团也是如此。当这座城市再一次变为废墟时，多芙·鹰手决定要改革这个团体，把主要目标定为与世界上其他文明种族和善良的人们创建同盟，共同对抗邪恶。现在，迷斯卓诺骑士们再次骑行在谷地(Dalelands)的大道上，并已经开始向外传播。每一个被多芙本人接纳加入骑士团的成员，都是充满了勇气和忠诚之人。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "圣杯骑士(Knights of the Silver Chalice)",
+											"entries": [
+												"圣杯骑士团是在一个世纪以前因半神赛雅茉芙(Siamorphe)颁布的法令而成立。赛雅茉芙的精神理念在于贵族统治的权力以及责任，且这位半神会化身为不同的凡人贵族活跃于每个世代中。根据赛雅茉芙当时的教令，圣杯骑士团决定自行担起责任，为泰斯尔王国(Tethyr)推举出一个合适的继承人，并重建王国的往日秩序。从那时起，他们已经成为泰斯尔中最受欢迎的骑士团，而这个国家也已接待了许多宣誓效忠于王室的骑士。"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Luxonborn (Acolyte)",
+			"source": "EGW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Every acolyte is a servant of some god. But you serve the Luxon, a being that you believe transcends godhood and created the cosmos. No mere priest, you are a student of potential, for the Luxon is potentiality incarnate. Your Shelter of the Faithful feature applies to all who venerate the Luxon, and to all who practice the art of dunamancy that the Luxon bestowed upon the world."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Marine",
+			"source": "GoS",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You were trained for battle on sandy beaches and rocky shores. You have launched midnight raids from swift ships whose names evoke terror in the hearts of your adversaries. The water is your second home, the rain your shelter, and the crashing waves your battle cry."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mercenary Veteran",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"作为一名会为了钱财而战的佣兵，你相当熟悉为了分到财宝而冒上失去生命或肢体的风险。现在，你期望作为一名冒险者与敌人战斗，并收获更大的回报。你的经历使你熟悉于佣兵生活的所有细节，且你可能经历过在战场上发生的悲惨故事或事件。你可能曾服役于一个像是散塔林会或明坛士兵的大型组织，或较小的佣兵团队，甚至可能曾待过不只一个团体。（参见「北地的佣兵团」边栏以查阅这些团体的情报。）",
+								"现在，你正寻求着其他事物，或许是因你冒险所能得的更大回报，或是选择你自己行动的自由。无论出于什么理由，尽管你离开了雇佣兵的生活，你的技巧毫无疑问适合于战斗，也因此现在你仍以一种不同的方式持续战斗着。",
+								{
+									"type": "inset",
+									"name": "北地的佣兵团",
+									"entries": [
+										"无数的佣兵团活跃于剑湾上下和整个北地。他们大多数是小规模经营，雇佣数十道数百个成员以提供保安业务、狩猎怪物和盗匪、或上战场以交换金钱。有些组织，例如散塔林会、火焰之拳、和明坛(Mintarn)的国家拥有数百或数千个成员，且能够提供私人军队给那些付的起价的对象。以下记载了一些活跃于北地的佣兵组织。",
+										{
+											"type": "entries",
+											"name": "寒栗团(The Chill)",
+											"entries": [
+												"寒冷而神秘的潜伏之森(Lurkwood)作为许多类地精团体的家乡，这些类地精团体集结成了一个被称作「寒栗团」的部落。与他们大多数的同类不同，寒栗团并不会劫掠北地的人民，并与之维持着相对良好的关系，好让他们自己可以被雇佣作为战士。尽管在北地很少有城邦愿意派遣军队与寒栗团并肩作战，但许多城邦很乐意付钱请寒栗团对抗那些乌斯迦部落、兽人、永恒荒野(Evermoors)上的巨魔、和其他危害文明的威胁。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "寂静之雨(Silent Rain)",
+											"entries": [
+												"完全由精灵组成，寂静之雨是一个在埃弗拉斯卡(Evereska)境外活动的传奇性佣兵组织。并不怎么在乎金钱或名声，寂静之雨只会接受关于能促进精灵事业、或涉及毁灭兽人、豺狼人或其他类似生物的工作。潜在雇主必须在埃弗拉斯卡附近留下书面文本（使用精灵语），若寂静之雨对其感兴趣，他们就会派遣代表过去接洽。"
+											]
+										},
+										{
+											"type": "entries",
+											"name": "血斧佣兵团(The Bloodaxes)",
+											"entries": [
+												"在近二个世纪以前成立于桑达巴(Sundabar)，血斧佣兵团原本是一群因为犯下违背「锻魂者」摩拉丁教诲的罪行而被放逐的矮人们。他们开始以雇佣兵的身分受雇于北地中任何愿意付钱的雇主，从此以后，加入这个佣兵团的成员也开始扩展到其他种族，其中的每个成员都是放逐者、罪犯、或与社会格格不入的家伙，他们在无畏的血斧佣兵团中寻求着崭新的开始和新的家族。"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mulmaster Aristocrat",
+			"source": "ALElementalEvil",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"From your hilltop home, you have looked down (literally and perhaps figuratively) on the unwashed masses of Mulmaster for your entire life. Your fur-trimmed robes and training in the visual and performing arts mark you as wealthy and perhaps well-born; you are a member of the City of Danger's aristocracy. None of your immediate family members sits on the Council of Blades or is even a Zor or Zora...yet. Nevertheless, you are one of Mulmaster's elite, and whether you personally covet a higher standing or not, you are at home in the dance halls where the aristocracy gathers to plot, to scheme, to do business, to discuss the arts, and, above all, to see, and to be seen."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Myriad Operative (Criminal)",
+			"source": "EGW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Most criminals in Wildemount are petty thieves and cutpurses who operate out of desperation. You, however, are a criminal of a higher caliber. You are a member of the Myriad, the greatest crime syndicate to ever grace the face of Exandria. You have a network of criminal contacts and allies to help you in your crimes\u2014but you also have rivals and superiors that would gladly throw you to the wolves to save their own skins.",
+								"The Myriad has bases of operation in every major city outside Eastern Wynandir, even if those bases are made up of only two or three members. Wherever you find the Myriad, you can find temporary shelter from the law\u2014for a price."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Noble",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你熟悉所谓的财富、权力、和特权。你顶着贵族头衔，且你的家族拥有土地、税收、并发挥着显著的政治影响力。你可以能是一位养尊处优，不知民间疾苦的权贵、可能是一名刚晋升贵族阶级的前商贾、或是一个有着过度权利意识而被剥夺继承权的无赖。或者，你可以是一名诚实、事必恭亲的地主，深深地挂念在你土地上生活与工作的人民，并敏锐地意识到你对他们的责任。",
+								"与你的DM一起讨论合适的头衔，并决定这个头衔带有多大的权力。贵族头衔本身并不代表什么\u2014它关系着整个家族，且无论你拥有什么样的头衔，你都将把它传给你的子嗣。你不仅需要决定你的贵族头衔，你也需要和DM一起讨论，描述你的家族以及他们对你的影响。",
+								"你的家族是古老而颇负盛名，或者你最近才被赋予了头衔？它们有着多大的影响力，又在什么地区具有影响力？你的家族在当地的其他贵族中有着什么样的名声？寻常百姓又是如何看待他们？",
+								"你在家族的地位为何？你是家主的继承人吗？你是否已经继承了这个头衔？你对于这个责任有什么想法？又或者，你太过远离继承权，以至于只要你不让家族蒙羞，就没有人会在乎你做什么？你们家族的家主对于你的冒险生涯有什么想法？你是沐浴在你家族的宠爱下，还是被你的家人们所回避？",
+								"你的家族是否拥有自己的纹章？是否有着你得配戴在玺戒上的徽章？是否总是需要穿戴特定色系的衣物？又是否有着被视为你们家族血脉象征、或甚至灵性上的家族成员的动物？",
+								"这些细节能协助你创建你的家族和头衔，将其融入战役所在世界的设置中。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Orzhov Representative",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The prospect of immense wealth is the promise of membership in the Orzhov Syndicate. All of the guild's endeavors channel wealth from Ravnican society into the ranks of the Orzhov\u2014and concentrates the spoils at the top of the hierarchy. As a functionary in that system, your best hope is to claim as much as possible of the money that passes through your hands on its way up, so that you can work your way into a more prominent position.",
+								"Regardless of your past and the wealth of your family, your initial status with the guild is near the bottom, until you have proven your value."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Outlander",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你在荒野中成长，远离文明以及城镇和科技所带来的舒适。你曾经目睹比林海更壮阔的兽群迁徙，在城里人无法想像的极端气候中幸存，并感受过方圆百里内仅有自己的孤寂。野性流淌在你的体内，无论你是游牧者、探索者、隐居者、渔猎者、或甚至劫掠者。即使身处你不清楚明确地势特征的场所，你也知道荒野中的道路位于何方。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Phlan Insurgent",
+			"source": "ALCurseOfStrahd",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The taking of Phlan by Vorgansharax is a clear memory in your mind. You were going about your everyday business when the green dragon's forces spilled out of the sewers and assailed your home. Many of Phlan's citizens, young and old alike, were captured, killed, or offered as tribute to the Maimed Virulence. You, yourself were one of those captured. But, either with the help of adventurers or through your own wits and sheer determination, you escaped.",
+								"Rather than flee the region, you've chosen to stay and fight. Finding refuge outside the town and the deadly thicket surrounding it, you strike out against the Tears of the Virulence and their monstrous allies. You've learned to survive in dire and desperate circumstances, with supplies running low and the arrival of reinforcements uncertain. You've grown accustomed to acting under the cover of night, dealing what blows you can to avenge the friends and family you lost within the currently occupied Phlan. You will drive Vorgansharax out, or you die trying."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Phlan Refugee",
+			"source": "ALElementalEvil",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Gone are the happier days of walking into the Laughing Goblin Inn after a hard day's labor. Everything has changed, and you are lucky to be alive. Back in Phlan you could count yourself among those street-wise folks who knew when to pay a bribe and who to work with to make a living. Your ability to listen to the winds of change have saved you before, and this time they allowed you to be one of the lucky few who escaped Phlan with something more than just the shirt on your back."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Plaintiff",
+			"source": "AI",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Sure, accidents happen. But they seem to happen an awful lot when Acquisitions Incorporated operatives are on the scene. Naturally, nothing ever happens when there are no witnesses left behind. But sometimes one casualty is left a little less than dead, just waiting to discover what a lucky break that accident actually was.",
+								"You were a victim of a legal incident that was ostensibly the fault of Acquisitions Incorporated. At least that's what the local magistrate said. But before a final ruling could be handed down, Acquisitions Incorporated offered you a job! Don't know how to swing a sword? They promised to teach you! Think you have what it takes to sling spells? They've got masters who'll have you throwing fire in no time!",
+								"With the promise of untold treasures and realms of magic and mystery just a dungeon away, you left your old life behind. Now a world of adventure is yours. Just initial here and sign here and here. Absolve Acq Inc of all former claims, and acknowledge you understand past outcomes don't guarantee future results."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/AI/plaintiff-coin.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Rakdos Cultist",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You're an entertainer at heart, a performer with a flair for the dramatic and a love of the spotlight. You've spent years honing your craft, mastering a demanding set of skills so you can perform them with panache and make them look easy. The wild applause, the screams of the crowds, the mayhem and terror spreading into the streets\u2014this is what you live for.",
+								"You're also a member of a cult devoted to an ancient demon who delights in violence and chaos. It just so happens that Rakdos loves a good show, and your highest aspiration is to please the Defiler, the Lord of Riots, with your own performance."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Revelry Pirate (Sailor)",
+			"source": "EGW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"It seems that just about everyone is a sailor on the Menagerie Coast. Plenty of pirates ply the waters of the coast as well, but none are as infamous or as organized as the mighty Revelry. If you're a pirate of the Revelry, you serve the Plank King and return a cut of all your plunder to him on the island of Darktow.",
+								"The Revelry doesn't take kindly to traitors and deserters, so if you count yourself a former member of that crew, you'll want to watch your back while traveling on the Menagerie Coast. Thugs might hassle you and your allies until you even the score with the Revelry, either by paying up, submitting to imprisonment, or proving that you're too dangerous to tangle with."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rival Intern",
+			"source": "AI",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You were an intern at a rival of Acquisitions Incorporated, and you gained a healthy respect for not just the job and the franchising opportunities, but for the ruthless and efficient way Acquisitions Incorporated goes about its business. Why deal with the rest, when you can work for the best?",
+								"Perhaps the rival did not treat you as well as you were hoping, or you washed out of that organization. Maybe you hope to leverage the knowledge you gained there for an advantage at Acquisitions Incorporated. Either way, you're now bringing your talents to the company, ready to put your skills to use."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Sage",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你花了多年光阴学习多元宇宙中的智能学识。你饱阅万卷，并听过你感兴趣学科中最伟大的专家们的教导。你的努力让你成为了你学习领域的大师。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Sailor",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你多年行驶于海船之上。在这段时光，你曾面对狂野风暴、深海巨兽，和那些想要把你的船舰沉入无底深渊的危险家伙。你的初恋献给了海与天交界的遥远的水平线，但该是时候尝试一些新事物了。",
+								"与你的DM一起讨论你先前行驶船只的性质。它是一艘商船、军舰、探索船、或是海盗船？它的名声有多响亮（或多臭名昭彰）？它的航行范围广泛吗？它现在仍在出航，或是已经遗失，并与所有船员一起音频无踪？",
+								"你在甲板上的职务是什么\u2013水手、船长、领航员、厨师、或其他职位？是谁担任船长和大副的职位？你是戴着同伴们的祝福离船，亦或是狼狈地从船上逃跑？"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Secret Identity",
+			"source": "ALRageOfDemons",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Even though you are a non-human, despite Hillfar's Great Law of Humanity, you continue to live in the City of Trade. You do so by maintaining a secret identity, forging documents, and wearing a disguise. Few, if any, know you aren't human. If you're a halfling or gnome, you pass as a little person or a child. If you're a half-elf, half-orc, or genasi, you disguise your non-human features. Other races use a combination of disguise and concealing clothing to hide. Your reasons for doing so are your own. Perhaps you're a dissident or the agent of a foreign power. Maybe you have a relationship with someone you cannot bear to leave. Regardless, this way of life has taken a heavy toll on you."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Selesnya Initiate",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are a member of a blessed community, built on the ideals of harmony. Here, nature and civilization coexist peacefully, living and growing in accordance with the will of the Worldsoul, Mat'Selesnya. As a member of the Selesnya Conclave, you are surrounded by people and other creatures who share your worldview and your longing for deeper spiritual communion with the world, and you have a fervent desire to share the joy you have experienced with Ravnica. Along with the rest of the conclave, you are committed to resisting the ambitions of the other guilds\u2014with military force if necessary."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Shade Fanatic",
+			"source": "ALRageOfDemons",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You grew up at a time when the wizards of Netheril were at war with the elves of Cormanthor. You recall sitting cross-legged hearing the stories of the glorious Thultanthar, also called the Shade Enclave and the City of Shade, and aspired to study there and maybe even did, for a time. Your dreams came crashing down a few years ago when Thultanthar fell from the sky upon Myth Drannor. You know that there was a Netherese Garrison stationed near Hillsfar and have heard rumors that its downfall came from traitors within the ranks. You remain loyal to Netheril and seek other Shade loyalists and fanatics in the Cormanthor forest and the areas surrounding Hillsfar."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Shipwright",
+			"source": "GoS",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You have sailed into war on the decks of great ships, patching their hulls with soup bowls and prayers. You once helped build a fishing vessel that single-handedly saved a town from starvation. You have seen a majestic prow in your dreams that you have not been able to replicate in wood. Since childhood, you have loved the water and have been captivated by the many vessels that travel on it."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Simic Scientist",
+			"source": "GGR",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Imagine a perfect world: one in which nature and civilization exist in harmony, adapted to each other; one in which life is shaped to match its environment and the environment is shaped to match life. That's the world you have been trying to grow in the laboratories of the Simic Combine. Nature is all about adaptation, evolution, and balance\u2014but for it to keep up with the pace of advancing civilization, nature needs some help from biomancers and terraformers. If, along the way, you happen to create super-soldiers and mutant monsters that can bolster the combine's defenses against the schemes and ambitions of the other guilds, so much the better."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Smuggler",
+			"source": "GoS",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"On a rickety barge, you carried a hundred longswords in fish barrels right past the dock master's oblivious lackeys. You have paddled a riverboat filled with stolen elven wine under the gaze of the moon and sold it for twice its value in the morning. In your more charitable times, you have transported innocents out of war zones or helped guide herd animals to safety on the banks of a burning river."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Soldier",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"在你有记忆以来，战争就是你的人生。你从年轻时便接受训练，研究武器和铠甲的使用、并学习基本的生存技巧，包括如何在战场中生存。你可能会是国家常备军、佣兵团中的一员，或者是在最近一次战争中崛起的地区性民兵部队的成员。",
+								"当你选择这个背景，与你的DM一起讨论并决定你曾隶属的军事组织，你在其中升至多高的阶级，以及你在你的军队生涯中经历了什么样的事情。这个组织是常备军、城镇守卫、还是村庄的民兵团？或者它可能会是一名贵族或商贾的私人部队、或是佣兵团。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Stojanow Prisoner",
+			"source": "ALCurseOfStrahd",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"Those words still haunt your dreams at night. When everyone was fleeing Phlan, you choose to stay. Whether out of an emotional attachment, or pursuit of riches, you made the decision that would affect the rest of your life.",
+								"Food became scarcer for those without connections. You became a beggar and to stay alive you bartered information to any interested party with food or gold to spare. You were good at what you did, and thought you were invincible. That changed when you were captured by the Tears of Virulence, the soldiers of Vorgansharax, the Maimed Virulence, for selling secrets to those bent on overthrowing the dragon. They locked you in the cells of Stojanow Gate. The first weeks you hoped to stay alive. As the weeks turned into months, and the interrogations continued you began to pray for death."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ticklebelly Nomad",
+			"source": "ALCurseOfStrahd",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You were born into a nomadic tribe that called the Ticklebelly Hills home. You migrated from location to location, living off the land with your tribe. The tribe would seasonally travel south into the Grass Sea and the Giant's Cairn, north into the Dragonspine Mountains, and even occasionally east across the Stojanow River to the borders of the Quivering forest.",
+								"In your migrations, your people have come to know the stone giant tribes that populate the Giant's Cairn. The dragon cultists came to the hills one day\u2014magic-users wearing purple and riding horrid beasts, black-clad warriors wearing wicked masks, and even soldiers from the nearby town of Phlan. Then the dragon called Vorgansharax arrived and laired in the hills, causing horrid thickets to grow and animals to act unusually. The cultists began raiding nomad camps for victims to offer to the wyrm. Eventually, the dragon moved on to attack Phlan, but life was never again the same for the nomads of the Ticklebelly Hills."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trade Sheriff",
+			"source": "ALRageOfDemons",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are one of the many people that make sure the trade routes are clear at ALL times. You assure that the Great Law of Trade is followed at all costs. You work by yourself or in groups to quell bandits and brigands who might stop trade routes from going through. You investigate potential ambushes and possible rumors as to someone wanting to rob or stop caravans. You are as much an investigator as you are law enforcement. You are able to go into a town/village around the Hillsfar area and find a contact that is willing to give you information from rumor to fact. This sometimes comes at a cost of a minor bribe of 1-9 silver pieces."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Urban Bounty Hunter",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"在你成为冒险者以前，由于你过着追踪目标以寻求报酬的生活，你的人生早已充满了冲突和激情。不过，不像其他收集赏金的人们，你并不是个会跟随猎物进入或跨越荒野的野蛮人。在你所生活的场所，你涉入一场场有利可图的交易，并时常测试着你的技巧和求生直觉。更重要的是，和在荒野中的赏金猎人相同，你并不孤单：你经常会与犯罪次文化圈和其他赏金猎人交互，维持这两个领域中的人脉以协助你迈向成功。",
+								"你可能会是一名狡诈的小通捕手，徘回在屋顶上捕捉城市中无数的窃贼的其中之一。或者你可能大街小巷的风声有所耳闻，时常留意着盗贼公会和街头恶霸的动向。你也可能是一名有着「天鹅绒面具」的赏金猎人，融入上流社会和贵族交际圈内以捉拿以富人为猎物的罪犯，例如扒手或骗子。你着手事业的社群可能会是费伦最大的大都市之一，例如深水城或柏德之门，或者其他人口较少的场所，例如陆斯坎(Luskan)或亚塔(Yartar)等任何规模大到足以稳定供应潜在猎物的场所。",
+								"作为冒险团队中的一员，你可能会发现追求那些不符合团队目标的个人原则会变得更加困难\u2014但另一方面，在你同伴的帮助下，你也可以拿下更强大的目标。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Urchin",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你成长于街头间，孤身一人，父母双亡，一贫如洗。没有任何人照看或供养你，所以你学会了如何自力谋生。你为了食物激烈奋斗，并时刻环顾四周以警戒其他的可怜虫将它从你手中偷走。你睡在屋顶或小巷，无处可供遮风避雨，忍受着病痛而无法指望药物和医疗的协助。尽管困难重重，你仍借着狡诈、强健、机敏、或者三者兼具而幸存了下来。",
+								"在你的冒险生涯开始时，你身上带着一笔足以让你简朴而安稳地度过至少十天的金钱。你是如何得到这笔钱的？又是什么让你得以打破你绝望的处境，并展开更好的生活？"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Uthgardt Tribe Member",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"尽管你可能最近才来到文明社会，但你对于争取优势时的合作与团队努力的价值观并不陌生。作为乌斯伽部落的成员，你早已学会了这些原则，且学得更加透彻。",
+								"你的族人们总尝试坚持于老方法。当其他王国在混乱和毁灭中崩塌瓦解时，传统和禁忌一直维持着乌斯伽部落的强大。然而在最近这几代，部落中的一些集团试图定居、谈和、贸易、甚至建造城镇。或许这正是为什么乌斯伽选择在人民中树立图腾以作为他力量活生生的体现。或许他们需要被提醒自己是谁，又从何而来。乌斯伽所拣选的人们带领集团回到古老的道途中，且你们大部分的族人都舍弃了文明生活的温和道路。",
+								"你可能成长于其中一个曾决定安顿下来的部落，且现在他们已经舍弃了这条路，漂泊不定。或者你可能来自于一个坚持传统的乌斯伽聚落，但你试图作为一名令人敬佩的冒险者，借由达成某个伟业以将荣耀归给你的部落。",
+								"参见第二章的「乌斯伽诸地」章节以详见关于各部落的领地和其活动，以帮助你选择你的隶属部落。",
+								{
+									"type": "inset",
+									"name": "费伦的野蛮人部落",
+									"entries": [
+										"尽管这个章节特别详述了乌斯伽部落，无论是这个背景或是出自《玩家手册》的{@background 化外之民}背景都可以被用在出身自费伦中任何一个野蛮人部落的角色。",
+										"你可能会是一名瑞格(Reghed)的金发野蛮人，生活在位于遥远北地，邻近冰风谷的瑞格冰川的阴影中。你也可能属于过着游牧生活的莱瑟曼(Rashemi)，以他们狂野的狂战士和面具女巫著名。或者，你来自其中一个位于琼达尔森林(Chondalwood)的木精灵部落、或是朱特(Chult)闷热丛林中憎恨魔法的人类部落。"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variant City Watch (Investigator)",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"社群组织中的调查员比起守卫或巡逻人员更为稀有，他们负责解开隐藏在犯罪之后的真相。尽管这些人很少出现在乡村区域，几乎在每一个相当规模的聚落都会有至少一个或两个拥有调查犯罪现场和追踪罪犯技能的调查员。若你过去是作为一名调查员，则你获得{@skill 调查}技能的熟练以取代{@skill 运动}。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variant Criminal (Spy)",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"尽管你的能力与那些窃贼或走私犯没有太大的区别，但你是在一种截然不同的环境下学习并实施它们：以一名谍报特工的身分。你可能曾是一名官方认可的王室特工，或可能你会贩卖你所发现的秘密给出价最高的买家。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variant Entertainer (Gladiator)",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"角斗士作为艺人，就如同吟游艺人或马戏表演者一样，他们被训练于将战斗技艺转变成能够娱乐大众的精彩表演。这种华丽的战斗就是你身为艺人的表演形式，尽管你也可能具备一些像是表演家或杂耍人的技术。利用你的人见人爱特性，你可以在任何将战斗视为娱乐的场地进行表演\u2013可能是角斗场、或是秘密的战斗俱乐部。你可以将背景装备中的乐器替换成一把低廉但不寻常的武器，例如三叉戟或捕网。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variant Guild Artisan (Guild Merchant)",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你可能隶属于贸易家、商队、或店主所组成的公会，而非工匠公会。你并不会自己制作物品，但会通过购买并销售其他人的作品（或工匠实行他们技艺时所需的原料）以赚取生活费用。你的公会可能会是一个庞大的商业财团（或家族），其影响力遍布整个区域。或者你借由船只、马车、或商队将货物从一处转运到另一地，或者从旅行商人那里买下它们，并在你自己的小小店面中贩售。某方面来说，旅行商人的生活可能会使他们比工匠更适合去冒险。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variant Noble (Knight)",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"骑士身分在大部分的社会文化中是贵族头衔中最低的阶级，但它也可以是一条通往更高地位的途径。若你想成为一名骑士，请选择「家臣」特性以取代「特权阶级」特性。你的其中一个家臣会是一名贵族，他作为你的扈从以换取他或她成为骑士的训练。你剩下的两个家臣可能会包括一名照料你马匹的马伕、以及一名保养（且可能协助你穿上）铠甲的仆从。",
+								"作为骑士精神跟宫廷爱情的象征，你可能会在装备上设置一个来自你决定献上生命奉献的贵族领主或女士的旗帜或其他象征物\u2013以代表忠贞的奉献。（这个人物可能会是你的羁绊）"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variant Sailor (Pirate)",
+			"source": "PHB",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你在一名可怕海盗的支配下度过了你的年少时光，这个残忍的恶汉教会了你如何在这血腥而危险的世界中生存。你曾在公海上纵情劫掠，并将不只一个应得的灵魂葬入深海坟墓。你熟悉恐惧和杀戮的味道，且你在许多港口城镇留下了赫赫凶名。",
+								"若你决定在你的航海生涯中加入海盗行为，则你可以选择恶名昭彰特性以取代船行水路特性。"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vizier",
+			"source": "PSA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You are a vizier, a servant of your god. You perform tasks that are essential to facilitating the initiates' journey, so the gods reward you with entry into the afterlife with the God-Pharaoh's blessing. You hope to achieve the most honored status in the afterlife by being the best possible servant to your god.",
+								"As a vizier, you can have any class, but you are especially likely to be a cleric, a druid (particularly if you serve Rhonas), or a paladin."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Volstrucker Agent",
+			"source": "EGW",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The Volstrucker are a clandestine organization of arcane assassins and enforcers in the service of the Cerberus Assembly. Their operatives bear no official title, but are referred to in hushed tones as \"scourgers\" by residents of large Dwendalian cities such as Zadash and Rexxentrum.",
+								"You are a Volstrucker agent. Your duty is to silence dissidents who would undermine the will of King Dwendal\u2014and more importantly, the will of the Assembly.",
+								{
+									"type": "entries",
+									"name": "Tragedy",
+									"entries": [
+										"Happy people aren't selected to join the Volstrucker. The Cerberus Assembly preys upon talented individuals who have been broken by tragedy\u2014in some cases, tragedy that the Volstrucker has arranged for. A slightly broken mind is more easily reshaped and reeducated. Choose the tragedy that set you on this path, or roll on the Tragedies table.",
+										{
+											"type": "table",
+											"colLabels": [
+												"d6",
+												"Tragedy"
+											],
+											"colStyles": [
+												"col-2 text-center",
+												"col-10"
+											],
+											"rows": [
+												[
+													"1",
+													"Familicide. Through deceit or manipulation, the Volstrucker convinced you to slaughter your own family."
+												],
+												[
+													"2",
+													"Amnesia. You were forced to study magic so potent that it strained your mind beyond mortal limits, stealing away the memories of your past."
+												],
+												[
+													"3",
+													"Capture. You were captured and tortured by agents of the Kryn Dynasty, and barely escaped."
+												],
+												[
+													"4",
+													"Starvation. A terrible blight afflicted your rural village, and many of your friends and family members starved to death. You survived, but only barely."
+												],
+												[
+													"5",
+													"Disfigurement. One of your arcane experiments went wrong and scarred or dismembered you so gravely that others now shun you. Only the Volstrucker showed you kindness after that day."
+												],
+												[
+													"6",
+													"Vicissitude. You were once the scion of a wealthy family who lost their entire fortune in the blink of an eye."
+												]
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/EGW/Volstrucker Agent.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Waterdhavian Noble",
+			"source": "SCAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"你是深水城中其中一个庞大贵族家系的后裔。作为谨慎维护他们在光辉之城中特权和地位的人类家族，深水城贵族以反常古怪、纵容、腐败的特质，以及最重要的，富裕而闻名于整个费伦大陆。",
+								"无论你是这类名声体现的最好例子，亦或是作为例外以证明这条规则的人，当人们得知你的姓氏和它所代表的涵义时，他们便会对你抱有期待。你展开冒险的理由通常会种程度上与你的家族有关：你是个家中的叛逆者吗，你是否更喜欢探索肮脏的地城而不愿在舞会上啜饮札尔美酒？或者，你是为了你的家族而拿起了宝剑或法术，确保他们能有一个名声显赫的后裔以继承他们的遗产。",
+								"与你的DM一起讨论你所属的家族\u2014在深水城中大约有七十五个家系，他们各自有着自己的财务收益、专长特色、和阴谋诡计。你可能会是你们家族的直系成员，很有可能在某日成为家族的领导者。或者你可能是众多表亲中的其中之一，没有那么高的威望，但也没有那么大的责任。"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

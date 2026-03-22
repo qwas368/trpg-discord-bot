@@ -1,0 +1,3548 @@
+{
+	"class": [
+		{
+			"name": "吟游诗人",
+			"ENG_name": "Bard",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"dex",
+				"cha"
+			],
+			"spellcastingAbility": "cha",
+			"casterProgression": "full",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"spellsKnownProgression": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				14,
+				15,
+				15,
+				16,
+				18,
+				19,
+				19,
+				20,
+				22,
+				22,
+				22
+			],
+			"startingProficiencies": {
+				"armor": [
+					"light"
+				],
+				"weapons": [
+					"simple",
+					"{@item hand crossbow|phb|手弩}",
+					"{@item longsword|phb|长剑}",
+					"{@item rapier|phb|刺剑}",
+					"{@item shortsword|phb|短剑}"
+				],
+				"tools": [
+					"三种你所选择{@item 乐器|PHB}"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"athletics",
+								"acrobatics",
+								"sleight of hand",
+								"stealth",
+								"arcana",
+								"history",
+								"investigation",
+								"nature",
+								"religion",
+								"animal handling",
+								"insight",
+								"medicine",
+								"perception",
+								"survival",
+								"deception",
+								"intimidation",
+								"performance",
+								"persuasion"
+							],
+							"count": 3
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a)一把{@item 刺剑|phb}, (b)一把{@item 长剑|phb}, 或 (c)任何一把{@filter 简易武器|items|source=phb|category=basic|type=simple weapon}",
+					"(a)一套{@item 大使套装|phb} 或 (b)一套{@item 表演家套装|phb}",
+					"(a)一把{@item 鲁特琴|phb} 或 (b)任何一把其他{@filter 乐器|items|miscellaneous=mundane|type=instrument}",
+					"一件{@item 皮甲|phb}，以及一把{@item 匕首|phb}"
+				],
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|起始金钱}",
+				"defaultData": [
+					{
+						"a": [
+							"rapier|phb"
+						],
+						"b": [
+							"longsword|phb"
+						],
+						"c": [
+							{
+								"equipmentType": "weaponSimple"
+							}
+						]
+					},
+					{
+						"a": [
+							"diplomat's pack|phb"
+						],
+						"b": [
+							"entertainer's pack|phb"
+						]
+					},
+					{
+						"a": [
+							"lute|phb"
+						],
+						"b": [
+							{
+								"equipmentType": "instrumentMusical"
+							}
+						]
+					},
+					{
+						"_": [
+							"Leather armor|phb",
+							"dagger|phb"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"cha": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"light"
+					],
+					"skills": [
+						{
+							"choose": {
+								"from": [
+									"athletics",
+									"acrobatics",
+									"sleight of hand",
+									"stealth",
+									"arcana",
+									"history",
+									"investigation",
+									"nature",
+									"religion",
+									"animal handling",
+									"insight",
+									"medicine",
+									"perception",
+									"survival",
+									"deception",
+									"intimidation",
+									"performance",
+									"persuasion"
+								],
+								"count": 1
+							}
+						}
+					],
+					"tools": [
+						"三种你所选择{@item 乐器|PHB}"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter 已知戏法|spells|level=0|class=bard}",
+						"{@filter 已知法术|spells|class=bard}"
+					],
+					"rows": [
+						[
+							2,
+							4
+						],
+						[
+							2,
+							5
+						],
+						[
+							2,
+							6
+						],
+						[
+							3,
+							7
+						],
+						[
+							3,
+							8
+						],
+						[
+							3,
+							9
+						],
+						[
+							3,
+							10
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							12
+						],
+						[
+							4,
+							14
+						],
+						[
+							4,
+							15
+						],
+						[
+							4,
+							15
+						],
+						[
+							4,
+							16
+						],
+						[
+							4,
+							18
+						],
+						[
+							4,
+							19
+						],
+						[
+							4,
+							19
+						],
+						[
+							4,
+							20
+						],
+						[
+							4,
+							22
+						],
+						[
+							4,
+							22
+						],
+						[
+							4,
+							22
+						]
+					]
+				},
+				{
+					"title": "法术位/每环",
+					"colLabels": [
+						"{@filter 1环|spells|level=1|class=bard}",
+						"{@filter 2环|spells|level=2|class=bard}",
+						"{@filter 3环|spells|level=3|class=bard}",
+						"{@filter 4环|spells|level=4|class=bard}",
+						"{@filter 5环|spells|level=5|class=bard}",
+						"{@filter 6环|spells|level=6|class=bard}",
+						"{@filter 7环|spells|level=7|class=bard}",
+						"{@filter 8环|spells|level=8|class=bard}",
+						"{@filter 9环|spells|level=9|class=bard}"
+					],
+					"rows": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							2,
+							1,
+							1
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"吟游激励|Bard||1",
+				"Magical Inspiration|Bard||1|UAClassFeatureVariants",
+				"施法|Bard||1",
+				"Spell Versatility|Bard||1|UAClassFeatureVariants",
+				"全能高手|Bard||2",
+				"纾压曲(d6)|Bard||2",
+				"魔法激励|Bard||2|TCE",
+				{
+					"classFeature": "吟游学院|Bard||3",
+					"gainSubclassFeature": true
+				},
+				"专精|Bard||3",
+				"属性值提升|Bard||4",
+				"Proficiency Versatility|Bard||4|UAClassFeatureVariants",
+				"多才诗人|Bard||4|TCE",
+				"吟游激励(d8)|Bard||5",
+				"激励涌泉|Bard||5",
+				"反制迷惑|Bard||6",
+				{
+					"classFeature": "吟游学院能力|Bard||6",
+					"gainSubclassFeature": true
+				},
+				"属性值提升|Bard||8",
+				"Proficiency Versatility|Bard||8|UAClassFeatureVariants",
+				"纾压曲(d8)|Bard||9",
+				"吟游激励(d10)|Bard||10",
+				"专精|Bard||10",
+				"魔法秘密|Bard||10",
+				"属性值提升|Bard||12",
+				"Proficiency Versatility|Bard||12|UAClassFeatureVariants",
+				"纾压曲(d10)|Bard||13",
+				"魔法秘密|Bard||14",
+				{
+					"classFeature": "吟游学院能力|Bard||14",
+					"gainSubclassFeature": true
+				},
+				"吟游激励(d12)|Bard||15",
+				"属性值提升|Bard||16",
+				"Proficiency Versatility|Bard||16|UAClassFeatureVariants",
+				"纾压曲(d12)|Bard||17",
+				"魔法秘密|Bard||18",
+				"属性值提升|Bard||19",
+				"Proficiency Versatility|Bard||19|UAClassFeatureVariants",
+				"卓越激励|Bard||20"
+			],
+			"subclassTitle": "Bard College",
+			"subclasses": [
+				{
+					"name": "轶闻学院",
+					"ENG_name": "College of Lore",
+					"shortName": "轶闻",
+					"ENG_shortName": "Lore",
+					"source": "PHB",
+					"page": 54,
+					"srd": true,
+					"subclassFeatures": [
+						"轶闻学院|Bard||Lore||3",
+						"额外魔法秘密|Bard||Lore||6",
+						"绝代技能|Bard||Lore||14"
+					]
+				},
+				{
+					"name": "勇气学院",
+					"ENG_name": "College of Valor",
+					"shortName": "勇气",
+					"ENG_shortName": "Valor",
+					"source": "PHB",
+					"page": 55,
+					"subclassFeatures": [
+						"勇气学院|Bard||Valor||3",
+						"额外攻击|Bard||Valor||6",
+						"战斗魔法|Bard||Valor||14"
+					]
+				},
+				{
+					"name": "College of Satire (UA)",
+					"shortName": "Satire (UA)",
+					"source": "UAKitsOfOld",
+					"page": 2,
+					"subclassFeatures": [
+						"College of Satire|Bard||Satire (UA)|UAKitsOfOld|3",
+						"Fool's Insight|Bard||Satire (UA)|UAKitsOfOld|6",
+						"Fool's Luck|Bard||Satire (UA)|UAKitsOfOld|14"
+					]
+				},
+				{
+					"name": "College of Swords (UA)",
+					"shortName": "Swords (UA)",
+					"source": "UAKitsOfOld",
+					"page": 1,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"剑舞学院|Bard||Swords (UA)|UAKitsOfOld|3",
+						"Extra Attack|Bard||Swords (UA)|UAKitsOfOld|6",
+						"Battle Magic|Bard||Swords (UA)|UAKitsOfOld|14"
+					]
+				},
+				{
+					"name": "College of Glamour (UA)",
+					"shortName": "Glamour (UA)",
+					"source": "UABardBardColleges",
+					"page": 1,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"College of Glamour|Bard||Glamour (UA)|UABardBardColleges|3",
+						"Mantle of Majesty|Bard||Glamour (UA)|UABardBardColleges|6",
+						"Mantle of Majesty|Bard||Glamour (UA)|UABardBardColleges|14"
+					]
+				},
+				{
+					"name": "College of Whispers (UA)",
+					"shortName": "Whispers (UA)",
+					"source": "UABardBardColleges",
+					"page": 2,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"低语学院|Bard||Whispers (UA)|UABardBardColleges|3",
+						"Mantle of Whispers|Bard||Whispers (UA)|UABardBardColleges|6",
+						"Shadow Lore|Bard||Whispers (UA)|UABardBardColleges|14"
+					]
+				},
+				{
+					"name": "College of Swords v2 (UA)",
+					"shortName": "Swords v2 (UA)",
+					"source": "UARevisedSubclasses",
+					"page": 1,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"剑舞学院v2(UA)|Bard||Swords v2 (UA)|UARevisedSubclasses|3",
+						"Cunning Flourish|Bard||Swords v2 (UA)|UARevisedSubclasses|6",
+						"Master's Flourish|Bard||Swords v2 (UA)|UARevisedSubclasses|14"
+					]
+				},
+				{
+					"name": "迷惑学院",
+					"ENG_name": "College of Glamour",
+					"shortName": "迷惑",
+					"ENG_shortName": "Glamour",
+					"source": "XGE",
+					"page": 14,
+					"additionalSpells": [
+						{
+							"innate": {
+								"6": [
+									"command"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						"迷惑学院|Bard||Glamour|XGE|3",
+						"威严光环|Bard||Glamour|XGE|6",
+						"无敌威严|Bard||Glamour|XGE|14"
+					]
+				},
+				{
+					"name": "剑舞学院",
+					"ENG_name": "College of Swords",
+					"shortName": "剑舞",
+					"ENG_shortName": "Swords",
+					"source": "XGE",
+					"page": 15,
+					"subclassFeatures": [
+						"剑舞学院|Bard||Swords|XGE|3",
+						"额外攻击|Bard||Swords|XGE|6",
+						"剑舞大师|Bard||Swords|XGE|14"
+					]
+				},
+				{
+					"name": "低语学院",
+					"ENG_name": "College of Whispers",
+					"shortName": "低语",
+					"ENG_shortName": "Whispers",
+					"source": "XGE",
+					"page": 16,
+					"subclassFeatures": [
+						"低语学院|Bard||Whispers|XGE|3",
+						"低语斗篷|Bard||Whispers|XGE|6",
+						"阴影学识|Bard||Whispers|XGE|14"
+					]
+				},
+				{
+					"name": "College of Eloquence (UA)",
+					"shortName": "Eloquence (UA)",
+					"source": "UABardAndPaladin",
+					"page": 1,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"College of Eloquence|Bard||Eloquence (UA)|UABardAndPaladin|3",
+						"Undeniable Logic|Bard||Eloquence (UA)|UABardAndPaladin|6",
+						"Infectious Inspiration|Bard||Eloquence (UA)|UABardAndPaladin|14"
+					]
+				},
+				{
+					"name": "College of Creation (UA)",
+					"shortName": "Creation (UA)",
+					"source": "UA2020SubclassesPt2",
+					"page": 1,
+					"isReprinted": true,
+					"subclassFeatures": [
+						"College of Creation|Bard||Creation (UA)|UA2020SubclassesPt2|3",
+						"Animating Performance|Bard||Creation (UA)|UA2020SubclassesPt2|6",
+						"Performance of Creation|Bard||Creation (UA)|UA2020SubclassesPt2|14"
+					]
+				},
+				{
+					"name": "College of Spirits (UA)",
+					"shortName": "Spirits (UA)",
+					"source": "UA2020SubclassesPt4",
+					"page": 1,
+					"subclassFeatures": [
+						"College of Spirits|Bard||Spirits (UA)|UA2020SubclassesPt4|3",
+						"Spirit Session|Bard||Spirits (UA)|UA2020SubclassesPt4|6",
+						"Spiritual Focus|Bard||Spirits (UA)|UA2020SubclassesPt4|6",
+						"Mystical Connection|Bard||Spirits (UA)|UA2020SubclassesPt4|14"
+					]
+				},
+				{
+					"name": "创造学院",
+					"ENG_name": "College of Creation",
+					"shortName": "创造",
+					"ENG_shortName": "Creation",
+					"source": "TCE",
+					"page": 28,
+					"subclassFeatures": [
+						"创造学院|Bard||Creation|TCE|3",
+						"活化表演|Bard||Creation|TCE|6",
+						"高潮乐章|Bard||Creation|TCE|14"
+					]
+				},
+				{
+					"name": "雄辩学院",
+					"ENG_name": "College of Eloquence",
+					"shortName": "雄辩",
+					"ENG_shortName": "Eloquence",
+					"source": "TCE",
+					"page": 29,
+					"otherSources": [
+						{
+							"source": "MOT",
+							"page": 28
+						}
+					],
+					"subclassFeatures": [
+						"雄辩学院|Bard||Eloquence|TCE|3",
+						"不竭鼓舞|Bard||Eloquence|TCE|6",
+						"统一言说|Bard||Eloquence|TCE|6",
+						"启悟传播|Bard||Eloquence|TCE|14"
+					]
+				},
+				{
+					"name": "灵魂学院",
+					"ENG_name": "College of Spirits",
+					"shortName": "灵魂",
+					"ENG_shortName": "Spirits",
+					"source": "VRGR",
+					"page": 28,
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": [
+									"guidance"
+								]
+							}
+						}
+					],
+					"subclassFeatures": [
+						"灵魂学院|Bard||Spirits|VRGR|3",
+						"降灵会|Bard||Spirits|VRGR|6",
+						"神秘连接|Bard||Spirits|VRGR|14"
+					]
+				}
+			],
+			"fluff": [
+				{
+					"name": "吟游诗人",
+					"ENG_name": "Bard",
+					"type": "section",
+					"entries": [
+						"Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song\u2014knowledge of the people who constructed the monument and the mythic saga it depicts.",
+						"A stern human warrior bangs his sword rhythmically against his scale mail, setting the tempo for his war chant and exhorting his companions to bravery and heroism. The magic of his song fortifies and emboldens them.",
+						"Laughing as she tunes her cittern, a gnome weaves her subtle magic over the assembled nobles, ensuring that her companions' words will be well received.",
+						"Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds.",
+						{
+							"type": "entries",
+							"name": "Music and Magic",
+							"entries": [
+								"In the worlds of D&D, words and music are not just vibrations of air, but vocalizations with power all their own. The bard is a master of song, speech, and the magic they contain. Bards say that the multiverse was spoken into existence, that the words of the gods gave it shape, and that echoes of these primordial Words of Creation still resound throughout the cosmos. The music of bards is an attempt to snatch and harness those echoes, subtly woven into their spells and powers.",
+								"The greatest strength of bards is their sheer versatility. Many bards prefer to stick to the sidelines in combat, using their magic to inspire their allies and hinder their foes from a distance. But bards are capable of defending themselves in melee if necessary, using their magic to bolster their swords and armor. Their spells lean toward charms and illusions rather than blatantly destructive spells. They have a wide-ranging knowledge of many subjects and a natural aptitude that lets them do almost anything well. Bards become masters of the talents they set their minds to perfecting, from musical performance to esoteric knowledge."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Learning from Experience",
+							"entries": [
+								"True bards are not common in the world. Not every minstrel singing in a tavern or jester cavorting in a royal court is a bard. Discovering the magic hidden in music requires hard study and some measure of natural talent that most troubadours and jongleurs lack. It can be hard to spot the difference between these performers and true bards, though. A bard's life is spent wandering across the land gathering lore, telling stories, and living on the gratitude of audiences, much like any other entertainer. But a depth of knowledge, a level of musical skill, and a touch of magic set bards apart from their fellows.",
+								"Only rarely do bards settle in one place for long, and their natural desire to travel\u2014to find new tales to tell, new skills to learn, and new discoveries beyond the horizon\u2014makes an adventuring career a natural calling. Every adventure is an opportunity to learn, practice a variety of skills, enter long-forgotten tombs, discover lost works of magic, decipher old tomes, travel to strange places, or encounter exotic creatures. Bards love to accompany heroes to witness their deeds firsthand. A bard who can tell an awe-inspiring story from personal experience earns renown among other bards. Indeed, after telling so many stories about heroes accomplishing mighty deeds, many bards take these themes to heart and assume heroic roles themselves."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Creating a Bard",
+							"entries": [
+								"Bards thrive on stories, whether those stories are true or not. Your character's background and motivations are not as important as the stories that he or she tells about them. Perhaps you had a secure and mundane childhood. There's no good story to be told about that, so you might paint yourself as an orphan raised by a hag in a dismal swamp. Or your childhood might be worthy of a story. Some bards acquire their magical music through extraordinary means, including the inspiration of fey or other supernatural creatures.",
+								"Did you serve an apprenticeship, studying under a master, following the more experienced bard until you were ready to strike out on your own? Or did you attend a college where you studied bardic lore and practiced your musical magic? Perhaps you were a young runaway or orphan, befriended by a wandering bard who became your mentor. Or you might have been a spoiled noble child tutored by a master. Perhaps you stumbled into the clutches of a hag, making a bargain for a musical gift in addition to your life and freedom, but at what cost?",
+								{
+									"type": "entries",
+									"name": "Quick Build",
+									"entries": [
+										"You can make a bard quickly by following these suggestions. First, Charisma should be your highest ability score, followed by Dexterity. Second, choose the {@background entertainer} background. Third, choose the {@spell 舞光术} and {@spell 恶毒嘲笑} cantrips, along with the following 1st-level spells: {@spell 魅惑人类}, {@spell 侦测魔法}, {@spell 治愈真言}, and {@spell 雷鸣波}."
+									]
+								}
+							]
+						}
+					],
+					"source": "PHB",
+					"page": 51
+				},
+				{
+					"type": "section",
+					"entries": [
+						{
+							"type": "quote",
+							"entries": [
+								"Music is the fruit of the divine tree that vibrates with the Words of Creation. But the question I ask you is, can a bard go to the root of this tree? Can one tap into the source of that power? Ah, then what manner of music they would bring to this world!"
+							],
+							"by": "Fletcher Danairia, master bard"
+						},
+						"Bards bring levity during grave times; they impart wisdom to offset ignorance; and they make the ridiculous seem sublime. Bards are preservers of ancient history, their songs and tales perpetuating the memory of great events down through time\u2014knowledge so important that it is memorized and passed along as oral history, to survive even when no written record remains.",
+						"It is also the bard's role to chronicle smaller and more contemporary events\u2014the stories of today's heroes, including their feats of valor as well as their less than impressive failures.",
+						"Of course, the world has many people who can carry a tune or tell a good story, and there's much more to any adventuring bard than a glib tongue and a melodious voice. Yet what truly sets bards apart from others\u2014and from one another\u2014are the style and substance of their performances.",
+						"To grab and hold the attention of an audience, bards are typically flamboyant and outgoing when they perform. The most famous of them are essentially the D&D world's equivalent of pop stars. If you're playing a bard, consider using one of your favorite musicians as a role model for your character.",
+						"You can add some unique aspects to your bard character by considering the suggestions that follow.",
+						{
+							"type": "entries",
+							"name": "Defining Work",
+							"entries": [
+								"Every successful bard is renowned for at least one piece of performance art, typically a song or a poem that is popular with everyone who hears it. These performances are spoken about for years by those who view them, and some spectators have had their lives forever changed because of the experience.",
+								"If your character is just starting out, your ultimate defining work is likely in the future. But in order to make any sort of living at your profession, chances are you already have a piece or two in your repertoire that have proven to be audience pleasers.",
+								{
+									"type": "table",
+									"caption": "Defining Work",
+									"colLabels": [
+										"{@dice d6}",
+										"Defining Work"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 1
+												}
+											},
+											"\"The Three Flambinis,\" a ribald song concerning mistaken identities and unfettered desire"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 2
+												}
+											},
+											"\"Waltz of the Myconids,\" an upbeat tune that children in particular enjoy"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 3
+												}
+											},
+											"\"Asmodeus's Golden Arse,\" a dramatic poem you claim was inspired by your personal visit to Avernus"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 4
+												}
+											},
+											"\"The Pirates of Luskan,\" your firsthand account of being kidnapped by sea reavers as a child"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 5
+												}
+											},
+											"\"A Hoop, Two Pigeons, and a Hell Hound,\" a subtle parody of an incompetent noble"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 6
+												}
+											},
+											"\"A Fool in the Abyss,\" a comedic poem about a jester's travels among demons"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Instrument",
+							"entries": [
+								"In a bard's quest for the ultimate performance and the highest acclaim, one's instrument is at least as important as one's vocal ability. The instrument's quality of manufacture is a critical factor, of course; the best ones make the best music, and some bards are continually on the lookout for an improvement. Perhaps just as important, though, is the instrument's own entertainment value; those that are bizarrely constructed or made of exotic materials are likely to leave a lasting impression on an audience.",
+								"You might have an \"off the rack\" instrument, perhaps because it's all you can afford right now. Or, if your first instrument was gifted to you, it might be of a more elaborate sort. Are you satisfied with the instrument you have, or do you aspire to replace it with something truly distinctive?",
+								{
+									"type": "table",
+									"caption": "Instrument",
+									"colLabels": [
+										"{@dice d6}",
+										"Instrument"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 1
+												}
+											},
+											"A masterfully crafted halfling fiddle"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 2
+												}
+											},
+											"A mithral {@item horn|PHB} made by elves"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 3
+												}
+											},
+											"A zither made with drow spider silk"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 4
+												}
+											},
+											"An orcish {@item drum|PHB}"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 5
+												}
+											},
+											"A wooden bullywug croak box"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 6
+												}
+											},
+											"A tinker's harp of gnomish design"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Embarrassment",
+							"entries": [
+								"Almost every bard has suffered at least one bad experience in front of an audience, and chances are you're no exception. No one becomes famous right away, after all; perhaps you had a few small difficulties early in your career, or maybe it took you a while to restore your reputation after one agonizing night when the fates conspired to bring about your theatrical ruin.",
+								"The ways that a performance can go wrong are as varied as the fish in the sea. No matter what sort of disaster might occur, however, a bard has the courage and the confidence to rebound from it\u2014either pressing on with the show (if possible) or promising to come back tomorrow with a new performance that's guaranteed to please.",
+								{
+									"type": "table",
+									"caption": "Embarrassment",
+									"colLabels": [
+										"{@dice d6}",
+										"Embarrassment"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 1
+												}
+											},
+											"The time when your comedic song, \"Big Tom's Hijinks\"\u2014which, by the way, you thought was brilliant\u2014did not go over well with Big Tom"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 2
+												}
+											},
+											"The matinee performance when a circus's owlbear got loose and terrorized the crowd"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 3
+												}
+											},
+											"When your opening song was your enthusiastic but universally hated rendition of \"Song of the Froghemoth\""
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 4
+												}
+											},
+											"The first and last public performance of \"Mirt, Man about Town\""
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 5
+												}
+											},
+											"The time on stage when your wig caught fire and you threw it down\u2014which set fire to the stage"
+										],
+										[
+											{
+												"type": "cell",
+												"roll": {
+													"exact": 6
+												}
+											},
+											"When you sat on your {@item lute|PHB} by mistake during the final stanza of \"Starlight Serenade\""
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "A Bard's Muse",
+							"entries": [
+								"Naturally, every bard has a repertoire of songs and stories. Some bards are generalists who can draw from a wide range of topics for each performance, and who take pride in their versatility. Others adopt a more personal approach to their art, driven by their attachment to a muse\u2014a particular concept that inspires much of what those bards do in front of an audience.",
+								"A bard who follows a muse generally does so to gain a deeper understanding of what that muse represents and how to best convey that understanding to others through performance.",
+								"If your bard character has a muse, it could be one of the three described here, or one of your own devising.",
+								{
+									"type": "entries",
+									"entries": [
+										{
+											"type": "entries",
+											"name": "Nature",
+											"entries": [
+												"You feel a kinship with the natural world, and its beauty and mystery inspire you. For you, a tree is deeply symbolic, its roots delving into the dark unknown to draw forth the power of the earth, while its branches reach toward the sun to nourish their flowers and fruit. Nature is the ancient witness who has seen every kingdom rise and fall, even those whose names have been forgotten and wait to be rediscovered. The gods of nature share their secrets with druids and sages, opening their hearts and minds to new ways of seeing, and as with those individuals, you find that your creativity blossoms while you wander in an open field of waving grass or walk in silent reverence through a grove of ancient oaks."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Love",
+											"entries": [
+												"You are on a quest to identify the essence of true love. Though you do not disdain the superficial love of flesh and form, the deeper form of love that can inspire thousands or bring joy to one's every moment is what you are interested in. Love of this sort takes on many forms, and you can see its presence everywhere\u2014from the sparkling of a beautiful gem to the song of a simple fisher thanking the sea for its bounty. You are on the trail of love, that most precious and mysterious of emotions, and your search fills your stories and your songs with vitality and passion."
+											]
+										},
+										{
+											"type": "entries",
+											"name": "Conflict",
+											"entries": [
+												"Drama embodies conflict, and the best stories have conflict as a key element. From the morning-after tale of a tavern brawl to the saga of an epic battle, from a lover's spat to a rift between powerful dynasties, conflict is what inspires tale-tellers like you to create your best work. Conflict can bring out the best in some people, causing their heroic nature to shine forth and transform the world, but it can cause others to gravitate toward darkness and fall under the sway of evil. You strive to experience or witness all forms of conflict, great and small, so as to study this eternal aspect of life and immortalize it in your words and music."
+											]
+										}
+									]
+								}
+							]
+						}
+					],
+					"source": "XGE",
+					"page": 12
+				}
+			]
+		}
+	],
+	"classFeature": [
+		{
+			"name": "吟游激励",
+			"ENG_name": "Bardic Inspiration",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你可以用振奋人心的言词或音乐来激励其他生物。在你的回合中使用一个附赠动作来选择一个除你之外，距离你60尺内且可以听见你的生物，该生物获得一个吟游激励骰{@dice d6}。",
+				"在接下来的10分钟内，该生物可以骰这颗激励骰，并将骰出来的数字加到它所进行的一次属性检定、攻击检定、或豁免检定中。该生物可以在骰{@dice d20}之后才决定是否使用使用吟游激励骰，但必须在DM宣布该检定结果之前使用。一旦吟游激励骰被使用，它就消失。且一个生物同时只能拥有一颗吟游激励骰。",
+				"你可以使用这个能力的次数等同于你的魅力调整值（最少为1）。你在完成一次长休后恢复所有你花费掉的次数。",
+				"你的吟游激励骰会在你本职业升至特定等级时改变。在5级的时候变为{@dice d8}、10级时{@dice d10}、15级时{@dice d12}。"
+			]
+		},
+		{
+			"name": "Magical Inspiration",
+			"source": "UAClassFeatureVariants",
+			"page": 3,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 1,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 1st-level bard feature (enhances Bardic Inspiration)}",
+				"If a creature has a Bardic Inspiration die from you and casts a spell, the creature can roll that die and add the number rolled to one damage or healing roll of the spell. The Bardic Inspiration die is then lost."
+			]
+		},
+		{
+			"name": "Spell Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 3,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 1,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 1st-level bard feature (enhances Spellcasting)}",
+				"Whenever you finish a long rest, you can replace one spell you learned from this Spellcasting feature with another spell from the bard spell list. The new spell must be the same level as the spell you replace."
+			]
+		},
+		{
+			"name": "施法",
+			"ENG_name": "Spellcasting",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"你习得用音乐和意志来解构并重塑现实的力量。你的法术是你庞大的乐章的一部份，也是你可以因应不同情况调律的魔法。请参阅{@book 第十章|PHB|10}以了解关于施法的规则，以及第十一章以查阅{@filter 吟游诗人法术列表|spells|class=bard}。",
+				{
+					"type": "entries",
+					"name": "戏法",
+					"entries": [
+						"你知晓两个从{@filter 吟游诗人法术列表|spells|class=bard}自选的戏法。你将在升至更高的吟游诗人等级时学会额外的吟游诗人戏法：在4级的时候学会第3个戏法，在10级的时候学会第4个。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "法术位",
+					"entries": [
+						"吟游诗人表中显示了你有多少个法术位可以用来施放你一环或更高环的{@filter 吟游诗人法术|spells|class=bard}。要施放其中一个法术，你必须消耗一个与该法术环阶相同或更高的法术位。你在完成一次长休后恢复所有你花费掉的法术位。",
+						"举例来说，如果你知晓一个1环的{@spell 治疗伤势}法术，且你拥有一个1环和一个2环的法术位，则你可以使用其中任意一个法术位来施放{@spell 治疗伤势}。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "一环或更高环的已知法术",
+					"entries": [
+						"你知晓四个从吟游诗人法术列表中自选的1环法术。",
+						"你将在提升至在每个除了第12,16,19,和20级的吟游诗人等级时，习得一个新的吟游诗人法术。每个这些法术的环阶都必须符合你所拥有法术位的环阶。举例来说，当你在此职业升至3级时，你可以学习一个新的1环或2环法术。",
+						"此外，当你提升这个职业的等级时，你可以从吟游诗人的法术列表中挑选一个法术来取代一个你目前已知的法术，而它的环阶也必须符合你所拥有法术位的环阶。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法属性",
+					"entries": [
+						"魅力是你施展吟游诗人法术的施法属性。你的魔法源自你倾注于音乐与演说表演的心神与灵魂。每当法术提及你的施法属性时，你将使用你的魅力。此外，当决定你吟游诗人法术的豁免DC、以及使用吟游诗人法术进行攻击检定时，你使用你的魅力调整值。",
+						{
+							"type": "abilityDc",
+							"name": "法术",
+							"attributes": [
+								"cha"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "法术",
+							"attributes": [
+								"cha"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "仪式施法",
+					"entries": [
+						"你可以用仪式来施放任何具有仪式标签，且你已知的吟游诗人法术。"
+					]
+				},
+				{
+					"type": "entries",
+					"name": "施法法器",
+					"entries": [
+						"你可以使用你的乐器（{@book 第五章|PHB|5}），来作为你施放吟游诗人法术的法器。"
+					]
+				}
+			]
+		},
+		{
+			"name": "全能高手",
+			"ENG_name": "Jack of All Trades",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"从2级开始，你可以将你熟练加值的一半（向下取整）加入任何你尚未熟练的属性检定中。"
+			]
+		},
+		{
+			"name": "魔法激励",
+			"ENG_name": "Magical Inspiration",
+			"source": "TCE",
+			"page": 27,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 2,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 2级诗人 {@variantrule 可选职业特性|tce|可选特性}}",
+				"如果一个生物拥有来自于你的吟游激励骰，当他施放一个回复生命值或者造成伤害的法术时，该生物可以掷出激励骰并选择受此法术影响的一名目标，在目标回复的生命值或者造成的伤害上加上掷出的数值。然后失去这颗吟游激励骰。"
+			]
+		},
+		{
+			"name": "纾压曲(d6)",
+			"ENG_name": "Song of Rest",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"从2级开始，你可以在短休期间利用安抚人心的音乐或演说来使你受伤的队友恢复活力。若你或任何可以听见你表演的生物在短休结束时借由消耗生命骰回复生命值，则每个这么做的生物回复额外的{@dice 1d6}生命值。",
+				"这个额外的生命值将会在你本职业升至特定等级时随之提升：9级时{@dice 1d8}、13级时{@dice 1d10}、17级时{@dice 1d12}。"
+			]
+		},
+		{
+			"name": "吟游学院",
+			"ENG_name": "Bard College",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"在3级时，你从可选的学院列表中选择一个吟游诗人学院来深入你的技巧。这个选择会在3级、6级、和14级的时候赋予你新的能力。"
+			]
+		},
+		{
+			"name": "专精",
+			"ENG_name": "Expertise",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"在3级时，选择两个你的技能熟练，你的熟练加值在使用所选熟练项所进行的任何属性检定中变为两倍。",
+				"在10级时，你可以再选择另外两个技能熟练以获得这个好处。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"当你在此职业升至4级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "多才诗人",
+			"ENG_name": "Bardic Versatility",
+			"source": "TCE",
+			"page": 27,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4级吟游诗人 {@variantrule 可选职业特性|tce|可选特性}}",
+				"每当你在该职业到达获得属性值提升特性的等级时，你可以选择以下一种效果执行，这种效果代表了你改变了你使用技能和魔法的重心：",
+				{
+					"type": "list",
+					"items": [
+						"将一个你以{@classFeature 专精|Bard|PHB|3}特性选择的技能替换为一个尚未从其中获益的已熟练的其他技能。",
+						"将一个你从该职业的施法特性中习得的戏法替换为{@filter 吟游诗人法术列表|spells|level=0|class=bard}中的另一个戏法。"
+					]
+				}
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "吟游激励(d8)",
+			"ENG_name": "Bardic Inspiration",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 5,
+			"entries": [
+				"在5级时，你的吟游激励骰变更为{@dice d8}。"
+			]
+		},
+		{
+			"name": "激励涌泉",
+			"ENG_name": "Font of Inspiration",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 5,
+			"entries": [
+				"从你升至5级开始，你在完成一次短休或长休后都会恢复所有你在吟游激励骰花费掉的次数。"
+			]
+		},
+		{
+			"name": "吟游学院能力",
+			"ENG_name": "Bard College feature",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"在6级时，你获得一个来自你吟游诗人学院的能力。"
+			]
+		},
+		{
+			"name": "反制迷惑",
+			"ENG_name": "Countercharm",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"在6级时，你获得使用音乐或言语的力量来干扰会影响心灵效果的能力。以一个动作，你可以开始一段持续到你下个回合结束的表演。在这段期间，你和任何与你距离30尺内的友善生物在对抗{@condition 恐惧}或{@condition 魅惑}的豁免检定中获得优势。只有能听见你的生物可以获得此效果。这段表演将在你陷入{@condition 无力}、被沉默、或是你自愿停止（不需要动作）时提早结束。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"当你在此职业升至8级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 8,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 8th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "纾压曲(d8)",
+			"ENG_name": "Song of Rest (d8)",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 9,
+			"entries": [
+				"在9级时，纾压曲所给予的额外生命值增加至{@dice 1d8}。"
+			]
+		},
+		{
+			"name": "吟游激励(d10)",
+			"ENG_name": "Bardic Inspiration (d10)",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"在10级时，你的吟游激励骰变更为{@dice d10}。"
+			]
+		},
+		{
+			"name": "专精",
+			"ENG_name": "Expertise",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"在10级时，你可以选择另外两个技能熟练。你的熟练加值在使用所选熟练项所进行的任何属性检定中变为两倍。"
+			]
+		},
+		{
+			"name": "魔法秘密",
+			"ENG_name": "Magical Secrets",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"在10级时，你从广泛的学科中掠夺了它们的魔法知识。从任意职业中（包括本职业）中选择二个法术。你所选择的法术必须要是你所能施放的环阶（见吟游诗人表），或者是戏法。",
+				"对你而言，所选的法术将被视为吟游诗人法术，且会被算在吟游诗人表中的已知法术数量中。",
+				"你将会在14级和18级时再从任意职业中学会二个额外法术。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"当你在此职业升至12级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 12,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 12th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "纾压曲(d10)",
+			"ENG_name": "Song of Rest (d10)",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 13,
+			"entries": [
+				"在13级时，纾压曲所给予的额外生命值增加至{@dice 1d10}。"
+			]
+		},
+		{
+			"name": "吟游学院能力",
+			"ENG_name": "Bard College feature",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"在14级时，你获得一个来自你吟游诗人学院的能力。"
+			]
+		},
+		{
+			"name": "魔法秘密",
+			"ENG_name": "Magical Secrets",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"在14级时，从任意职业中（包括本职业）额外选择二个法术。你所选择的法术必须要是你所能施放的环阶（见吟游诗人表），或者是戏法。",
+				"对你而言，所选的法术将被视为吟游诗人法术，且会被算在吟游诗人表中的已知法术数量中。"
+			]
+		},
+		{
+			"name": "吟游激励(d12)",
+			"ENG_name": "Bardic Inspiration (d12)",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"在15级时，你的吟游激励骰变更为{@dice d12}。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"当你在此职业升至16级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 16,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 16th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "纾压曲(d12)",
+			"ENG_name": "Song of Rest (d12)",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"在17级时，纾压曲所给予的额外生命值增加至{@dice 1d12}。"
+			]
+		},
+		{
+			"name": "魔法秘密",
+			"ENG_name": "Magical Secrets",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"在18级时，从任意职业中（包括本职业）额外选择二个法术。你所选择的法术必须要是你所能施放的环阶（见吟游诗人表），或者是戏法。",
+				"对你而言，所选的法术将被视为吟游诗人法术，且会被算在吟游诗人表中的已知法术数量中。"
+			]
+		},
+		{
+			"name": "属性值提升",
+			"ENG_name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"当你在此职业升至19级时，你可以增加一项自选属性值2点，或着你可以增加二项自选属性值各1点。如同平常一样，你不能通过这个能力将一个属性值提升至超过20。",
+				"如果你的DM允许使用专长的话，你也可以改为获得一个{@5etools 专长|feats.html}。"
+			]
+		},
+		{
+			"name": "Proficiency Versatility",
+			"source": "UAClassFeatureVariants",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 19,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 19th-level feature (enhances Ability Score Improvement)}",
+				"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+				"This change represents one of your skills atrophying as you focus on a different skill."
+			]
+		},
+		{
+			"name": "卓越激励",
+			"ENG_name": "Superior Inspiration",
+			"source": "PHB",
+			"page": 51,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"在20级时，当你骰先攻时且吟游激励骰已经没有剩下的使用次数，则你获得一次使用次数。"
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "轶闻学院",
+			"ENG_name": "College of Lore",
+			"source": "PHB",
+			"page": 54,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"轶闻学院的吟游诗人知晓大部分的事情，并从各式各样的来源，从学术典籍到乡野奇谈，搜集种种不同的轶闻。无论是酒馆中的歌唱家、或是皇室宫廷里的作曲家，这些诗人都会运用他们的天赋让观众们入迷。当掌声响毕，观众们将可能会发现自己对所有深信不疑的事情提出质疑，从他们对当地神殿中神职人员的信仰，到他们对君王的忠诚。",
+				"这些吟游诗人忠于对真实和美的追求，而非效忠于君王或追随神祇的教条。那些雇佣这类吟游诗人作为使者或顾问的贵族，也知道这些诗人更倾向诚实而非圆滑。",
+				"这个学院的成员有时会聚集在图书馆或有着教室和宿舍的真正学院，彼此分享他们的学识。他们也会在节日或政事中相见，让他们得以揭露腐败、谎言、并嘲弄那些自命不凡的权威人物。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "额外熟练|Bard||Lore||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "语出惊人|Bard||Lore||3"
+				}
+			]
+		},
+		{
+			"name": "额外熟练",
+			"ENG_name": "Bonus Proficiencies",
+			"source": "PHB",
+			"page": 54,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级轶闻学院特性}",
+				"你获得三个自选技能的熟练。"
+			]
+		},
+		{
+			"name": "语出惊人",
+			"ENG_name": "Cutting Words",
+			"source": "PHB",
+			"page": 54,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级轶闻学院特性}",
+				"你学会如何运用你的机智去干扰、迷惑、并瓦解他人的信心和能力。当一个距离你60尺内且你所能看见的生物进行一次攻击检定、属性检定、或伤害骰时，你可以使用你的反应并消耗一次你吟游激励的使用次数，骰一颗吟游激励骰，并将骰出来的数字减掉该生物的掷骰结果。你可以选择在该生物掷骰后，但DM决定其攻击检定或属性检定成功与否之前、或在该生物造成其伤害之前使用此能力。若该生物无法听见你或它免疫于{@condition 魅惑}，则该生物免疫于此效果。"
+			]
+		},
+		{
+			"name": "额外魔法秘密",
+			"ENG_name": "Additional Magical Secrets",
+			"source": "PHB",
+			"page": 54,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级轶闻学院特性}",
+				"你从任意职业中额外习得二个法术。你所选择的法术必须要符合你所能施放的环阶（见吟游诗人表）或是戏法。所选的法术对你而言被视作吟游诗人法术，但不会被计入你已知吟游诗人法术的数量中。"
+			]
+		},
+		{
+			"name": "绝代技能",
+			"ENG_name": "Peerless Skill",
+			"source": "PHB",
+			"page": 54,
+			"srd": true,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Lore",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级轶闻学院特性}",
+				"当你进行一次属性检定时，你可以消耗一次你吟游激励的使用次数。骰一颗吟游激励骰，并将骰出来的数字加入该属性检定的掷骰结果中。你可以选择在你为该属性检定掷骰后，但DM宣布你成功与否之前使用此能力。"
+			]
+		},
+		{
+			"name": "勇气学院",
+			"ENG_name": "College of Valor",
+			"source": "PHB",
+			"page": 55,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"勇气学院的吟游诗人是一群勇敢的歌者，他们的诗歌让关于过去伟大英雄们的记忆仍然永存世间，并因此激励新世代的英雄们。这些诗人们或聚集在青草会堂、或环绕在熊熊篝火边，吟唱着关于过去和现在的伟大事迹。他们遍历大陆以亲眼见证重大事件，并确保这些事件的记忆不会被世界遗忘。通过歌曲，他们启发他人达到与过去英雄同等的成就。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "额外熟练|Bard||Valor||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战斗激励|Bard||Valor||3"
+				}
+			]
+		},
+		{
+			"name": "额外熟练",
+			"ENG_name": "Bonus Proficiencies",
+			"source": "PHB",
+			"page": 55,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级勇气学院特性}",
+				"你获得中甲、盾牌、和军用武器的熟练。"
+			]
+		},
+		{
+			"name": "战斗激励",
+			"ENG_name": "Combat Inspiration",
+			"source": "PHB",
+			"page": 55,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级勇气学院特性}",
+				"你学会在战斗中激励他人。一个拥有你所给予的吟游激励骰的生物，可以骰该吟游激励骰以将骰出来的数字加入它刚进行的武器伤害骰中。或者，当一个以该生物为目标的攻击检定被进行时，它可以在看见该次攻击检定的结果后，但DM宣布该次攻击命中与否之前，使用它的反应以骰该吟游激励骰，并将骰出来的数字加入它对该次攻击的AC中。"
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "PHB",
+			"page": 55,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级勇气学院特性}",
+				"每当你在自己回合执行{@action 攻击}动作时，你可以发动两次攻击，而非一次。"
+			]
+		},
+		{
+			"name": "战斗魔法",
+			"ENG_name": "Battle Magic",
+			"source": "PHB",
+			"page": 55,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Valor",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级勇气学院特性}",
+				"你已经精通于将施法和使用武器编织成一个协调的行动。当你使用你的动作施放一个吟游诗人法术时，你能够以一个附赠动作进行一次武器攻击。"
+			]
+		},
+		{
+			"name": "创造学院",
+			"ENG_name": "College of Creation",
+			"source": "TCE",
+			"page": 27,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"吟游诗人相信这个宇宙是一个艺术作品\u2014\u2014是第一群的巨龙和神的造物。这种创造工作包含了韵律，并且一直到今天，通过我们处在的现实，都能听到其袅袅不绝的回音。这种有魔力的韵律被称作造物之歌。创造学院的吟游诗人引用这原始的歌曲，以此为基础创作舞蹈，音乐和诗篇。他们的师长们大多如此教诲：",
+				"\"在日月周转出现之前，那一曲颂歌就已经存在于这世上，它唤醒了这个世界的第一次黎明破晓。它的旋律是如此的欢快，就连树木和石头听了也会开口歌唱。世间万物，包括树木和石头，都无时不吟唱着这曲子。学习这造物之歌吧，我的学生们，你也能让群山与你合唱，与你共舞。\"",
+				"矮人和侏儒经常鼓励他们之中的吟游诗人去学习造物之歌，以之为师。而在龙裔之间，造物之歌有着崇高的地位，因为传说中所描绘的巴哈姆特和提亚马特\u2014\u2014巨龙中的最杰出者\u2014\u2014是造物之歌最早的两位歌者。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "潜能微尘|Bard||Creation|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "造物表演|Bard||Creation|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "潜能微尘",
+			"ENG_name": "Mote of Potential",
+			"source": "TCE",
+			"page": 27,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级创造学院特性}",
+				"每当你给予一个生物以吟游激励骰时，你可以唱出造物之歌的一个音符，创造一团微小的潜能微尘，在那个生物五尺以内的轨道上环绕。这个微尘是无形且不可被摧毁的，它将一直持续存在直到这个吟游激励骰被消耗掉。这团微尘看起来像一个音符，或是一颗星星，一朵花，抑或其他任何一种艺术或者生命的符号，这将由你来决定。",
+				"当这个生物使用那个吟游激励骰时，这团微尘将会根据这个吟游激励骰被使用的方式-属性检定，攻击检定或者豁免检定，会产生不同的额外效果。具体细节如下所示：",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "属性检定。",
+							"entry": "当该生物将吟游激励骰用于增益属性检定时，他可以重新掷一次吟游激励骰并且选择使用其中一个掷骰结果。这团微尘会炸开，发射出多彩而无害的闪光。"
+						},
+						{
+							"type": "item",
+							"name": "攻击检定。",
+							"entry": "当该生物将吟游激励骰用于增益攻击检定时，掷出吟游激励骰后，这团微尘会立刻如雷霆般破碎。该生物这次攻击的目标以及其5尺距离内你能看到的由你决定的所有生物必须进行一次体质豁免，其DC为你的施法DC，如果豁免失败，将会承受等同于该吟游激励骰子所掷结果的雷鸣伤害。"
+						},
+						{
+							"type": "item",
+							"name": "豁免检定。",
+							"entry": "当该生物将吟游激励骰用于增益豁免检定时，掷出吟游激励骰后，这团微尘会立刻伴随着一段舒缓的音乐消失不见，给予这个生物等同于该吟游激励骰子所掷结果加上你的魅力调整值的临时生命值（最低为1）。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "造物表演",
+			"ENG_name": "Performance of Creation",
+			"source": "TCE",
+			"page": 27,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级创造学院特性}",
+				"以一个动作，你可以引导造物之歌的魔力来创造一个由你选择的非魔法物品，它会在你选择的距离你10尺内的一处未被占据的空间里生成。它必须要生成在一个可以支撑它的地方\u2014\u2014这可以是在也体内或者一个表面上。这件物品的价值不能超过你吟游诗人等级*20gp，它必须是中型或者更小的物品。这件物品会闪烁着柔和的微光。当一个生物触碰它的时候，会听到轻微的音乐。在被创造出等同于你的熟练加值数的小时之后，这件物品会消失。例如，{@book 《玩家手册》|PHB|5}中的\"装备\"章节里的物品大多数都是可以通过此方法创造的。",
+				"每当你用这一特性创造出一件物品后，直到下一次长休结束前你都不能再次使用这个能力。你可以消耗一个2环或者更高级的法术位去重制这个能力的使用次数。你同时只能保持一件以此法被创造出的物品。如果在你使用这个能力创造物品时已经有一件被创造出来的物品了，那么那个旧的物品会立刻消失不见。",
+				"你创造的物品都大小限制会随着你的吟游诗人等级提高而增长。6级时你可以创造大型物品，14级时你可以创造巨型物品。"
+			]
+		},
+		{
+			"name": "活化表演",
+			"ENG_name": "Animating Performance",
+			"source": "TCE",
+			"page": 27,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级创造学院特性}",
+				"以一个动作，你可以选择你30尺内一个你可以看见大型或者更小的非魔法物品，赋予其生命。这件活化的物品将会使用如下{@creature 舞空物品|TCE}的属性，并且使用你的熟练加值。这件物品将会对你以及你的伙伴保持友好，而且会听从你的命令。它将持续保持活性一个小时，如果期间其生命值降低为0，或者你死亡，则该物品失去活性。",
+				"在战斗中，该物品将会与你共用先攻，它会紧随在你的回合后行动。它可以自行移动并执行自己的反应，不过在它的回合它只会进行{@action 闪避}。除非使用附赠动作对它发出命令。他可以做其动作列表中的动作，当然你也可以命令它做其他事情。如果你的角色失能昏迷了，那么这件活化物品会做其他动作，不仅仅是{@action 闪避}。",
+				"当你使用附赠动作发出诗人激励时，作为发出诗人激励的附赠动作的一部分，你同时也可以对这个活化物品发出指令。",
+				"每当你用这一特性活化一件物品后，直到下一次长休结束前你都不能再次使用这个能力。你可以消耗一个3环或者更高级的法术位去重制这个能力的使用次数。你同时只能保持一件以此法被活化的物品。如果在你使用这个能力活化物品时已经有一件{@creature 舞空物品|TCE}了，那么那个旧的物品会立刻停止不动，变回死物。"
+			]
+		},
+		{
+			"name": "高潮乐章",
+			"ENG_name": "Creative Crescendo",
+			"source": "TCE",
+			"page": 27,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级创造学院特性}",
+				"当你使用造物表演特性创造物品时，你可以一次性不只一件物品。你能一次创造的物品数量等于你的魅力调整值（最低为两件物品）。如果同时创造的物品总数超过了这个数值，那么你可以选择你先前创造的物品中的哪几件将会消失不见。你所创造的物品中只有一件可以达到你创造物品的大小峰值，其他的必须是小型或者微型。",
+				"你的创造表演特性不再有所创造物品的价值限制。"
+			]
+		},
+		{
+			"name": "雄辩学院",
+			"ENG_name": "College of Eloquence",
+			"source": "TCE",
+			"page": 29,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"雄辩学院的学徒们熟练的掌握了演说的艺术。这些吟游诗人舞动着牢不可破的逻辑与夸张的文字游戏二重奏，用逻辑的论断与叩击心弦的感染力，顺着观众的情感不断出击，赢取怀疑者的坚信和贬低者的较好。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "巧舌如簧|Bard||Eloquence|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "扰神之词|Bard||Eloquence|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "巧舌如簧",
+			"ENG_name": "Silver Tongue",
+			"source": "TCE",
+			"page": 29,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级雄辩学院特性}",
+				"你是语言的大师，懂得在合适的时刻说出正确的话语。当你在进行一次魅力({@skill 说服})检定或魅力({@skill 欺瞒})检定时，如果你掷出9或者更低的{@dice d20}，都会被视作10。"
+			]
+		},
+		{
+			"name": "扰神之词",
+			"ENG_name": "Unsettling Words",
+			"source": "TCE",
+			"page": 29,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级雄辩学院特性}",
+				"你可以编造一些带有魔力的话语，扰乱一个生物的心神，使其自我怀疑。消耗一个附赠动作，你可以消耗一个吟游激励骰，选择一个你视野中的距你60尺以内的生物。掷出诗人激励，在你的下一个回合开始前，该生物的下一次豁免检定将会减去这个激励骰所投出的值。"
+			]
+		},
+		{
+			"name": "不竭鼓舞",
+			"ENG_name": "Unfailing Inspiration",
+			"source": "TCE",
+			"page": 29,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级雄辩学院特性}",
+				"你的激励言语是如此的具有感染力，以至于被鼓舞的人感受到他们必须要，不行也得行地做到成功。当一个生物使用了你的吟游激励骰用于攻击骰、属性检定或豁免检定后仍然失败，其可以保留这个吟游激励骰。"
+			]
+		},
+		{
+			"name": "统一言说",
+			"ENG_name": "Universal Speech",
+			"source": "TCE",
+			"page": 29,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级雄辩学院特性}",
+				"你掌握了一种让你的话语被任何有智慧的生物理解的方法。以一个动作，你可以选择六十尺内至多为你魅力调整值数量的生物（至少为1）。在一小时内，被选中的生物可以魔法般理解你，不论你所说的话使用何种语言。",
+				"每当你用这一能力后，直到下一次长休结束前，你都不能再次使用这个能力，除非你消耗一枚法术位来再次使用此能力。"
+			]
+		},
+		{
+			"name": "启悟传播",
+			"ENG_name": "Infectious Inspiration",
+			"source": "TCE",
+			"page": 29,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级雄辩学院特性}",
+				"当你成功激励了他人之后，你那雄辩言辞的力量会散播开去。当一个距离你60尺内的生物使用了你的吟游激励骰增益了一次攻击骰，属性检定或者豁免检定并且成功之后，你可以用你的反应去借此鼓励另一个（除了你之外的）能听见你的生物了，其获得一个吟游激励骰，并且你不会消耗已有的吟游激励骰。",
+				"你可以使用该反应的次数等于你的魅力调整值（最少为1），在长休后恢复该能力被消耗的所有使用次数。"
+			]
+		},
+		{
+			"name": "College of Creation",
+			"source": "UA2020SubclassesPt2",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation (UA)",
+			"subclassSource": "UA2020SubclassesPt2",
+			"level": 3,
+			"entries": [
+				"Bards believe the multiverse was given existence through word and sound, esoteric harmonies that continue to resound through existence: the Song of Creation. The bards of this college draw on this ancient power through performances of dance, music, or song to bring into being what they need most.",
+				"Members of this college might have developed their powers during experiences on other worlds or planes of existence. Those who have seen the commonalities of multiple realities might have learned how to tap into truths most mortals glimpse only for a moment. Alternatively, the bard might find themselves out of step with their own home plane, reality, or time, their connections to elsewhere allowing them to manipulate the space around them. Regardless of where a bard draws their powers from, other performers might be drawn to them, either to learn their secrets or to put an end to their dangerous manipulation of the Song of Creation.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Note of Potential|Bard||Creation (UA)|UA2020SubclassesPt2|3"
+				}
+			]
+		},
+		{
+			"name": "Note of Potential",
+			"source": "UA2020SubclassesPt2",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation (UA)",
+			"subclassSource": "UA2020SubclassesPt2",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level College of Creation feature}",
+				"You can manipulate the Song of Creation to summon a floating musical note of possibility: Whenever you give a creature a Bardic Inspiration die, you can create a Note of Potential. The note orbits within 5 feet of the creature. The note is a Tiny object that is intangible and invulnerable, and it lasts until the Bardic Inspiration die is lost. A creature with a note can use it in the following ways.",
+				{
+					"type": "entries",
+					"name": "Note of Destruction",
+					"entries": [
+						"Immediately after the creature rolls the Bardic Inspiration die to add it to an attack roll, the creature can expend the note to create a burst of sound. Each other creature within 5 feet of it must succeed on a Constitution saving throw against your spell save DC or take thunder damage equal to the number rolled on the Bardic Inspiration die."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Note of Protection",
+					"entries": [
+						"Immediately after the creature rolls the Bardic Inspiration die and adds it to a saving throw, the creature can expend the note to gain temporary hit points equal to the number rolled on the Bardic Inspiration die + your Charisma modifier, provided the creature doesn't already have temporary hit points."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Note of Ingenuity",
+					"entries": [
+						"When the creature rolls the Bardic Inspiration die to add it to an ability check, the creature can expend the note to roll the Bardic Inspiration die again and choose which roll to use."
+					]
+				}
+			]
+		},
+		{
+			"name": "Animating Performance",
+			"source": "UA2020SubclassesPt2",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation (UA)",
+			"subclassSource": "UA2020SubclassesPt2",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level College of Creation feature}",
+				"Your mastery over the Song of Creation allows you to magically bring items to life. As an action, you can target a Large or smaller nonmagical item you can see within 30 feet of you and animate it. The animate item uses the {@creature 舞空物品|UA2020SubclassesPt2} stat block and is under your control for 1 hour or until it is reduced to 0 hit points.",
+				"In combat, the item shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action 闪避} action, unless you take a bonus action on your turn to command it to take one of the actions in its stat block or the {@action 疾走}, {@action 撤离}, {@action 协助}, {@action 躲藏}, or {@action 搜寻} action.",
+				"When you use your Bardic Inspiration feature, you can command which action your animated item takes as part of the same bonus action.",
+				"Once you animate an item with this feature, you can't do so again until you finish a long rest or until you expend a spell slot of 3rd level or higher to use this feature. You can have only one item animated by this feature at a time; if you use this action and already have a {@creature 舞空物品|UA2020SubclassesPt2} from this feature, the first one immediately becomes inanimate."
+			]
+		},
+		{
+			"name": "Performance of Creation",
+			"source": "UA2020SubclassesPt2",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Creation (UA)",
+			"subclassSource": "UA2020SubclassesPt2",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level College of Creation feature}",
+				"Your performance can manipulate the magic of creation, briefly transforming the world around you. As an action, you can create one nonmagical item of your choice in an unoccupied space within 10 feet of you. The item must appear on a surface or in a liquid that can support it. The gp value of the item can't be more than 20 times your bard level and must be Large or smaller. Tiny glimmering, intangible notes float around it, and a creature can faintly hear music when touching it. For examples of items you can create, see the Armor, Weapons, Adventuring Gear, Tools, and Mounts and Vehicles tables in chapter 5, \"Equipment,\" of the Player's Handbook.",
+				"The created item disappears at the end of your next turn, unless you use your action to maintain it. Each time you use your action in this way, the item's duration is extended to the end of your next turn, up to a maximum of 1 minute. If you maintain the item for the full minute, it continues to exist for a number of hours equal to your bard level.",
+				"Once you create an item with this feature, you can't do so again until you finish a long rest or until you expend a spell slot of 5th level or higher to use this feature. You can have only one item created by this feature at a time; if you use this action and already have an item from this feature, the first one immediately vanishes."
+			]
+		},
+		{
+			"name": "College of Spirits",
+			"source": "UA2020SubclassesPt4",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits (UA)",
+			"subclassSource": "UA2020SubclassesPt4",
+			"level": 3,
+			"entries": [
+				"Stories of the past are powerful; they hold lessons of history, philosophy, and magic. Bards of the College of Spirits seek the stories of those from beyond the material plane. Using gaming sets, they reach out to hear their stories, but the bards have no control over what story they find.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Guiding Whispers|Bard||Spirits (UA)|UA2020SubclassesPt4|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Spiritual Focus|Bard||Spirits (UA)|UA2020SubclassesPt4|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tales from Beyond|Bard||Spirits (UA)|UA2020SubclassesPt4|3"
+				}
+			]
+		},
+		{
+			"name": "Guiding Whispers",
+			"source": "UA2020SubclassesPt4",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits (UA)",
+			"subclassSource": "UA2020SubclassesPt4",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level College of Spirits feature}",
+				"You can reach out to spirits to guide you and others. You learn the {@spell 神导术} cantrip, which doesn't count against the number of bard cantrips you know. For you, it has a range of 60 feet when you cast it."
+			]
+		},
+		{
+			"name": "Spiritual Focus",
+			"source": "UA2020SubclassesPt4",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits (UA)",
+			"subclassSource": "UA2020SubclassesPt4",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level College of Spirits feature}",
+				"Your practice of contacting spirits can employ special tools. You can use the following objects as a spellcasting focus for your bard spells: a candle, a crystal ball, a talking board, a tarokka deck, or a skull.",
+				"At 6th level, when you cast a bard spell that deals damage or restores hit points through the Spiritual Focus, roll a {@dice d6}, and you gain a bonus to one roll of the spell equal to the number rolled."
+			]
+		},
+		{
+			"name": "Tales from Beyond",
+			"source": "UA2020SubclassesPt4",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits (UA)",
+			"subclassSource": "UA2020SubclassesPt4",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level College of Spirits feature}",
+				"You reach out to spirits who tell their tales through you. While you are holding your Spiritual Focus, you can use a bonus action to expend one use of your Bardic Inspiration and roll on the Spirits' Tales table using your Bardic Inspiration die to determine the tale told. You retain the tale in mind until you bestow the tale's effect or you finish a short or long rest.",
+				"You can use an action to choose one creature you can see within 30 feet of you (this can be you) to be the target of the tale's effect. Once you do so, you can't bestow the tale's effect again until you roll it again.",
+				"You can retain only one of these tales in mind at a time, and rolling on the Spirits' Tales table immediately ends the effect of the previous tale. If the tale requires a saving throw, the DC equals your spell save DC.",
+				{
+					"type": "table",
+					"caption": "Spirits' Tales",
+					"colLabels": [
+						"Bardic Insp. Die",
+						"Tale"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							1,
+							"{@b 1 Beast.} You recite the tale of a clever animal. For 1 minute, the target has advantage on Wisdom ({@skill 察觉}) checks and advantage on attack rolls against a creature if another enemy is within 5 feet of it, and that enemy isn't {@condition 无力}."
+						],
+						[
+							2,
+							"{@b 2 Warrior.} You recount the story of a renowned duelist. Make a melee spell attack against the target as an attacking spectral warrior briefly appears in an unoccupied space within 5 feet of the target before vanishing. On a hit, the target takes force damage equal to two rolls of your Bardic Inspiration die + your Charisma modifier."
+						],
+						[
+							3,
+							"{@b 3 Friends.} You recite the tale of friends who found each other in the afterlife. The target and another creature of its choice it can see within 5 feet of it regains hit points equal to a roll of your Bardic Inspiration die + your Charisma modifier."
+						],
+						[
+							4,
+							"{@b 4 Runaway.} You tell the tale of an adventurer that could escape any confinement. The target can immediately use its reaction to teleport up to 30 feet to an unoccupied space it can see. When the target teleports, it can choose a number of creatures it can see within 30 feet of it up to your Charisma modifier (minimum of 1) to immediately use the same reaction."
+						],
+						[
+							5,
+							"{@b 5 Avenger.} You recount the tale of an avenging knight. For 1 minute, whenever a creature the target can see within 30 feet of it is damaged by a creature, the target can use its reaction to deal force damage equal to a roll of your Bardic Inspiration die to the attacker."
+						],
+						[
+							6,
+							"{@b 6 Hero.} You speak the tale of an epic hero. Choose a creature you can see within 30 feet of you. The target gains temporary hit points equal to a roll of your Bardic Inspiration die + your bard level. While it has these temporary hit points, the target's walking speed increases by 10 feet."
+						],
+						[
+							7,
+							"{@b 7 Fey.} You recount the tale of a mischievous fey. The target must succeed on a Wisdom saving throw or become {@condition 魅惑} by you until the end of its next turn. The {@condition 魅惑} target must use its action to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no other creature."
+						],
+						[
+							8,
+							"{@b 8 Dark Spirit.} You speak a dreadful tale of a slayer in the dark. The target becomes {@condition 隐形} until the end of its next turn or until it hits a creature with an attack. If it hits a creature with an attack during this invisibility, that creature takes necrotic damage equal to a roll of your Bardic Inspiration die and is {@condition 恐惧} of the target until the end of its next turn."
+						],
+						[
+							9,
+							"{@b 9 Giant.} You speak of the deeds of a mighty giant. Each creature of the target's choice it can see within 30 feet of it must make a Strength saving throw, taking force damage equal to two rolls of your Bardic Inspiration die on a failed save and is knocked {@condition 伏地}. A creature that succeeds on its saving throw takes half as much damage and isn't knocked {@condition 伏地}."
+						],
+						[
+							10,
+							"{@b 10 Dragon.} You breathe a poem of a wrathful dragon. The target magically spews fire from their mouth in a 30-foot cone. Each creature in that area must make a Dexterity saving throw, taking fire damage equal to three rolls of your Bardic Inspiration die on a failed save, or half as much damage on a successful one."
+						],
+						[
+							11,
+							"{@b 11 Celestial.} You speak of the exalted deeds of a celestial. The target regains hit points equal to two rolls of your Bardic Inspiration die + your bard level, and you end one disease or a condition from the following list affecting the target: {@condition 目盲}, {@condition 耳聋}, {@condition 麻痹}, {@condition 石化}, or {@condition 中毒}."
+						],
+						[
+							12,
+							"{@b 12 Unknown.} You utter an incomprehensible fable from a being beyond the stars. Choose a creature you can see within 30 feet of you. The target must succeed on an Intelligence saving throw or take psychic damage equal to three rolls of your Bardic Inspiration die, and the target is unable to speak any language for 1 minute."
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Spirit Session",
+			"source": "UA2020SubclassesPt4",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits (UA)",
+			"subclassSource": "UA2020SubclassesPt4",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level College of Spirits feature}",
+				"You can channel spirits to gain insights into magic. You can conduct an hour-long ritual channeling spirits (which can be done during a short or long rest) using your Spiritual Focus. You can conduct the ritual with a number of creatures equal to your proficiency bonus (including yourself). At the end of the ritual, you temporarily learn one spell of your choice from any class.",
+				"The spell you choose must be of a level equal to the number of creatures that conducted the ritual or less, the spell must of a level you can cast, and it must be in the school of divination or necromancy. The chosen spell counts as a bard spell for you but doesn't count against the number of bard spells you know.",
+				"Once you perform the ritual, you can't do so again until you start a long rest, and you know the chosen spell until you start a long rest."
+			]
+		},
+		{
+			"name": "Spiritual Focus",
+			"source": "UA2020SubclassesPt4",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits (UA)",
+			"subclassSource": "UA2020SubclassesPt4",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level College of Spirits feature}",
+				"At 6th level, when you cast a bard spell that deals damage or restores hit points through the Spiritual Focus, roll a {@dice d6}, and you gain a bonus to one roll of the spell equal to the number rolled."
+			]
+		},
+		{
+			"name": "Mystical Connection",
+			"source": "UA2020SubclassesPt4",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits (UA)",
+			"subclassSource": "UA2020SubclassesPt4",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level College of Spirits feature}",
+				"Your connection to spirits has become semi-permanent. Whenever you use your Tales from Beyond feature, you can roll a {@dice d6} and use it instead of expending a Bardic Inspiration die. You still use your Bardic Inspiration die for the tale's effect, without expending it."
+			]
+		},
+		{
+			"name": "College of Eloquence",
+			"source": "UABardAndPaladin",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence (UA)",
+			"subclassSource": "UABardAndPaladin",
+			"level": 3,
+			"entries": [
+				"Adherents of the College of Eloquence master the art of oratory. Persuasion is regarded as a high art, and a well-reasoned, well-spoken argument often proves more powerful than objective truth. These bards wield a blend of logic and theatrical wordplay, winning over skeptics and detractors with logical arguments, and plucking at heartstrings to appeal to the emotions of entire audiences.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Universal Speech|Bard||Eloquence (UA)|UABardAndPaladin|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Soothing Words|Bard||Eloquence (UA)|UABardAndPaladin|3"
+				}
+			]
+		},
+		{
+			"name": "Soothing Words",
+			"source": "UABardAndPaladin",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence (UA)",
+			"subclassSource": "UABardAndPaladin",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level College of Eloquence feature}",
+				"You can now cast calm emotions without expending a spell slot. You can use this feature a number of times equal to your Charisma modifier. You regain all expended uses of this feature when you finish a long rest."
+			]
+		},
+		{
+			"name": "Universal Speech",
+			"source": "UABardAndPaladin",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence (UA)",
+			"subclassSource": "UABardAndPaladin",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level College of Eloquence feature}",
+				"You have gained the ability to speak and reason with any creature. As a bonus action, you can expend one of your uses of Bardic Inspiration. When you do so, roll your Bardic Inspiration die, and choose a number of creatures within 60 feet of you that you can see equal to the roll. For 10 minutes, the chosen creatures can magically understand you, regardless of the language you speak, and you have advantage on Charisma checks made to influence them. This feature works even on a creature that doesn't speak any languages."
+			]
+		},
+		{
+			"name": "Undeniable Logic",
+			"source": "UABardAndPaladin",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence (UA)",
+			"subclassSource": "UABardAndPaladin",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level College of Eloquence feature}",
+				"You can spin words laced with magic into a knot of reasoning that can be encouraging or impossible to follow.",
+				"As a bonus action, you can expend one of your uses of Bardic Inspiration. When you do so, choose a creature you can see within 60 of you that can hear you, then roll your Bardic Inspiration die and choose one of the following:",
+				{
+					"type": "list",
+					"items": [
+						"The creature takes psychic damage equal to the number you roll on the Bardic Inspiration die, and the creature must succeed on an Intelligence saving throw against your spell save DC or have disadvantage on the next saving throw it makes before the end of your next turn.",
+						"The creature regains hit points equal to the number you roll on the Bardic Inspiration die, and the creature has advantage on the next saving throw it makes before the end of your next turn."
+					]
+				}
+			]
+		},
+		{
+			"name": "Infectious Inspiration",
+			"source": "UABardAndPaladin",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence (UA)",
+			"subclassSource": "UABardAndPaladin",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level College of Eloquence feature}",
+				"When a creature adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll fails, the creature can keep the Bardic Inspiration die.",
+				"In addition, when a creature adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll succeeds, you can use your reaction to encourage a different creature (other than yourself) that can hear you within 60 feet of you, giving it a Bardic Inspiration die without expending any of your Bardic Inspiration uses. You can use this reaction a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "College of Glamour",
+			"source": "UABardBardColleges",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 3,
+			"entries": [
+				"The College of Glamour is open to those bards who mastered their craft in the vibrant, deadly realm of the Feywild. Tutored by satyrs, eladrin, and other fey, these bards learn to use their magic to delight and captivate others.",
+				"The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. The bards of this college are so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, abusing their magic to turn their hosts into thralls.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Mantle of Inspiration|Bard||Glamour (UA)|UABardBardColleges|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Enthralling Performance|Bard||Glamour (UA)|UABardBardColleges|3"
+				}
+			]
+		},
+		{
+			"name": "Enthralling Performance",
+			"source": "UABardBardColleges",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Starting at 3rd level, you can charge your performance with seductive fey magic.",
+				"If you perform for at least 10 minutes, you can attempt to inspire wonder in your audience by singing, reciting a poem, or dancing. At the end of the performance, choose a number of humanoids within 60 feet of you who watched and listened to all of it, up to a number of them equal to your Charisma modifier (minimum of one). Each target must succeed on a Wisdom saving throw against your spell save DC or be {@condition 魅惑} by you. While {@condition 魅惑} in this way, the target idolizes you, it speaks glowingly of you to anyone who speaks to it, and it hinders anyone who opposes you, avoiding violence unless it was already inclined to fight on your behalf. This effect ends on a target after 1 hour, if it takes any damage, if you attack it, or if it witnesses you attacking or damaging any of its allies.",
+				"If a target succeeds on its save against this effect, the target has no hint that you tried to charm it.",
+				"Once you use this feature, you can't use it again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Mantle of Inspiration",
+			"source": "UABardBardColleges",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"When you join the College of Glamour at 3rd level, you gain the ability to weave a song of fey magic that enthralls your allies with vigor and speed.",
+				"As a bonus action, you can expend a use of Bardic Inspiration to grant yourself a wondrous, otherworldly appearance. When you do so, choose a number of allies you can see and who can see you within 60 feet of you, up to a number of them equal to your Charisma modifier (minimum of one). Each target gains {@dice 2d6} temporary hit points.",
+				"When a target gains these temporary hit points, it can also use its reaction to move up to its speed toward you, without provoking opportunity attacks. It must take the shortest, safest path to you.",
+				"The number of temporary hit points increases when you reach certain levels in this class, increasing to {@dice 2d8} at 5th level, {@dice 2d10} at 10th level, and {@dice 2d12} at 15th level."
+			]
+		},
+		{
+			"name": "Mantle of Majesty",
+			"source": "UABardBardColleges",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you gain the ability to cloak yourself in a fey magic that makes others want to serve you. As a bonus action, you take on an appearance of unearthly beauty for 1 minute. During this time, you can cast {@spell 命令术} as a bonus action on each of your turns, without using a spell slot. This effect lasts for 1 minute, and any creature {@condition 魅惑} by you automatically fails its saving throw against the spell.",
+				"Once you use this feature, you can't use it again until you finish a long rest."
+			]
+		},
+		{
+			"name": "Mantle of Majesty",
+			"source": "UABardBardColleges",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, you gain an otherworldly aspect to your appearance that makes you look more fierce and lovely.",
+				"In addition, through this feature, you can cast {@spell 圣域术} on yourself. If a creature fails its saving throw against the spell, you also gain advantage on all Charisma checks against the creature for 1 minute, and it has disadvantage on any saving throw it makes against your spells on your next turn.",
+				"Once you cast {@spell 圣域术} using this feature, you can't do so again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "低语学院",
+			"ENG_name": "College of Whispers",
+			"source": "UABardBardColleges",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 3,
+			"entries": [
+				"Most folk are happy to welcome a bard into their midst. Bards of the College of Whispers use this to their advantage. They appear to be like any other bard, sharing news, singing songs, and telling tales to the audiences they gather. In truth, the College of Whispers teaches its students that they are wolves among sheep. These bards use their knowledge and magic to uncover secrets and turn them against others through extortion and threats.",
+				"Many other bards hate the College of Whispers, viewing it as a parasite that uses the bards' reputation to acquire wealth and power. For this reason, these bards rarely reveal their true nature unless they must. They typically claim to follow some other college, or keep their true nature secret in order to better infiltrate and exploit royal courts and other settings of power.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Venomous Blades|Bard||Whispers (UA)|UABardBardColleges|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Venomous Words|Bard||Whispers (UA)|UABardBardColleges|3"
+				}
+			]
+		},
+		{
+			"name": "Venomous Blades",
+			"source": "UABardBardColleges",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"When you join the College of Whispers at 3rd level, you gain the ability to magically make your weapon attacks toxic for a moment.",
+				"When you hit a creature with a weapon attack, you can expend one use of your Bardic Inspiration to deal an additional {@damage 2d6} poison damage to that target. You can do so only once per round on your turn.",
+				"The additional damage increases when you reach certain levels in this class, increasing to {@dice 2d8} at 5th level, {@dice 2d10} at 10th level, and {@dice 2d12} at 15th level."
+			]
+		},
+		{
+			"name": "Venomous Words",
+			"source": "UABardBardColleges",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"At 3rd level, you learn to infuse innocent-seeming words with an insidious magic. A creature that hears you speak can become plunged into fear and paranoia.",
+				"If you speak to a humanoid alone for at least 10 minutes, you can attempt to seed paranoia and fear into its mind. At the end of the conversation, the target must succeed on a Wisdom saving throw against your spell save DC or be {@condition 恐惧} for the next hour, until it is attacked or damaged, or until it witnesses its allies being attacked or damaged. While {@condition 恐惧} in this way, the target is paranoid and tries to avoid the company of others, including its allies. The target seeks out what it considers the safest, most secret place available to it and hides there.",
+				"If the target succeeds on its save, the target has no hint that you tried to frighten it.",
+				"Once you use this feature, you can't use it again until you finish a short rest or long rest."
+			]
+		},
+		{
+			"name": "Mantle of Whispers",
+			"source": "UABardBardColleges",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you gain the ability to adopt a creature's persona. When you slay a creature with an attack or a spell or a creature dies within 5 feet of you, you can magically capture its shadow using your reaction. You can capture only the shadow of a creature that is your creature type, such as humanoid, and your size (you can capture a Small or Medium shadow if you're Small), and you can have only one shadow captured at a time.",
+				"After you capture a creature's shadow, you can use your magic to weave it into a disguise that allows you to take on its appearance and gain access to its surface memories. As an action, you take on the creature's appearance for 1 hour or until you end this effect as a bonus action.",
+				"During that hour, you gain access to all information that the creature would freely share with a casual acquaintance. Information includes general details on its background and personal life, but does not include secrets. The information is enough that you can pass yourself off as the creature by drawing on its memories.",
+				"Another creature can see through this disguise by making a Wisdom ({@skill 洞悉}) check opposed by your Charisma ({@skill 欺瞒}) check, though you gain a +5 bonus to your check.",
+				"The disguise and the knowledge it grants disappears when this ability's duration ends."
+			]
+		},
+		{
+			"name": "Shadow Lore",
+			"source": "UABardBardColleges",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers (UA)",
+			"subclassSource": "UABardBardColleges",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, you gain the ability to weave dark magic into your words and tap into a creature's deepest fears.",
+				"As an action, you magically whisper a phrase that only one creature of your choice within 30 feet of you can hear. The target must make a Wisdom saving throw against your spell save DC. It automatically succeeds if it doesn't share a language with you or if it can't hear you. On a successful saving throw, your whisper sounds like unintelligible mumbling and has no effect.",
+				"If the target fails its saving throw, it is {@condition 魅惑} by you for the next 8 hours or until you or your allies attack or damage it. It interprets the whispers as a description of its most mortifying secret. While you gain no knowledge of this secret, the target is convinced you know it.",
+				"While {@condition 魅惑} in this way, the creature obeys your commands for fear that you will reveal its secret. It won't risk its life for you or fight for you, unless it was already inclined to do so. It grants you favors and gifts it would offer to a close friend.",
+				"When the effect ends, the creature has no understanding of why it held you in such fear. Once you use this feature, you can't use it again until you finish a long rest."
+			]
+		},
+		{
+			"name": "College of Satire",
+			"source": "UAKitsOfOld",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Satire (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 3,
+			"entries": [
+				"Bards of the College of Satire are called jesters. They use lowbrow stories, daring acrobatics, and cutting jokes to entertain audiences, ranging from the crowds in a rundown dockside pub to the nobles of a king's royal court. Where other bards seek forgotten lore or tales of epic bravery, jesters ferret out embarrassing and hilarious stories of all kinds. Whether telling the ribald tale of a brawny stable hand's affair with an aged duchess or a mocking satire of a paladin of Helm's cloying innocence, a jester never lets taste, social decorum, or shame get in the way of a good laugh.",
+				"While jesters are masters of puns, jokes, and verbal barbs, they are much more than just comic relief. They are expected to mock and provoke, taking advantage of how even the most powerful folk are expected by tradition to endure a jester's barbs with good humor. This expectation allows a jester to serve as a critic or a voice of reason when others are too intimidated to speak the truth.",
+				"For the duchess with a taste for strapping young laborers, such tales might serve to warn the targets of her affections and force her to change her ways for lack of willing partners. Striking back at the jester only ruins her already damaged reputation, and might provide the best evidence that the jester's satires have hit their mark. But if she is kind and generous to her conquests, the jokes and stories cast her as a kind of folk hero, while drawing even more potential partners to her.",
+				"Jesters are loyal to only one cause: the pursuit and propagation of the truth. They use their comedy and innocuous appearance to break down social barriers and expose corruption, incompetence, and stupidity among the rich and powerful. Whether revealing a con artist's treachery or exposing a baron's plans for war as driven by greed and bloodlust, a jester serves as the conscience of a realm.",
+				"Jesters adventure to safeguard the common folk and to undermine the plans of the rich, powerful, and arrogant. Their magic bolsters allies' spirits while casting doubt into foes' minds. Among bards, jesters are unmatched acrobats, and their ability to tumble, dodge, leap, and climb makes them slippery opponents in battle.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Bard||Satire (UA)|UAKitsOfOld|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tumbling Fool|Bard||Satire (UA)|UAKitsOfOld|3"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "UAKitsOfOld",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Satire (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"When you join the College of Satire at 3rd level, you gain proficiency with {@item 盗贼工具|phb}. You also gain proficiency in {@skill 巧手} and one additional skill of your choice. If you are already proficient with {@item 盗贼工具|phb} or in {@skill 巧手}, choose another skill proficiency for each proficiency you already have."
+			]
+		},
+		{
+			"name": "Tumbling Fool",
+			"source": "UAKitsOfOld",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Satire (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"At 3rd level, you master a variety of acrobatic techniques that allow you to evade danger. As a bonus action, you can tumble. When you tumble, you gain the following benefits for the rest of your turn:",
+				{
+					"type": "list",
+					"items": [
+						"You gain the benefits of taking the {@action 疾走} and {@action 撤离} actions.",
+						"You gain a climbing speed equal to your current speed.",
+						"You take half damage from falling."
+					]
+				}
+			]
+		},
+		{
+			"name": "Fool's Insight",
+			"source": "UAKitsOfOld",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Satire (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, your ability to gather stories and lore gains a supernatural edge. You can cast detect thoughts up to a number of times equal to your Charisma modifier. You regain any expended uses of this ability after completing a long rest.",
+				"If a creature resists your attempt to probe deeper and succeeds at its saving throw against your detect thoughts, it immediately suffers an embarrassing social gaffe. It might loudly pass gas, unleash a thunderous burp, trip and fall, or be compelled to tell a tasteless joke."
+			]
+		},
+		{
+			"name": "Fool's Luck",
+			"source": "UAKitsOfOld",
+			"page": 2,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Satire (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Jesters seem to have a knack for pulling themselves out of tight situations, transforming what looks like sure failure into an embarrassing but effective success.",
+				"At 14th level, you can expend one use of Bardic Inspiration after you fail an ability check, fail a saving throw, or miss with an attack roll. Roll a Bardic Inspiration die and add the number rolled to your attack, saving throw, or ability check, using the new result in place of the failed one.",
+				"If using this ability grants you a success on the attack, saving throw, or ability check, note the number you rolled on the Bardic Inspiration die. The DM can then apply that result as a penalty to an attack or check you make, and you cannot use this ability again until you suffer this drawback. When the DM invokes this penalty, describe an embarrassing gaffe or mistake you make as part of the affected die roll."
+			]
+		},
+		{
+			"name": "剑舞学院",
+			"ENG_name": "College of Swords",
+			"source": "UAKitsOfOld",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 3,
+			"entries": [
+				"Bards of the College of Swords are called blades, and they entertain through daring feats of weapon prowess. Blades perform stunts such as sword swallowing, knife throwing and juggling, and mock combats. But though they use their weapons to entertain, they are also highly trained and skilled warriors in their own right.",
+				"Their talent with weapons inspires many blades to lead double lives. One blade might use a circus troupe as cover for nefarious deeds such as assassination, robbery, and blackmail. Other blades strike at the wicked, bringing justice to bear against the cruel and powerful. Most troupes are happy to accept a blade's talent for the excitement it adds to a performance, but few entertainers fully trust them.",
+				"Blades who abandon lives as entertainers have often run into trouble that makes maintaining their secret activities impossible. A blade caught stealing or engaging in vigilante justice is too great a liability for most performer troupes. With their weapon skills as their greatest asset, these blades either take up work as enforcers for thieves' guilds or strike out on their own as adventurers.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Bard||Swords (UA)|UAKitsOfOld|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fighting Style|Bard||Swords (UA)|UAKitsOfOld|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Blade Flourish|Bard||Swords (UA)|UAKitsOfOld|3"
+				}
+			]
+		},
+		{
+			"name": "Blade Flourish",
+			"source": "UAKitsOfOld",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"At 3rd level, you learn to conduct impressive displays of skill with your weapons. When you use the {@action 攻击} action on your turn and attack with a dagger, longsword, rapier, scimitar, or shortsword, you can attempt one of the following flourishes.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Defensive Flourish",
+							"entries": [
+								"You spin your weapon around you in swift circles, creating a hypnotic display. As a bonus action, you expend one use of Bardic Inspiration, rolling a Bardic Inspiration die and applying the number rolled as a bonus to your AC until the start of your next turn."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Trick Shooter's Flourish",
+							"entries": [
+								"This favorite trick of knife throwers allows you to expend one use of Bardic Inspiration as a bonus action. Roll a Bardic Inspiration die and apply the number rolled as a bonus to the next ranged attack roll you make with a dagger this turn. If the target of the attack is an unattended, inanimate object, the bonus equals double the die roll."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Unnerving Flourish",
+							"entries": [
+								"Your deadly display of combat prowess unnerves your opponents, leaving them cowering in fear and at your mercy. Whenever you reduce a creature to 0 hit points with a melee attack, you can use a bonus action to expend one use of Bardic Inspiration, and instead leave the creature at 1 hit point.",
+								"The creature is {@condition 恐惧} of you for a number of minutes equal to your Charisma modifier. It must also make a Charisma saving throw with a DC equal to your spellcasting DC + a bonus equal to the roll of your Bardic Inspiration die. If the creature fails this saving throw, it answers truthfully any questions you ask it and obeys your direct orders while it is {@condition 恐惧} by this effect."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "UAKitsOfOld",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"When you join the College of Blades at 3rd level, you gain proficiency with medium armor and with scimitars."
+			]
+		},
+		{
+			"name": "Fighting Style",
+			"source": "UAKitsOfOld",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"The College of Blades emphasizes mastery with weapons, granting you access to the two-weapon fighting option for the Fighting Style class feature.",
+				{
+					"type": "refOptionalfeature",
+					"optionalfeature": "双武器战斗"
+				}
+			]
+		},
+		{
+			"name": "Extra Attack",
+			"source": "UAKitsOfOld",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Beginning at 6th level, you can attack twice, instead of once, whenever you take the {@action 攻击} action on your turn."
+			]
+		},
+		{
+			"name": "Battle Magic",
+			"source": "UAKitsOfOld",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords (UA)",
+			"subclassSource": "UAKitsOfOld",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action."
+			]
+		},
+		{
+			"name": "剑舞学院v2(UA)",
+			"ENG_name": "College of Swords v2",
+			"source": "UARevisedSubclasses",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords v2 (UA)",
+			"subclassSource": "UARevisedSubclasses",
+			"level": 3,
+			"entries": [
+				"Bards of the College of Swords are called blades, and they entertain through daring feats of weapon prowess. Blades perform stunts such as sword swallowing, knife throwing and juggling, and mock combats. But though they use their weapons to entertain, they are also highly trained and skilled warriors in their own right.",
+				"Their talent with weapons inspires many blades to lead double lives. One blade might use a circus troupe as cover for nefarious deeds such as assassination, robbery, and blackmail. Other blades strike at the wicked, bringing justice to bear against the cruel and powerful. Most troupes are happy to accept a blade's talent for the excitement it adds to a performance, but few entertainers fully trust them.",
+				"Blades who abandon lives as entertainers have often run into trouble that makes maintaining their secret activities impossible. A blade caught stealing or engaging in vigilante justice is too great a liability for most performer troupes. With their weapon skills as their greatest asset, these blades either take up work as enforcers for thieves' guilds or strike out on their own as adventurers.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Bard||Swords v2 (UA)|UARevisedSubclasses|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fighting Style|Bard||Swords v2 (UA)|UARevisedSubclasses|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Blade Flourish|Bard||Swords v2 (UA)|UARevisedSubclasses|3"
+				}
+			]
+		},
+		{
+			"name": "Blade Flourish",
+			"source": "UARevisedSubclasses",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords v2 (UA)",
+			"subclassSource": "UARevisedSubclasses",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"At 3rd level, you learn to conduct impressive displays of skill with your weapons. As a standard action, you can make a standard melee attack and increase your walking speed by 10 feet until the end of the current turn. Whenever you use this option, you can also use one of the following Blade Flourish options with it.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Defensive Flourish",
+							"entries": [
+								"You spin your weapon around you in swift circles, creating a hypnotic display. You can expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and applying the number rolled as a bonus to your AC until the start of your next turn."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Slashing Flourish",
+							"entries": [
+								"If the attack hits its target, you can expend one of your uses of Bardic Inspiration to cause the weapon to damage each creature of your choice, other than the target, that you can see within 5 feet of you. The damage equals the number you roll on the Bardic Inspiration die."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Mobile Flourish",
+							"entries": [
+								"If the attack hits its target, you can expend one of your uses of Bardic Inspiration to push the target up to 5 feet away from you, plus a number of feet equal to the number you roll on the Bardic Inspiration die. You can then immediately use your reaction to move up to your speed to an unoccupied space within 5 feet of the target."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "UARevisedSubclasses",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords v2 (UA)",
+			"subclassSource": "UARevisedSubclasses",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"When you join the College of Blades at 3rd level, you gain proficiency with medium armor and with scimitars. If you are proficient with a simple or martial melee weapon, you can use it as a spellcasting focus for your Bard spells."
+			]
+		},
+		{
+			"name": "Fighting Style",
+			"source": "UARevisedSubclasses",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords v2 (UA)",
+			"subclassSource": "UARevisedSubclasses",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"The College of Blades emphasizes mastery with weapons, granting you access to either the dueling or two-weapon fighting option for the Fighting Style class feature, which are as follows.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "决斗"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "双武器战斗"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cunning Flourish",
+			"source": "UARevisedSubclasses",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords v2 (UA)",
+			"subclassSource": "UARevisedSubclasses",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Beginning at 6th level, you can attack twice, instead of once, whenever you take the Blade Flourish action on your turn. You can, nevertheless, only use one Blade Flourish option when you take that action."
+			]
+		},
+		{
+			"name": "Master's Flourish",
+			"source": "UARevisedSubclasses",
+			"page": 1,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords v2 (UA)",
+			"subclassSource": "UARevisedSubclasses",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Starting at 14th level, whenever you use a Blade Flourish option, you can roll a {@dice d6} and use it instead of expending a Bardic Inspiration die."
+			]
+		},
+		{
+			"name": "灵魂学院",
+			"ENG_name": "College of Spirits",
+			"source": "VRGR",
+			"page": 28,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits",
+			"subclassSource": "VRGR",
+			"level": 3,
+			"entries": [
+				"灵魂学院的吟游诗人探寻着蕴涵力量的传说——无论其来自传奇，历史，还是小说，并为这些传说赋予生命。这些吟游诗人使用神秘的象征物，召唤出强大之力的精神化身，来再一次改变世界。但是，这些灵魂是变化无常的，所以一位吟游诗人不一定能完全掌控其召唤出来的灵魂。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "指引低语|Bard||Spirits|VRGR|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "灵魂法器|Bard||Spirits|VRGR|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "先世传说|Bard||Spirits|VRGR|3"
+				}
+			]
+		},
+		{
+			"name": "指引低语",
+			"ENG_name": "Guiding Whispers",
+			"source": "VRGR",
+			"page": 28,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits",
+			"subclassSource": "VRGR",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级灵魂学院特性}",
+				"你能沟通灵魂来指引你或他人。你习得{@spell 神导术}戏法，并不算在你的吟游诗人已知戏法数量里。当你施放时，其施法距离为60尺。"
+			]
+		},
+		{
+			"name": "灵魂法器",
+			"ENG_name": "Spiritual Focus",
+			"source": "VRGR",
+			"page": 28,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits",
+			"subclassSource": "VRGR",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级灵魂学院特性}",
+				"你使用工具来帮助你引导灵魂，这些灵魂可能来自历史人物，或是虚构的典范。你能用以下物件来作为你的法器，用以释放你的诗人法术：一根蜡烛，水晶球，头骨，灵应牌，塔罗牌。",
+				"六级时，当你通过灵魂法器释放一道造成伤害或恢复生命值的诗人法术时，投掷一枚{@dice d6}, 并将结果加到这个法术的一个伤害骰或治疗骰上。"
+			]
+		},
+		{
+			"name": "先世传说",
+			"ENG_name": "Tales from Beyond",
+			"source": "VRGR",
+			"page": 28,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits",
+			"subclassSource": "VRGR",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级灵魂学院特性}",
+				"你沟通灵魂，它们借你之口来叙说它们的传说。当你持握你的灵魂法器时，你能使用附赠动作，并消耗一次诗人激励，来投掷一次灵魂传说表。使用你的诗人激励投掷结果来决定哪些灵魂让你述说它们的传说。你将传说记在脑海之中，直到你赠与传说的效果，或你完成一次短休或长休。",
+				"你能用一个动作选择30尺内一个你可见的生物（可以是你）成为传说效果的目标。一旦你这样做后，直到下一次投掷传说前你都无法再使用传说效果。",
+				"你一次只能记住一种传说，当你投掷灵魂传说表时，立即结束前一个传说的效果。",
+				"如果传说需要进行豁免，DC为你的法术豁免DC。",
+				{
+					"type": "table",
+					"caption": "灵魂传说",
+					"colLabels": [
+						"诗人激励骰",
+						"通过你叙说的传说"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"智兽传说。接下来的10分钟内，每当目标进行一次智力，感知或魅力检定时，目标在投掷后额外投掷一枚与你诗人激励骰相同的骰子，并将结果加到检定之中。"
+						],
+						[
+							"2",
+							"盛名对决者传说。你对目标进行一次近战法术攻击。命中时，目标受到两个你的诗人激励骰结果+你的魅力调整值的力场伤害。"
+						],
+						[
+							"3",
+							"挚友传说。目标和目标所选的，一个在其5尺内且可见的生物，获得临时生命值，数值为一个你的诗人激励骰结果+你的魅力调整值。"
+						],
+						[
+							"4",
+							"逃离传说。目标能立即使用其反应来传送至多30尺到一处其可见且未被占据的空间。当目标传送时，其能选择相当于你的魅力调整值（最少为0）个数的生物立即执行相同的反应，这些生物需在目标的30尺内且可见。"
+						],
+						[
+							"5",
+							"复仇者传说。持续一分钟，任何使用近战攻击命中目标的生物会受到相当于一个你的诗人激励骰结果的力场伤害。"
+						],
+						[
+							"6",
+							"旅行者传说。目标获得临时生命值，数值为一个你的诗人激励骰结果+你的诗人等级。当其拥有这些临时生命值时，其移动速度增加10尺，AC获得+1加值。"
+						],
+						[
+							"7",
+							"欺诈者传说。目标进行一次感知豁免，失败时，受到2个你的诗人激励骰结果的心灵伤害, 并陷入{@condition 无力}直到其下一个回合结束。"
+						],
+						[
+							"8",
+							"幻影传说。目标变为{@condition 隐形}直到其下一个回合结束，或攻击命中一个生物。如果目标在这次隐形期间攻击命中了一个生物，被攻击的生物受到暗蚀伤害，数值为一个你的诗人激励骰结果，并陷入对目标的{@condition 恐惧}之中，持续到该生物的下一个回合结束。"
+						],
+						[
+							"9",
+							"暴君传说。目标选择的30尺内可见的任意数量生物进行一次力量豁免，失败时，该生物受到3个你的诗人激励骰结果的雷鸣伤害，并陷入{@condition 伏地}。豁免成功时，受到一半伤害，并不会陷入{@condition 伏地}。"
+						],
+						[
+							"10",
+							"巨龙传说。目标从口中喷出30尺锥形的火焰。在范围内的目标需进行一次敏捷豁免，失败时，受到4个你的诗人激励骰结果的火焰伤害，豁免成功时，受到一半的伤害。"
+						],
+						[
+							"11",
+							"天使传说。目标恢复相当于两个你的诗人激励骰结果+你的魅力调整值的生命值，并且你结束目标身上一种正在作用的效应：{@condition 目盲}、{@condition 耳聋}、{@condition 麻痹}、{@condition 石化}或{@condition 中毒}。"
+						],
+						[
+							"12",
+							"意志扭曲者传说。你唤起异界存在不可名状的寓言。目标进行一次智力豁免，失败时受到相当于3个你的诗人激励骰结果的心灵伤害，并被{@condition 震慑}直到其下一个回合结束。"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "降灵会",
+			"source": "VRGR",
+			"page": 28,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits",
+			"subclassSource": "VRGR",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级灵魂学院特性}",
+				"灵魂给予你超自然的洞悉力。你能进行一个小时的仪式，使用你的法器来引导灵魂（可以在短休或长休中进行）。你可以同与你熟练值相等个数的自愿生物（包括你自己）一同进行仪式。仪式结束时，你可以从任意职业法术列表中选择一个法术，你暂时性的习得该法术。",
+				"你选择的法术的环级需小于或等于参加仪式的生物数，该法术必须为预言或死灵学派，并且属于你能释放的环级法术。该法术对你而言是诗人法术，但不算进你的诗人已知法术数量里。",
+				"一旦你举行了该仪式，直到你开始一次长休前都不能再这样做，你所习得的法术持续直到你开始一次长休。"
+			]
+		},
+		{
+			"name": "神秘连接",
+			"source": "VRGR",
+			"page": 28,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Spirits",
+			"subclassSource": "VRGR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级灵魂学院特性}",
+				"你现在能让先世传说的灵魂叙说特定的传说。当你投掷灵魂传说表时，你投掷两次，并选择两个效果之一来赠与。如果投掷结果相同，那你无视结果，从表中任意选择一个效果。",
+				{
+					"type": "inset",
+					"name": "灵魂传说",
+					"ENG_name": "Spirit Tales",
+					"entries": [
+						"像灵魂学院诗人一样的故事叙说者，他们叙说的传说往往启发于一些较伟大的主题或作品主体，当决定你讲什么故事时，考虑是什么把它们联系在一起。它们是否为具有相同特征的组别，如塔罗牌的形象，星座中的人物，童年时想象的朋友，或是某本故事书里的角色。或者你的灵感来源更广泛，包含历史勇者，神话英雄，或都市传奇？用你叙说的故事来定义你作为一个故事叙说者的冒险者形象。"
+					]
+				}
+			]
+		},
+		{
+			"name": "迷惑学院",
+			"ENG_name": "College of Glamour",
+			"source": "XGE",
+			"page": 14,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"迷惑学院，是那些在妖精荒野的活泼国度中精通他们技艺、或受到该地居民教导的吟游诗人们的家园。在萨特羊人、雅灵、以及其他精类生物的教导下，这些诗人们学会运用他们的魔法以取悦和迷惑他人。",
+				"人们对这个学院的诗人们既敬畏又恐惧。他们的演出臻近传奇。这些诗人们是如此的动人而善辩，以至于他们所演出的讲词或歌曲能够让绑匪不伤害诗人而将其释放，或甚至能使愤怒的巨龙平静而满足。这能安抚野兽的魔法也同样让他们得以扭曲人心。这个学院中卑劣的吟游诗人能够依附在一个团体中，榨取它们长达数个礼拜，滥用他们的魔法以将他们的主人变成奴隶。这个学院中英勇的吟游诗人则会使用这股力量去颠覆压迫者，为被压迫的人们带来快乐。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "激励光环|Bard||Glamour|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "醉人表演|Bard||Glamour|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "醉人表演",
+			"ENG_name": "Enthralling Performance",
+			"source": "XGE",
+			"page": 14,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级迷惑学院特性}",
+				"你可以在你的表演中注入魅惑人心的精类魔法。",
+				"若你持续表演至少1分钟，你可以尝试通过歌唱、朗诵诗歌、或跳舞来惊艳你的听众。在表演结束时，选择距离你60尺内完整观看或聆听了你表演的任意数量个类人生物，数量最多等同于你的魅力调整值（最少为一）。每个目标必须成功通过一次对抗你法术豁免DC的感知豁免，否则将被你{@condition 魅惑}。当因为这个方式被{@condition 魅惑}，目标将视你为偶像，热烈地和任何人谈论关于你的事，并阻挠任何反对你的人。除非它原本就倾向为你而战，否则它会避免暴力手段。作用于一个目标上的此效果会在1小时后结束，或在它受到任何伤害、你攻击它、或它目击你攻击或伤害了他的任何盟友时提早结束。",
+				"若目标成功通过豁免检定，目标并不会察觉到你曾尝试魅惑它。",
+				"一旦你使用此能力，直到你完成一次短休或长休之前你都不能再使用它。"
+			]
+		},
+		{
+			"name": "激励光环",
+			"ENG_name": "Mantle of Inspiration",
+			"source": "XGE",
+			"page": 14,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级迷惑学院特性}",
+				"你获得编织精族魔法之歌的能力，为你的盟友带来活力与速度。",
+				"以一个附赠动作，你可以消耗一次你吟游激励的使用次数，赋予自己不可思议的美貌。当你这么做时，选择距离你60尺内你能看见，且它能看见你的任意数量个生物，数量最多等同于你的魅力调整值（最少为一）。它们将各自获得5点临时生命值。当一个生物获得这些临时生命值，它可以立刻使用它的反应移动最多等同于它的移动速度，而不会引发借机攻击。",
+				"临时生命值将在你本职业升至特定等级时增加，5级时增加至8，10级时增加至11，15级时增加至14。"
+			]
+		},
+		{
+			"name": "威严光环",
+			"ENG_name": "Mantle of Majesty",
+			"source": "XGE",
+			"page": 14,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XGE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级迷惑学院特性}",
+				"你获得用精族魔法笼罩自己的能力，让他人不禁想要服侍你。以一个附赠动作，你可以施放{@spell 命令术}而无须消耗法术位，且你取得超凡的美貌长达1分钟或直到你的专注结束（如同你专注于法术）。在这段期间，你可以在你的每个回合以一个附赠动作施放{@spell 命令术}，而无须消耗法术位。",
+				"任何被你{@condition 魅惑}的生物将在对抗你用此能力施放{@spell 命令术}的豁免检定中自动失败。",
+				"一旦你使用此能力，直到你完成一次长休之前你都不能再使用它。"
+			]
+		},
+		{
+			"name": "无敌威严",
+			"ENG_name": "Unbreakable Majesty",
+			"source": "XGE",
+			"page": 14,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Glamour",
+			"subclassSource": "XGE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级迷惑学院特性}",
+				"你将永远获得超凡脱俗的外貌，使你看起来动人而强烈。",
+				"此外，以一个附赠动作，你可以展现魔法威严姿容长达1分钟或直到你{@condition 无力}状态。在这段期间，每当任何生物在一个回合中第一次尝试攻击你，该攻击者必须进行一次对抗你法术豁免DC的魅力豁免。若豁免失败，它在该回合不能攻击你，且必须为它的攻击选择一个新的目标，否则该攻击将被浪费。若豁免成功，它在该回合可以攻击你，但它将在你下个回合对抗任何你法术的豁免检定中具有劣势。",
+				"一旦你展现这个威严姿容，直到你完成一次短休或长休之前你都不能再这么做。"
+			]
+		},
+		{
+			"name": "剑舞学院",
+			"ENG_name": "College of Swords",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"剑舞学院的吟游诗人们又被称作「锋刃」，且他们通过高超而英勇的武器技艺以娱乐大众。锋刃们的演出体操包括吞剑、扔刀杂耍、以及仿真战斗等等。即使他们使用武器来表演娱乐，他们同时也是具备着高超训练和熟练技术的战士。",
+				"他们在武器上的天赋让许多锋刃过着双重生活。一个锋刃可能会用一般马戏团来掩盖他们的恶毒行为，像是暗杀、抢劫、和勒索。其他锋刃则致力于打击邪恶，使正义临到残暴而强大的恶人。因为锋刃的天赋能为表演带来刺激感，大部分的剧团都乐于接纳他们，但很少有艺人会完全信任与他们为伍的锋刃。",
+				"舍弃了艺人身分的锋刃，通常都是因为遇到了使他不可能维持他秘密行动的麻烦。一个因盗窃被捕、或致力于运行私法的锋刃，对于大部分的剧团来说都是个太沉重的负担。利用他们的武器技巧和魔法，这些锋刃或者成为了盗贼公会的执法者，或是作为冒险者开辟自己的道路。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "额外熟练|Bard||Swords|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "战斗风格|Bard||Swords|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "锋刃剑舞|Bard||Swords|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "锋刃剑舞",
+			"ENG_name": "Blade Flourish",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级剑舞学院特性}",
+				"你学会展示出战斗技艺和速度而令人印象深刻的表演。",
+				"每当你在你的回合采取{@action 攻击}动作，你的步行速度增加10尺直到这个回合结束，且若此攻击动作的其中一次你所进行的武器攻击命中一个生物，则你可以选择使用下列其中一个锋刃剑舞选项。你每回合只能使用一个锋刃剑舞选项。",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "防御剑舞|Bard|XGE|Swords|XGE|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "顺劈剑舞|Bard|XGE|Swords|XGE|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "灵活剑舞|Bard|XGE|Swords|XGE|3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "额外熟练",
+			"ENG_name": "Bonus Proficiencies",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级剑舞学院特性}",
+				"你将获得中甲和{@item 弯刀|phb}的熟练。",
+				"若你熟练于一把简易或军用近战武器，则你可以用它来你施放吟游诗人法术的法器。"
+			]
+		},
+		{
+			"name": "战斗风格",
+			"ENG_name": "Fighting Style",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级剑舞学院特性}",
+				"你采用一种特殊的战斗风格以作为你的专业。从下列选项中选择一种。你不能获得相同的战斗风格选项超过一次，即使游戏中的某个项目让你有机会再选择它也一样。",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "决斗"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "双武器战斗"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "额外攻击",
+			"ENG_name": "Extra Attack",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级剑舞学院特性}",
+				"每当你在自己回合执行{@action 攻击}动作时，你可以发动两次攻击，而非一次。"
+			]
+		},
+		{
+			"name": "剑舞大师",
+			"ENG_name": "Master's Flourish",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级剑舞学院特性}",
+				"每当你使用一个锋刃剑舞的选项，你可以骰一颗{@dice d6}，并使用它以取代一次吟游激励骰的消耗。"
+			]
+		},
+		{
+			"name": "低语学院",
+			"ENG_name": "College of Whispers",
+			"source": "XGE",
+			"page": 16,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"大多数群众都乐于招待吟游诗人到他们之中。而低语学院的吟游诗人正是利用了这一点。他们看起来就像其他吟游诗人那样，分享新闻，一展歌喉，并和关众们述说他们所搜集的轶事。但实际上，低语学院教导学生们成为披着羊皮的狼。这些诗人用他们的知识和魔法揭露秘密，并利用它们恐吓或是勒索他人。",
+				"许多其他的吟游诗人痛恨低语学院，认为它们是利用吟游诗人的名誉来为自己赚取金钱与权力的害群之马。因此，这个学院的诗人们鲜少揭露他们的本性。他们通常声称来自其他学院，隐藏他们实际的职业，以渗透进并利用皇室和其他权力团体。",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "精神之刃|Bard||Whispers|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "骇人言词|Bard||Whispers|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "精神之刃",
+			"ENG_name": "Psychic Blades",
+			"source": "XGE",
+			"page": 16,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级低语学院特性}",
+				"你获得了使你的武器攻击得以魔法性毒害其他生物精神的能力。",
+				"当你以一次武器攻击命中一个生物时，你可以消耗一次你吟游激励的使用次数，以对该目标造成额外的{@damage 2d6}心灵伤害。你每轮在你的回合只能使用此能力一次。",
+				"这个心灵伤害会在你本职业升至特定等级时增加，在5级时增加至{@dice 3d6}、10级时{@dice 5d6}、15级时{@dice 8d6}。"
+			]
+		},
+		{
+			"name": "骇人言词",
+			"ENG_name": "Words of Terror",
+			"source": "XGE",
+			"page": 16,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3级低语学院特性}",
+				"你学会将能够引发恐慌的阴险魔法注入看似无害的言词中。",
+				"若你和一个类人生物单独谈话至少1分钟，你可以尝试在它心中埋下偏执和妄想。在对话结束时，目标必须成功通过一次对抗你法术豁免DC的感知豁免，否则因你或你所选择的另一个生物陷入{@condition 恐惧}。目标将因为这个方式而陷入{@condition 恐惧}长达1小时，或直到它被攻击或伤害、或直到它目击它的盟友被攻击或伤害。",
+				"若目标成功通过豁免检定，目标并不会察觉到你曾尝试恐惧它。",
+				"一旦你使用此能力，直到你完成一次短休或长休之前你都不能再使用它。"
+			]
+		},
+		{
+			"name": "低语斗篷",
+			"ENG_name": "Mantle of Whispers",
+			"source": "XGE",
+			"page": 16,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers",
+			"subclassSource": "XGE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6级低语学院特性}",
+				"你获得变化成一个类人生物的身分人格的能力。当一个类人生物在距离你30尺内死亡时，你可以使用你的反应用魔法捕捉它的影子。你能保留这个影子直到你使用它、或直到你完成一次长休。",
+				"你能够以一个动作使用这个影子。当你这么做时，影子将消失，并魔法地变化成一个出现在你身上的伪装。你看起来就像那个死去的人物，但健康且充满生气。这个伪装持续1个小时，或直到你以一个附赠动作终止它。",
+				"当你处于此伪装时，你能够知晓所有该类人生物会随意与泛泛之交分享的情报。这类情报包括了它出身背景和私人生活的寻常细节，但并不包括秘密。这些情报足以让你利用它的记忆来冒充这个人物。",
+				"其他生物可以通过成功通过一次对抗你魅力（{@skill 欺瞒}）检定的感知（{@skill 洞悉}）检定，以看穿这个伪装。你在该检定中获得+5加值。",
+				"一旦你用此能力捕捉了一个影子，直到你完成一次短休或长休之前你都不能再用它来捕捉另一个影子。"
+			]
+		},
+		{
+			"name": "阴影学识",
+			"ENG_name": "Shadow Lore",
+			"source": "XGE",
+			"page": 16,
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Whispers",
+			"subclassSource": "XGE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14级低语学院特性}",
+				"你获得将黑暗魔法编入你言词，引发出一个生物最深恐惧的能力。",
+				"以一个动作，你用魔法低语一段词句，且只有一个距离你30尺内的生物可以听见。目标必须进行一次对抗你法术豁免DC的感知豁免。若它与你之间没有共通的语言或它无法听见你，则它将自动通过该豁免检定。若豁免成功，你的低语听起来将像是一阵不知所云的呢喃，且没有任何效果。",
+				"若豁免失败，目标将在接下来8小时内被你{@condition 魅惑}，或直到你或你的盟友攻击它、伤害它、或强迫它进行一次豁免检定。它将把这段低语解读成一段对它最不堪秘密的描述。你不会获得任何对该秘密的情报，但目标会深信你已经知道该秘密。",
+				"被{@condition 魅惑}的生物将因为惧怕你揭露它的秘密而服从你的命令。它不会为你冒险赌上自己的性命或为你而战，除非它原本就倾向会这么做。它会为你提供只提供给亲密朋友的帮助和礼物。",
+				"当这个效果结束，该生物不会理解它为什么如此惧怕你。",
+				"一旦你使用此能力，直到你完成一次长休之前你都不能再使用它。"
+			]
+		},
+		{
+			"name": "防御剑舞",
+			"ENG_name": "Defensive Flourish",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "XGE",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"你可以消耗一次你吟游激励的使用次数，以让武器对你命中的目标造成额外伤害。这个额外伤害等同于你吟游激励骰的掷骰结果。直到你的下个回合开始，你也将其掷骰结果加到你的AC中。"
+			]
+		},
+		{
+			"name": "灵活剑舞",
+			"ENG_name": "Mobile Flourish",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "XGE",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"你可以消耗一次你吟游激励的使用次数，以让武器对你命中的目标造成额外伤害。这个额外伤害等同于你吟游激励骰的掷骰结果。你也可以将目标推离你5尺加上等同于其掷骰结果的尺数的距离。你可以接着立刻使用你的反应以移动最多你步行速度的距离到一处距离目标5尺内的未被占据空间。"
+			]
+		},
+		{
+			"name": "顺劈剑舞",
+			"ENG_name": "Slashing Flourish",
+			"source": "XGE",
+			"page": 15,
+			"className": "Bard",
+			"classSource": "XGE",
+			"subclassShortName": "Swords",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"你可以消耗一次你吟游激励的使用次数，以让武器对你命中的目标和任何距离你5尺内，你所选且你所能看见的其他生物造成额外伤害。这个额外伤害等同于你吟游激励骰的掷骰结果。"
+			]
+		}
+	]
+}

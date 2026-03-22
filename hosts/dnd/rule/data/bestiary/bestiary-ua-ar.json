@@ -1,0 +1,211 @@
+{
+	"monster": [
+		{
+			"name": "炼金人工生命体",
+			"ENG_name": "Alchemical Homunculus",
+			"source": "UAArtificerRevisited",
+			"page": 6,
+			"size": "T",
+			"type": "construct",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"special": "等同于你奇械师职业等级的五倍 + 你的智力调整值"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 30
+			},
+			"str": 4,
+			"dex": 15,
+			"con": 11,
+			"int": 10,
+			"wis": 10,
+			"cha": 7,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"黑暗视觉 60 尺"
+			],
+			"passive": 10,
+			"immune": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"理解你所说的语言"
+			],
+			"trait": [
+				{
+					"name": "主人之力",
+					"ENG_name": "Might of the Master",
+					"entries": [
+						"每当你的熟练加值提升1点，下列数据也会跟着提升1点：炼金人工生命体的技能加值、以及它酸性唾沫的命中加值和伤害加值。"
+					]
+				}
+			],
+			"actionNote": "Requires Your Bonus Action",
+			"action": [
+				{
+					"name": "酸性唾沫",
+					"ENG_name": "Acidic Spittle",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 30 ft., one target you can see. {@h}{@damage 1d6 + 2} acid damage."
+					]
+				},
+				{
+					"name": "炼金药膏 (3/日)",
+					"ENG_name": "Alchemical Salve (3/Day)",
+					"entries": [
+						"炼金人工生命体制造出一剂药膏并触碰一个你所指定的生物。目标将接受下列其中一个你所选择的魔法效果：",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "浮力",
+									"ENG_name": "Buoyancy",
+									"entry": "目标获得10尺的飞行速度，持续10分钟。"
+								},
+								{
+									"type": "item",
+									"name": "激励",
+									"ENG_name": "Inspiration",
+									"entry": "目标将感到醍醐灌顶，在接下来1小时内在某些属性检定中获得优势。目标可以在检定掷骰之前或之后选择是否使用此效果。这个魔法将在目标使用等同于你智力调整值的次数（最少1次）后被耗尽。"
+								},
+								{
+									"type": "item",
+									"name": "韧性",
+									"ENG_name": "Resilience",
+									"entry": "目标获得等同于{@dice 2d6} + 你的智力调整值的临时生命值。"
+								}
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"A"
+			],
+			"miscTags": [
+				"RW"
+			]
+		},
+		{
+			"name": "Iron Defender",
+			"source": "UAArtificerRevisited",
+			"page": 11,
+			"size": "M",
+			"type": "construct",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"天生护甲"
+					]
+				}
+			],
+			"hp": {
+				"special": "equal to five times your level in this class + your Intelligence modifier + the iron defender's Constitution modifier"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 4,
+			"wis": 10,
+			"cha": 6,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Might of the Master",
+					"entries": [
+						"The following numbers increase by 1 when your proficiency bonus increases by 1: the iron defender's skill bonuses, the bonuses to hit and damage of its bite, and the number of hit points restored by its Repair action."
+					]
+				},
+				{
+					"name": "Vigilant",
+					"entries": [
+						"The iron defender can't be surprised."
+					]
+				}
+			],
+			"actionNote": "Requires Your Bonus Action",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target you can see. {@h}{@damage 1d8 + 2} piercing damage."
+					]
+				},
+				{
+					"name": "Repair (3/Day)",
+					"entries": [
+						"The magical mechanisms inside the iron defender restore {@dice 2d8 + 2} hit points to itself or to one construct or object within 5 feet of it."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Defensive Pounce",
+					"entries": [
+						"The iron defender imposes disadvantage on the attack roll of one creature it can see that is within 5 feet of it, provided the attack roll is against a creature other than the iron defender."
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			]
+		}
+	]
+}

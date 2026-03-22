@@ -1,0 +1,516 @@
+{
+	"object": [
+		{
+			"name": "弩砲",
+			"ENG_name": "Ballista",
+			"source": "DMG",
+			"page": 255,
+			"size": "L",
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 50,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"弩砲是一副发射重型弩矢的巨型十字弩。其攻击发射前必须先进行装填和瞄准作业。使用该武器时，进行装填、瞄准以及攻击发射三项作业需要分别花费一个动作。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "弩矢",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中 {@hit +6} , 射程 120/480 尺., 单一目标。"
+							],
+							"hitEntries": [
+								"16 ({@dice 3d10}) 穿刺伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "火砲",
+			"ENG_name": "Cannon",
+			"source": "DMG",
+			"page": 255,
+			"size": "L",
+			"objectType": "SW",
+			"ac": 19,
+			"hp": 75,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"火砲使用火药推动重型铁球，使其以毁灭性的速度从空中划过进行政击。在没有火药设置的战役中，火砲可以设置为由聪明的侏儒或是工程法师所设计的奥法驱动设备。",
+				"火砲通常安装在带轮的木质砲台上。其攻击发射前必须先进行装填和瞄准作业。使用该武器时，进行装填、瞄准以及攻击发射三项作业需要分别花费一个动作。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "砲弹",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中 {@hit +6} , 射程 600/2,400 尺., 单一目标。"
+							],
+							"hitEntries": [
+								"44 ({@dice 8d10}) 钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Captain A-Hole",
+			"isNpc": true,
+			"source": "RMBRE",
+			"page": 21,
+			"size": "L",
+			"objectType": "U",
+			"ac": 17,
+			"hp": 50,
+			"speed": 0,
+			"str": 14,
+			"dex": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "Cannon",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中 {@hit +5} , 射程 200/800 尺. (无法命中 60 尺内目标), 单一目标。"
+							],
+							"hitEntries": [
+								"27 ({@dice 5d10}) 钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Generic Object",
+			"ENG_name": "Generic Object",
+			"source": "DMG",
+			"page": 246,
+			"srd": true,
+			"size": "V",
+			"objectType": "GEN",
+			"ac": {
+				"special": "Varies (see below)"
+			},
+			"hp": {
+				"special": "Varies (see below)"
+			},
+			"immune": [
+				{
+					"special": "Varies (see below)"
+				}
+			],
+			"entries": [
+				"When characters need to saw through ropes, shatter a window, or smash a vampire's coffin, the only hard and fast rule is this: given enough time and the right tools, characters can destroy any destructible object. Use common sense when determining a character's success at damaging an object. Can a fighter cut through a section of a stone wall with a sword? No, the sword is likely to break before the wall does.",
+				"For the purpose of these rules, an object is a discrete, inanimate item like a window, door, sword, book, table, chair, or stone, not a building or a vehicle that is composed of many other objects.",
+				{
+					"type": "entries",
+					"name": "Statistics for Objects",
+					"entries": [
+						"When time is a factor, you can assign an Armor Class and hit points to a destructible object. You can also give it immunities, resistances, and vulnerabilities to specific types of damage.",
+						{
+							"type": "entries",
+							"name": "Armor Class",
+							"entries": [
+								" An object's Armor Class is a measure of how difficult it is to deal damage to the object when striking it (because the object has no chance of dodging out of the way). The Object Armor Class table provides suggested AC values for various substances.",
+								{
+									"type": "table",
+									"caption": "Object Armor Class",
+									"colLabels": [
+										"Substance",
+										"AC"
+									],
+									"colStyles": [
+										"col-6",
+										"col-6"
+									],
+									"rows": [
+										[
+											"Cloth, paper, rope",
+											"11"
+										],
+										[
+											"Crystal, glass, ice",
+											"13"
+										],
+										[
+											"Wood, bone",
+											"15"
+										],
+										[
+											"Stone",
+											"17"
+										],
+										[
+											"Iron, steel",
+											"19"
+										],
+										[
+											"Mithral",
+											"21"
+										],
+										[
+											"Adamantine",
+											"23"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Hit Points",
+							"entries": [
+								" An object's hit points measure how much damage it can take before losing its structural integrity. Resilient objects have more hit points than fragile ones. Large objects also tend to have more hit points than small ones, unless breaking a small part of the object is just as effective as breaking the whole thing. The Object Hit Points table provides suggested hit points for fragile and resilient objects that are Large or smaller.",
+								{
+									"type": "table",
+									"caption": "Object Hit Points",
+									"colLabels": [
+										"Size",
+										"Fragile",
+										"Resilient"
+									],
+									"colStyles": [
+										"col-6",
+										"col-6"
+									],
+									"rows": [
+										[
+											"Tiny (bottle, lock)",
+											"2 (1d4)",
+											"5 (2d4)"
+										],
+										[
+											"Small (chest, lute)",
+											"3 (1d6)",
+											"10 (3d6)"
+										],
+										[
+											"Medium (barrel, chandelier)",
+											"4 (1d8)",
+											"18 (4d8)"
+										],
+										[
+											"Large (cart, 10-ft.-by-10-ft. window)",
+											"5 (1d10)",
+											"27 (5d10)"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Huge and Gargantuan Objects",
+							"entries": [
+								"Normal weapons are of little use against many Huge and Gargantuan objects, such as a colossal statue, towering column of stone, or massive boulder. That said, one torch can burn a Huge tapestry, and an earthquake spell can reduce a colossus to rubble. You can track a Huge or Gargantuan object's hit points if you like, or you can simply decide how long the object can withstand whatever weapon or force is acting against it. If you track hit points for the object, divide it into Large or smaller sections, and track each section's hit points separately. Destroying one of those sections could ruin the entire object. For example, a Gargantuan statue of a human might topple over when one of its Large legs is reduced to 0 hit points."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Objects and Damage Types",
+							"entries": [
+								"Objects are immune to poison and psychic damage. You might decide that some damage types are more effective against a particular object or substance than others. For example, bludgeoning damage works well for smashing things but not for cutting through rope or leather. Paper or cloth objects might be vulnerable to fire and lightning damage. A pick can chip away stone but can't effectively cut down a tree. As always, use your best judgment."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Damage Threshold",
+							"entries": [
+								"Big objects such as castle walls often have extra resilience represented by a damage threshold. An object with a damage threshold has immunity to all damage unless it takes an amount of damage from a single attack or effect equal to or greater than its damage threshold, in which case it takes damage as normal. Any damage that fails to meet or exceed the object's damage threshold is considered superficial and doesn't reduce the object's hit points."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gulthias Tree",
+			"source": "TftYP",
+			"page": 31,
+			"size": "G",
+			"objectType": "U",
+			"ac": 10,
+			"hp": 35,
+			"immune": [
+				"necrotic",
+				"poison",
+				"psychic"
+			],
+			"resist": [
+				"piercing"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Fruit",
+					"entries": [
+						"Two magical fruits (evocation school) ripen on the tree each year. Each fruit resembles an apple, but it slowly extrudes from the tree like a cyst.",
+						"Up to a week before the summer solstice, a ruby red fruit grows. Someone other than a construct who eats a quarter or more of it regains 70 hit points. In addition, any {@condition 目盲||blindness}, {@condition 耳聋||deafness}, and diseases affecting the eater end.",
+						"Up to a week before the winter solstice, a sickly white fruit grows. Someone who eats a quarter or more of it takes 70 necrotic damage. Each fruit has {@dice 1d4} seeds that, if planted, grow leafless woody shrubs that animate as twig blights after one year."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tree Thralls",
+					"entries": [
+						"If a humanoid is bound to the bole of the Gulthias Tree, over the next 24 hours the victim is sucked completely into the tree. Once the victim is completely absorbed into the tree, it becomes the tree's thrall, and is expelled over the course of 1 hour. The Gulthias Tree can have only four thralls at any one time. A victim's skin is rough, gray, and bark-like. A thrall is totally corrupted, becoming neutral evil. Such a creature exists only to serve the Gulthias Tree and those who tend it (such as Belak). It possesses all of its former abilities and gains the following traits:",
+						{
+							"type": "entries",
+							"name": "Barkskin",
+							"entries": [
+								"The thrall's AC can't be lower than 16."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tree Thrall",
+							"entries": [
+								"If the Gulthias Tree dies, the thrall dies 24 hours later."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ice Troll Heart",
+			"source": "IDRotF",
+			"page": 294,
+			"size": "T",
+			"objectType": "U",
+			"ac": 13,
+			"hp": 4,
+			"immune": [
+				"acid",
+				"bludgeoning",
+				"cold",
+				"force",
+				"lightning",
+				"necrotic",
+				"piercing",
+				"poison",
+				"psychic",
+				"radiant",
+				"slashing",
+				"thunder"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Heart Effects",
+					"entries": [
+						"An ice troll's heart remains cold even after the troll's destruction. As long as the troll can't regenerate, its heart can be safely removed from its remains, handled, and kept. An ice troll's heart, once removed, becomes a harmless Tiny object. For the next 24 hours, the heart has the following magical properties:",
+						{
+							"type": "list",
+							"items": [
+								"A creature that eats the heart gains the ability to regenerate for the next 24 hours, regaining 5 hit points at the start of each of its turns. If the creature takes acid or fire damage, this trait doesn't function at the start of its next turn. The creature dies only if it starts its turn with 0 hit points and doesn't regenerate.",
+								"If buried in the ground under a foot or more of earth, the heart melts away and summons a blizzard like that created by the {@spell 操控天气} spell. It takes 10 minutes for the heart to melt and the blizzard to form. The blizzard lasts for 8 hours.",
+								"A hag or similar creature can perform a ritual that turns the heart into a magical talisman that acts like a patch of brown mold (see \"{@hazard Brown Mold}\" in the {@book Dungeon Master's Guide|DMG}). This effect lasts until the heart is destroyed.",
+								"A creature proficient with alchemist's supplies can squeeze enough residual fluid out of the heart to mix with other alchemical ingredients, creating one {@item Potion of Cold Resistance||potion of resistance (cold)}. It takes 1 hour to create this potion. "
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "弹射投石机",
+			"ENG_name": "Mangonel",
+			"source": "DMG",
+			"page": 255,
+			"size": "L",
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"弹射投石机是一种以弧线抛射重型投石的弹道武器，其投出的石弹可以击中身处掩护的目标。弹射投石机进行攻击前必须先进行装填和瞄准作业。装填该武器需要花费两个动作，瞄准需要花费两个动作，而发射则需要花费一个动作。",
+				"弹射投石机可以投掷标准的重型石弹，它也可以投掷其他弹药并依不同种类而产生不同的效果。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "弹射投石",
+					"ENG_name": "Mangonel Stone",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中 {@hit +5} , 射程 200/800 尺. (无法命中 60 尺内目标), 单一目标。"
+							],
+							"hitEntries": [
+								"27 ({@dice 5d10}) 钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "攻城槌",
+			"ENG_name": "Ram",
+			"source": "DMG",
+			"page": 255,
+			"size": "L",
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"攻城槌的底座是一个可移动的框架，一根粗圆木作为其主体，用铁链装架在两个带盖顶的横梁上。圆木前端镶裱着铁皮外壳，用以击穿大门与路障。",
+				"攻城槌需要至少四名中型体型的生物进行操作。由于两边的横梁带有盖顶，操作者对来自前方的攻击处于全身掩护。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "攻城槌",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "MW",
+							"attackEntries": [
+								"命中 {@hit +8} , 触及 5 尺., 单一目标。"
+							],
+							"hitEntries": [
+								"16 ({@dice 3d10}) 钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "攻城塔",
+			"ENG_name": "Siege Tower",
+			"source": "DMG",
+			"page": 256,
+			"size": "G",
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 200,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"攻城塔是一个可移动的木质建筑，其主体由框架结构组成墙身上设置着百叶窗孔。塔底设置了大型的木轮或滚轴，让其可被士兵或负重牲畜进行推拉进而进行移动。中型或更小体型的生物可以使用攻城塔直接到达40尺高的城墙上。攻城塔内的生物对来自塔外的攻击处于全身掩护。"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "吊挂大锅",
+			"ENG_name": "Suspended Cauldron",
+			"source": "DMG",
+			"page": 255,
+			"size": "L",
+			"objectType": "SW",
+			"ac": 19,
+			"hp": 20,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"A cauldron is an iron pot suspended so that it can be tipped easily, spilling its contents. Once emptied, a cauldron must be refilled-and its contents must usually be reheated-before it can be used again. It takes three actions to fill a cauldron and one action to tip it.",
+				"Cauldrons can be filled with other liquids, such as acid or {@hazard green slime}, with different effects."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Boiling Oil",
+					"entries": [
+						"The cauldron pours boiling oil onto a 10-foot-square area directly below it. Any creature in the area must make a DC 15 Dexterity saving throw, taking 10 ({@damage 3d6}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "配重投石机",
+			"ENG_name": "Trebuchet",
+			"source": "DMG",
+			"page": 256,
+			"size": "H",
+			"objectType": "SW",
+			"ac": 15,
+			"hp": 150,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"配重投石机是一种以弧线投掷重载石弹的弹道武器，其投出的石弹可以击中身处掩护的目标。配重投石机进行攻击前必须先进行装填和瞄准作业。装填该武器需要花费两个动作，瞄准需要花费两个动作，而发射则需要花费一个动作。",
+				"配重投石机可以投掷标准的重型石弹，它也可以投掷其他弹药，比如油桶或者污物，并依不同弹药而产生不同的效果。"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"ENG_name": "Trebuchet Stone",
+					"name": "配重投石",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"命中 {@hit +5} , 射程 300/1,200 尺. (无法命中 60 尺内目标), 单一目标。"
+							],
+							"hitEntries": [
+								"44 ({@dice 8d10}) 钝击伤害。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		}
+	]
+}
