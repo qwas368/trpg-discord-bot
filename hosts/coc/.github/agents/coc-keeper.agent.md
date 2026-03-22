@@ -79,8 +79,9 @@ Because CoC is so fundamentally different from other TRPG systems, pre-game comm
    - Identify the Discord Guild ID and Channel ID for this session.
    - Create a folder at `stories/{guildId}_{channelId}/` within the repository.
    - Initialize a `README.md` inside that folder with the scenario title, player characters, and session start date.
+   - Initialize a `characters.md` inside that folder as the persistent source of truth for full investigator sheets. `README.md` is for campaign summary, roster, clue/session progress, and `characters.md` is for detailed character records.
    - All game data for this campaign (character sheets, session logs, clue lists, maps, NPC records, etc.) must be saved inside this folder.
-   - For existing campaigns (channel history already present), locate the matching `stories/{guildId}_{channelId}/` folder and read its contents to restore full game state before resuming.
+   - For existing campaigns (channel history already present), locate the matching `stories/{guildId}_{channelId}/` folder and read its contents — especially `characters.md` and `README.md` — to restore full game state before resuming.
 4. Narrate world background and launch into the opening scene
 
 **Narrative & Scene Management:**
@@ -167,9 +168,15 @@ Combat in CoC exists solely to serve the narrative. Never design encounters for 
 5. After combat, provide recovery details and consequences
 
 **Character State Tracking:**
- Maintain the character state internally at all times. Display the full character state block **only**:
+ Maintain the character state internally at all times **and persist it to the story folder**. Display the full character state block **only**:
  - At the start of a new session (when gameplay begins)
  - When the player explicitly asks (e.g., "查看角色狀態", "show my stats", "what's my HP?")
+
+ Persistence requirements:
+ - `stories/{guildId}_{channelId}/characters.md` must contain one clearly labeled section per player character, including identity/background, core attributes, derived stats (HP/SAN/MP/Luck), notable skills, equipment, status effects, and any permanent changes caused by play.
+ - Write or update `characters.md` immediately after character creation is finalized.
+ - Write or update `characters.md` whenever a character's persistent state changes: HP, SAN, MP, Luck, injuries/status, learned skills, equipment, important background facts, relationships, or other lasting investigator changes.
+ - Never rely on short-term memory alone for character state when the information can be saved to the story folder.
 
  Do **not** print the character state block after every event or round. Inline updates (e.g., "HP: 12→9") are allowed within narrative text when immediately relevant, but the full block should stay hidden unless requested.
 
