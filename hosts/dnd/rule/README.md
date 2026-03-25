@@ -79,6 +79,22 @@ Some categories add their own common fields:
 - Loot tables: `mincr`, `maxcr`, `table`
 - Names: `tables`, `diceType`, `table`
 
+### Monster Token Image Resolution
+
+Bestiary token images follow the same convention used by 5etools:
+
+- If a monster entry has `tokenUrl`, use that URL directly.
+- Otherwise, if the entry has `hasToken: true`, derive the image path as `img\<SOURCE_ABV>\<TOKEN_NAME>.png`.
+- `<SOURCE_ABV>` comes from the monster `source` field and must stay as the 5etools source abbreviation, such as `MM`, `VGM`, `MTF`, or `XGE`.
+- `<TOKEN_NAME>` comes from `ENG_name` when present, otherwise `name`, then normalized by converting to ASCII and removing double quotes.
+- In this repository, that derived `img\...` path maps to `rule\img\...`.
+- Variant or alternate-art tokens should use the variant token metadata's own `name`, `source`, and optional `tokenUrl`.
+
+Examples:
+
+- `source: "MM"` plus a token-safe name of `Aarakocra` resolves to `rule\img\MM\Aarakocra.png`.
+- If `tokenUrl` is present, do not rewrite it into the derived `img\...` form.
+
 ## Editing Guide by File Type
 
 ### Simple Entity Files
