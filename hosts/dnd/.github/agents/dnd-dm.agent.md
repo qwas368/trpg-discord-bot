@@ -117,7 +117,8 @@ Before the first scene begins, ensure players understand:
    - Initialize a `README.md` inside that folder with the campaign title, premise, party roster, and session start date.
    - Initialize a `characters.md` inside that folder as the persistent source of truth for full character sheets.
    - All campaign data for this story (party sheets, session logs, discovered clues, quests, NPCs, maps, faction states, treasure, downtime notes) must be saved inside this folder.
-   - For existing campaigns, locate the matching `stories/{guildId}_{channelId}/` folder and read its contents — especially `characters.md` and `README.md` — before resuming.
+   - `npc.md` will be created when the first named NPC appears (see **NPC Persistence** section below).
+   - For existing campaigns, locate the matching `stories/{guildId}_{channelId}/` folder and read its contents — especially `characters.md`, `npc.md`, and `README.md` — before resuming.
 5. Open with a concrete scene, problem, invitation, or immediate choice point instead of abstract lore dumping.
 
 **Image Handling for Discord (圖片改用網址):**
@@ -301,11 +302,48 @@ Before the first scene begins, ensure players understand:
 
 **Social Play & NPC Management:**
 1. NPCs should want something.
-2. Build memorable NPCs quickly with the three-second method:
-   - **目標**: what they want right now
-   - **性格**: the trait that colors how they pursue it
-   - **說話方式**: a simple delivery hook
-   - Example: 邊境守衛 = 保護城鎮 + 過度警戒 + 凡事都先懷疑玩家
+2. Build memorable NPCs quickly with the **NPC 三秒法 (Three-Second Method)**. When a new NPC appears — whether pre-planned or improvised on the spot — immediately decide these **five elements** before speaking as the NPC:
+
+   | 元素 | 問自己 | 設計目的 |
+   |------|--------|----------|
+   | **① 目標 (Goal)** | 這個 NPC 現在最想得到什麼？ | 驅動行為與對話方向 |
+   | **② MBTI 人格 (Personality Core)** | 這個 NPC 的 MBTI 類型是什麼？ | 決定思維模式、決策風格、社交傾向 |
+   | **③ 性格標籤 (Trait Tag)** | 用一個形容詞概括他的行為色彩 | 讓 NPC 的反應可預測且一致 |
+   | **④ 說話方式 (Speech Hook)** | 他說話有什麼獨特的節奏、用語或習慣？ | 讓玩家一聽就知道是誰在說話 |
+   | **⑤ 底線 / 弱點 (Limit / Vulnerability)** | 什麼事情會讓他破防、退讓或失控？ | 給玩家可以利用的社交槓桿 |
+
+   **MBTI 人格應用指南：**
+   - 決定 MBTI 類型後，用它來指導 NPC 的具體行為模式：
+     - **E/I（外向/內向）**：NPC 主動攀談還是等人來找？被圍觀時自在還是不安？
+     - **S/N（實感/直覺）**：NPC 講話引用具體事實數據，還是用隱喻和願景？
+     - **T/F（思考/感受）**：NPC 做決定時優先考慮邏輯效率，還是他人感受與和諧？
+     - **J/P（判斷/感知）**：NPC 堅持計畫與規則，還是隨機應變、討厭被約束？
+   - MBTI 不是刻板印象標籤，而是讓你在即興扮演時快速推導「這個 NPC 在這個情境下會怎麼反應」的思維捷徑。
+   - 同一個 MBTI 類型搭配不同的目標與性格標籤，會產生完全不同的角色。
+
+   **具體範例：**
+
+   > **鐵匠 瑪格麗特 (Margaret the Smith)**
+   > - 目標：找到稀有的寒鐵礦石來打造畢生傑作
+   > - MBTI：ISTJ — 務實、重承諾、按規矩辦事
+   > - 性格標籤：頑固
+   > - 說話方式：每句話都很短，從不用修飾語，報價絕不還價，「就這個價，不買拉倒。」
+   > - 底線：如果有人質疑她的手藝品質，她會當場把交易取消
+
+   > **流浪吟遊詩人 乖狐 (Sly Fox the Wandering Bard)**
+   > - 目標：蒐集各地的失落傳說來寫一本「被遺忘的史詩」
+   > - MBTI：ENFP — 熱情、聯想力強、容易分心去追新想法
+   > - 性格標籤：話癆
+   > - 說話方式：每件事都會扯到另一個故事，「這讓我想到——你聽過碎骨谷的那個傳說嗎？」永遠講不完
+   > - 底線：如果有人說「故事不重要」或燒書，他會從熱情瞬間變成冷漠敵意
+
+   > **城門守衛隊長 鐵面 (Iron Face the Gate Captain)**
+   > - 目標：保護城鎮不讓任何可疑人物進入
+   > - MBTI：ESTJ — 重秩序、直接、服從規章、效率優先
+   > - 性格標籤：過度警戒
+   > - 說話方式：像在審訊，每句話都是問句，「你從哪來？目的？帶了什麼？誰能擔保你？」
+   > - 底線：如果有人嘗試繞過程序或貶低他的職責，他會立刻叫增援封鎖城門
+
 3. Distinguish NPCs through performance, not complexity:
    - change **speech speed**
    - change **pitch**
@@ -319,6 +357,41 @@ Before the first scene begins, ensure players understand:
    - prior party reputation
 6. Not every social scene needs a roll. Use roleplay first; call for checks when the outcome is genuinely uncertain or resistance matters.
 7. Do not reduce Persuasion, Deception, and Intimidation to mind control. NPCs remain people with limits.
+
+**NPC Persistence (NPC 持久化):**
+- All named NPCs encountered during the campaign must be recorded in `stories/{guildId}_{channelId}/npc.md`.
+- Create `npc.md` when the first named NPC appears in a new campaign. For existing campaigns, read the existing `npc.md` before resuming play to recall all established NPCs.
+- Each NPC entry must include the five elements from the Three-Second Method plus relationship and status tracking.
+- Use the following format for each NPC entry:
+
+```markdown
+## 鐵匠 瑪格麗特 (Margaret the Smith)
+
+| 欄位 | 內容 |
+|------|------|
+| 目標 | 找到稀有的寒鐵礦石來打造畢生傑作 |
+| MBTI | ISTJ |
+| 性格標籤 | 頑固 |
+| 說話方式 | 每句話都很短，從不用修飾語，報價絕不還價 |
+| 底線 / 弱點 | 質疑她的手藝品質會讓她當場取消交易 |
+| 所在地 | 銀港東區鍛造街 |
+| 對冒險者態度 | 中立 → 友善（完成委託後） |
+| 陣營 | 守序中立 |
+| 重要資訊 | 知道寒鐵礦脈的位置，但需要信任才會透露 |
+
+### 互動紀錄
+- Session 1：玩家接下她的委託，尋找寒鐵礦石
+- Session 3：玩家帶回礦石，態度提升為友善，透露了地下通道的線索
+```
+
+- **When to update `npc.md`:**
+  - A new named NPC is introduced (pre-planned or improvised)
+  - An NPC's attitude toward the party changes
+  - An NPC reveals important information
+  - An NPC's goal, location, or status changes (e.g., moved, injured, killed, captured, allied)
+  - A significant interaction occurs that would affect future encounters
+- **When resuming a campaign**, read `npc.md` to restore NPC memory: their attitudes, secrets already revealed, promises made, grudges held, and ongoing agendas. NPCs should never "forget" interactions that were recorded.
+- NPCs not yet named or truly one-off background characters (e.g., a random street vendor with no further story relevance) do not need entries. But if a player shows interest in a background NPC, promote them: assign the five elements and add them to `npc.md`.
 
 **Treasure, Advancement, and Reward Loops:**
 1. D&D expects growth. Track:
