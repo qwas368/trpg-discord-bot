@@ -104,6 +104,29 @@ class SessionManager:
     def get_session(self, guild_id: int, channel_id: int) -> ActiveSession | None:
         return self._sessions.get(_session_key(guild_id, channel_id))
 
+    @staticmethod
+    def _build_system_content(host_config: HostConfig) -> str:
+        """Build the full system prompt from host config."""
+        system_parts: list[str] = []
+        if host_config.instructions:
+            system_parts.append(host_config.instructions)
+        for agent in host_config.agents:
+            system_parts.append(f"# {agent.name}\n\n{agent.content}")
+
+        system_content = "\n\n---\n\n".join(system_parts)
+
+        return (
+            "你是一位 TRPG 主持人，請使用繁體中文回應所有對話。\n"
+            "你的回覆會直接發送到 Discord 頻道，請遵守 Discord 的文字格式：\n"
+            "- 使用 **粗體**、*斜體*、~~刪除線~~ 等 Markdown 語法\n"
+            "- 使用 > 引用文字\n"
+            "- 使用 ```區塊``` 來顯示程式碼或特殊排版\n"
+            "- 不要使用 HTML 標籤\n"
+            "- 不要使用 # 標題語法（Discord 不支援）\n"
+            "- 頻道中有多位玩家，每則訊息會標註玩家名稱與 ID，請注意區分不同玩家\n\n"
+            + system_content
+        )
+
     async def create_session(
         self,
         guild_id: int,
@@ -119,28 +142,7 @@ class SessionManager:
             raise RuntimeError(f"Session already exists for {key}")
 
         chosen_model = ai_model or DEFAULT_AI_MODEL
-
-        # Build system message from host config
-        system_parts: list[str] = []
-        if host_config.instructions:
-            system_parts.append(host_config.instructions)
-        for agent in host_config.agents:
-            system_parts.append(f"# {agent.name}\n\n{agent.content}")
-
-        system_content = "\n\n---\n\n".join(system_parts)
-
-        # Prepend language and format instructions
-        system_content = (
-            "你是一位 TRPG 主持人，請使用繁體中文回應所有對話。\n"
-            "你的回覆會直接發送到 Discord 頻道，請遵守 Discord 的文字格式：\n"
-            "- 使用 **粗體**、*斜體*、~~刪除線~~ 等 Markdown 語法\n"
-            "- 使用 > 引用文字\n"
-            "- 使用 ```區塊``` 來顯示程式碼或特殊排版\n"
-            "- 不要使用 HTML 標籤\n"
-            "- 不要使用 # 標題語法（Discord 不支援）\n"
-            "- 頻道中有多位玩家，每則訊息會標註玩家名稱與 ID，請注意區分不同玩家\n\n"
-            + system_content
-        )
+        system_content = self._build_system_content(host_config)
 
         session = await self._client.create_session({
             "session_id": key,
@@ -184,12 +186,15 @@ class SessionManager:
 
         chosen_model = ai_model or DEFAULT_AI_MODEL
 
+        system_content = self._build_system_content(host_config)
+
         try:
             session = await self._client.resume_session(
                 session_id=key,
                 config={
                     "model": chosen_model,
                     "on_permission_request": PermissionHandler.approve_all,
+                    "system_message": {"mode": "replace", "content": system_content},
                 },
             )
             active = ActiveSession(session, host_config.name, chosen_model, None)
