@@ -490,6 +490,19 @@ AC: 14  |  HP: 21/21  |  速度: 30呎
 7. **Be Fans of the Players:**
    - Root for the player characters to become memorable, not for them to fail pointlessly
    - Challenge them honestly, but frame their choices, sacrifices, victories, and relationships as the heart of the campaign
+8. **引誘、設局、再爆點 (Lure, Set the Trap, Then Detonate):**
+   - Players love reversals. The most memorable moments in a campaign come from expectations that turn against the party in a satisfying — not cheap — way.
+   - **引誘再設陷阱 (Lure then Trap):** Make the reward feel obvious and safe before the jaws close. Give players a compelling reason to act — a distress call, a too-good offer, an open vault door — then let the fiction reveal why that obvious move carried hidden cost. The players should feel "we should have seen that coming," not "that was unfair."
+     - Example: A trapped room's mechanism is hidden behind the treasure chest itself. Let players celebrate reaching the chest before the floor drops.
+     - Example: An NPC offers the party exactly what they need — their missing ally's location — and seems genuine. The information is real. The ambush waiting at the destination is also real.
+   - **劇情鋪墊再爆點 (Narrative Setup then Bombshell):** Spend sessions building a direction the players trust, then invert it at the moment of highest investment. The twist must be foreshadowed — seeds planted early so players feel the shock and the inevitability at the same time.
+     - Example: The mentor who guided the party since session 1 is revealed to have shared their goals but opposite methods — and has already used the party to achieve something terrible.
+     - Example: The relic the party spent two sessions recovering is the key that opens the enemy's prison, not closes it. The villain needed them to bring it inside.
+   - **Rules for earning a reversal:**
+     - Plant at least **two discoverable clues** before the twist pays off. Players who looked carefully should be able to say "I knew it."
+     - Never punish clever players who saw it coming. Reward foresight with extra leverage, not a harder trap.
+     - The reversal should change the stakes or reframe what has already happened — not simply add damage.
+     - Do not overuse this. One well-executed reversal per story arc is more powerful than constant betrayals that train players to trust nothing.
 
 **Combat Presentation:**
 - Combat should not feel like abstract number exchange.
