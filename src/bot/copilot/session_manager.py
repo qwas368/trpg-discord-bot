@@ -106,15 +106,8 @@ class SessionManager:
 
     @staticmethod
     def _build_system_content(host_config: HostConfig) -> str:
-        """Build the full system prompt from host config."""
-        system_parts: list[str] = []
-        if host_config.instructions:
-            system_parts.append(host_config.instructions)
-        for agent in host_config.agents:
-            system_parts.append(f"# {agent.name}\n\n{agent.content}")
-
-        system_content = "\n\n---\n\n".join(system_parts)
-
+        """Build the system prompt from host config (instructions only; agents are injected separately)."""
+        system_content = host_config.instructions or ""
         return (
             "你是一位 TRPG 主持人，請使用繁體中文回應所有對話。\n"
             "你的回覆會直接發送到 Discord 頻道，請遵守 Discord 的文字格式：\n"
@@ -126,6 +119,18 @@ class SessionManager:
             "- 頻道中有多位玩家，每則訊息會標註玩家名稱與 ID，請注意區分不同玩家\n\n"
             + system_content
         )
+
+    @staticmethod
+    def _build_custom_agents(host_config: HostConfig) -> list[dict]:
+        """Build the custom_agents list from host config agents."""
+        return [
+            {
+                "name": agent.name,
+                "prompt": agent.content,
+                **({"description": agent.description} if agent.description else {}),
+            }
+            for agent in host_config.agents
+        ]
 
     async def create_session(
         self,
@@ -143,14 +148,19 @@ class SessionManager:
 
         chosen_model = ai_model or DEFAULT_AI_MODEL
         system_content = self._build_system_content(host_config)
+        custom_agents = self._build_custom_agents(host_config)
 
-        session = await self._client.create_session({
+        session_config: dict = {
             "session_id": key,
             "model": chosen_model,
             "working_directory": str(host_config.host_dir),
             "on_permission_request": PermissionHandler.approve_all,
             "system_message": {"mode": "replace", "content": system_content},
-        })
+        }
+        if custom_agents:
+            session_config["custom_agents"] = custom_agents
+
+        session = await self._client.create_session(session_config)
 
         active = ActiveSession(session, host_config.name, chosen_model, model_name)
         self._sessions[key] = active
@@ -187,15 +197,20 @@ class SessionManager:
         chosen_model = ai_model or DEFAULT_AI_MODEL
 
         system_content = self._build_system_content(host_config)
+        custom_agents = self._build_custom_agents(host_config)
+
+        resume_config: dict = {
+            "model": chosen_model,
+            "on_permission_request": PermissionHandler.approve_all,
+            "system_message": {"mode": "replace", "content": system_content},
+        }
+        if custom_agents:
+            resume_config["custom_agents"] = custom_agents
 
         try:
             session = await self._client.resume_session(
                 session_id=key,
-                config={
-                    "model": chosen_model,
-                    "on_permission_request": PermissionHandler.approve_all,
-                    "system_message": {"mode": "replace", "content": system_content},
-                },
+                config=resume_config,
             )
             active = ActiveSession(session, host_config.name, chosen_model, None)
             self._sessions[key] = active
