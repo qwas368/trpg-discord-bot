@@ -106,8 +106,15 @@ class SessionManager:
 
     @staticmethod
     def _build_system_content(host_config: HostConfig) -> str:
-        """Build the system prompt from host config (instructions only; agents are injected separately)."""
-        system_content = host_config.instructions or ""
+        """Build the full system prompt from host config."""
+        system_parts: list[str] = []
+        if host_config.instructions:
+            system_parts.append(host_config.instructions)
+        for agent in host_config.agents:
+            system_parts.append(f"# {agent.name}\n\n{agent.content}")
+
+        system_content = "\n\n---\n\n".join(system_parts)
+
         return (
             "你是一位 TRPG 主持人，請使用繁體中文回應所有對話。\n"
             "你的回覆會直接發送到 Discord 頻道，請遵守 Discord 的文字格式：\n"
