@@ -208,6 +208,7 @@ class SessionManager:
 
         resume_config: dict = {
             "model": chosen_model,
+            "working_directory": str(host_config.host_dir),
             "on_permission_request": PermissionHandler.approve_all,
             "system_message": {"mode": "replace", "content": system_content},
         }
