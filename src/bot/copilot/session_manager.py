@@ -9,7 +9,8 @@ import subprocess
 import sys
 from typing import Any
 
-from copilot import CopilotClient, PermissionHandler
+from copilot import CopilotClient
+from copilot.session import PermissionHandler
 
 from bot.config import DEFAULT_AI_MODEL
 from bot.host_loader import HostConfig, load_model_content
@@ -157,17 +158,14 @@ class SessionManager:
         system_content = self._build_system_content(host_config)
         custom_agents = self._build_custom_agents(host_config)
 
-        session_config: dict = {
-            "session_id": key,
-            "model": chosen_model,
-            "working_directory": str(host_config.host_dir),
-            "on_permission_request": PermissionHandler.approve_all,
-            "system_message": {"mode": "replace", "content": system_content},
-        }
-        if custom_agents:
-            session_config["custom_agents"] = custom_agents
-
-        session = await self._client.create_session(session_config)
+        session = await self._client.create_session(
+            session_id=key,
+            model=chosen_model,
+            working_directory=str(host_config.host_dir),
+            on_permission_request=PermissionHandler.approve_all,
+            system_message={"mode": "replace", "content": system_content},
+            custom_agents=custom_agents or None,
+        )
 
         active = ActiveSession(session, host_config.name, chosen_model, model_name)
         self._sessions[key] = active
@@ -206,19 +204,14 @@ class SessionManager:
         system_content = self._build_system_content(host_config)
         custom_agents = self._build_custom_agents(host_config)
 
-        resume_config: dict = {
-            "model": chosen_model,
-            "working_directory": str(host_config.host_dir),
-            "on_permission_request": PermissionHandler.approve_all,
-            "system_message": {"mode": "replace", "content": system_content},
-        }
-        if custom_agents:
-            resume_config["custom_agents"] = custom_agents
-
         try:
             session = await self._client.resume_session(
-                session_id=key,
-                config=resume_config,
+                key,
+                on_permission_request=PermissionHandler.approve_all,
+                model=chosen_model,
+                working_directory=str(host_config.host_dir),
+                system_message={"mode": "replace", "content": system_content},
+                custom_agents=custom_agents or None,
             )
             active = ActiveSession(session, host_config.name, chosen_model, None)
             self._sessions[key] = active
@@ -265,7 +258,7 @@ class SessionManager:
             log.info("Session closed: %s", key)
 
     @staticmethod
-    async def _send_and_wait(session: Any, prompt: str, timeout: float = 120.0) -> str:
+    async def _send_and_wait(session: Any, prompt: str, timeout: float = 240.0) -> str:
         done = asyncio.Event()
         replies: list[str] = []
 
@@ -278,7 +271,7 @@ class SessionManager:
 
         unsubscribe = session.on(on_event)
         try:
-            await session.send({"prompt": prompt})
+            await session.send(prompt)
             await asyncio.wait_for(done.wait(), timeout=timeout)
         except asyncio.TimeoutError:
             log.error("Copilot session timed out after %.1f seconds", timeout)
