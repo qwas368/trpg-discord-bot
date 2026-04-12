@@ -23,14 +23,62 @@ def _session_key(guild_id: int, channel_id: int) -> str:
 
 
 class ActiveSession:
-    """Wraps a Copilot SDK session with metadata."""
+    """Wraps a Copilot SDK session with a persistent event listener."""
 
-    def __init__(self, session: Any, host_type: str, ai_model: str, model_name: str | None):
+    def __init__(
+        self,
+        session: Any,
+        host_type: str,
+        ai_model: str,
+        model_name: str | None,
+        host_config: HostConfig | None = None,
+    ):
         self.session = session
         self.host_type = host_type
         self.ai_model = ai_model
         self.model_name = model_name
+        self.host_config = host_config
         self.sent_message_ids: set[int] = set()
+
+        # Persistent listener state
+        self._message_callback: Any | None = None  # async fn(str) -> None
+        self._unsubscribe: Any | None = None
+        self._idle_event: asyncio.Event | None = None
+        self._reply_count: int = 0
+        self._loop: asyncio.AbstractEventLoop | None = None
+
+    def set_message_callback(self, callback: Any) -> None:
+        """Set the async callback for forwarding assistant messages (e.g. to Discord)."""
+        self._message_callback = callback
+
+    def setup_listener(self) -> None:
+        """Subscribe to session events once. Stays active until cleanup()."""
+        self._loop = asyncio.get_running_loop()
+
+        async def _safe_send(content: str) -> None:
+            if self._message_callback:
+                try:
+                    await self._message_callback(content)
+                except Exception:
+                    log.exception("Error in message callback")
+
+        def _on_event(event: Any) -> None:
+            etype = event.type if isinstance(event.type, str) else event.type.value
+            if etype == "assistant.message" and event.data.content:
+                self._reply_count += 1
+                if self._message_callback and self._loop:
+                    asyncio.run_coroutine_threadsafe(_safe_send(event.data.content), self._loop)
+            elif etype == "session.idle":
+                if self._idle_event:
+                    self._idle_event.set()
+
+        self._unsubscribe = self.session.on(_on_event)
+
+    def cleanup(self) -> None:
+        """Unsubscribe the persistent listener."""
+        if self._unsubscribe:
+            self._unsubscribe()
+            self._unsubscribe = None
 
 
 class SessionManager:
@@ -167,16 +215,18 @@ class SessionManager:
             custom_agents=custom_agents or None,
         )
 
-        active = ActiveSession(session, host_config.name, chosen_model, model_name)
+        active = ActiveSession(session, host_config.name, chosen_model, model_name, host_config)
+        active.setup_listener()
         self._sessions[key] = active
         log.info("Session created: %s (host=%s, model=%s)", key, host_config.name, chosen_model)
 
-        # If a game module was selected, send its content as the first message
+        # If a game module was selected, send its content as the first message.
+        # Callback is not set yet, so the reply won't be forwarded to Discord.
         if model_name:
             try:
                 content = load_model_content(model_name)
-                await self._send_and_wait(
-                    session,
+                await self._wait_for_idle(
+                    active,
                     f"以下是本次遊戲模組的資料，請仔細閱讀並據此主持遊戲：\n\n{content}",
                 )
                 log.info("Game module loaded: %s", model_name)
@@ -213,7 +263,8 @@ class SessionManager:
                 system_message={"mode": "replace", "content": system_content},
                 custom_agents=custom_agents or None,
             )
-            active = ActiveSession(session, host_config.name, chosen_model, None)
+            active = ActiveSession(session, host_config.name, chosen_model, None, host_config)
+            active.setup_listener()
             self._sessions[key] = active
             log.info("Session resumed: %s", key)
             return active
@@ -228,7 +279,11 @@ class SessionManager:
         user_message: str,
         context: str | None = None,
     ) -> str:
-        """Send a message to the session and return the assistant's reply."""
+        """Send a message and wait for idle. Replies are forwarded via the session callback.
+
+        Returns a non-empty string only when something needs to be shown to the user
+        (e.g. timeout with no replies). Otherwise returns empty string.
+        """
         key = _session_key(guild_id, channel_id)
         active = self._sessions.get(key)
         if not active:
@@ -242,7 +297,37 @@ class SessionManager:
         prompt_parts.append(user_message)
         full_prompt = "".join(prompt_parts)
 
-        return await self._send_and_wait(active.session, full_prompt)
+        try:
+            idle_reached = await self._wait_for_idle(active, full_prompt)
+        except Exception as exc:
+            if "Session not found" not in str(exc):
+                raise
+            log.warning("Session %s expired (backend dropped it), auto-recovering...", key)
+
+            # Auto-recovery: drop stale session, try resume → create
+            old_callback = active._message_callback
+            active.cleanup()
+            self._sessions.pop(key, None)
+            host_config = active.host_config
+            if host_config is None:
+                raise RuntimeError(f"Session {key} expired and no host_config for recovery")
+
+            recovered = await self.resume_session(guild_id, channel_id, host_config, active.ai_model)
+            if recovered is None:
+                log.info("Resume failed for %s, creating fresh session", key)
+                recovered = await self.create_session(
+                    guild_id, channel_id, host_config, active.ai_model
+                )
+
+            # Transfer the callback to the recovered session
+            if old_callback:
+                recovered.set_message_callback(old_callback)
+            log.info("Session recovered for %s, retrying message", key)
+            idle_reached = await self._wait_for_idle(recovered, full_prompt)
+
+        if not idle_reached and active._reply_count == 0:
+            return "⚠️ 回覆逾時，請再試一次。"
+        return ""
 
     async def close_session(self, guild_id: int, channel_id: int) -> None:
         key = _session_key(guild_id, channel_id)
@@ -251,6 +336,7 @@ class SessionManager:
     async def close_session_by_key(self, key: str) -> None:
         active = self._sessions.pop(key, None)
         if active:
+            active.cleanup()
             try:
                 await active.session.disconnect()
             except Exception:
@@ -258,25 +344,20 @@ class SessionManager:
             log.info("Session closed: %s", key)
 
     @staticmethod
-    async def _send_and_wait(session: Any, prompt: str, timeout: float = 240.0) -> str:
-        done = asyncio.Event()
-        replies: list[str] = []
-
-        def on_event(event: Any) -> None:
-            etype = event.type if isinstance(event.type, str) else event.type.value
-            if etype == "assistant.message":
-                replies.append(event.data.content)
-            elif etype == "session.idle":
-                done.set()
-
-        unsubscribe = session.on(on_event)
+    async def _wait_for_idle(active: ActiveSession, prompt: str, timeout: float = 240.0) -> bool:
+        """Send a prompt and wait for session.idle. Returns True if idle reached, False on timeout."""
+        active._idle_event = asyncio.Event()
+        active._reply_count = 0
         try:
-            await session.send(prompt)
-            await asyncio.wait_for(done.wait(), timeout=timeout)
+            await active.session.send(prompt)
+            await asyncio.wait_for(active._idle_event.wait(), timeout=timeout)
+            return True
         except asyncio.TimeoutError:
-            log.error("Copilot session timed out after %.1f seconds", timeout)
-            return "\n\n".join(replies) if replies else "⚠️ 回覆逾時，請再試一次。"
+            log.warning(
+                "Session timed out after %.1f seconds (subscription remains active, replies=%d)",
+                timeout,
+                active._reply_count,
+            )
+            return False
         finally:
-            unsubscribe()
-
-        return "\n\n".join(replies) if replies else "(沒有回覆)"
+            active._idle_event = None

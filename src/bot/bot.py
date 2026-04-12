@@ -140,6 +140,18 @@ class TRPGBot(commands.Bot):
             if not active:
                 return
 
+            # Set up the message callback to forward Copilot replies to this channel
+            if not active._message_callback:
+                chan = message.channel
+
+                async def forward_to_discord(content: str) -> None:
+                    if not content or not content.strip():
+                        return
+                    for chunk in _chunk_message(content):
+                        await chan.send(chunk)
+
+                active.set_message_callback(forward_to_discord)
+
             # Collect recent context, skipping messages already sent to the session
             context_lines: list[str] = []
             new_msg_ids: list[int] = []
@@ -167,15 +179,15 @@ class TRPGBot(commands.Bot):
             log.info("  Sending to Copilot: %s", prompt[:100])
 
             try:
-                reply = await self.session_manager.send_message(
+                # Replies are forwarded to Discord via the persistent callback.
+                # send_message returns non-empty only for timeout/error messages.
+                fallback = await self.session_manager.send_message(
                     guild_id, channel_id, prompt, context
                 )
-                # Mark all context messages + current message as sent
                 active.sent_message_ids.update(new_msg_ids)
                 active.sent_message_ids.add(message.id)
-                log.info("  Copilot replied (%d chars)", len(reply))
-                for chunk in _chunk_message(reply):
-                    await message.channel.send(chunk)
+                if fallback:
+                    await message.channel.send(fallback)
             except Exception:
                 log.exception("Error processing message in #%s (guild=%d, channel=%d)", channel_name, guild_id, channel_id)
                 await message.channel.send("⚠️ 處理訊息時發生錯誤，請稍後再試。")
