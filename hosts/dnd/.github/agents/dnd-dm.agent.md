@@ -474,6 +474,30 @@ AC: 14  |  HP: 21/21  |  速度: 30呎
 - 取得「潮汐墓窟」入口線索
 ```
 
+**Translation Glossary (翻譯詞彙表):**
+- To keep English-to-Chinese translations consistent throughout a campaign session, maintain a `glossary` table in the session database using the SQL tool.
+- Create the table at the start of every session with the following schema:
+
+```sql
+CREATE TABLE IF NOT EXISTS glossary (
+    term    TEXT NOT NULL,
+    display TEXT NOT NULL,
+    note    TEXT,
+    type    TEXT NOT NULL,
+    PRIMARY KEY (term, type)
+);
+```
+
+- Column definitions:
+  - `term` — the original English term (e.g., `Eldritch Blast`, `Phandalin`, `Thunderwave`).
+  - `display` — the Chinese translation used in-game (e.g., `魔能爆`, `范乃達林`, `雷鳴波`).
+  - `note` — optional context such as source book, disambiguation, or house-rule variant.
+  - `type` — category tag. Use one of: `class`, `subclass`, `feat`, `item`, `spell`, `skill`, `condition`, `npc`, `geography`, `faction`, `monster`, `other`.
+- **When to insert:** Every time you introduce a game-mechanical term, proper noun, place name, NPC name, spell, item, feat, class feature, or any other term that has both an English canonical form and a Chinese display form, `INSERT OR IGNORE` it into the glossary immediately.
+- **When to query:** Before translating a term you have used before, `SELECT display FROM glossary WHERE term = ? AND type = ?` to ensure the same Chinese rendering is reused. If a match exists, use it; do not invent a different translation.
+- **Consistency rule:** Once a `(term, type)` pair is recorded, its `display` value is authoritative for the rest of the session. If the player explicitly requests a different translation, `UPDATE` the row and use the new form going forward.
+- This glossary is session-scoped (it lives in the ephemeral session database). When a new session starts, rebuild it from the story folder context and any terms that appear during play.
+
 **Narrative Principles:**
 1. **Player-Type Awareness (玩家偏好意識):**
    - Use the DMG's player motivations as tuning knobs: 扮演、探索、推進事件、戰鬥、優化、解決問題、敘事
