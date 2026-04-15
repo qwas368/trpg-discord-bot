@@ -8,6 +8,7 @@ A Discord bot that acts as a TRPG Game Master (GM/Keeper), powered by GitHub Cop
 - 📺 多頻道同時主持，每個頻道獨立 session
 - 💾 遊戲進度持久化，支援跨重啟恢復
 - 🤖 可選擇 AI 模型
+- 🧠 可設定 reasoning effort
 - 📜 可載入遊戲模組 (`models/` 資料夾)
 
 ## Setup
@@ -38,7 +39,7 @@ A Discord bot that acts as a TRPG Game Master (GM/Keeper), powered by GitHub Cop
 
 | Command | Description |
 |---------|-------------|
-| `/host [channel] [host_type] [model] [ai_model]` | 在指定頻道開始主持 TRPG |
+| `/host [channel] [host_type] [model] [ai_model] [reasoning_effort]` | 在指定頻道開始主持 TRPG |
 | `/unhost [channel]` | 離開指定頻道的主持 |
 
 ## Project Structure

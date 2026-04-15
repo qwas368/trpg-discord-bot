@@ -8,21 +8,12 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
+from bot.config import DEFAULT_AI_MODEL
 from bot.host_loader import list_hosts, list_models, load_host
 
 log = logging.getLogger(__name__)
 
-AI_MODELS = [
-    "claude-sonnet-4.6",
-    "claude-sonnet-4.5",
-    "claude-opus-4.6",
-    "claude-opus-4.5",
-    "gpt-5",
-    "gpt-5.1",
-    "gpt-5.2",
-    "gpt-4.1",
-    "gemini-3-pro-preview",
-]
+REASONING_EFFORTS = ["low", "medium", "high", "xhigh"]
 
 
 async def _host_type_autocomplete(
@@ -58,10 +49,31 @@ async def _model_autocomplete(
 async def _ai_model_autocomplete(
     interaction: discord.Interaction, current: str
 ) -> list[app_commands.Choice[str]]:
+    try:
+        session_manager = getattr(interaction.client, "session_manager", None)
+        if session_manager is None:
+            models = [DEFAULT_AI_MODEL]
+        else:
+            models = await session_manager.get_available_models()
+        return [
+            app_commands.Choice(name=m, value=m)
+            for m in models
+            if current.lower() in m.lower()
+        ][:25]
+    except Exception:
+        log.debug("autocomplete error for ai_model", exc_info=True)
+        if current.lower() in DEFAULT_AI_MODEL.lower():
+            return [app_commands.Choice(name=DEFAULT_AI_MODEL, value=DEFAULT_AI_MODEL)]
+        return []
+
+
+async def _reasoning_effort_autocomplete(
+    interaction: discord.Interaction, current: str
+) -> list[app_commands.Choice[str]]:
     return [
-        app_commands.Choice(name=m, value=m)
-        for m in AI_MODELS
-        if current.lower() in m.lower()
+        app_commands.Choice(name=effort, value=effort)
+        for effort in REASONING_EFFORTS
+        if current.lower() in effort.lower()
     ][:25]
 
 
@@ -74,12 +86,14 @@ class HostingCog(commands.Cog):
         channel="要主持的頻道",
         host_type="主持人類型 (如 coc, dnd)",
         model="遊戲模組 (可選)",
-        ai_model="AI 模型 (預設 claude-sonnet-4.6)",
+        ai_model="AI 模型 (可選，預設使用環境設定)",
+        reasoning_effort="推理強度 (可選：low / medium / high / xhigh)",
     )
     @app_commands.autocomplete(
         host_type=_host_type_autocomplete,
         model=_model_autocomplete,
         ai_model=_ai_model_autocomplete,
+        reasoning_effort=_reasoning_effort_autocomplete,
     )
     async def host(
         self,
@@ -88,6 +102,7 @@ class HostingCog(commands.Cog):
         host_type: str,
         model: str | None = None,
         ai_model: str | None = None,
+        reasoning_effort: str | None = None,
     ) -> None:
         sm = self.bot.session_manager  # type: ignore[attr-defined]
         guild_id = interaction.guild_id
@@ -115,37 +130,57 @@ class HostingCog(commands.Cog):
             )
             return
 
+        if reasoning_effort and reasoning_effort not in REASONING_EFFORTS:
+            await interaction.response.send_message(
+                "找不到這個 reasoning effort。可用值：low, medium, high, xhigh",
+                ephemeral=True,
+            )
+            return
+
         await interaction.response.defer()
 
-        chosen_model = ai_model or "claude-sonnet-4.6"
+        chosen_model = ai_model or DEFAULT_AI_MODEL
         log.info(
-            "/host: user=%s channel=#%s host=%s ai_model=%s game_module=%s (guild=%d)",
-            interaction.user.display_name, channel.name, host_type, chosen_model, model or "(none)", guild_id,
+            "/host: user=%s channel=#%s host=%s ai_model=%s reasoning_effort=%s game_module=%s (guild=%d)",
+            interaction.user.display_name,
+            channel.name,
+            host_type,
+            chosen_model,
+            reasoning_effort or "(default)",
+            model or "(none)",
+            guild_id,
         )
 
         try:
             # Try to resume first
-            active = await sm.resume_session(guild_id, channel.id, host_config, chosen_model)
+            active = await sm.resume_session(
+                guild_id, channel.id, host_config, chosen_model, reasoning_effort
+            )
             if active:
                 log.info("/host: resumed session in #%s (guild=%d)", channel.name, guild_id)
-                await interaction.followup.send(
-                    f"🎲 已恢復 {channel.mention} 的 **{host_type}** 遊戲！\n"
-                    f"🤖 模型：`{chosen_model}`\n"
-                    f"在該頻道 @我 即可繼續遊戲。"
-                )
+                parts = [
+                    f"🎲 已恢復 {channel.mention} 的 **{host_type}** 遊戲！",
+                    f"🤖 模型：`{active.ai_model}`",
+                ]
+                if active.reasoning_effort:
+                    parts.append(f"🧠 推理強度：`{active.reasoning_effort}`")
+                parts.append("在該頻道 @我 即可繼續遊戲。")
+                await interaction.followup.send("\n".join(parts))
                 return
         except Exception:
             log.debug("/host: resume failed for #%s, creating new session", channel.name, exc_info=True)
 
         try:
-            await sm.create_session(
-                guild_id, channel.id, host_config, chosen_model, model
+            active = await sm.create_session(
+                guild_id, channel.id, host_config, chosen_model, model, reasoning_effort
             )
             log.info("/host: new session created in #%s (guild=%d)", channel.name, guild_id)
             parts = [
                 f"🎲 開始在 {channel.mention} 主持 **{host_type}** TRPG！",
-                f"🤖 模型：`{chosen_model}`",
+                f"🤖 模型：`{active.ai_model}`",
             ]
+            if active.reasoning_effort:
+                parts.append(f"🧠 推理強度：`{active.reasoning_effort}`")
             if model:
                 parts.append(f"📜 遊戲模組：`{model}`")
             parts.append("在該頻道 @我 即可開始遊戲。")

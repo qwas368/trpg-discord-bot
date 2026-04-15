@@ -12,7 +12,7 @@ from typing import Any
 from copilot import CopilotClient
 from copilot.session import PermissionHandler
 
-from bot.config import DEFAULT_AI_MODEL
+from bot.config import DEFAULT_AI_MODEL, DEFAULT_REASONING_EFFORT
 from bot.host_loader import HostConfig, load_model_content
 
 log = logging.getLogger(__name__)
@@ -31,12 +31,14 @@ class ActiveSession:
         host_type: str,
         ai_model: str,
         model_name: str | None,
+        reasoning_effort: str | None,
         host_config: HostConfig | None = None,
     ):
         self.session = session
         self.host_type = host_type
         self.ai_model = ai_model
         self.model_name = model_name
+        self.reasoning_effort = reasoning_effort
         self.host_config = host_config
         self.sent_message_ids: set[int] = set()
 
@@ -85,6 +87,7 @@ class SessionManager:
     def __init__(self) -> None:
         self._client: CopilotClient | None = None
         self._sessions: dict[str, ActiveSession] = {}
+        self._available_models: list[str] | None = None
 
     async def start(self) -> None:
         self._client = CopilotClient()
@@ -145,6 +148,7 @@ class SessionManager:
         if self._client:
             await self._client.stop()
             self._client = None
+        self._available_models = None
         log.info("Copilot SDK client stopped")
 
     def is_hosting(self, guild_id: int, channel_id: int) -> bool:
@@ -152,6 +156,24 @@ class SessionManager:
 
     def get_session(self, guild_id: int, channel_id: int) -> ActiveSession | None:
         return self._sessions.get(_session_key(guild_id, channel_id))
+
+    async def get_available_models(self, refresh: bool = False) -> list[str]:
+        """Return model IDs from Copilot SDK, cached for autocomplete use."""
+        assert self._client is not None, "SessionManager not started"
+
+        if self._available_models is not None and not refresh:
+            return self._available_models
+
+        models = await self._client.list_models()
+        ids = sorted(
+            {
+                model_id
+                for model in models
+                if (model_id := getattr(model, "id", None))
+            }
+        )
+        self._available_models = ids or [DEFAULT_AI_MODEL]
+        return self._available_models
 
     @staticmethod
     def _build_system_content(host_config: HostConfig) -> str:
@@ -195,6 +217,7 @@ class SessionManager:
         host_config: HostConfig,
         ai_model: str | None = None,
         model_name: str | None = None,
+        reasoning_effort: str | None = None,
     ) -> ActiveSession:
         assert self._client is not None, "SessionManager not started"
 
@@ -203,22 +226,37 @@ class SessionManager:
             raise RuntimeError(f"Session already exists for {key}")
 
         chosen_model = ai_model or DEFAULT_AI_MODEL
+        chosen_reasoning_effort = reasoning_effort or DEFAULT_REASONING_EFFORT
         system_content = self._build_system_content(host_config)
         custom_agents = self._build_custom_agents(host_config)
 
         session = await self._client.create_session(
             session_id=key,
             model=chosen_model,
+            reasoning_effort=chosen_reasoning_effort,
             working_directory=str(host_config.host_dir),
             on_permission_request=PermissionHandler.approve_all,
             system_message={"mode": "replace", "content": system_content},
             custom_agents=custom_agents or None,
         )
 
-        active = ActiveSession(session, host_config.name, chosen_model, model_name, host_config)
+        active = ActiveSession(
+            session,
+            host_config.name,
+            chosen_model,
+            model_name,
+            chosen_reasoning_effort,
+            host_config,
+        )
         active.setup_listener()
         self._sessions[key] = active
-        log.info("Session created: %s (host=%s, model=%s)", key, host_config.name, chosen_model)
+        log.info(
+            "Session created: %s (host=%s, model=%s, reasoning_effort=%s)",
+            key,
+            host_config.name,
+            chosen_model,
+            chosen_reasoning_effort or "(default)",
+        )
 
         # If a game module was selected, send its content as the first message.
         # Callback is not set yet, so the reply won't be forwarded to Discord.
@@ -241,6 +279,7 @@ class SessionManager:
         channel_id: int,
         host_config: HostConfig,
         ai_model: str | None = None,
+        reasoning_effort: str | None = None,
     ) -> ActiveSession | None:
         """Try to resume an existing session. Returns None if not resumable."""
         assert self._client is not None, "SessionManager not started"
@@ -250,6 +289,7 @@ class SessionManager:
             return self._sessions[key]
 
         chosen_model = ai_model or DEFAULT_AI_MODEL
+        chosen_reasoning_effort = reasoning_effort or DEFAULT_REASONING_EFFORT
 
         system_content = self._build_system_content(host_config)
         custom_agents = self._build_custom_agents(host_config)
@@ -259,14 +299,27 @@ class SessionManager:
                 key,
                 on_permission_request=PermissionHandler.approve_all,
                 model=chosen_model,
+                reasoning_effort=chosen_reasoning_effort,
                 working_directory=str(host_config.host_dir),
                 system_message={"mode": "replace", "content": system_content},
                 custom_agents=custom_agents or None,
             )
-            active = ActiveSession(session, host_config.name, chosen_model, None, host_config)
+            active = ActiveSession(
+                session,
+                host_config.name,
+                chosen_model,
+                None,
+                chosen_reasoning_effort,
+                host_config,
+            )
             active.setup_listener()
             self._sessions[key] = active
-            log.info("Session resumed: %s", key)
+            log.info(
+                "Session resumed: %s (model=%s, reasoning_effort=%s)",
+                key,
+                chosen_model,
+                chosen_reasoning_effort or "(default)",
+            )
             return active
         except Exception as e:
             log.debug("Could not resume session %s: %s", key, e)
@@ -312,11 +365,22 @@ class SessionManager:
             if host_config is None:
                 raise RuntimeError(f"Session {key} expired and no host_config for recovery")
 
-            recovered = await self.resume_session(guild_id, channel_id, host_config, active.ai_model)
+            recovered = await self.resume_session(
+                guild_id,
+                channel_id,
+                host_config,
+                active.ai_model,
+                active.reasoning_effort,
+            )
             if recovered is None:
                 log.info("Resume failed for %s, creating fresh session", key)
                 recovered = await self.create_session(
-                    guild_id, channel_id, host_config, active.ai_model
+                    guild_id,
+                    channel_id,
+                    host_config,
+                    active.ai_model,
+                    active.model_name,
+                    active.reasoning_effort,
                 )
 
             # Transfer the callback to the recovered session
