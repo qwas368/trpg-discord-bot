@@ -9,6 +9,7 @@ dependencies = [
     "github-copilot-sdk",
     "python-dotenv>=1.0",
     "pyyaml>=6.0",
+    "xai-sdk",
 ]
 
 [tool.setuptools.packages.find]

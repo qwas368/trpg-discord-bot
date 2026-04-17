@@ -12,7 +12,7 @@ from discord import app_commands
 from discord.ext import commands
 
 from bot.config import DISCORD_TOKEN
-from bot.copilot.session_manager import SessionManager
+from bot.copilot.session_manager import ActiveSession, SessionManager
 
 log = logging.getLogger(__name__)
 
@@ -39,6 +39,28 @@ def _chunk_message(text: str, limit: int = DISCORD_MAX_LENGTH) -> list[str]:
     return chunks
 
 
+def _format_chat_line(author_name: str, author_id: int, content: str) -> str:
+    return f"[{author_name} (id:{author_id})]: {content}"
+
+
+def _strip_bot_mention(text: str, user: discord.ClientUser | None) -> str:
+    if not user:
+        return text.strip()
+    return text.replace(f"<@{user.id}>", "").replace(f"<@!{user.id}>", "").strip()
+
+
+def _resolve_bot_name(message: discord.Message, user: discord.ClientUser | None) -> str | None:
+    if message.guild and user:
+        member = message.guild.get_member(user.id)
+        if member:
+            return member.display_name
+        if hasattr(message.guild, "me") and message.guild.me:
+            return message.guild.me.display_name
+    if user:
+        return user.display_name
+    return None
+
+
 class _AutocompleteExpiredFilter(logging.Filter):
     """Suppress 'Unknown interaction' errors from autocomplete handlers."""
 
@@ -63,6 +85,40 @@ class TRPGBot(commands.Bot):
         # typically due to rapid field switching. Harmless and not actionable.
         _tree_logger = logging.getLogger("discord.app_commands.tree")
         _tree_logger.addFilter(_AutocompleteExpiredFilter())
+
+    async def _collect_context_messages(
+        self,
+        channel: discord.abc.Messageable,
+        before: discord.Message,
+        active: ActiveSession,
+    ) -> list[discord.Message]:
+        messages: list[discord.Message] = []
+        async for msg in channel.history(limit=CONTEXT_MESSAGE_COUNT, before=before):
+            if active.mode == "copilot":
+                if msg.id in active.sent_message_ids:
+                    continue
+                if active.pending_copilot_backfill and msg.id in active.grok_pending_message_ids:
+                    continue
+            messages.append(msg)
+        messages.reverse()
+        return messages
+
+    async def _send_grok_reply(
+        self,
+        channel: discord.abc.Messageable,
+        active: ActiveSession,
+        reply: str,
+    ) -> None:
+        if not reply or not reply.strip():
+            return
+
+        for chunk in _chunk_message(reply):
+            sent = await channel.send(chunk)
+            active.record_grok_backfill(
+                sent.id,
+                _format_chat_line(sent.author.display_name, sent.author.id, chunk),
+                sent.created_at,
+            )
 
     async def setup_hook(self) -> None:
         await self.session_manager.start()
@@ -140,51 +196,61 @@ class TRPGBot(commands.Bot):
             if not active:
                 return
 
-            # Set up the message callback to forward Copilot replies to this channel
-            if not active._message_callback:
-                chan = message.channel
-
-                async def forward_to_discord(content: str) -> None:
-                    if not content or not content.strip():
-                        return
-                    for chunk in _chunk_message(content):
-                        await chan.send(chunk)
-
-                active.set_message_callback(forward_to_discord)
-
-            # Collect recent context, skipping messages already sent to the session
-            context_lines: list[str] = []
-            new_msg_ids: list[int] = []
-            async for msg in message.channel.history(limit=CONTEXT_MESSAGE_COUNT, before=message):
-                if msg.id in active.sent_message_ids:
-                    continue
-                author = msg.author.display_name
-                uid = msg.author.id
-                context_lines.append(f"[{author} (id:{uid})]: {msg.content}")
-                new_msg_ids.append(msg.id)
-            context_lines.reverse()
-            new_msg_ids.reverse()
+            history_messages = await self._collect_context_messages(message.channel, message, active)
+            context_lines = [
+                _format_chat_line(msg.author.display_name, msg.author.id, msg.content)
+                for msg in history_messages
+            ]
             context = "\n".join(context_lines) if context_lines else None
-            log.info("  Collected %d new context messages (%d skipped as already sent)",
-                     len(context_lines), CONTEXT_MESSAGE_COUNT - len(context_lines) - 1)
+            log.info("  Collected %d context messages for %s mode", len(context_lines), active.mode)
 
             # Remove the bot mention from the user's message
-            user_text = message.content
-            if self.user:
-                user_text = user_text.replace(f"<@{self.user.id}>", "").replace(f"<@!{self.user.id}>", "").strip()
+            user_text = _strip_bot_mention(message.content, self.user)
 
             display_name = message.author.display_name
             uid = message.author.id
-            prompt = f"[{display_name} (id:{uid})]: {user_text}" if user_text else f"[{display_name} (id:{uid})] 提及了你"
-            log.info("  Sending to Copilot: %s", prompt[:100])
+            prompt = (
+                _format_chat_line(display_name, uid, user_text)
+                if user_text
+                else f"[{display_name} (id:{uid})] 提及了你"
+            )
 
             try:
-                # Replies are forwarded to Discord via the persistent callback.
-                # send_message returns non-empty only for timeout/error messages.
-                fallback = await self.session_manager.send_message(
-                    guild_id, channel_id, prompt, context
-                )
-                active.sent_message_ids.update(new_msg_ids)
+                if active.mode == "grok":
+                    log.info("  Sending to Grok: %s", prompt[:100])
+                    for history_message, context_line in zip(history_messages, context_lines):
+                        active.record_grok_backfill(
+                            history_message.id,
+                            context_line,
+                            history_message.created_at,
+                        )
+                    active.record_grok_backfill(message.id, prompt, message.created_at)
+                    reply = await self.session_manager.send_grok_message(
+                        guild_id,
+                        channel_id,
+                        prompt,
+                        context,
+                        _resolve_bot_name(message, self.user),
+                    )
+                    await self._send_grok_reply(message.channel, active, reply)
+                    return
+
+                # Set up the message callback to forward Copilot replies to this channel
+                if not active._message_callback:
+                    chan = message.channel
+
+                    async def forward_to_discord(content: str) -> None:
+                        if not content or not content.strip():
+                            return
+                        for chunk in _chunk_message(content):
+                            await chan.send(chunk)
+
+                    active.set_message_callback(forward_to_discord)
+
+                log.info("  Sending to Copilot: %s", prompt[:100])
+                fallback = await self.session_manager.send_message(guild_id, channel_id, prompt, context)
+                active = self.session_manager.get_session(guild_id, channel_id) or active
+                active.sent_message_ids.update(msg.id for msg in history_messages)
                 active.sent_message_ids.add(message.id)
                 if fallback:
                     await message.channel.send(fallback)

@@ -7,12 +7,18 @@ import logging
 import shutil
 import subprocess
 import sys
+from datetime import datetime, timezone
 from typing import Any
 
-from copilot import CopilotClient
-from copilot.session import PermissionHandler
+from copilot import CopilotClient, PermissionHandler
 
-from bot.config import DEFAULT_AI_MODEL, DEFAULT_REASONING_EFFORT
+from bot.config import (
+    DEFAULT_AI_MODEL,
+    DEFAULT_GROK_MODEL,
+    DEFAULT_REASONING_EFFORT,
+    XAI_API_KEY,
+)
+from bot.grok.client import GrokClient
 from bot.host_loader import HostConfig, load_model_content
 
 log = logging.getLogger(__name__)
@@ -23,7 +29,7 @@ def _session_key(guild_id: int, channel_id: int) -> str:
 
 
 class ActiveSession:
-    """Wraps a Copilot SDK session with a persistent event listener."""
+    """Wraps a Copilot SDK session with runtime state for provider switching."""
 
     def __init__(
         self,
@@ -41,6 +47,13 @@ class ActiveSession:
         self.reasoning_effort = reasoning_effort
         self.host_config = host_config
         self.sent_message_ids: set[int] = set()
+
+        self.mode = "copilot"
+        self.grok_model = DEFAULT_GROK_MODEL
+        self.grok_pending_lines: list[str] = []
+        self.grok_pending_message_ids: set[int] = set()
+        self.pending_copilot_backfill = False
+        self.grok_started_at: datetime | None = None
 
         # Persistent listener state
         self._message_callback: Any | None = None  # async fn(str) -> None
@@ -82,12 +95,63 @@ class ActiveSession:
             self._unsubscribe()
             self._unsubscribe = None
 
+    def copy_runtime_state_from(self, other: "ActiveSession") -> None:
+        """Carry provider/runtime state across Copilot session recovery."""
+        self.sent_message_ids = set(other.sent_message_ids)
+        self.mode = other.mode
+        self.grok_model = other.grok_model
+        self.grok_pending_lines = list(other.grok_pending_lines)
+        self.grok_pending_message_ids = set(other.grok_pending_message_ids)
+        self.pending_copilot_backfill = other.pending_copilot_backfill
+        self.grok_started_at = other.grok_started_at
+
+    def enable_grok_mode(self) -> None:
+        self.mode = "grok"
+        self.grok_started_at = datetime.now(timezone.utc)
+
+    def disable_grok_mode(self) -> None:
+        self.mode = "copilot"
+        self.grok_started_at = None
+        self.pending_copilot_backfill = bool(self.grok_pending_lines)
+
+    def record_grok_backfill(
+        self,
+        message_id: int,
+        content: str,
+        created_at: datetime | None,
+    ) -> None:
+        """Track Discord messages that Copilot missed while Grok mode was active."""
+        if not content or message_id in self.grok_pending_message_ids:
+            return
+
+        if created_at and created_at.tzinfo is None:
+            created_at = created_at.replace(tzinfo=timezone.utc)
+        if self.grok_started_at and created_at and created_at < self.grok_started_at:
+            return
+
+        self.grok_pending_message_ids.add(message_id)
+        self.grok_pending_lines.append(content)
+        self.pending_copilot_backfill = True
+
+    def clear_grok_backfill(self) -> None:
+        self.grok_pending_lines.clear()
+        self.grok_pending_message_ids.clear()
+        self.pending_copilot_backfill = False
+
 
 class SessionManager:
     def __init__(self) -> None:
         self._client: CopilotClient | None = None
         self._sessions: dict[str, ActiveSession] = {}
         self._available_models: list[str] | None = None
+        self._grok_client: GrokClient | None = None
+        self._grok_init_error: str | None = None
+
+        if XAI_API_KEY:
+            try:
+                self._grok_client = GrokClient(XAI_API_KEY)
+            except RuntimeError as exc:
+                self._grok_init_error = str(exc)
 
     async def start(self) -> None:
         self._client = CopilotClient()
@@ -157,6 +221,12 @@ class SessionManager:
     def get_session(self, guild_id: int, channel_id: int) -> ActiveSession | None:
         return self._sessions.get(_session_key(guild_id, channel_id))
 
+    def require_session(self, guild_id: int, channel_id: int) -> ActiveSession:
+        active = self.get_session(guild_id, channel_id)
+        if not active:
+            raise RuntimeError(f"No active session for {_session_key(guild_id, channel_id)}")
+        return active
+
     async def get_available_models(self, refresh: bool = False) -> list[str]:
         """Return model IDs from Copilot SDK, cached for autocomplete use."""
         assert self._client is not None, "SessionManager not started"
@@ -174,6 +244,28 @@ class SessionManager:
         )
         self._available_models = ids or [DEFAULT_AI_MODEL]
         return self._available_models
+
+    def is_grok_available(self) -> bool:
+        return self._grok_client is not None
+
+    def ensure_grok_available(self) -> GrokClient:
+        if self._grok_client is not None:
+            return self._grok_client
+        if not XAI_API_KEY:
+            raise RuntimeError("尚未設定 XAI_API_KEY，無法啟用 Grok 模式。")
+        if self._grok_init_error:
+            raise RuntimeError(self._grok_init_error)
+        raise RuntimeError("Grok client 尚未初始化。")
+
+    def toggle_grok_mode(self, guild_id: int, channel_id: int) -> tuple[ActiveSession, bool]:
+        active = self.require_session(guild_id, channel_id)
+        if active.mode == "grok":
+            active.disable_grok_mode()
+            return active, False
+
+        self.ensure_grok_available()
+        active.enable_grok_mode()
+        return active, True
 
     @staticmethod
     def _build_system_content(host_config: HostConfig) -> str:
@@ -196,6 +288,26 @@ class SessionManager:
             "- 不要使用 # 標題語法（Discord 不支援）\n"
             "- 頻道中有多位玩家，每則訊息會標註玩家名稱與 ID，請注意區分不同玩家\n\n"
             + system_content
+        )
+
+    @classmethod
+    def _build_grok_system_content(
+        cls,
+        host_config: HostConfig,
+        ai_name: str | None = None,
+    ) -> str:
+        ai_identity = (
+            f"你在這個 Discord 頻道中的名字是「{ai_name}」。玩家提到、呼叫或對話中稱呼這個名字時，指的就是你。\n"
+            if ai_name
+            else ""
+        )
+        return (
+            "你目前在一個 Discord 頻道中接續多人對話。\n"
+            + ai_identity
+            +
+            "你不會持續保留跨回合記憶，請只根據本輪提供的最近對話紀錄與最新提及訊息來回應。\n"
+            "如果上下文不足，直接依據已知內容接話，不要假裝看過未提供的內容。\n\n"
+            + cls._build_system_content(host_config)
         )
 
     @staticmethod
@@ -231,13 +343,15 @@ class SessionManager:
         custom_agents = self._build_custom_agents(host_config)
 
         session = await self._client.create_session(
-            session_id=key,
-            model=chosen_model,
-            reasoning_effort=chosen_reasoning_effort,
-            working_directory=str(host_config.host_dir),
-            on_permission_request=PermissionHandler.approve_all,
-            system_message={"mode": "replace", "content": system_content},
-            custom_agents=custom_agents or None,
+            {
+                "session_id": key,
+                "model": chosen_model,
+                "reasoning_effort": chosen_reasoning_effort,
+                "working_directory": str(host_config.host_dir),
+                "on_permission_request": PermissionHandler.approve_all,
+                "system_message": {"mode": "replace", "content": system_content},
+                "custom_agents": custom_agents or None,
+            }
         )
 
         active = ActiveSession(
@@ -297,12 +411,14 @@ class SessionManager:
         try:
             session = await self._client.resume_session(
                 key,
-                on_permission_request=PermissionHandler.approve_all,
-                model=chosen_model,
-                reasoning_effort=chosen_reasoning_effort,
-                working_directory=str(host_config.host_dir),
-                system_message={"mode": "replace", "content": system_content},
-                custom_agents=custom_agents or None,
+                {
+                    "on_permission_request": PermissionHandler.approve_all,
+                    "model": chosen_model,
+                    "reasoning_effort": chosen_reasoning_effort,
+                    "working_directory": str(host_config.host_dir),
+                    "system_message": {"mode": "replace", "content": system_content},
+                    "custom_agents": custom_agents or None,
+                },
             )
             active = ActiveSession(
                 session,
@@ -325,6 +441,28 @@ class SessionManager:
             log.debug("Could not resume session %s: %s", key, e)
             return None
 
+    async def send_grok_message(
+        self,
+        guild_id: int,
+        channel_id: int,
+        user_message: str,
+        context: str | None = None,
+        ai_name: str | None = None,
+    ) -> str:
+        active = self.require_session(guild_id, channel_id)
+        if active.mode != "grok":
+            raise RuntimeError("Current session is not in Grok mode.")
+        if active.host_config is None:
+            raise RuntimeError("Current session is missing host configuration.")
+
+        grok_client = self.ensure_grok_available()
+        return await grok_client.generate_reply(
+            model=active.grok_model or DEFAULT_GROK_MODEL,
+            system_prompt=self._build_grok_system_content(active.host_config, ai_name),
+            context=context,
+            user_message=user_message,
+        )
+
     async def send_message(
         self,
         guild_id: int,
@@ -343,6 +481,12 @@ class SessionManager:
             raise RuntimeError(f"No active session for {key}")
 
         prompt_parts: list[str] = []
+        if active.pending_copilot_backfill and active.grok_pending_lines:
+            prompt_parts.append(
+                "以下是你切換到 Grok 模式期間，Discord 頻道中發生但你尚未看過的對話。"
+                "請先吸收這些內容，再接續最新的玩家訊息：\n\n"
+                f"{chr(10).join(active.grok_pending_lines)}\n\n---\n\n"
+            )
         if context:
             prompt_parts.append(
                 f"以下是頻道中最近的對話紀錄，供你參考上下文：\n\n{context}\n\n---\n\n"
@@ -350,18 +494,20 @@ class SessionManager:
         prompt_parts.append(user_message)
         full_prompt = "".join(prompt_parts)
 
+        target_active = active
+
         try:
-            idle_reached = await self._wait_for_idle(active, full_prompt)
+            idle_reached = await self._wait_for_idle(target_active, full_prompt)
         except Exception as exc:
             if "Session not found" not in str(exc):
                 raise
             log.warning("Session %s expired (backend dropped it), auto-recovering...", key)
 
             # Auto-recovery: drop stale session, try resume → create
-            old_callback = active._message_callback
-            active.cleanup()
+            old_callback = target_active._message_callback
+            target_active.cleanup()
             self._sessions.pop(key, None)
-            host_config = active.host_config
+            host_config = target_active.host_config
             if host_config is None:
                 raise RuntimeError(f"Session {key} expired and no host_config for recovery")
 
@@ -369,8 +515,8 @@ class SessionManager:
                 guild_id,
                 channel_id,
                 host_config,
-                active.ai_model,
-                active.reasoning_effort,
+                target_active.ai_model,
+                target_active.reasoning_effort,
             )
             if recovered is None:
                 log.info("Resume failed for %s, creating fresh session", key)
@@ -378,18 +524,25 @@ class SessionManager:
                     guild_id,
                     channel_id,
                     host_config,
-                    active.ai_model,
-                    active.model_name,
-                    active.reasoning_effort,
+                    target_active.ai_model,
+                    target_active.model_name,
+                    target_active.reasoning_effort,
                 )
+
+            recovered.copy_runtime_state_from(target_active)
 
             # Transfer the callback to the recovered session
             if old_callback:
                 recovered.set_message_callback(old_callback)
             log.info("Session recovered for %s, retrying message", key)
-            idle_reached = await self._wait_for_idle(recovered, full_prompt)
+            target_active = recovered
+            idle_reached = await self._wait_for_idle(target_active, full_prompt)
 
-        if not idle_reached and active._reply_count == 0:
+        if target_active.pending_copilot_backfill and target_active.grok_pending_lines:
+            target_active.sent_message_ids.update(target_active.grok_pending_message_ids)
+            target_active.clear_grok_backfill()
+
+        if not idle_reached and target_active._reply_count == 0:
             return "⚠️ 回覆逾時，請再試一次。"
         return ""
 
@@ -413,7 +566,7 @@ class SessionManager:
         active._idle_event = asyncio.Event()
         active._reply_count = 0
         try:
-            await active.session.send(prompt)
+            await active.session.send({"prompt": prompt})
             await asyncio.wait_for(active._idle_event.wait(), timeout=timeout)
             return True
         except asyncio.TimeoutError:
