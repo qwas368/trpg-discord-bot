@@ -1,4 +1,4 @@
-"""Manages Copilot SDK sessions for each Discord channel."""
+"""管理每個 Discord 頻道對應的 Copilot / Grok 執行狀態。"""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import shutil
 import subprocess
 import sys
 from datetime import datetime, timezone
-from typing import Any
+from typing import Any, Sequence
 
 from copilot import CopilotClient, PermissionHandler
 
@@ -16,6 +16,7 @@ from bot.config import (
     DEFAULT_AI_MODEL,
     DEFAULT_GROK_MODEL,
     DEFAULT_REASONING_EFFORT,
+    GROK_CONTEXT_MESSAGE_COUNT,
     XAI_API_KEY,
 )
 from bot.grok.client import GrokClient
@@ -25,11 +26,12 @@ log = logging.getLogger(__name__)
 
 
 def _session_key(guild_id: int, channel_id: int) -> str:
+    """將 guild 與 channel 組成穩定的 session key。"""
     return f"{guild_id}_{channel_id}"
 
 
 class ActiveSession:
-    """Wraps a Copilot SDK session with runtime state for provider switching."""
+    """包裝 Copilot SDK session，並補上切換 Grok 時需要的執行期狀態。"""
 
     def __init__(
         self,
@@ -46,16 +48,20 @@ class ActiveSession:
         self.model_name = model_name
         self.reasoning_effort = reasoning_effort
         self.host_config = host_config
+
+        # sent_message_ids 用來避免把已經看過的 Discord 訊息再次送進 Copilot。
         self.sent_message_ids: set[int] = set()
 
+        # mode / grok_* 這一組欄位負責維護 Grok 切換、回補與角色摘要狀態。
         self.mode = "copilot"
         self.grok_model = DEFAULT_GROK_MODEL
         self.grok_pending_lines: list[str] = []
         self.grok_pending_message_ids: set[int] = set()
         self.pending_copilot_backfill = False
         self.grok_started_at: datetime | None = None
+        self.grok_character_summary: str | None = None
 
-        # Persistent listener state
+        # 底下是與 Copilot SDK subscription 相關的暫存狀態。
         self._message_callback: Any | None = None  # async fn(str) -> None
         self._unsubscribe: Any | None = None
         self._idle_event: asyncio.Event | None = None
@@ -63,11 +69,11 @@ class ActiveSession:
         self._loop: asyncio.AbstractEventLoop | None = None
 
     def set_message_callback(self, callback: Any) -> None:
-        """Set the async callback for forwarding assistant messages (e.g. to Discord)."""
+        """設定 assistant 回覆的轉送 callback（通常是送回 Discord）。"""
         self._message_callback = callback
 
     def setup_listener(self) -> None:
-        """Subscribe to session events once. Stays active until cleanup()."""
+        """訂閱 Copilot session 事件，直到 cleanup() 才解除。"""
         self._loop = asyncio.get_running_loop()
 
         async def _safe_send(content: str) -> None:
@@ -80,23 +86,25 @@ class ActiveSession:
         def _on_event(event: Any) -> None:
             etype = event.type if isinstance(event.type, str) else event.type.value
             if etype == "assistant.message" and event.data.content:
+                # assistant.message 代表 Copilot 真正吐出了可轉送的內容。
                 self._reply_count += 1
                 if self._message_callback and self._loop:
                     asyncio.run_coroutine_threadsafe(_safe_send(event.data.content), self._loop)
             elif etype == "session.idle":
+                # session.idle 代表這一輪輸出已經結束，可解除等待。
                 if self._idle_event:
                     self._idle_event.set()
 
         self._unsubscribe = self.session.on(_on_event)
 
     def cleanup(self) -> None:
-        """Unsubscribe the persistent listener."""
+        """解除事件訂閱，避免 session 關閉後仍殘留 callback。"""
         if self._unsubscribe:
             self._unsubscribe()
             self._unsubscribe = None
 
     def copy_runtime_state_from(self, other: "ActiveSession") -> None:
-        """Carry provider/runtime state across Copilot session recovery."""
+        """在 session 自動恢復時沿用 mode、backfill 與摘要等執行期狀態。"""
         self.sent_message_ids = set(other.sent_message_ids)
         self.mode = other.mode
         self.grok_model = other.grok_model
@@ -104,12 +112,15 @@ class ActiveSession:
         self.grok_pending_message_ids = set(other.grok_pending_message_ids)
         self.pending_copilot_backfill = other.pending_copilot_backfill
         self.grok_started_at = other.grok_started_at
+        self.grok_character_summary = other.grok_character_summary
 
     def enable_grok_mode(self) -> None:
+        """切到 Grok，並記錄切換時間供 backfill 判斷。"""
         self.mode = "grok"
         self.grok_started_at = datetime.now(timezone.utc)
 
     def disable_grok_mode(self) -> None:
+        """切回 Copilot，標記下一次要先補回 Grok 期間 transcript。"""
         self.mode = "copilot"
         self.grok_started_at = None
         self.pending_copilot_backfill = bool(self.grok_pending_lines)
@@ -120,10 +131,11 @@ class ActiveSession:
         content: str,
         created_at: datetime | None,
     ) -> None:
-        """Track Discord messages that Copilot missed while Grok mode was active."""
+        """記錄 Grok 模式期間的 Discord 訊息，供切回 Copilot 時回補。"""
         if not content or message_id in self.grok_pending_message_ids:
             return
 
+        # 某些 datetime 可能沒有 tzinfo，統一補成 UTC 以便和 grok_started_at 比較。
         if created_at and created_at.tzinfo is None:
             created_at = created_at.replace(tzinfo=timezone.utc)
         if self.grok_started_at and created_at and created_at < self.grok_started_at:
@@ -147,6 +159,7 @@ class SessionManager:
         self._grok_client: GrokClient | None = None
         self._grok_init_error: str | None = None
 
+        # 啟動時先嘗試初始化 Grok；若套件缺失，延後到使用者切換時再回報。
         if XAI_API_KEY:
             try:
                 self._grok_client = GrokClient(XAI_API_KEY)
@@ -158,7 +171,7 @@ class SessionManager:
         await self._client.start()
         log.info("Copilot SDK client started")
 
-        # Verify authentication via SDK
+        # 先透過 SDK 驗證是否已登入 Copilot。
         auth = await self._client.get_auth_status()
         if auth.isAuthenticated:
             log.info(
@@ -168,7 +181,7 @@ class SessionManager:
             )
             return
 
-        # Not authenticated — stop the client and run interactive login
+        # 尚未登入時，改走 copilot CLI 的互動式登入流程。
         log.warning("Copilot is not authenticated: %s", auth.statusMessage or "no details")
         await self._client.stop()
         self._client = None
@@ -197,7 +210,7 @@ class SessionManager:
             log.error("Copilot login failed (exit code %d).", result.returncode)
             sys.exit(1)
 
-        # Restart the client after login
+        # 登入成功後重建 SDK client，讓後續 session 能正常建立。
         self._client = CopilotClient()
         await self._client.start()
         auth = await self._client.get_auth_status()
@@ -228,7 +241,7 @@ class SessionManager:
         return active
 
     async def get_available_models(self, refresh: bool = False) -> list[str]:
-        """Return model IDs from Copilot SDK, cached for autocomplete use."""
+        """從 Copilot SDK 取得模型 ID，並做快取供 autocomplete 使用。"""
         assert self._client is not None, "SessionManager not started"
 
         if self._available_models is not None and not refresh:
@@ -257,19 +270,81 @@ class SessionManager:
             raise RuntimeError(self._grok_init_error)
         raise RuntimeError("Grok client 尚未初始化。")
 
-    def toggle_grok_mode(self, guild_id: int, channel_id: int) -> tuple[ActiveSession, bool]:
+    async def toggle_grok_mode(
+        self,
+        guild_id: int,
+        channel_id: int,
+        history_context: str | None = None,
+        history_message_ids: Sequence[int] | None = None,
+        ai_name: str | None = None,
+    ) -> tuple[ActiveSession, bool]:
+        """切換指定頻道的 Grok 模式，必要時先建立 handoff 摘要。"""
         active = self.require_session(guild_id, channel_id)
         if active.mode == "grok":
             active.disable_grok_mode()
             return active, False
 
         self.ensure_grok_available()
+
+        # 從 Copilot 切到 Grok 時，先請 Copilot 用近期對話整理角色卡。
+        context = history_context or f"（最近 {GROK_CONTEXT_MESSAGE_COUNT} 則訊息中沒有可用內容）"
+        summary = await self.generate_grok_handoff_summary(
+            guild_id,
+            channel_id,
+            context,
+            history_message_ids or (),
+            ai_name,
+        )
+        active.grok_character_summary = summary
         active.enable_grok_mode()
         return active, True
 
+    async def generate_grok_handoff_summary(
+        self,
+        guild_id: int,
+        channel_id: int,
+        history_context: str,
+        history_message_ids: Sequence[int],
+        ai_name: str | None = None,
+    ) -> str:
+        """請 Copilot 根據 recent history 產出一份給 Grok 使用的角色摘要。"""
+        active = self.require_session(guild_id, channel_id)
+        if active.mode != "copilot":
+            raise RuntimeError("只能在 Copilot 模式下建立 Grok 交接摘要。")
+
+        prompt = self._build_grok_handoff_prompt(history_context, ai_name)
+        summary = await self._send_internal_message(active, prompt)
+        active.grok_character_summary = summary
+        active.sent_message_ids.update(history_message_ids)
+        log.info(
+            "Generated Grok handoff summary for %s using %d recent messages",
+            _session_key(guild_id, channel_id),
+            len(history_message_ids),
+        )
+        return summary
+
+    @staticmethod
+    async def _send_internal_message(
+        active: ActiveSession,
+        prompt: str,
+        timeout: float = 240.0,
+    ) -> str:
+        """送出不應回傳到 Discord 的內部 prompt，例如 handoff 摘要請求。"""
+        original_callback = active._message_callback
+        active._message_callback = None
+        try:
+            event = await active.session.send_and_wait({"prompt": prompt}, timeout=timeout)
+        finally:
+            active._message_callback = original_callback
+
+        content = getattr(getattr(event, "data", None), "content", None) if event else None
+        if not content or not str(content).strip():
+            raise RuntimeError("Copilot 沒有成功產出 Grok 交接摘要。")
+        return str(content).strip()
+
     @staticmethod
     def _build_system_content(host_config: HostConfig) -> str:
-        """Build the full system prompt from host config."""
+        """把 host 指令與 agents 組成 Copilot / Grok 共用的基礎 system prompt。"""
         system_parts: list[str] = []
         if host_config.instructions:
             system_parts.append(host_config.instructions)
@@ -295,24 +370,52 @@ class SessionManager:
         cls,
         host_config: HostConfig,
         ai_name: str | None = None,
+        character_summary: str | None = None,
     ) -> str:
+        """建立 Grok 專用 system prompt，補上 stateless 說明與角色卡摘要。"""
         ai_identity = (
             f"你在這個 Discord 頻道中的名字是「{ai_name}」。玩家提到、呼叫或對話中稱呼這個名字時，指的就是你。\n"
             if ai_name
             else ""
         )
+        summary_section = (
+            f"以下是 Copilot 根據最近 {GROK_CONTEXT_MESSAGE_COUNT} 則 Discord 訊息整理的精簡角色卡。"
+            "請盡量維持這些角色設定；若與更近的對話衝突，以更近的對話為準。\n\n"
+            f"{character_summary}\n\n"
+            if character_summary
+            else ""
+        )
         return (
             "你目前在一個 Discord 頻道中接續多人對話。\n"
             + ai_identity
-            +
-            "你不會持續保留跨回合記憶，請只根據本輪提供的最近對話紀錄與最新提及訊息來回應。\n"
+            + "你不會持續保留跨回合記憶，請只根據本輪提供的最近對話紀錄與最新提及訊息來回應。\n"
             "如果上下文不足，直接依據已知內容接話，不要假裝看過未提供的內容。\n\n"
+            + summary_section
             + cls._build_system_content(host_config)
         )
 
     @staticmethod
+    def _build_grok_handoff_prompt(history_context: str, ai_name: str | None = None) -> str:
+        """建立請 Copilot 整理角色卡的內部 handoff prompt。"""
+        ai_identity = (
+            f"在這個 Discord 頻道中，AI/主持人自己的名字是「{ai_name}」。\n"
+            if ai_name
+            else ""
+        )
+        return (
+            "這是一則內部交接訊息，不要角色扮演，也不要產出要直接貼到 Discord 的回覆。\n"
+            "接下來這個頻道將暫時由 Grok 接手回覆。\n"
+            + ai_identity
+            + f"請根據以下最近 {GROK_CONTEXT_MESSAGE_COUNT} 則 Discord 訊息，整理出「出現角色的精簡角色卡」。\n"
+            "請優先涵蓋：姓名、身分/角色定位、個性、口吻/說話風格、與玩家的關係。\n"
+            "若資訊不足，請明確寫「未知」。請只輸出繁體中文摘要，不要額外解釋。\n\n"
+            "最近訊息如下：\n\n"
+            f"{history_context}"
+        )
+
+    @staticmethod
     def _build_custom_agents(host_config: HostConfig) -> list[dict]:
-        """Build the custom_agents list from host config agents."""
+        """將 HostConfig.agents 轉成 Copilot SDK 需要的 custom_agents 格式。"""
         return [
             {
                 "name": agent.name,
@@ -331,6 +434,7 @@ class SessionManager:
         model_name: str | None = None,
         reasoning_effort: str | None = None,
     ) -> ActiveSession:
+        """建立一個新的 Copilot session，並掛上 Discord 端需要的執行期狀態。"""
         assert self._client is not None, "SessionManager not started"
 
         key = _session_key(guild_id, channel_id)
@@ -372,8 +476,8 @@ class SessionManager:
             chosen_reasoning_effort or "(default)",
         )
 
-        # If a game module was selected, send its content as the first message.
-        # Callback is not set yet, so the reply won't be forwarded to Discord.
+        # 若有指定遊戲模組，先把模組內容作為開場資料送進 Copilot。
+        # 此時 callback 尚未綁到 Discord，因此不會把初始化回覆送到頻道。
         if model_name:
             try:
                 content = load_model_content(model_name)
@@ -395,7 +499,7 @@ class SessionManager:
         ai_model: str | None = None,
         reasoning_effort: str | None = None,
     ) -> ActiveSession | None:
-        """Try to resume an existing session. Returns None if not resumable."""
+        """嘗試恢復既有 session；若後端無法恢復則回傳 None。"""
         assert self._client is not None, "SessionManager not started"
 
         key = _session_key(guild_id, channel_id)
@@ -449,6 +553,7 @@ class SessionManager:
         context: str | None = None,
         ai_name: str | None = None,
     ) -> str:
+        """把當前回合的 Discord 對話交給 Grok 產生回覆。"""
         active = self.require_session(guild_id, channel_id)
         if active.mode != "grok":
             raise RuntimeError("Current session is not in Grok mode.")
@@ -458,7 +563,11 @@ class SessionManager:
         grok_client = self.ensure_grok_available()
         return await grok_client.generate_reply(
             model=active.grok_model or DEFAULT_GROK_MODEL,
-            system_prompt=self._build_grok_system_content(active.host_config, ai_name),
+            system_prompt=self._build_grok_system_content(
+                active.host_config,
+                ai_name,
+                active.grok_character_summary,
+            ),
             context=context,
             user_message=user_message,
         )
@@ -470,10 +579,10 @@ class SessionManager:
         user_message: str,
         context: str | None = None,
     ) -> str:
-        """Send a message and wait for idle. Replies are forwarded via the session callback.
+        """將訊息送給 Copilot 並等待 idle。
 
-        Returns a non-empty string only when something needs to be shown to the user
-        (e.g. timeout with no replies). Otherwise returns empty string.
+        真正的模型回覆會透過 session callback 直接轉送到 Discord。
+        這個方法只在需要額外提示使用者時回傳文字，例如完全逾時沒有任何輸出。
         """
         key = _session_key(guild_id, channel_id)
         active = self._sessions.get(key)
@@ -482,6 +591,7 @@ class SessionManager:
 
         prompt_parts: list[str] = []
         if active.pending_copilot_backfill and active.grok_pending_lines:
+            # 切回 Copilot 後，先把 Grok 期間漏掉的頻道訊息補給它。
             prompt_parts.append(
                 "以下是你切換到 Grok 模式期間，Discord 頻道中發生但你尚未看過的對話。"
                 "請先吸收這些內容，再接續最新的玩家訊息：\n\n"
@@ -503,7 +613,7 @@ class SessionManager:
                 raise
             log.warning("Session %s expired (backend dropped it), auto-recovering...", key)
 
-            # Auto-recovery: drop stale session, try resume → create
+            # 後端 session 遺失時，先丟棄 stale session，再嘗試 resume，最後才重建。
             old_callback = target_active._message_callback
             target_active.cleanup()
             self._sessions.pop(key, None)
@@ -531,7 +641,7 @@ class SessionManager:
 
             recovered.copy_runtime_state_from(target_active)
 
-            # Transfer the callback to the recovered session
+            # 恢復成功後，把原本的 Discord callback 接回新 session。
             if old_callback:
                 recovered.set_message_callback(old_callback)
             log.info("Session recovered for %s, retrying message", key)
@@ -562,7 +672,7 @@ class SessionManager:
 
     @staticmethod
     async def _wait_for_idle(active: ActiveSession, prompt: str, timeout: float = 240.0) -> bool:
-        """Send a prompt and wait for session.idle. Returns True if idle reached, False on timeout."""
+        """送出 prompt 後等待 session.idle；逾時則回傳 False。"""
         active._idle_event = asyncio.Event()
         active._reply_count = 0
         try:

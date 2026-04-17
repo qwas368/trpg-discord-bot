@@ -41,7 +41,7 @@ A Discord bot that acts as a TRPG Game Master (GM/Keeper), powered by GitHub Cop
 | Command | Description |
 |---------|-------------|
 | `/host [channel] [host_type] [model] [ai_model] [reasoning_effort]` | 在指定頻道開始主持 TRPG |
-| `/grok [channel]` | 切換指定頻道的 Grok 模式 |
+| `/grok [channel]` | 切換指定頻道的 Grok 模式，並先用最近 50 則訊息產生角色摘要 |
 | `/status [channel]` | 查看指定頻道目前使用 Grok 或 Copilot |
 | `/unhost [channel]` | 離開指定頻道的主持 |
 

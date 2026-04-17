@@ -1,4 +1,4 @@
-"""Slash commands for hosting TRPG sessions in Discord channels."""
+"""Discord slash commands：負責開局、切 Grok、查狀態與結束主持。"""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from bot.config import DEFAULT_AI_MODEL
+from bot.config import DEFAULT_AI_MODEL, GROK_CONTEXT_MESSAGE_COUNT
 from bot.host_loader import list_hosts, list_models, load_host
 
 log = logging.getLogger(__name__)
@@ -20,15 +20,49 @@ def _resolve_channel(
     interaction: discord.Interaction,
     channel: discord.TextChannel | None,
 ) -> discord.TextChannel:
+    """將可選頻道參數正規化成實際要操作的文字頻道。"""
     target = channel or interaction.channel
     if not isinstance(target, discord.TextChannel):
         raise ValueError("請在文字頻道使用這個指令，或明確指定一個文字頻道。")
     return target
 
 
+def _format_chat_line(author_name: str, author_id: int, content: str) -> str:
+    """統一 recent-history 與回補訊息的文字格式。"""
+    return f"[{author_name} (id:{author_id})]: {content}"
+
+
+def _resolve_bot_name(
+    channel: discord.TextChannel,
+    user: discord.ClientUser | None,
+) -> str | None:
+    """優先取 server 內顯示名稱，讓 Grok / handoff prompt 知道自己叫什麼。"""
+    if user:
+        member = channel.guild.get_member(user.id)
+        if member:
+            return member.display_name
+        if channel.guild.me:
+            return channel.guild.me.display_name
+        return user.display_name
+    return None
+
+
+async def _collect_recent_messages(
+    channel: discord.TextChannel,
+    limit: int,
+) -> list[discord.Message]:
+    """抓取指定頻道最近 N 則訊息，並調整為舊到新的順序。"""
+    messages: list[discord.Message] = []
+    async for msg in channel.history(limit=limit):
+        messages.append(msg)
+    messages.reverse()
+    return messages
+
+
 async def _host_type_autocomplete(
     interaction: discord.Interaction, current: str
 ) -> list[app_commands.Choice[str]]:
+    """依目前輸入內容過濾 host 類型。"""
     try:
         hosts = list_hosts()
         return [
@@ -44,6 +78,7 @@ async def _host_type_autocomplete(
 async def _model_autocomplete(
     interaction: discord.Interaction, current: str
 ) -> list[app_commands.Choice[str]]:
+    """依目前輸入內容過濾可選遊戲模組。"""
     try:
         models = list_models()
         return [
@@ -59,6 +94,7 @@ async def _model_autocomplete(
 async def _ai_model_autocomplete(
     interaction: discord.Interaction, current: str
 ) -> list[app_commands.Choice[str]]:
+    """從 Copilot SDK 讀出可用模型，供 slash command 自動完成。"""
     try:
         session_manager = getattr(interaction.client, "session_manager", None)
         if session_manager is None:
@@ -80,6 +116,7 @@ async def _ai_model_autocomplete(
 async def _reasoning_effort_autocomplete(
     interaction: discord.Interaction, current: str
 ) -> list[app_commands.Choice[str]]:
+    """提供固定的 reasoning effort 候選值。"""
     return [
         app_commands.Choice(name=effort, value=effort)
         for effort in REASONING_EFFORTS
@@ -88,6 +125,8 @@ async def _reasoning_effort_autocomplete(
 
 
 class HostingCog(commands.Cog):
+    """集中管理與主持 session 相關的 slash commands。"""
+
     def __init__(self, bot: commands.Bot) -> None:
         self.bot = bot
 
@@ -128,7 +167,7 @@ class HostingCog(commands.Cog):
             )
             return
 
-        # Validate host type
+        # 先確認 host 類型存在，避免後面建立 session 才失敗。
         try:
             host_config = load_host(host_type)
         except FileNotFoundError:
@@ -162,7 +201,7 @@ class HostingCog(commands.Cog):
         )
 
         try:
-            # Try to resume first
+            # 優先恢復既有 session，讓同頻道可以續玩。
             active = await sm.resume_session(
                 guild_id, channel.id, host_config, chosen_model, reasoning_effort
             )
@@ -181,6 +220,7 @@ class HostingCog(commands.Cog):
             log.debug("/host: resume failed for #%s, creating new session", channel.name, exc_info=True)
 
         try:
+            # 無法恢復時才建立全新 session。
             active = await sm.create_session(
                 guild_id, channel.id, host_config, chosen_model, model, reasoning_effort
             )
@@ -228,7 +268,27 @@ class HostingCog(commands.Cog):
         await interaction.response.defer()
 
         try:
-            active, enabled = sm.toggle_grok_mode(guild_id, target_channel.id)
+            current = sm.require_session(guild_id, target_channel.id)
+            if current.mode == "grok":
+                # 已在 Grok 時，/grok 代表切回 Copilot。
+                active, enabled = await sm.toggle_grok_mode(guild_id, target_channel.id)
+            else:
+                # 從 Copilot 切到 Grok 前，先抓最近 50 則訊息交給 Copilot 產生角色卡摘要。
+                history_messages = await _collect_recent_messages(
+                    target_channel,
+                    GROK_CONTEXT_MESSAGE_COUNT,
+                )
+                history_context = "\n".join(
+                    _format_chat_line(msg.author.display_name, msg.author.id, msg.content)
+                    for msg in history_messages
+                )
+                active, enabled = await sm.toggle_grok_mode(
+                    guild_id,
+                    target_channel.id,
+                    history_context,
+                    [msg.id for msg in history_messages],
+                    _resolve_bot_name(target_channel, self.bot.user),
+                )
         except RuntimeError as exc:
             await interaction.followup.send(f"⚠️ {exc}")
             return
@@ -237,10 +297,12 @@ class HostingCog(commands.Cog):
             parts = [
                 f"⚡ 已切換 {target_channel.mention} 到 **Grok** 模式。",
                 f"🤖 Grok 模型：`{active.grok_model}`",
-                "🧠 之後每次 @我，都會用最近 20 筆 Discord 對話重建上下文。",
+                f"🧠 之後每次 @我，都會用最近 {GROK_CONTEXT_MESSAGE_COUNT} 筆 Discord 對話重建上下文。",
+                "🗂️ 已先請 Copilot 依最近對話整理一版精簡角色卡給 Grok 使用。",
             ]
         else:
             parts = [f"🔁 已切回 {target_channel.mention} 的 **Copilot** 模式。"]
+            # 回切 Copilot 後，第一次發話前會補回 Grok 期間的 transcript。
             if active.grok_pending_lines:
                 parts.append(
                     "📝 下次在該頻道 @我 時，會先把 Grok 模式期間未同步的對話補回 Copilot。"
@@ -286,7 +348,12 @@ class HostingCog(commands.Cog):
         if active.reasoning_effort:
             parts.append(f"🧠 Copilot 推理強度：`{active.reasoning_effort}`")
         if active.mode == "grok":
-            parts.append("📚 Grok 會在每次 @我 時重建最近 20 筆 Discord 上下文。")
+            # Grok 是 stateless，因此每次回合都會重建 recent context。
+            parts.append(
+                f"📚 Grok 會在每次 @我 時重建最近 {GROK_CONTEXT_MESSAGE_COUNT} 筆 Discord 上下文。"
+            )
+        if active.grok_character_summary:
+            parts.append("🗂️ Grok 角色卡摘要：已準備")
         if active.pending_copilot_backfill:
             parts.append(f"📝 待同步 Grok 訊息：`{len(active.grok_pending_lines)}`")
         await interaction.response.send_message("\n".join(parts))
@@ -312,6 +379,7 @@ class HostingCog(commands.Cog):
             return
 
         await interaction.response.defer()
+        # 關閉當前頻道對應的 session，但保留後端可恢復的 session_id 狀態。
         await sm.close_session(guild_id, channel.id)
         log.info("/unhost: stopped hosting #%s (guild=%d, user=%s)", channel.name, guild_id, interaction.user.display_name)
         await interaction.followup.send(
@@ -320,4 +388,5 @@ class HostingCog(commands.Cog):
 
 
 async def setup(bot: commands.Bot) -> None:
+    """讓 discord.py 在 extension 載入時註冊 cog。"""
     await bot.add_cog(HostingCog(bot))

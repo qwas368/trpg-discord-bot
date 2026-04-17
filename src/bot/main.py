@@ -1,9 +1,10 @@
-"""Entry point for the TRPG Discord bot."""
+"""TRPG Discord Bot 的程式入口。"""
 
 from bot.bot import run_bot
 
 
 def main() -> None:
+    """啟動 bot 主流程。"""
     run_bot()
 
 

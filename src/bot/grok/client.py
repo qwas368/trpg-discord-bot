@@ -1,4 +1,4 @@
-"""xAI Grok client wrapper."""
+"""封裝 xAI SDK，提供簡單的 Grok 呼叫介面。"""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ except ImportError:  # pragma: no cover - handled at runtime
 
 
 class GrokClient:
-    """Small async wrapper around the official xAI Python SDK."""
+    """以非同步形式包裝官方 xAI Python SDK。"""
 
     def __init__(self, api_key: str):
         if Client is None or system is None or user is None:
@@ -28,6 +28,7 @@ class GrokClient:
         user_message: str,
         context: str | None = None,
     ) -> str:
+        # 官方 SDK 是同步介面，這裡丟到 thread 避免卡住 Discord event loop。
         return await asyncio.to_thread(
             self._generate_reply_sync,
             model,
@@ -45,6 +46,7 @@ class GrokClient:
     ) -> str:
         prompt_parts: list[str] = []
         if context:
+            # Grok 本身不保留長期狀態，所以每次都重新附上近期對話。
             prompt_parts.append(
                 f"以下是 Discord 頻道最近的對話紀錄，請依此接續對話：\n\n{context}\n\n---"
             )
