@@ -1,0 +1,11 @@
+## The Sword Coast and the North
+
+This chapter details many of the locales of the Sword Coast and the North, as seen through the eyes and recollections of a person living in Faerûn. Rather than being exhaustive descriptions, what follows are snippets of information drawn from the experience of five individuals who have traversed, lived in, and explored these areas. Like any other narrators, they have opinions and biases, and may be drawing conclusions from incomplete information. No one in the Realms knows everything about any subject, even its oldest and most learned sages, and the views formed from such incomplete information can often suggest an inaccurate conclusion. This is not to say that any of the information the narrators provide is false, only that they may not be entirely knowledgeable in their declarations.
+
+The details given here only begin to scratch the surface of the adventuring possibilities in the North. Although some of these locales are virtually unknown to outsiders, entire books longer than this one could be (and have been) written about others. If the descriptions leave you wanting to know more, consider them an inducement for you and your companions to visit these places and experience them firsthand.
+
+Be aware, also, that there is a great deal more to the North than what is presented here. There are ruins without names, and settlements so small as to not even warrant mention in this tome. What lurks in the uncharted areas, waiting to tantalize or perhaps terrorize, is all the more formidable because it can't be anticipated.
+
+> **Note to the DM: Making the Realms Yours**
+> The information in this chapter is intentionally nonspecific with respect to threats, monsters, and statistics. While you can use these details to flavor your descriptions of the towns and cities your players might visit, you should in no way consider these pieces of narration definitive. They're meant to provide touchstones, not to constrain your players to a narrow conception of the world.
+> You might decide to change some of the details, either to surprise your players or to account for events that have transpired since they obtained the information herein. You're encouraged to take what's presented here and make it, and the Forgotten Realms, your own.
