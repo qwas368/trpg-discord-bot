@@ -1,342 +1,8 @@
-# DM 參考表格（DM Reference Tables）
+# DM 參考表格與附錄（DM Tables & Appendices）
 
-*來源：DM 帷幕（DM Screen）、荒野工具包（Wilderness Kit）、城主指南附錄*
+*來源：城主指南（Dungeon Master's Guide）附錄 A–D*
 
-本模組彙整 DM 常用的快速參考表格：NPC 特徵表、隨機地城生成、荒野旅行規則、旅程週期、隨機遭遇、迷路規則等。
-
----
-
-# DM 帷幕（DM Screen）
-
-**NPC Characteristics**
-
-| d20 | Characteristic |
-| --- | --- |
-| 1 | Absentminded |
-| 2 | Arrogant |
-| 3 | Boorish |
-| 4 | Chews something |
-| 5 | Clumsy |
-| 6 | Curious |
-| 7 | Dim-witted |
-| 8 | Fiddles and fidgets nervously |
-| 9 | Frequently uses the wrong word |
-| 10 | Friendly |
-| 11 | Irritable |
-| 12 | Prone to predictions of certain doom |
-| 13 | Pronounced scar |
-| 14 | Slurs words, lisps, or stutters |
-| 15 | Speaks loudly or whispers |
-| 16 | Squints |
-| 17 | Stares into distance |
-| 18 | Suspicious |
-| 19 | Uses colorful oaths and exclamations |
-| 20 | Uses flowery speech or long words |
-
-**NPC Ideals**
-
-| d20 | Ideal (Alignment) |
-| --- | --- |
-| 1 | Aspiration (any) |
-| 2 | Charity (good) |
-| 3 | Community (lawful) |
-| 4 | Creativity (chaotic) |
-| 5 | Discovery (any) |
-| 6 | Fairness (lawful) |
-| 7 | Freedom (chaotic) |
-| 8 | Glory (any) |
-| 9 | Greater good (good) |
-| 10 | Greed (evil) |
-| 11 | Honor (lawful) |
-| 12 | Independence (chaotic) |
-| 13 | Knowledge (neutral) |
-| 14 | Life (good) |
-| 15 | Live and let live (neutral) |
-| 16 | Might (evil) |
-| 17 | Nation (any) |
-| 18 | People (neutral) |
-| 19 | Power (evil) |
-| 20 | Redemption (any) |
-
-**NPC Bonds**
-
-| d10 | Bonds |
-| --- | --- |
-| 1 | Personal goal or achievement |
-| 2 | Family member |
-| 3 | Colleagues or compatriots |
-| 4 | Benefactor, patron, or employer |
-| 5 | Romantic interest |
-| 6 | Special place |
-| 7 | Keepsake |
-| 8 | Valuable possession |
-| 9 | Revenge |
-| 10 | Roll twice, ignoring further rolls of 10 |
-
-**NPC Flaws**
-
-| d12 | Flaw |
-| --- | --- |
-| 1 | Forbidden love or romantic susceptibility |
-| 2 | Dependence |
-| 3 | Arrogance |
-| 4 | Envy of another person's possessions or station |
-| 5 | Overpowering greed |
-| 6 | Prone to rage |
-| 7 | Powerful enemy |
-| 8 | Specific phobia |
-| 9 | Shameful or scandalous history |
-| 10 | Secret crime or misdeed |
-| 11 | Possession of forbidden lore |
-| 12 | Foolhardy bravery |
-
-**有事發生了！**
-
-| d20 | Event |
-| --- | --- |
-| 1 | 一扇門開啟了。 |
-| 2 | 一團火焰開始燃燒。 |
-| 3 | 一顆流星劃過天際。 |
-| 4 | 一隻怪物出現了。 |
-| 5 | A screech pierces the air. |
-| 6 | A storm begins. |
-| 7 | 一顆詭異的星出現在空中。 |
-| 8 | A strong gust oif wind blows through. |
-| 9 | A tremor shakes the ground. |
-| 10 | 某人產生了既視感。 |
-| 11 | 某人生氣了。 |
-| 12 | Someone glimpses the future. |
-| 13 | Someone has a sense of foreboding. |
-| 14 | Someone has to go to the bathroom. |
-| 15 | Something spills or falls to the ground. |
-| 16 | Something isn't where it's supposed to be. |
-| 17 | The lights go out. |
-| 18 | The sun comes out. |
-| 19 | There's a foul smell in the air. |
-| 20 | Unexplained magic occurs. |
-
-**Quick Finds**
-
-| d12 | Find |
-| --- | --- |
-| 1 | Artwork |
-| 2 | Body |
-| 3 | Food or drink |
-| 4 | Jewelery |
-| 5 | Key |
-| 6 | Letter |
-| 7 | Magic herbs |
-| 8 | Map |
-| 9 | Monster parts |
-| 10 | Secret message |
-| 11 | Signet or insignia |
-| 12 | Tome |
-
-**光照**
-
-| 來源 | 明亮光照 | 微光光照 | 持續時間 |
-| --- | --- | --- | --- |
-| 蠟燭 | 5 尺 | +5 尺 | 1 小時 |
-| 油燈 | 15 尺 | +30 尺 | 6 小時 |
-| 牛眼提燈 | 60 尺錐形 | +60 尺 | 6 小時 |
-| 附蓋提燈 | 30 尺 | +30 尺 | 6 小時 |
-| 降下燈蓋 | — | +5 尺 | — |
-| 火炬 | 20 尺 | +20 尺 | 1 小時 |
-
-
----
-
-# Wilderness Journeys
-
-This sheet provides guidelines for playing through wilderness travel and for keeping track of supplies during the journeys.
-
-## Journey Cycles
-
-A journey takes place in Cycles that each represent the days spent travelling in the wilderness.……
-
-For each cycle, follow these steps in order:
-
-- **1. Weather.** The DM determines the predominant weather conditions for the Cycle.……
-- **2. Pace.** the players choose the groups travel pace for the cycle: slow, normal, or fast.……
-- **3. Navigate.** The DM decides whether the adventurers are at risk of losing their way, following the guidelines in ……
-- **4. Encounter.** Roll a `d10`. On a 1, the characters encounter something this cycle.……
-- **5. Supplies.** Expend food and water for each creature in the party that must eat or drink, consulting the "Food an……
-- **6. Progress.** Track the party's progress in the miles for the cycle.……
-
-## Becoming Lost
-
-Travelers are unlikely to get lost when following an established path or road or with a landmark in sight. In those circumstances, assume a group of adventurers won't get lost.
-
-Here are the circumstances that can cause a group to lose its way:
-
-- Weather that obscures the area, such as heavy rain, snow, or fog.
-- Traveling at night, even with light sources or *黑暗視覺*.
-- Dense forest
-- Traveling underground
-- Traveling at sea while unable to see the sky or any familiar land.
-
-The DM lets the group know when they are in one or more of those circumstances, and then the characters choose one of their number who must make a Wisdom (**生存**) check against a DC appropriate to the……
-
-If the check fails, the group spends `1d6` hours (short cycle) or `1d6` days (long cycle) traveling in a random direction.……
-
-## Random Encounter
-
-If a random encounter occurs, the DM can roll on a table in a book like Xanathar's Guide to Everything or use the Wilderness Encounter table here.
-
-**Wilderness Encounter**
-
-| d8 | Encounter |
-| --- | --- |
-| 1 | A lone, powerful creature appears! The DM chooses the creature, selecting one with a challenge rating that is 1-3 higher than the group's level. The creature lives in the area or is passing through, and it is hostile toward the group only if they provoke it. |
-| 2-4 | Hostile creatures prowl nearby! The DM chooses the creatures, selecting five with a challenge rating equal to the group's level. These creatures are either monsters native to the area or hostile travelers |
-| 5-6 | A group of friendly travelers crosses the group's path. The travelers have `2d6` goods for sale that cost 1 gp or less on the Adventuring Gear table in the Player's Handbook |
-| 7 | The group discovers a monument. Roll on the Monuments table. |
-| 8 | The group wanders into a strange place. Roll on the Weird Locales table. |
-
-**Monuments**
-
-| d20 | Monument |
-| --- | --- |
-| 1 | Sealed burial mound or pyramid |
-| 2 | Plundered burial mound or pyramid |
-| 3 | Faces carved into a mountainside or cliff |
-| 4 | Giant statues carved out of a mountainside or cliff |
-| 5-6 | intact obelisk etched with a warning, historical lore, dedication, or religious iconography |
-| 7-8 | Ruined or toppled obelisk |
-| 9-10 | Intact statue of a person or deity |
-| 11-13 | Ruined or toppled statue of a person or deity |
-| 14 | Great stone wall, intact, with tower fortifications spaced at one-mile intervals |
-| 15 | Great stone wall in ruins |
-| 16 | Great stone arch |
-| 17 | Fountain |
-| 18 | Intact circle of standing stones |
-| 19 | Ruined or toppled circle of standing stones |
-| 20 | Pillar carved with elemental or fey symbols |
-
-**Weird Locales**
-
-| d20 | Locale |
-| --- | --- |
-| 1-2 | Dead magic zone (similar to an antimagic field) |
-| 3 | Wild magic zone (roll on the Wild Magic Surge table in the Player's Handbook whenever a spell is cast within the zone) |
-| 4 | Boulder carved with talking faces |
-| 5 | Crystal cave that mystically answers questions |
-| 6 | Ancient tree containing a trapped spirit |
-| 7-8 | Battlefield where lingering fog occasionally assumes humanoid forms |
-| 9-10 | A portal to another plane of existence |
-| 11 | Wishing well |
-| 12 | Giant crystal shard protruding from the ground |
-| 13 | Wrecked ship, even if water is nowhere nearby |
-| 14-15 | Haunted hill or barrow mound |
-| 16 | River ferry guided by a skeletal captain |
-| 17 | Field of **石化** soldiers or other creatures |
-| 18 | Forest of **石化** or **awakened tree** |
-| 19 | Canyon containing a dragons' graveyard |
-| 20 | Floating earth mote with a tower on it |
-
-### Food and Water
-
-Creatures require units of food and water every cycle.……
-
-- **Short Cycle:** 1 unit = 1 pound/gallon of food/water
-- **Long Cycle:** 1 unit = 7 pounds/gallons of food/water
-
-A creature's water needs are doubled if the weather is hot, unless it has resistance or immunity to ……
-
-**Food and Water Needs**
-
-| Creature Size | Food/Water per Cycle | Food Cost per Short Cycle | Food Cost per Long Cycle |
-| --- | --- | --- | --- |
-| Tiny | 1/4 unit | 1 sp, 2 cp | 7 sp, 5 cp |
-| Small | 1 unit | 5 sp | 3 gp, 5sp |
-| Medium | 1 unit | 5 sp | 3 gp, 5 sp |
-| Large | 4 units | 2 gp | 14 gp |
-| Huge | 16 units | 8 gp | 56 gp |
-| Gargantuan | 64 units | 32 gp | 224 gp |
-
-### Tracking Supplies
-
-Use the accompanying Supply Tracker to note whether you are tracking a short or long cycle journey a……
-
-A character unable to eat or drink gains 1 level of **力竭** for each requirement they fail to meet.……
-
-### Foraging
-
-Characters can hunt or gather food and water while the party travels at a normal or slow pace.……
-
-
-# Wilderness Chases
-
-When a chase begins in the wilderness, the DM can use these rules to determine whether the pursuer catches their quarry.
-
-## Playing a Chase
-
-A chase is played out over the course of rounds, during which each chase participant takes a turn.
-
-Here Are the steps to follow in a chase:
-
-- **1. Establish positions.** Determine how far apart the quarry and the pursuer are from each other.……
-- **2. Roll initiative.** Everyone involved in the chase rolls initiative, determining the order of their turns in the chase.
-- **3. Roll for a complication.** When your turn starts, roll a `d20` and consult the Wilderness Chase Complications table to see if a……
-- **4. Move And take an action.** You can take one action on your turn, and before or after that action, you can move upto a distance ……
-- **5. Begin the next round.** When Everyone Involved in the chase has had a turn, the round ends, and the DM determines whether th……
-
-**Wilderness Chase Complications**
-
-| d20 | Complication |
-| --- | --- |
-| 1 | Your path takes you through a rough patch of brush. Make a DC 10 Strength (**運動**) or Dexterity (**體操**) check (your choice) to get past the brush. On failed check, the brush counts as 5feet of difficult terrain. |
-| 2 | Uneven ground threatens to slow your progress. Make a DC 10 Dexterity (**體操**) check to navigate the area. On failed check, the ground counts as 10 feet of difficult terrain. `d20` |
-| 3 | You run through a swarm of insects (see the Monster Manual For game statistics). The swarm makes an opportunity attack against you (+3 to hit; `4d4` piercing damage on a hit). |
-| 4 | A stream, ravine, or rock bed blocks your path. Make a DC 10 Strength (**運動**) or Dexterity (**體操**) check (your choice) to cross the impediment. On a failed check, the impediment counts as 10 feet of difficult terrain. |
-| 5 | Make a DC 10 Constitution saving throw. Ona failed save, you are **目盲** by blowing sand,dirt, ash, snow,or pollen until the end of your turn. While **目盲** in this way, your speed is halved. |
-| 6 | A sudden drop catches you by surprise. Make a DC 10 Dexterity saving throw to navigate the impediment. On failed save, you fall `1d4 x 5` feet, taking `1d6` bludgeoning damage per 10 feet fallen as normal, and land **伏地**. |
-| 7 | You blunder into a snare. Make a DC 15 Dexterity saving throw. On failed save, you are caught in the snare and **束縛**. As an action, you or someone within 5 feet of you can make a DC 10 Strength check, freeing you on a success. The snare can also be destroyed; it has an AC of 10 and 5 hit points, and it is immune to poison and psychic damage. Complication |
-| 8 | You are caught in a stampede of spooked animals. Make a DC 10 Dexterity saving throw. Ona failed save, you are knocked about and take `1d4` bludgeoning damage and `1d4` piercing damage. |
-| 9 | Your path takes you near a patch of razorvine. Make a DC 15 Dexterity saving throw or use 10 feet of movement (your choice) to avoid the razorvine. On a failed save, you take `1d10` slashing damage. |
-| 10 | One or more creatures in the area chase after you! The DM chooses these pursuers or rolls a `d8` to determine them: (1) 2 **brown bear**, (2) `2d4` **giant toad**, (3) `1d4` **poisonous snake**, (4) `2d4` **wolf**, (5) 1 **giant boar**, (6) 2 **dire wolf**, (7) **griffon**, or (8) `1d12` **giant rat** (see the 《Monster Manual》 for the creatures' game statistics). |
-| 11-20 | No complication. |
-
-### Dashing
-
-Over the course of a chase, you can take the **疾走** action a limited number of times before you risk……
-
-You drop out of the chase if your **力竭** reaches level 5, since your speed becomes0.……
-
-### Reactions
-
-During a chase, you can take reactions as normal, but you can't make opportunity attacks against oth……
-
-## Ending a Chase
-
-A chase ends when one side or the other stops, when the quarry escapes, or when at least one pursuer is within 5 feet of a quarry.
-
-If neither side gives up the chase, the quarry can make a Dexterity (**隱匿**) check at the end of each round, after every participant in the chase has taken a turn.……
-
-The quarry gains advantage or disadvantage on the check based on prevailing circumstances, as shown in the Escape Factors table.……
-
-**Escape Factors**
-
-| Factor | Check Has... |
-| --- | --- |
-| Quarry has many things to hide behind | Advantage |
-| Quarry is in a very crowded or noisy area | Advantage |
-| Quarry has few things to hide behind | Disadvantage |
-| Quarry is in an uncrowded or quiet area | Disadvantage |
-| The lead pursue ris a ranger or has proficiency in **生存** | Disadvantage |
-
-Escape doesn't necessarily mean a quarry has outpaced pursuers. For example, in the mountains, escape might mean the quarry ducked into a crevice or a hollow log.
-
-## Splitting Up
-
-Creatures being chased can split up into smaller groups. This tactic forces pursuers to either divide their forces or allow some of the quarry to escape.……
-
-## Role Reversal
-
-During a chase,it's possible for the pursuers to become the quarry. For example, characters chasing a bandit through the woods might draw unwanted attention from other bandits.……
-
-
----
+本模組涵蓋隨機地城生成、怪物列表、地圖及 DM 靈感來源。
 
 # Appendix A: Random Dungeons
 
@@ -348,112 +14,1225 @@ Alternatively, you can decide that passages leading off the edge of the map are 
 
 ## Starting Area
 
-The Starting Area table produces a chamb……
+The Starting Area table produces a chamber or a set of corridors at the entrance to your dungeon. When rolling for a random starting area, pick one of the doors or passages leading into the starting area as the entrance to the dungeon as a whole.
 
-Once you've selected the entrance, roll ……
+Once you've selected the entrance, roll on the appropriate table for each passage or door leading away from the starting area. Passages each extend 10 feet beyond the starting area. After that point, check on the Passage table for each passage to determine what lies beyond. Use the Beyond a Door table to determine what lies behind doors and secret doors.
+
+**Starting Area**
+
+| d10 | Configuration |
+| --- | --- |
+| 1 | Square, 20 × 20 ft.; passage on each wall |
+| 2 | Square, 20 × 20 ft.; door on two walls, passage in third wall |
+| 3 | Square, 40 × 40 ft.; doors on three walls |
+| 4 | Rectangle, 80 × 20 ft., with row of pillars down the middle; two passages leading from each long wall, doors on each short wall |
+| 5 | Rectangle, 20 × 40 ft.; passage on each wall |
+| 6 | Circle, 40 ft. diameter; one passage at each cardinal direction |
+| 7 | Circle, 40 ft. diameter; one passage in each cardinal direction; well in middle of room (might lead down to lower level) |
+| 8 | Square, 20 × 20 ft.; door on two walls, passage on third wall, secret door on fourth wall |
+| 9 | Passage, 10 ft. wide; T intersection |
+| 10 | Passage, 10 ft. wide; four-way intersection |
 
 ## Passages
 
-When generating passages and corridors, ……
+When generating passages and corridors, roll on the Passage table multiple times, extending the length and branches of any open passage on the map until you arrive at a door or chamber.
 
-Whenever you create a new passage, roll ……
+Whenever you create a new passage, roll to determine its width. If the passage branches from another passage, roll a d12 on the Passage Width table. If it comes from a chamber, roll a d20 on that table, but the width of the passage must be at least 5 feet smaller than the longest dimension of the chamber.
+
+**Passage**
+
+| d20 | Detail |
+| --- | --- |
+| 1-2 | Continue straight 30 ft., no doors or side passages |
+| 3 | Continue straight 20 ft., door to the right, then an additional 10 ft. ahead |
+| 4 | Continue straight 20 ft., door to the left, then an additional 10 ft. ahead |
+| 5 | Continue straight 20 ft.; passage ends in a door |
+| 6-7 | Continue straight 20 ft., side passage to the right, then an additional 10 ft. ahead |
+| 8-9 | Continue straight 20 ft., side passage to the left, then an additional 10 ft. ahead |
+| 10 | Continue straight 20 ft., comes to a dead end; 10 chance of a secret door |
+| 11-12 | Continue straight 20 ft., then the passage turns left and continues 10 ft. |
+| 13-14 | Continue straight 20 ft., then the passage turns right and continues 10 ft. |
+| 15-19 | Chamber (roll on the Chamber table) |
+| 20 | Stairs* (roll on the Stairs table) |
+
+**Passage Width**
+
+| d12/d20 | Width |
+| --- | --- |
+| 1–2 | 5 ft. |
+| 3–12 | 10 ft. |
+| 13–14 | 20 ft. |
+| 15–16 | 30 ft. |
+| 17 | 40 ft., with row of pillars down the middle |
+| 18 | 40 ft., with double row of pillars |
+| 19 | 40 ft. wide, 20 ft. high |
+| 20 | 40 ft. wide, 20 ft. high, gallery 10 ft. above floor allows access to level above |
 
 ## Doors
 
-Whenever a table roll indicates a door, ……
+Whenever a table roll indicates a door, roll on the Door Type table to determine its nature, then roll on the Beyond a Door table to see what lies on the other side of it. If a door is barred, you decide which side of the door the bar is on. Unlocked doors can also be stuck, at your discretion. See chapter 5, "Adventure Environments," for information on doors and portcullises.
+
+**Door Type**
+
+| d20 | Door Type |
+| --- | --- |
+| 1-10 | Wooden |
+| 11-12 | Wooden, barred or locked |
+| 13 | Stone |
+| 14 | Stone, barred or locked |
+| 15 | Iron |
+| 16 | Iron, barred or locked |
+| 17 | Portcullis |
+| 18 | Portcullis, locked in place |
+| 19 | Secret door |
+| 20 | Secret door, barred or locked |
+
+**Beyond a Door**
+
+| d20 | Feature |
+| --- | --- |
+| 1-2 | Passage extending 10 ft., then T intersection extending 10 ft. to the right and left |
+| 3-8 | Passage 20 ft. straight ahead |
+| 9-18 | Chamber (roll on the Chamber table) |
+| 19 | Stairs (roll on the Stairs table) |
+| 20 | False door with trap |
 
 ## Chambers
 
-Whenever a roll on a table indicates a c……
+Whenever a roll on a table indicates a chamber, use the Chamber table to define its dimensions. Then roll on the Chamber Exits table to determine the number of exits. For each exit, roll on the Exit Location and Exit Type tables to determine the nature and placement of the exit.
 
-Use the tables in the "Stocking a Dungeo……
+Use the tables in the "Stocking a Dungeon" section to determine the contents of a chamber.
+
+**Chamber**
+
+| d20 | Chamber |
+| --- | --- |
+| 1-2 | Square, 20 × 20 ft.¹ |
+| 3-4 | Square, 30 × 30 ft.¹ |
+| 5-6 | Square, 40 × 40 ft.¹ |
+| 7-9 | Rectangle, 20 × 30 ft.¹ |
+| 10-12 | Rectangle, 30 × 40 ft.¹ |
+| 13-14 | Rectangle, 40 × 50 ft.² |
+| 15 | Rectangle, 50 × 80 ft.² |
+| 16 | Circle, 30 ft. diameter¹ |
+| 17 | Circle, 50 ft. diameter² |
+| 18 | Octagon, 40 × 40 ft.² |
+| 19 | Octagon, 60 × 60 ft.² |
+| 20 | Trapezoid, roughly 40 × 60 ft.² |
+
+**Chamber Exits**
+
+| d20 | Normal Chamber | Large Chamber |
+| --- | --- | --- |
+| 1-3 | 0 | 0 |
+| 4-5 | 0 | 1 |
+| 6-8 | 1 | 1 |
+| 9-11 | 1 | 2 |
+| 12-13 | 2 | 2 |
+| 14-15 | 2 | 3 |
+| 16-17 | 3 | 3 |
+| 18 | 3 | 4 |
+| 19 | 4 | 5 |
+| 20 | 4 | 6 |
+
+**Exit Location**
+
+| d20 | Location |
+| --- | --- |
+| 1-7 | Wall opposite entrance |
+| 8-12 | Wall left of entrance |
+| 13-17 | Wall right of entrance |
+| 18-20 | Same wall as entrance |
+
+**Exit Type**
+
+| d20 | Type |
+| --- | --- |
+| 1-10 | Door (roll on the Door Type table) |
+| 11-20 | Corridor, 10 ft. long |
 
 ## Stairs
 
-Stairs can include any means of going up……
+Stairs can include any means of going up and down, including ramps, chimneys, open shafts, elevators, and ladders. If your dungeon has more than one level, the amount of space between levels is up to you. A distance of 30 feet works fine for most dungeons.
+
+**Stairs**
+
+| d20 | Stairs |
+| --- | --- |
+| 1-4 | Down one level to a chamber |
+| 5-8 | Down one level to a passage 20 ft. long |
+| 9 | Down two levels to a chamber |
+| 10 | Down two levels to a passage 20 ft. long |
+| 11 | Down three levels to a chamber |
+| 12 | Down three levels to a passage 20 ft. long |
+| 13 | Up one level to a chamber |
+| 14 | Up one level to a passage 20 ft. long |
+| 15 | Up to a dead end |
+| 16 | Down to a dead end |
+| 17 | Chimney up one level to a passage 20 ft. long |
+| 18 | Chimney up two levels to a passage 20 ft. long |
+| 19 | Shaft (with or without elevator) down one level to a chamber |
+| 20 | Shaft (with or without elevator) up one level to a chamber and down one level to a chamber |
 
 ## Connecting Areas
 
-When your map is done, consider adding d……
+When your map is done, consider adding doors between chambers and passages that are next to each other but otherwise not connected. Such doors create more paths through the dungeon and expand players' options.
 
-If your dungeon consists of more than on……
+If your dungeon consists of more than one level, be sure that any stairs, pits, and other vertical passages line up between levels. If you're using graph paper, lay a new page on top of your existing map, mark the locations of stairs and other features shared by the two levels, and begin mapping the new level.
 
 ## Stocking a Dungeon
 
-Creating a map for your dungeon is only ……
+Creating a map for your dungeon is only half the fun. Once you have the layout, you need to decide what challenges and rewards are to be found in the dungeon's passages and chambers. Any reasonably large space should be stocked with interesting sights, sounds, objects, and creatures.
 
-You don't need to have every last detail……
+You don't need to have every last detail of your dungeon plotted out. You can get by with nothing more than a list of monsters, a list of treasures, and a list of one or two key elements for each dungeon area.
 
 ### Chamber Purpose
 
-A room's purpose can……
+A room's purpose can help determine its furnishings and other contents.
 
-For each chamber on ……
+For each chamber on your dungeon map, establish its purpose or use the tables below to generate ideas. Each type of dungeon described in the "Dungeon Purpose" section of chapter 5, "Adventure Environments," has its own table featuring chambers geared to the dungeon's purpose. For example, if you're building a tomb, use the Dungeon: Tomb table to help you determine the purpose of each chamber. These dungeon-specific tables are followed by the General Dungeon Chambers table, which you can use if your dungeon isn't an exact fit for one of the standard types of dungeon or if you want to mix things up.
 
-Relying on random ro……
+Relying on random rolls to stock an entire dungeon can lead to incongruous results. A tiny room might end up being identified as a temple, while the huge chamber next door serves as storage. It can be fun to try to make sense of such strange design ideas, but make changes as you see fit. You can set aside a few key rooms and create specific contents for them.
+
+**Dungeon: Death Trap**
+
+| d20 | Purpose |
+| --- | --- |
+| 1 | Antechamber or waiting room for spectators |
+| 2-8 | Guardroom fortified against intruders |
+| 9-11 | Vault for holding important treasures, accessible only by locked or secret door (75 chance of being trapped) |
+| 12-14 | Room containing a puzzle that must be solved to bypass a trap or monster |
+| 15-19 | Trap designed to kill or capture creatures |
+| 20 | Observation room, allowing guards or spectators to observe creatures moving through the dungeon |
+
+**Dungeon: Lair**
+
+| d20 | Purpose |
+| --- | --- |
+| 1 | Armory stocked with weapons and armor |
+| 2 | Audience chamber, used to receive guests |
+| 3 | Banquet room for important celebrations |
+| 4 | Barracks where the lair's defenders are quartered |
+| 5 | Bedroom, for use by leaders |
+| 6 | Chapel where the lair's inhabitants worship |
+| 7 | Cistern or well for drinking water |
+| 8-9 | Guardroom for the defense of the lair |
+| 10 | Kennel for pets or guard beasts |
+| 11 | Kitchen for food storage and preparation |
+| 12 | Pen or prison where captives are held |
+| 13-14 | Storage, mostly nonperishable goods |
+| 15 | Throne room where the lair's leaders hold court |
+| 16 | Torture chamber |
+| 17 | Training and exercise room |
+| 18 | Trophy room or museum |
+| 19 | Latrine or bath |
+| 20 | Workshop for the construction of weapons, armor, tools, and other goods |
+
+**Dungeon: Maze**
+
+| d20 | Purpose |
+| --- | --- |
+| 1 | Conjuring room, used to summon creatures that guard the maze |
+| 2-5 | Guard room for sentinels that patrol the maze |
+| 6-10 | Lair for guard beasts that patrol the maze |
+| 11 | Pen or prison accessible only by secret door, used to hold captives condemned to the maze |
+| 12 | Shrine dedicated to a god or other entity |
+| 13-14 | Storage for food, as well as tools used by the maze's guardians to keep the complex in working order |
+| 15-18 | Trap to confound or kill those sent into the maze |
+| 19 | Well that provides drinking water |
+| 20 | Workshop where doors, torch sconces, and other furnishings are repaired and maintained |
+
+**Dungeon: Mine**
+
+| d20 | Purpose |
+| --- | --- |
+| 1-2 | Barracks for miners |
+| 3 | Bedroom for a supervisor or manager |
+| 4 | Chapel dedicated to a patron deity of miners, earth, or protection |
+| 5 | Cistern providing drinking water for miners |
+| 6-7 | Guardroom |
+| 8 | Kitchen used to feed workers |
+| 9 | Laboratory used to conduct tests on strange minerals extracted from the mine |
+| 10-15 | Lode where metal ore is mined (75 chance of being depleted) |
+| 16 | Office used by the mine supervisor |
+| 17 | Smithy for repairing damaged tools |
+| 18-19 | Storage for tools and other equipment |
+| 20 | Strong room or vault used to store ore for transport to the surface |
+
+**Dungeon: Planar Gate**
+
+| d100 | Purpose |
+| --- | --- |
+| 01-03 | Decorated foyer or antechamber |
+| 04-08 | Armory used by the portal's guardians |
+| 09-10 | Audience chamber for receiving visitors |
+| 11-19 | Barracks used by the portal's guards |
+| 20-23 | Bedroom for use by the high-ranking members of the order that guards the portal |
+| 24-30 | Chapel dedicated to a deity or deities related to the portal and its defenders |
+| 31-35 | Cistern providing fresh water |
+| 36-38 | Classroom for use of initiates learning about the portal's secrets |
+| 39 | Conjuring room for summoning creatures used to investigate or defend the portal |
+| 40-41 | Crypt where the remains of those that died guarding the portal are kept |
+| 42-47 | Dining room |
+| 48-50 | Divination room used to investigate the portal and events tied to it |
+| 51-55 | Dormitory for visitors and guards |
+| 56-57 | Entry room or vestibule |
+| 58-59 | Gallery for displaying trophies and objects related to the portal and those that guard it |
+| 60-67 | Guardroom to protect or watch over the portal |
+| 68-72 | Kitchen |
+| 73-77 | Laboratory for conducting experiments relating to the portal and creatures that emerge from it |
+| 78-80 | Library holding books about the portal's history |
+| 81-85 | Pen or prison for holding captives or creatures that emerge from the portal |
+| 86-87 | Planar junction, where the gate to another plane once stood (25 chance of being active) |
+| 88-90 | Storage |
+| 91 | Strong room or vault, for guarding valuable treasures connected to the portal or funds used to pay the planar gate's guardians |
+| 92-93 | Study |
+| 94 | Torture chamber, for questioning creatures that pass through the portal or that attempt to clandestinely use it |
+| 95-98 | Latrine or bath |
+| 99-00 | Workshop for constructing tools and gear needed to study the portal |
+
+**Dungeon: Stronghold**
+
+| d100 | Purpose |
+| --- | --- |
+| 01-02 | Antechamber where visitors seeking access to the stronghold wait |
+| 03-05 | Armory holding high-quality gear, including light siege weapons such as ballistas |
+| 06 | Audience chamber used by the master of the stronghold to receive visitors |
+| 07 | Aviary or zoo for keeping exotic creatures |
+| 08-11 | Banquet room for hosting celebrations and guests |
+| 12-15 | Barracks used by elite guards |
+| 16 | Bath outfitted with a marble floor and other luxurious accoutrements |
+| 17 | Bedroom for use by the stronghold's master or important guests |
+| 18 | Chapel dedicated to a deity associated with the stronghold's master |
+| 19-21 | Cistern providing drinking water |
+| 22-25 | Dining room for intimate gatherings or informal meals |
+| 26 | Dressing room featuring a number of wardrobes |
+| 27-29 | Gallery for the display of expensive works of art and trophies |
+| 30-32 | Game room used to entertain visitors |
+| 33-50 | Guardroom |
+| 51 | Kennel where monsters or trained animals that protect the stronghold are kept |
+| 52-57 | Kitchen designed to prepare exotic foods for large numbers of guests |
+| 58-61 | Library with an extensive collection of rare books |
+| 62 | Lounge used to entertain guests |
+| 63-70 | Pantry, including cellar for wine or spirits |
+| 71-74 | Sitting room for family and intimate guests |
+| 75-78 | Stable |
+| 79-86 | Storage for mundane goods and supplies |
+| 87 | Strong room or vault for protecting important treasures (75 chance of being hidden behind a secret door) |
+| 88-92 | Study, including a writing desk |
+| 93 | Throne room, elaborately decorated |
+| 94-96 | Waiting room where lesser guests are held before receiving an audience |
+| 97-98 | Latrine or bath |
+| 99-00 | Crypt belonging to the stronghold's master or someone else of importance |
+
+**Dungeon: Temple or Shrine**
+
+| d100 | Purpose |
+| --- | --- |
+| 01-03 | Armory filled with weapons and armor, battle banners, and pennants |
+| 04-05 | Audience chamber where priests of the temple receive commoners and low-ranking visitors |
+| 06-07 | Banquet room used for celebrations and holy days |
+| 08-10 | Barracks for the temple's military arm or its hired guards |
+| 11-14 | Cells where the faithful can sit in quiet contemplation |
+| 15-24 | Central temple built to accommodate rituals |
+| 25-28 | Chapel dedicated to a lesser deity associated with the temple's major deity |
+| 29-31 | Classroom used to train initiates and priests |
+| 32-34 | Conjuring room, specially sanctified and used to summon extraplanar creatures |
+| 35-40 | Crypt for a high priest or similar figure, hidden and heavily guarded by creatures and traps |
+| 41-42 | Dining room (large) for the temple's servants and lesser priests |
+| 43 | Dining room (small) for the temple's high priests |
+| 44-46 | Divination room, inscribed with runes and stocked with soothsaying implements |
+| 47-50 | Dormitory for lesser priests or students |
+| 51-56 | Guardroom |
+| 57 | Kennel for animals or monsters associated with the temple's deity |
+| 58-60 | Kitchen (might bear a disturbing resemblance to a torture chamber in an evil temple) |
+| 61-65 | Library, well stocked with religious treatises |
+| 66-68 | Prison for captured enemies (in good or neutral temples) or those designated as sacrifices (in evil temples) |
+| 69-73 | Robing room containing ceremonial outfits and items |
+| 74 | Stable for riding horses and mounts belonging to the temple, or for visiting messengers and caravans |
+| 75-79 | Storage holding mundane supplies |
+| 80 | Strong room or vault holding important relics and ceremonial items, heavily trapped |
+| 81-82 | Torture chamber, used in inquisitions (in good or neutral temples with a lawful bent) or for the sheer joy of causing pain (evil temples) |
+| 83-89 | Trophy room where art celebrating key figures and events from mythology is displayed |
+| 90 | Latrine or bath |
+| 91-94 | Well for drinking water, defendable in the case of attack or siege |
+| 95-00 | Workshop for repairing or creating weapons, religious items, and tools |
+
+**Dungeon: Tomb**
+
+| d20 | Purpose |
+| --- | --- |
+| 1 | Antechamber for those that have come to pay respect to the dead or prepare themselves for burial rituals |
+| 2-3 | Chapel dedicated to deities that watch over the dead and protect their resting places |
+| 4-8 | Crypt for less important burials |
+| 9 | Divination room, used in rituals to contact the dead for guidance |
+| 10 | False crypt (trapped) to kill or capture thieves |
+| 11 | Gallery to display the deeds of the deceased through trophies, statues, paintings and so forth |
+| 12 | Grand crypt for a noble, high priest, or other important individual |
+| 13-14 | Guardroom, usually guarded by undead, constructs, or other creatures that don't need to eat or sleep |
+| 15 | Robing room for priests to prepare for burial rituals |
+| 16-17 | Storage, stocked with tools for maintaining the tomb and preparing the dead for burial |
+| 18 | Tomb where the wealthiest and most important folk are interred, protected by secret doors and traps |
+| 19-20 | Workshop for embalming the dead |
+
+**Dungeon: Treasure Vault**
+
+| d20 | Purpose |
+| --- | --- |
+| 1 | Antechamber for visiting dignitaries |
+| 2 | Armory containing mundane and magic gear used by the treasure vault's guards |
+| 3-4 | Barracks for guards |
+| 5 | Cistern providing fresh water |
+| 6-9 | Guardroom to defend against intruders |
+| 10 | Kennel for trained beasts used to guard the treasure vault |
+| 11 | Kitchen for feeding guards |
+| 12 | Watch room that allows guards to observe those who approach the dungeon |
+| 13 | Prison for hold ing captured intruders |
+| 14-15 | Strong room or vault, for guarding the treasure hidden in the dungeon, accessible only by locked or secret door |
+| 16 | Torture chamber for extracting information from captured intruders |
+| 17-20 | Trap or other trick designed to kill or capture creatures that enter the dungeon |
+
+**General Dungeon Chambers**
+
+| d100 | Purpose |
+| --- | --- |
+| 01 | Antechamber |
+| 02-03 | Armory |
+| 04 | Audience chamber |
+| 05 | Aviary |
+| 06-07 | Banquet room |
+| 08-10 | Barracks |
+| 11 | Bath or latrine |
+| 12 | Bedroom |
+| 13 | Bestiary |
+| 14-16 | Cell |
+| 17 | Chantry |
+| 18 | Chapel |
+| 19-20 | Cistern |
+| 21 | Classroom |
+| 22 | Closet |
+| 23-24 | Conjuring room |
+| 25-26 | Court |
+| 27-29 | Crypt |
+| 30-31 | Dining room |
+| 32-33 | Divination room |
+| 34 | Dormitory |
+| 35 | Dressing room |
+| 36 | Entry room or vestibule |
+| 37-38 | Gallery |
+| 39-40 | Game room |
+| 41-43 | Guardroom |
+| 44-45 | Hall |
+| 46-47 | Hall, great |
+| 48-49 | Hallway |
+| 50 | Kennel |
+| 51-52 | Kitchen |
+| 53-54 | Laboratory |
+| 55-57 | Library |
+| 58-59 | Lounge |
+| 60 | Meditation chamber |
+| 61 | Observatory |
+| 62 | Office |
+| 63-64 | Pantry |
+| 65-66 | Pen or prison |
+| 67-68 | Reception room |
+| 69-70 | Refectory |
+| 71 | Robing room |
+| 72 | Salon |
+| 73-74 | Shrine |
+| 75-76 | Sitting room |
+| 77-78 | Smithy |
+| 79 | Stable |
+| 80-81 | Storage room |
+| 82-83 | Strong room or vault |
+| 84-85 | Study |
+| 86-88 | Temple |
+| 89-90 | Throne room |
+| 91 | Torture chamber |
+| 92-93 | Training or exercise room |
+| 94-95 | Trophy room or museum |
+| 96 | Waiting room |
+| 97 | Nursery or schoolroom |
+| 98 | Well |
+| 99-00 | Workshop |
 
 ### Current Chamber State
 
-If a dungeon has a t……
+If a dungeon has a tumultuous history, you can roll to determine the current condition of any particular area. Otherwise, if the room is still used for its intended purpose, it remains intact.
+
+**Current Chamber State**
+
+| d20 | Features |
+| --- | --- |
+| 1-3 | Rubble, ceiling partially collapsed |
+| 4-5 | Holes, floor partially collapsed |
+| 6-7 | Ashes, contents mostly burned |
+| 8-9 | Used as a campsite |
+| 10-11 | Pool of water; chamber's original contents are water damaged |
+| 12-16 | Furniture wrecked but still present |
+| 17-18 | Converted to some other use (roll on the General Dungeon Chambers table) |
+| 19 | Stripped bare |
+| 20 | Pristine and in original state |
 
 ### Chamber Contents
 
-Once you have a sens……
+Once you have a sense of the purpose of the various dungeon chambers, you can think about the contents of those areas. The Dungeon Chamber Contents table allows you to randomly roll contents for a chamber, or you can choose contents for specific areas. If you choose contents, be sure to include an interesting, colorful assortment of things. In addition to the contents shown on this table, refer to "Dungeon Dressing" later in this appendix for additional items and elements to fill rooms.
 
-In the Dungeon Chamb……
+In the Dungeon Chamber Contents table, a "dominant inhabitant" is a creature that controls an area. Pets and allied creatures are subservient to the dominant inhabitant. "Random creatures" are scavengers or nuisances, usually lone monsters or small groups passing through the area. They include such creatures as carrion crawlers, dire rats, gelatinous cubes, and rust monsters. See chapter 3, "Creating Adventures," for more information on random encounters.
+
+**Dungeon Chamber Contents**
+
+| d100 | Contents |
+| --- | --- |
+| 01-08 | Monster (dominant inhabitant) |
+| 09-15 | Monster (dominant inhabitant) with treasure |
+| 16-27 | Monster (pet or allied creature) |
+| 28-33 | Monster (pet or allied creature) guarding treasure |
+| 34-42 | Monster (random creature) |
+| 43-50 | Monster (random creature) with treasure |
+| 51-58 | Dungeon hazard (see "Random Dungeon Hazards") with incidental t reasure |
+| 59-63 | Obstacle (see "Random Obstacles") |
+| 64-73 | Trap (see "Random Traps") |
+| 74-76 | Trap (see "Random Traps") protecting treasure |
+| 77-80 | Trick (see "Random Tricks") |
+| 81-88 | Empty room |
+| 89-94 | Empty room with dungeon hazard (see "Random Dungeon Hazards") |
+| 95-00 | Empty room with treasure |
 
 ### Monsters and Motivations
 
-See chapter 3, "Crea……
+See chapter 3, "Creating Adventures," for guidance on creating encounters with monsters. To foster variety and suspense, be sure to include encounters of varying difficulty.
 
-A powerful creature ……
+A powerful creature encountered early in the dungeon sets an exciting tone and forces the adventurers to rely on their wits. For example, an ancient red dragon might slumber on the first level of a dungeon, a pall of smoke and the sound of its heavy breathing filling the chambers near its lair. Clever characters will do their utmost to avoid the dragon, even as the party's brave thief makes off with a few coins from its hoard.
 
-Not all monsters are……
+Not all monsters are automatically hostile. When placing monsters in your dungeon, consider their relationships to nearby creatures and their attitudes toward adventurers. Characters might be able to appease a hungry beast by offering it food, and smarter creatures have complex motivations. The Monster Motivation table lets you use a monster's goals to define its presence in the dungeon.
 
-For large groups of ……
+For large groups of monsters encountered across multiple chambers, motivation could apply to the entire group, or each subgroup could have conflicting goals.
+
+**Monster Motivation**
+
+| d20 | Goals |
+| --- | --- |
+| 1-2 | Find a sanctuary |
+| 3-5 | Conquer the dungeon |
+| 6-8 | Seek an item in the dungeon |
+| 9-11 | Slay a rival |
+| 12-13 | Hide from enemies |
+| 14-15 | Recover from a battle |
+| 16-17 | Avoid danger |
+| 18-20 | Seek wealth |
 
 ### Random Dungeon Hazards
 
-Hazards are rarely f……
+Hazards are rarely found in inhabited areas, because monsters either clear them away or avoid them. Shriekers and violet fungi are described in the *Monster Manual*. The other hazards on the table are described in chapter 5, "Adventure Environments."
+
+**Dungeon Hazards**
+
+| d20 | Hazard |
+| --- | --- |
+| 1-3 | Brown mold |
+| 4-8 | Green slime |
+| 9-10 | Shrieker |
+| 11-15 | webs |
+| 16-17 | Violet fungus |
+| 18-20 | Yellow mold |
 
 ### Random Obstacles
 
-Obstacles block prog……
+Obstacles block progress through the dungeon. In some cases, what adventurers consider an obstacle is an easy path for the dungeon's inhabitants. For example, a flooded chamber is a barrier to many characters but easily navigated by water-breathing creatures.
 
-Obstacles can affect……
+Obstacles can affect more than one room. A chasm might run through several passages and chambers, or send cracks through the stonework in a wider area around it. An area of battering winds that emanates from a magic altar could stir the air less dangerously for hundreds of feet in all directions.
+
+**Obstacles**
+
+| d20 | Obstacle |
+| --- | --- |
+| 1 | Antilife aura with a radius of 1d10 × 10 ft.; while in the aura, living creatures can't regain hit points |
+| 2 | Battering winds reduce speed by half, impose disadvantage on ranged attack rolls |
+| 3 | 劍刃障壁 blocks passage |
+| 4-8 | Cave-in |
+| 9-12 | Chasm 1d4 × 10 ft. wide and 2d6 × 10 ft. deep, possibly connected to other levels of the dungeon |
+| 13-14 | Flooding leaves 2d10 ft. of water in the area; create nearby upward-sloping passages, raised floors, or rising sta irs to contain the water |
+| 15 | Lava flows through the area (50 chance of a stone bridge crossing it) |
+| 16 | Overgrown mushrooms block progress and must be hacked down (25 chance of a mold or fungus dungeon hazard hidden among them) |
+| 17 | Poisonous gas (deals 1d6 poison damage per minute of exposure) |
+| 18 | Reverse gravity effect causes creatures to fall toward the ceiling |
+| 19 | 火牆術 blocks passage |
+| 20 | 力牆術 blocks passage |
 
 ### Random Traps
 
-If you need a trap q……
+If you need a trap quickly or want to drop random traps into a dungeon, use the sample traps presented in chapter 5, "Adventure Environments" or the tables below. If you use the tables, start with the Trap Effects and Trap Trigger tables to decide the type of trap, then use the Trap Damage Severity tables to decide how deadly it should be. For more information on trap damage severity, see chapter 5.
+
+**Trap Trigger**
+
+| d6 | Trigger |
+| --- | --- |
+| 1 | stepped on (floor, stairs) |
+| 2 | moved through (doorway, hallway) |
+| 3 | touched (doorknob, statue) |
+| 4 | opened (door, treasure chest) |
+| 5 | looked at (mural, arcane symbol) |
+| 6 | moved (cart, stone block) |
+
+**Trap Damage Severity**
+
+| d6 | Damage Severity |
+| --- | --- |
+| 1-2 | Setback |
+| 3-5 | Dangerous |
+| 6 | Deadly |
+
+**Trap Effects**
+
+| d100 | Effect |
+| --- | --- |
+| 1-4 | Magic missile shoot from a statue or object |
+| 5-7 | Collapsing staircase creates a ramp that deposits characters into a pit at its lower end |
+| 8-10 | Ceiling block falls, or entire ceiling collapses |
+| 11-12 | Ceiling lowers slowly in locked room |
+| 13-14 | Chute opens in floor |
+| 15-16 | Clanging noise attracts nearby monsters |
+| 17-19 | Touching an object triggers a 解離術 spell |
+| 20-23 | Door or other object is coated with contact poison |
+| 24-27 | Fire shoots out from wall, floor, or object |
+| 28-30 | Touching an object triggers a 石化術 spell |
+| 31-33 | Floor collapses or is an illusion |
+| 34-36 | Vent releases gas: blinding, acidic, obscuring, paralyzing, poisonous, or sleep-inducing |
+| 37-39 | Floor tiles are electrified |
+| 40-43 | 守衛銘文 |
+| 44-46 | Huge wheeled statue rolls down corridor |
+| 47-49 | 閃電束 shoots from wall or object |
+| 50-52 | Locked room floods with water or acid |
+| 53-56 | Darts shoot out of an opened chest |
+| 57-59 | A flying sword, animated armor, or rug of smothering animates and attacks when touched (see "Animated Objects" in the Monster Manual) |
+| 60-62 | Pendulum, either bladed or weighted as a maul, swings across the room or hall |
+| 63-67 | Hidden pit opens beneath characters (25 chance that a black pudding or gelatinous cube fills the bottom of the pit) |
+| 68-70 | Hidden pit floods with acid or fire |
+| 71-73 | Locking pit floods with water |
+| 74-77 | Scything blade emerges from wall or object |
+| 78-81 | Spears (possibly poisoned) spring out |
+| 82-84 | Brittle stairs collapse over spikes |
+| 85-88 | 雷鳴波 knocks characters into a pit or spikes |
+| 89-91 | Steel or stone jaws restrain a character |
+| 92-94 | Stone block smashes across hallway |
+| 95-97 | 徽記術 |
+| 98-100 | Walls slide together |
 
 ### Random Tricks
 
-Tricks are quirkier ……
+Tricks are quirkier and less deadly than traps. Some are effects left behind by the dungeon's creators, while others might be manifestations of the strange magical energy suffusing the dungeon.
 
-The following tables……
+The following tables allow you to generate random tricks. Roll first to determine an object that the trick is placed on, then roll to determine the nature of the trick. Some tricks are permanent effects that can't be dispelled; others are temporary or can be neutralized with a dispel magic spell. You decide which is which.
+
+**Trick Objects**
+
+| d20 | Object |
+| --- | --- |
+| 1 | Book |
+| 2 | Brain preserved in a jar |
+| 3 | Burning fire |
+| 4 | Cracked gem |
+| 5 | Door energy |
+| 6 | Fresco |
+| 7 | Furniture |
+| 8 | Glass sculpture |
+| 9 | Mushroom field |
+| 10 | Painting |
+| 11 | Plant or tree |
+| 12 | Pool of water |
+| 13 | Runes engraved on wall or floor |
+| 14 | Skull |
+| 15 | Sphere of magical |
+| 16 | Statue |
+| 17 | Stone obelisk |
+| 18 | Suit of armor |
+| 19 | Tapestry or rug |
+| 20 | Target dummy |
+
+**Tricks**
+
+| d100 | Trick Effect |
+| --- | --- |
+| 1-3 | Ages the first person to touch the object |
+| 4-6 | The touched object animates, or it animates other objects nearby |
+| 7-10 | Asks three skill-testing questions (if all three are answered correctly, a reward appears) |
+| 11-13 | Bestows resistance or vulnerability |
+| 14-16 | Changes a character's alignment, personality, size, appearance, or sex when touched |
+| 17-19 | Changes one substance to another, such as gold to lead or metal to brittle crystal |
+| 20-22 | Creates a force field |
+| 23-26 | Creates an illusion |
+| 27-29 | Suppresses magic items for a time |
+| 30-32 | Enlarges or reduces characters |
+| 33-35 | 魔嘴術 speaks a riddle |
+| 36-38 | 困惑術 (targets all creatures within 10 ft.) |
+| 39-41 | Gives directions (true or false) |
+| 42-44 | Grants a wish |
+| 45-47 | Flies about to avoid being touched |
+| 48-50 | Casts 指使術 on the characters |
+| 51-53 | Increases, reduces, negates, or reverses gravity |
+| 54-56 | Induces greed |
+| 57-59 | Contains an imprisoned creature |
+| 60-62 | Locks or unlocks exits |
+| 63-65 | Offers a game of chance, with the promise of a reward or valuable information |
+| 66-68 | Helps or harms certain types of creatures |
+| 69-71 | Casts 變形術 on the characters (lasts 1 hour) |
+| 72-75 | Presents a puzzle or riddle |
+| 76-78 | Prevents movement |
+| 79-81 | Releases coins, false coins, gems, false gems, a magic item, or a map |
+| 82-84 | Releases, summons, or turns into a monster |
+| 85-87 | Casts 暗示術 on the characters |
+| 88-90 | Wails loudly when touched |
+| 91-93 | Talks (normal speech, nonsense, poetry and rhymes, singing, spellcasting, or screaming) |
+| 94-97 | Teleports characters to another place |
+| 98-00 | Swaps two or more characters' minds |
 
 ### Random treasures
 
-Use the tables and g……
+Use the tables and guidelines in chapter 7, "Treasure" to determine the treasure in each area of your dungeon.
 
 ### Empty Rooms
 
-An empty room can be……
+An empty room can be a godsend for characters who need a safe place to take a short rest. Characters can also barricade themselves there and take a long rest.
 
-Sometimes such a roo……
+Sometimes such a room isn't as empty as it appears. If the characters search a room carefully, you can reward them with a secret compartment containing a journal belonging to a previous inhabitant, a map leading to another dungeon, or some other discovery.
 
 ### Dungeon Dressing
 
-The tables in this s……
+The tables in this section provide miscellaneous items and points of interest that can be placed in your dungeon. Dungeon dressing can help establish the atmosphere of a dungeon, give clues about its creators and history, provide the basis for tricks and traps, or encourage exploration.
 
-To generate dungeon ……
+To generate dungeon dressing at random, roll once on each of the following tables: Noises, Air, and Odors. Roll as often as you like on the other tables in this section, or choose appropriate furnishings for the area.
+
+**Noises**
+
+| d100 | Effect |
+| --- | --- |
+| 1-5 | Bang or slam |
+| 6 | Bellowing |
+| 7 | Buzzing |
+| 8-10 | Chanting |
+| 11 | Chiming |
+| 12 | Chirping |
+| 13 | Clanking |
+| 14 | Clashing |
+| 15 | Clicking |
+| 16 | Coughing |
+| 17-18 | Creaking |
+| 19 | Drumming |
+| 20-23 | Footsteps ahead |
+| 24-26 | Footsteps approaching |
+| 27-29 | Footsteps behind |
+| 30-31 | Footsteps receding |
+| 32-33 | Footsteps to the side |
+| 34-35 | Giggling (faint) |
+| 36 | Gong |
+| 37-39 | Grating |
+| 40-41 | Groaning |
+| 42 | Grunting |
+| 43-44 | Hissing |
+| 45 | Horn or trumpet sounding |
+| 46 | Howling |
+| 47-48 | Humming |
+| 49 | Jingling |
+| 50-53 | Knocking |
+| 54-55 | Laughter |
+| 56-57 | Moaning |
+| 58-60 | Murmuring |
+| 61-62 | Music |
+| 63 | Rattling |
+| 64 | Ringing |
+| 65-68 | Rustling |
+| 69-72 | Scratching or scrabbling |
+| 73-74 | Screaming |
+| 75-77 | Scuttling |
+| 78 | Shuffling |
+| 79-80 | Slithering |
+| 81 | Snapping |
+| 82 | Sneezing |
+| 83 | Sobbing |
+| 84 | Splashing |
+| 85 | Splintering |
+| 86-87 | Squeaking |
+| 88 | Squealing |
+| 89-90 | Tapping |
+| 91-92 | Thud |
+| 93-94 | Thumping |
+| 95 | Tinkling |
+| 96 | Twanging |
+| 97 | Whining |
+| 98 | Whispering |
+| 99-00 | Whistling |
+
+**Air**
+
+| d100 | Effect |
+| --- | --- |
+| 1-60 | Clear and damp |
+| 61-70 | Clear and drafty |
+| 71-80 | Clear but cold |
+| 81-83 | Foggy or misty and cold |
+| 84-85 | Clear, with mist covering floor |
+| 86-90 | Clear and warm |
+| 91-93 | Hazy and humid |
+| 94-96 | Smoky or steamy |
+| 97-98 | Clear, with smoke covering ceiling |
+| 99-00 | Clear and windy |
+
+**Odor**
+
+| d100 | Effect |
+| --- | --- |
+| 1-3 | Acrid |
+| 4-5 | Chlorine |
+| 6-39 | Dank or moldy |
+| 40-49 | Earthy |
+| 50-57 | Manure |
+| 58-61 | Metallic |
+| 62-65 | Ozone |
+| 66-70 | Putrid |
+| 71-75 | Rotting vegetation |
+| 76-77 | Salty and wet |
+| 78-82 | Smoky |
+| 83-89 | Stale |
+| 90-95 | Sulfurous |
+| 96-00 | Urine |
+
+**General Features**
+
+| d100 | Item |
+| --- | --- |
+| 1 | Arrow, broken |
+| 2-4 | Ashes |
+| 5-6 | Bones |
+| 7 | Bottle, broken |
+| 8 | Chain, corroded (5 ft. long) |
+| 9 | Club, splintered |
+| 10-19 | Cobwebs |
+| 20 | Coin, copper |
+| 21-22 | Cracks, ceiling |
+| 23-24 | Cracks, floor |
+| 25-26 | Cracks, wall |
+| 27 | Dagger hilt |
+| 28-29 | Damp ceiling |
+| 30-33 | Dampness, wall |
+| 34 | Dried blood |
+| 35-41 | Dripping blood |
+| 42-44 | Dung |
+| 45-49 | Dust |
+| 50 | Flask, cracked |
+| 51 | Food scraps |
+| 52 | Fungi (common) |
+| 53-55 | Guano |
+| 56 | Hair or fur |
+| 57 | Hammer head, cracked |
+| 58 | Helmet, badly dented |
+| 59 | Iron bar, bent and rusted |
+| 60 | Javelin head, blunt |
+| 61 | Leather boot |
+| 62-64 | Leaves and twigs |
+| 65-68 | Mold (common) |
+| 69 | Pick handle |
+| 70 | Pole, broken |
+| 71 | Pottery shards |
+| 72-73 | Rags |
+| 74 | Rope, rotten |
+| 75-76 | Rubble and dirt |
+| 77 | Sack, torn |
+| 78-80 | Slime (harmless) |
+| 81 | Spike, rusted |
+| 82-83 | Sticks |
+| 84 | Stones, small |
+| 85 | Straw |
+| 86 | Sword blade, broken |
+| 87 | Teeth or fangs, scattered |
+| 88 | Torch stub |
+| 89 | Wall scratchings |
+| 90-91 | Water, large puddle |
+| 92-93 | Water, small puddle |
+| 94-95 | Water, trickle |
+| 96 | Wax blob (candle stub) |
+| 97 | Wax drippings |
+| 98-00 | Wood pieces, rotting |
+
+**General Furnishings and Appointments**
+
+| d100 | Item |
+| --- | --- |
+| 1 | Altar |
+| 2 | Armchair |
+| 3 | Armoire |
+| 4 | Arras or curtain |
+| 5 | Bag |
+| 6 | Barrel (40 gallons) |
+| 7-8 | Bed |
+| 9 | Bench |
+| 10 | Blanket |
+| 11 | Box (large) |
+| 12 | Brazier and charcoal |
+| 13 | Bucket |
+| 14 | Buffet cabinet |
+| 15 | Bunks |
+| 16 | Butt (huge cask, 125 gallons) |
+| 17 | Cabinet |
+| 18 | Candelabrum |
+| 19 | Carpet (large) |
+| 20 | Cask (40 gallons) |
+| 21 | Chandelier |
+| 22 | Charcoal |
+| 23-24 | Chair, plain |
+| 25 | Chair, padded |
+| 26 | Chair, padded, or divan |
+| 27 | Chest, large |
+| 28 | Chest, medium |
+| 29 | Chest of drawers |
+| 30 | Closet (wardrobe) |
+| 31 | Coal |
+| 32-33 | Couch |
+| 34 | Crate |
+| 35 | Cresset |
+| 36 | Cupboard |
+| 37 | Cushion |
+| 38 | Dais |
+| 39 | Desk |
+| 40-42 | Fireplace and wood |
+| 43 | Fireplace with mantle |
+| 44 | Firkin (small cask, 10 gallons) |
+| 45 | Fountain |
+| 46 | Fresco |
+| 47 | Grindstone |
+| 48 | Hamper |
+| 49 | Hassock |
+| 50 | Hogshead (large cask, 65 gallons) |
+| 51 | Idol (large) |
+| 52 | Keg (small barrel, 20 gallons) |
+| 53 | Loom |
+| 54 | Mat |
+| 55 | Mattress |
+| 56 | Pail |
+| 57 | Painting |
+| 58-60 | Pallet |
+| 61 | Pedestal |
+| 62-64 | Pegs |
+| 65 | Pillow |
+| 66 | Pipe (large cask, 105 gallons) |
+| 67 | Quilt |
+| 68-70 | Rug (small or medium) |
+| 71 | Rushes |
+| 72 | Sack |
+| 73 | Sconce |
+| 74 | Screen |
+| 75 | Sheet |
+| 76-77 | Shelf |
+| 78 | Shrine |
+| 79 | Sideboard |
+| 80 | Sofa |
+| 81 | Staff, normal |
+| 82 | Stand |
+| 83 | Statue |
+| 84 | Stool, high |
+| 85 | Stool, normal |
+| 86 | Table, large |
+| 87 | Table, long |
+| 88 | Table, low |
+| 89 | Table, round |
+| 90 | Table, small |
+| 91 | Table, trestle |
+| 92 | Tapestry |
+| 93 | Throne |
+| 94 | Trunk |
+| 95 | Tub |
+| 96 | Tun (huge cask, 250 gallons) |
+| 97 | Urn |
+| 98 | Wall basin and font |
+| 99 | Wood billets |
+| 00 | Workbench |
+
+**Religious Articles and Furnishings**
+
+| d100 | Item |
+| --- | --- |
+| 1-5 | Altar |
+| 6-8 | Bells |
+| 9-11 | Brazier |
+| 12 | Candelabra |
+| 13-14 | Candles |
+| 15 | Candlesticks |
+| 16 | Cassocks |
+| 17 | Chimes |
+| 18-19 | Cloth, altar |
+| 20-23 | Columns or pillars |
+| 24 | Curtain or tapestry |
+| 25 | Drum |
+| 26-27 | Font |
+| 28-29 | Gong |
+| 30-35 | Holy or unholy symbol |
+| 36-37 | Holy or unholy writings |
+| 38-43 | Idol |
+| 44-48 | Incense burner |
+| 49 | Kneeling bench |
+| 50-53 | Lamp |
+| 54 | Lectern |
+| 55 | Mosaic |
+| 56-58 | Offertory container |
+| 59 | Paintings or frescoes |
+| 60-61 | Pews |
+| 62 | Pipes, musical |
+| 63 | Prayer rug |
+| 64 | Pulpit |
+| 65 | Rail |
+| 66-69 | Robes |
+| 70-71 | Screen |
+| 72-76 | Shrine |
+| 77 | Side chairs |
+| 78-79 | Stand |
+| 80-82 | Statue |
+| 83 | Throne |
+| 84-85 | Thurible |
+| 86-90 | Tripod |
+| 91-97 | Vestments |
+| 98-99 | Votive light |
+| 00 | Whistle |
+
+**Mage Furnishings**
+
+| d100 | Item |
+| --- | --- |
+| 1-3 | Alembic |
+| 4-5 | Balance and weights |
+| 6-9 | Beaker |
+| 10 | Bellows |
+| 11-14 | Book |
+| 15-16 | Bottle |
+| 17 | Bowl |
+| 18 | Box |
+| 19-22 | Brazier |
+| 23 | Cage |
+| 24 | Candle |
+| 25-26 | Candlestick |
+| 27-28 | Cauldron |
+| 29-30 | Chalk |
+| 31-32 | Crucible |
+| 33 | Crystal ball |
+| 34 | Decanter |
+| 35 | Desk |
+| 36 | Dish |
+| 37-40 | Flask or jar |
+| 41 | Funnel |
+| 42 | Furnace |
+| 43-44 | Herbs |
+| 45 | Horn |
+| 46-47 | Hourglass |
+| 48-49 | Jug |
+| 50 | Kettle |
+| 51 | Ladle |
+| 52 | Lamp or lantern |
+| 53 | Lens (concave or convex) |
+| 54 | Magic circle |
+| 55 | Mortar and pestle |
+| 56 | Pan |
+| 57-58 | Parchment |
+| 59 | Pentacle |
+| 60 | Pentagram |
+| 61 | Pipe, smoking |
+| 62 | Pot |
+| 63 | Prism |
+| 64-65 | Quill |
+| 66-68 | Retort |
+| 69 | Rod, mixing or stirring |
+| 70-72 | Scroll |
+| 73 | Sextant |
+| 74-75 | Skull |
+| 76 | Spatula |
+| 77 | Spoon, measuring |
+| 78 | Stand |
+| 79 | Stool |
+| 80 | Stuffed animal |
+| 81 | Tank (container) |
+| 82 | Tongs |
+| 83 | Tripod |
+| 84 | Tube (container) |
+| 85-86 | Tube (piping) |
+| 87 | Tweezers |
+| 88-90 | Vial |
+| 91 | Water clock |
+| 92 | Wire |
+| 93-00 | Workbench |
+
+**Utensils and Personal Items**
+
+| d100 | Item |
+| --- | --- |
+| 1 | Awl |
+| 2 | Bandages |
+| 3 | Basin |
+| 4-5 | Basket |
+| 6-7 | Book |
+| 8-9 | Bottle |
+| 10 | Bowl |
+| 11 | Box |
+| 12-13 | Brush |
+| 14 | Candle |
+| 15 | Candle snuffer |
+| 16 | Candlestick |
+| 17 | Cane or walking stick |
+| 18 | Case |
+| 19 | Casket (small) |
+| 20-21 | Coffer |
+| 22 | Cologne or perfume |
+| 23 | Comb |
+| 24 | Cup |
+| 25 | Decanter |
+| 26-27 | Dish |
+| 28 | Ear spoon |
+| 29 | Ewer |
+| 30 | Flagon, mug, or tankard |
+| 31-32 | Flask or jar |
+| 33 | Food |
+| 34 | Fork |
+| 35 | Grater |
+| 36 | Grinder |
+| 37 | Horn, drinking |
+| 38 | Hourglass |
+| 39 | Jug or pitcher |
+| 40 | Kettle |
+| 41 | Key |
+| 42 | Knife |
+| 43 | Knucklebones or dice |
+| 44 | Ladle |
+| 45-46 | Lamp or lantern |
+| 47-48 | Mirror |
+| 49 | Needle(s) |
+| 50 | Oil, cooking |
+| 51 | Oil, fuel |
+| 52 | Oil, scented |
+| 53 | Pan |
+| 54-55 | Parchment |
+| 56 | Pipe, musical |
+| 57 | Pipe, smoking |
+| 58 | Plate, platter, or saucer |
+| 59 | Pot |
+| 60-61 | Pouch |
+| 62 | Powder puff |
+| 63 | Quill |
+| 64 | Razor |
+| 65 | Rope |
+| 66 | Salve or unguent |
+| 67-68 | Scroll |
+| 69 | Shaker |
+| 70 | Sifter or strainer |
+| 71-72 | Soap |
+| 73 | Spigot |
+| 74 | Spoon |
+| 75 | Stopper |
+| 76-77 | Statuette or figurine |
+| 78-79 | Thread |
+| 80-82 | Tinderbox (with flint and steel) |
+| 83 | Towel |
+| 84 | Tray |
+| 85 | Trivet or tripod |
+| 86 | Tureen |
+| 87-88 | Twine |
+| 89-90 | Vase |
+| 91-92 | Vial |
+| 93 | Washcloth |
+| 94 | Whetstone |
+| 95-96 | Wig |
+| 97-98 | Wool |
+| 99-00 | Yarn |
+
+**Container Contents**
+
+| d100 | Item |
+| --- | --- |
+| 1-3 | Ash |
+| 4-6 | Bark |
+| 7-9 | Bodily organs |
+| 10-14 | Bones |
+| 15-17 | Cinders |
+| 18-22 | Crystals |
+| 23-26 | Dust |
+| 27-28 | Fibers |
+| 29-31 | Gelatin |
+| 32-35 | Grains |
+| 36-38 | Grease |
+| 39-41 | Husks |
+| 42-46 | Leaves |
+| 47-54 | Liquid, thin |
+| 55-59 | Liquid, viscous |
+| 60-61 | Lumps, unidentifiable |
+| 62-64 | Oil |
+| 65-68 | Paste |
+| 69-71 | Pellets |
+| 72-84 | Powder |
+| 85-86 | Semiliquid suspension |
+| 87-88 | Skin or hide |
+| 89-90 | Spheres (metal, stone, or wood) |
+| 91-92 | Splinters |
+| 93-94 | Stalks |
+| 95-97 | Strands |
+| 98-00 | Strips |
+
+**Books, Scrolls, and Tomes**
+
+| d100 | Contents |
+| --- | --- |
+| 1-2 | Account records |
+| 3-4 | Alchemist's notebook |
+| 5-6 | Almanac |
+| 7-8 | Bestiary |
+| 9-11 | Biography |
+| 12-14 | Book of heraldry |
+| 15 | Book of myths |
+| 16 | Book of pressed flowers |
+| 17 | Calendar |
+| 18-22 | Catalog |
+| 23-24 | Contract |
+| 25-27 | Diary |
+| 28-29 | Dictionary |
+| 30-32 | Doodles or sketches |
+| 33 | Forged document |
+| 34 | Grammar workbook |
+| 35-36 | Heretical text |
+| 37-41 | Historical text |
+| 42-43 | Last will and testament |
+| 44-45 | Legal code |
+| 46-53 | Letter |
+| 54 | Lunatic's ravings |
+| 55 | Magic tricks (not a spellbook) |
+| 56 | Magic scroll |
+| 57-59 | Map or atlas |
+| 60 | Memoir |
+| 61-62 | Navigational chart or star chart |
+| 63-64 | Novel |
+| 65 | Painting |
+| 66-67 | Poetry |
+| 68-69 | Prayer book |
+| 70 | Property deed |
+| 71-74 | Recipe book or cookbook |
+| 75 | Record of a criminal trial |
+| 76 | Royal proclamation |
+| 77-78 | Sheet music |
+| 79 | Spellbook |
+| 80 | Text on armor making |
+| 81-82 | Text on astrology |
+| 83-84 | Text on brewing |
+| 85-86 | Text on exotic flora or fauna |
+| 87-88 | Text on herbalism |
+| 89-90 | Text on local flora |
+| 91-92 | Text on mathematics |
+| 93 | Text on masonry |
+| 94 | Text on medicine |
+| 95 | Theological text |
+| 96 | Tome of (forbidden lore) |
+| 97-99 | Travelogue for an exotic land |
+| 00 | Travelogue of the planes |
 
 
 # Appendix B: Monster Lists
 
 ## Monsters by Environment
 
-The following tables organize monsters by environment and challenge rating.……
+The following tables organize monsters by environment and challenge rating. These tables omit monsters that don't customarily inhabit the environments included here, such as angels and demons.
 
 - Arctic monsters
 - Coastal monsters
@@ -512,11 +1291,51 @@ This index organizes the monsters in the Monster Manual by challenge rating.
 Creating a map for an adventure is a fun, challenging, and time-consuming endeavor. However, unless you have something specific in mind, you're better off conserving your time and energy by repurposing an existing map. Published adventures and the Internet are terrific sources for maps. A few sample maps are included here as well. Use them as you will!
 
 
+
 # Appendix D: Dungeon Master Inspiration
 
 Here are several inspiring works that can help you become a better storyteller, writer, performer, and mapmaker. This is by no means an exhaustive list, but a collection of titles picked out by playtesters and the Dungeons & Dragons creative team. For more inspirational reading, see the Appendices in the Player's Handbook.
 
-> **Atlas Games.**, *Once Upon a Time: The Storytelling Card G……
-> **Bernhardt, William.**, *Creating Character: Bringing Your ……
+> **Atlas Games.**, *Once Upon a Time: The Storytelling Card Game.*,
+> **Bernhardt, William.**, *Creating Character: Bringing Your Story to Life.*
 > *Perfecting Plot: Charting the Hero's Journey.*
+> *Story Structure: The Key to Successful Fiction.*
+> **Bowers, Malcolm.**, *Gary Gygax's Extraordinary Book of Names.*,
+> **Browning, Joseph & Suzi Yee.**, *A Magical Medieval Society: Western Europe.*,
+> **Burroway, Janet.**, *Writing Fiction.*,
+> **Cleaver, Jerry.**, *Immediate Fiction.*,
+> **Cordingly, David.**, *Under the Black Flag.*,
+> **Egri, Lajos.**, *The Art of Dramatic Writing.*,
+> **Ewalt, David M.**, *Of Dice and Men.*,
+> **Gygax, Gary.**, *Gary Gygax's Living Fantasy* and the rest of the Gygaxian Fantasy Worlds series.
+> *Master of the Game.*
+> *Role-Playing Mastery.*
+> **Hindmarch, Will.**, *The Bones: Us and Our Dice.*,
+> **Hindmarch, Will & Jeff Tidball.**, *Things We Think About Games.*,
+> **Hirsh, Jr., E.D.**, *The New Dictionary of Cultural Literacy.*,
+> **Ingpen, Robert.**, *The Encyclopedia of Things That Never Were.*,
+> **Kaufmann, J.E. & H.W.**, *Kaufmann. The Medieval Fortress.*,
+> **King, Stephen.**, *On Writing: A Memoir of the Craft.*,
+> **Koster, Raph.**, *A Theory of Fun for Game Design.*,
+> **Laws, Robin D.**, *Hamlet's Hit Points.*,
+> **Lee, Alan & David Day.**, *Castles.*,
+> **Macaulay, David.**, *Castle.*,
+> **Malory, Sir Thomas.**, *Le Morte d'Arthur.*,
+> **McKee, Robert.**, *Story: Substance, Structure, Style, and the Principles of Screenwriting.*,
+> **Mortimer, Ian.**, *The Time Traveler's Guide to Medieval England.*,
+> **O'Connor, Paul Ryan, ed.**, *Grimtooth's Traps.*,
+> **PennyPress.**, *Variety Puzzles and Games series.*,
+> **Peterson, Jon.**, *Playing at the World.*,
+> **Robbins, Ben.**, *Microscope.*,
+> **Schell, Jesse.**, *Game Design: A Book of Lenses.*,
+> **Snyder, Blake.**, *Save the Cat.*,
+> **Swift, Michael and Angus Konstam.**, *Cities of the Renaissance World.*,
+> **Truby, John.**, *The Anatomy of Story.*,
+> **TSR.**, *Arms and Equipment Guide.*
+> *Campaign Sourcebook/Catacomb Guide.*
+> *The Castle Guide.*
+> **Walmsley, Graham.**, *Play Unsafe: How Improvisation Can Change the Way You Roleplay.*,
+> **Wilford, John Noble.**, *The Mapmakers.*,
+> **Writers Digest.**, *The Writer's Complete Fantasy Reference.*
+
 
