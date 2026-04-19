@@ -116,7 +116,7 @@ D&D 5e 除了核心被遺忘的國度（Forgotten Realms）設定之外，還推
 本技能的詳細內容分為以下模組：
 
 ### 被遺忘的國度：劍灣（Forgotten Realms: Sword Coast）
-劍灣地區、主要城市、陣營、歷史、神明與角色選項。
+劍灣地區、主要城市、陣營、歷史、神明、種族、職業與背景選項。
 - [第 1 部分](modules/forgotten-realms-part1.md)
 - [第 2 部分](modules/forgotten-realms-part2.md)
 - [第 3 部分](modules/forgotten-realms-part3.md)
@@ -130,6 +130,13 @@ D&D 5e 除了核心被遺忘的國度（Forgotten Realms）設定之外，還推
 - [第 11 部分](modules/forgotten-realms-part11.md)
 - [第 12 部分](modules/forgotten-realms-part12.md)
 - [第 13 部分](modules/forgotten-realms-part13.md)
+- [第 14 部分](modules/forgotten-realms-part14.md)
+- [第 15 部分](modules/forgotten-realms-part15.md)
+- [第 16 部分](modules/forgotten-realms-part16.md)
+- [第 17 部分](modules/forgotten-realms-part17.md)
+- [第 18 部分](modules/forgotten-realms-part18.md)
+- [第 19 部分](modules/forgotten-realms-part19.md)
+- [第 20 部分](modules/forgotten-realms-part20.md)
 
 ### 艾伯倫（Eberron）
 艾伯倫世界、柯瓦雷國家、最終戰爭、龍紋、獨特種族、夏恩城、信仰、團體贊助者、角色創建種族與寶藏。
@@ -183,6 +190,15 @@ Critical Role 的威德蒙特、國家、陣營、萬神殿、地名錄、英雄
 - [第 20 部分](modules/wildemount-part20.md)
 - [第 21 部分](modules/wildemount-part21.md)
 - [第 22 部分](modules/wildemount-part22.md)
+- [第 23 部分 — 角色選項：種族（矮人、精靈、半身人、人類）](modules/wildemount-part23.md)
+- [第 24 部分 — 角色選項：種族續（鳥人、神裔、龍裔等）](modules/wildemount-part24.md)
+- [第 25 部分 — 角色選項：種族續二（哥布林、歌利亞、半精靈等）](modules/wildemount-part25.md)
+- [第 26 部分 — 子職業與時空魔法（Dunamancy）](modules/wildemount-part26.md)
+- [第 27 部分 — 時空魔法法術與背景](modules/wildemount-part27.md)
+- [第 28 部分 — 英雄紀事（Heroic Chronicle）](modules/wildemount-part28.md)
+- [第 29 部分 — 英雄紀事（續）](modules/wildemount-part29.md)
+- [第 30 部分 — 威德蒙特寶物（Treasures）](modules/wildemount-part30.md)
+- [第 31 部分 — 術語表（Glossary）](modules/wildemount-part31.md)
 
 ### 拉尼卡（Ravnica）
 MTG 的拉尼卡城市世界、十大公會、公會晉升、聲望系統與第十區。
