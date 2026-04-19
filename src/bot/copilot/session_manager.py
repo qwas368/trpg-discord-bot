@@ -10,7 +10,8 @@ import sys
 from datetime import datetime, timezone
 from typing import Any, Sequence
 
-from copilot import CopilotClient, PermissionHandler
+from copilot import CopilotClient
+from copilot.session import PermissionHandler
 
 from bot.config import (
     DEFAULT_AI_MODEL,
@@ -333,7 +334,7 @@ class SessionManager:
         original_callback = active._message_callback
         active._message_callback = None
         try:
-            event = await active.session.send_and_wait({"prompt": prompt}, timeout=timeout)
+            event = await active.session.send_and_wait(prompt, timeout=timeout)
         finally:
             active._message_callback = original_callback
 
@@ -447,15 +448,14 @@ class SessionManager:
         custom_agents = self._build_custom_agents(host_config)
 
         session = await self._client.create_session(
-            {
-                "session_id": key,
-                "model": chosen_model,
-                "reasoning_effort": chosen_reasoning_effort,
-                "working_directory": str(host_config.host_dir),
-                "on_permission_request": PermissionHandler.approve_all,
-                "system_message": {"mode": "replace", "content": system_content},
-                "custom_agents": custom_agents or None,
-            }
+            session_id=key,
+            model=chosen_model,
+            reasoning_effort=chosen_reasoning_effort,
+            working_directory=str(host_config.host_dir),
+            on_permission_request=PermissionHandler.approve_all,
+            system_message={"mode": "replace", "content": system_content},
+            custom_agents=custom_agents or None,
+            skill_directories=host_config.skill_directories or None,
         )
 
         active = ActiveSession(
@@ -515,14 +515,13 @@ class SessionManager:
         try:
             session = await self._client.resume_session(
                 key,
-                {
-                    "on_permission_request": PermissionHandler.approve_all,
-                    "model": chosen_model,
-                    "reasoning_effort": chosen_reasoning_effort,
-                    "working_directory": str(host_config.host_dir),
-                    "system_message": {"mode": "replace", "content": system_content},
-                    "custom_agents": custom_agents or None,
-                },
+                on_permission_request=PermissionHandler.approve_all,
+                model=chosen_model,
+                reasoning_effort=chosen_reasoning_effort,
+                working_directory=str(host_config.host_dir),
+                system_message={"mode": "replace", "content": system_content},
+                custom_agents=custom_agents or None,
+                skill_directories=host_config.skill_directories or None,
             )
             active = ActiveSession(
                 session,
@@ -676,7 +675,7 @@ class SessionManager:
         active._idle_event = asyncio.Event()
         active._reply_count = 0
         try:
-            await active.session.send({"prompt": prompt})
+            await active.session.send(prompt)
             await asyncio.wait_for(active._idle_event.wait(), timeout=timeout)
             return True
         except asyncio.TimeoutError:
