@@ -58,6 +58,9 @@ description: "D&D 5e 角色選項擴展 — 乞丐全書（XGE）與塔莎萬事
 | [puzzles-environments-part5](modules/puzzles-environments-part5.md) | TCE 謎題、環境、跟班、團體贊助人 |
 | [puzzles-environments-part6](modules/puzzles-environments-part6.md) | TCE 謎題、環境、跟班、團體贊助人 |
 | [puzzles-environments](modules/puzzles-environments.md) | TCE 謎題、環境、跟班、團體贊助人 |
+| [magical-miscellany](modules/magical-miscellany.md) | TCE 魔法刺青、魔法物品、法術個性化與神器 |
+| [shared-campaigns](modules/shared-campaigns.md) | XGE 附錄A：共享戰役規則與冒險者聯盟指引 |
+| [character-names](modules/character-names.md) | XGE 附錄B：各種族與文化的角色命名表 |
 
 ## 使用提示
 

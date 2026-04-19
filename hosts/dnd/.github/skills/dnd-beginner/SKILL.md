@@ -22,3 +22,10 @@ description: "D&D 5e 新手入門 — 以輕鬆有趣的方式介紹龍與地下
 - [如何進行角色扮演](modules/如何進行角色扮演.md)
 - [給新手玩家的建議](modules/給新手玩家的建議.md)
 - [其他重要規則](modules/其他重要規則.md)
+
+### Rick and Morty D&D 規則補充
+來自《Rick and Morty vs. Dungeons & Dragons》的簡化規則版本：
+- [RMR 規則](modules/rmr-rules.md) — 第1部分
+- [RMR 規則（續）](modules/rmr-rules-part2.md) — 第2部分
+- [RMR 規則（續）](modules/rmr-rules-part3.md) — 第3部分
+- [RMR 規則（續）](modules/rmr-rules-part4.md) — 第4部分

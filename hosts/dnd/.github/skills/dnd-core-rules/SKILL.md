@@ -142,6 +142,13 @@ description: "D&D 5e 核心規則 — 玩家手冊（PHB）與官方問答（SAC
 - [施法規則](modules/rules-clarifications-spellcasting.md) — 施法機制、怪物、魔法物品
 - [特定法術問答](modules/rules-clarifications-specific-spells.md) — 各別法術的官方問答
 
+### 附錄與補充（Appendices & Supplements）
+來自《玩家手冊》的附錄與法術列表：
+- [狀態](modules/conditions.md) — PHB 附錄A：所有狀態效果的完整定義
+- [多元宇宙諸神](modules/gods-multiverse.md) — PHB 附錄B：各設定中的神祇列表
+- [存在位面](modules/planes-of-existence.md) — PHB 附錄C：多元宇宙的位面結構
+- [法術列表](modules/spells-list.md) — PHB 第12章：各職業的完整法術列表
+
 ---
 
 ## 快速參考（Quick Reference）

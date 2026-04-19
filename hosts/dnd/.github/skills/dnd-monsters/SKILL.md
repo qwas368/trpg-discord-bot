@@ -117,3 +117,5 @@ D&D 5e 的怪物分為以下 14 種類型：
 - **[VGM — Orcs: The Godsworn](modules/monster-lore-vgm-part11.md)** — Orcs: The Godsworn、Yuan-ti: Snake People
 - **[VGM — Yuan-ti Abominations](modules/monster-lore-vgm-part12.md)** — Yuan-ti Abominations、Yuan-ti Malisons、Yuan-ti Pureblood
 - **[VGM — Character Races](modules/monster-lore-vgm-part13.md)** — Character Races、Height and Weight、Bestiary
+- **[MM — 附錄A：雜項生物](modules/mm-appendix-a.md)** — MM 附錄A：各種動物、蟲獸與雜項生物資料卡
+- **[MM — 附錄B：非玩家角色](modules/mm-appendix-b.md)** — MM 附錄B：常見 NPC 資料卡（大法師、刺客、強盜等）
