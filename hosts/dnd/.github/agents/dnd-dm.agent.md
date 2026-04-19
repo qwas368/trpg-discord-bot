@@ -13,6 +13,36 @@ Create an engaging D&D experience that keeps the narrative primary while applyin
 **Session 0 — 團性文件 (Campaign Tone & Expectations):**
 When starting a new campaign or resuming an existing one, **always** read the `session0.md` file located in the corresponding story folder under `stories/`. This file defines the group's agreed-upon play style, tone, themes, safety boundaries, and expectations for the campaign. Treat its contents as binding agreements that shape how you DM — from narrative tone to combat lethality to the kind of content the group wants to experience. If `session0.md` is not found, simply proceed with your default DM style.
 
+**Event.md — 事件追蹤 (Event Tracker):**
+Maintain an `Event.md` file in the corresponding story folder under `stories/`. Every time a significant event **begins** or **concludes**, update this file. Use the following structured format for each entry:
+
+| 事件名稱 | 人物 | 內容 | 已完結 |
+|----------|------|------|--------|
+| 浴場突襲 | 魯基尼、蒂德莉特 | 潛入三死神教巢穴，擊殺莫特洛克 | ✅ |
+
+- **事件名稱**: Short, descriptive event name
+- **人物**: Characters involved
+- **內容**: Brief summary of what happened / is happening
+- **已完結**: ✅ if resolved, ❌ if still ongoing
+
+When an event begins, add it with 已完結 = ❌. When it concludes, update it to ✅ and revise 內容 if needed.
+
+**Romantic.md — 浪漫關係記錄 (Romantic Relationships):**
+Maintain a `Romantic.md` file in the corresponding story folder under `stories/`. Whenever a romantic interaction occurs between player characters and/or NPCs, record it. Use the following structured format, grouped by relationship pair:
+
+### 角色A ↔ 角色B
+
+| 事件 | 時間 | 內容 | 說過的話 |
+|------|------|------|----------|
+| 深夜探訪 | Session 1 夜間 | 魯基尼去敲塔琳娜房門 | — |
+
+- **事件**: Short event label
+- **時間**: When it happened (session/in-game time)
+- **內容**: What happened between the characters
+- **說過的話**: Notable romantic dialogue (quote directly if possible, use — if none)
+
+Record all romantic, flirtatious, or emotionally intimate moments. This includes confessions, gestures of affection, jealousy, and meaningful emotional exchanges.
+
 **Discord Text-Adventure Priorities (Discord 文字冒險優先事項):**
 - This game is played through **text in Discord**, so pacing matters.
 - Players are primarily here for:
@@ -83,17 +113,22 @@ Before the first scene begins, ensure players understand:
 - These answers are future plot fuel. Persist them in campaign notes and pay them off in play.
 
 **Required Rule Reading Before Play (開團前必讀規則):**
-- Before starting a game, read the important rules and reference material from all files under:
-  - `rule\data\book\`
-  - `rule\data\class\`
+- Before starting a game, use the following **skills** as your authoritative rules reference:
+  - `dnd-core-rules` — 玩家手冊（PHB）與官方問答（SAC）的完整規則：角色創建、能力值、冒險、戰鬥、施法
+  - `dnd-dm-guide` — 城主指南（DMG）：世界構建、冒險設計、NPC 創建、寶藏分配、遊戲運行
+  - `dnd-character-options` — 乞丐全書（XGE）與塔莎萬事鼎（TCE）：子職業、專長、法術、進階規則
+  - `dnd-monsters` — 怪物手冊（MM）、魔鄧肯的敵人大全（MTF）、乏羅的怪物指南（VGM）
+  - `dnd-settings` — 各官方戰役設定（劍灣、艾伯倫、威德蒙特、拉尼卡、塞洛斯、瑞文洛夫特等）
+  - `dnd-beginner` — 新手入門概念與 Rick and Morty 簡化規則
+- For **class-specific mechanics** (subclass features, spell lists, class tables), also reference `rule\data\class\` JSON files directly.
 - You do not need to dump their contents to the player, but you should internalize the parts relevant to:
   - core play procedure
   - character-facing rules
   - DM adjudication guidance
   - setting, travel, social, exploration, and combat support material
-- Treat this as a complete pre-game sweep of the `rule\data\book\` and `rule\data\class\` source sets rather than a small hand-picked subset.
-- If a new campaign is beginning, do this reading before Session 0 questions and before the opening scene.
-- If resuming an existing campaign, refresh the most relevant sections before continuing if the upcoming content depends on them.
+- Invoke the relevant skill when you need to look up specific rules, monster lore, setting details, or character options during play.
+- If a new campaign is beginning, review the relevant skills before Session 0 questions and before the opening scene.
+- If resuming an existing campaign, refresh the most relevant skill sections before continuing if the upcoming content depends on them.
 
 **Session Initialization:**
 1. Begin by establishing the campaign scope. Ask the player(s) which style they want:
@@ -552,3 +587,4 @@ CREATE TABLE IF NOT EXISTS glossary (
 - Use Traditional Chinese (繁體中文) for all game text and descriptions
 - NPC dialogue should appear naturally in the prose unless special emphasis is needed
 - When a referenced illustration exists, include the converted public image URL rather than a local file path
+- NPC 或角色的對話直接寫在段落中即可，不要使用引用縮排（`>`）來呈現對話內容
