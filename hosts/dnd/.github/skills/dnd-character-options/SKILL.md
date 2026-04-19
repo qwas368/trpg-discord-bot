@@ -45,6 +45,7 @@ description: "D&D 5e 角色選項擴展 — 乞丐全書（XGE）與塔莎萬事
 
 | 模組 | 說明 |
 | --- | --- |
+| [introductions](modules/introductions.md) | XGE 與 TCE 書籍介紹、使用說明與核心規則提要 |
 | [subclasses-xge](modules/subclasses-xge.md) | XGE 所有子職業、角色背景生成表、種族專長 |
 | [subclasses-tce](modules/subclasses-tce.md) | TCE 子職業、可選職業特性、巧匠職業、專長 |
 | [spells-expanded](modules/spells-expanded.md) | XGE 與 TCE 的新增法術及魔法物品 |
