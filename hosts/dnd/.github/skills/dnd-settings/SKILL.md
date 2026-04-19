@@ -132,7 +132,7 @@ D&D 5e 除了核心被遺忘的國度（Forgotten Realms）設定之外，還推
 - [第 13 部分](modules/forgotten-realms-part13.md)
 
 ### 艾伯倫（Eberron）
-艾伯倫世界、柯瓦雷國家、最終戰爭、龍紋、獨特種族、夏恩城、信仰與團體贊助者。
+艾伯倫世界、柯瓦雷國家、最終戰爭、龍紋、獨特種族、夏恩城、信仰、團體贊助者、角色創建種族與寶藏。
 - [第 1 部分](modules/eberron-part1.md)
 - [第 2 部分](modules/eberron-part2.md)
 - [第 3 部分](modules/eberron-part3.md)
@@ -155,6 +155,9 @@ D&D 5e 除了核心被遺忘的國度（Forgotten Realms）設定之外，還推
 - [第 20 部分](modules/eberron-part20.md)
 - [第 21 部分](modules/eberron-part21.md)
 - [第 22 部分](modules/eberron-part22.md)
+- [第 23 部分](modules/eberron-part23.md)
+- [第 24 部分](modules/eberron-part24.md)
+- [第 25 部分](modules/eberron-part25.md)
 
 ### 威德蒙特（Wildemount）
 Critical Role 的威德蒙特、國家、陣營、萬神殿、地名錄、英雄紀事與角色選項。
