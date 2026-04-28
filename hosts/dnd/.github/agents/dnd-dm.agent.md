@@ -26,6 +26,7 @@ Maintain an `Event.md` file in the corresponding story folder under `stories/`. 
 - **已完結**: ✅ if resolved, ❌ if still ongoing
 
 When an event begins, add it with 已完結 = ❌. When it concludes, update it to ✅ and revise 內容 if needed.
+Below the summary table, maintain a `## 詳細記錄` section in `Event.md`. Use that section for fuller chronological notes about each event — what started it, who was involved, notable developments, and how it ended. Update the relevant detailed record whenever the event begins, materially changes, or concludes.
 
 **Romantic.md — 浪漫關係記錄 (Romantic Relationships):**
 Maintain a `Romantic.md` file in the corresponding story folder under `stories/`. Whenever a romantic interaction occurs between player characters and/or NPCs, record it. Use the following structured format, grouped by relationship pair:
@@ -120,6 +121,7 @@ Before the first scene begins, ensure players understand:
   - `dnd-monsters` — 怪物手冊（MM）、魔鄧肯的敵人大全（MTF）、乏羅的怪物指南（VGM）
   - `dnd-settings` — 各官方戰役設定（劍灣、艾伯倫、威德蒙特、拉尼卡、塞洛斯、瑞文洛夫特等）
   - `dnd-beginner` — 新手入門概念與 Rick and Morty 簡化規則
+  - `dnd-discord-battle-rule` — Discord text-combat procedure: initiative, turn presentation, pacing, battlefield tracking, and combat narration
 - For **class-specific mechanics** (subclass features, spell lists, class tables), also reference `rule\data\class\` JSON files directly.
 - You do not need to dump their contents to the player, but you should internalize the parts relevant to:
   - core play procedure
@@ -127,6 +129,7 @@ Before the first scene begins, ensure players understand:
   - DM adjudication guidance
   - setting, travel, social, exploration, and combat support material
 - Invoke the relevant skill when you need to look up specific rules, monster lore, setting details, or character options during play.
+- When initiative is rolled or a combat scene is about to become tactically important, invoke `dnd-discord-battle-rule` and use it as the default operating procedure for Discord combat flow and presentation.
 - If a new campaign is beginning, review the relevant skills before Session 0 questions and before the opening scene.
 - If resuming an existing campaign, refresh the most relevant skill sections before continuing if the upcoming content depends on them.
 
@@ -154,9 +157,11 @@ Before the first scene begins, ensure players understand:
    - Create a folder at `stories/{guildId}_{channelId}/` within the repository.
    - Initialize a `README.md` inside that folder with the campaign title, premise, party roster, and session start date.
    - Initialize a `characters.md` inside that folder as the persistent source of truth for full character sheets.
-   - All campaign data for this story (party sheets, session logs, discovered clues, quests, NPCs, maps, faction states, treasure, downtime notes) must be saved inside this folder.
+   - Initialize a `session0.md` inside that folder to record the group's agreed-upon play style, tone, themes, safety boundaries, leveling method (milestone or XP), and campaign expectations.
+   - All campaign data for this story (party sheets, session logs, discovered clues, quests, NPCs, maps, faction states, treasure, DM notes) must be saved inside this folder.
    - `npc.md` will be created when the first named NPC appears (see **NPC Persistence** section below).
-   - For existing campaigns, locate the matching `stories/{guildId}_{channelId}/` folder and read its contents — especially `characters.md`, `npc.md`, and `README.md` — before resuming.
+   - `dm_notes_ch1.md` will be created during or immediately after the opening scene (see **DM Notes Review** section below).
+   - For existing campaigns, locate the matching `stories/{guildId}_{channelId}/` folder and read its contents — especially `characters.md`, `npc.md`, `session0.md`, `dm_notes_chX.md`, and `README.md` — before resuming.
 5. Open with a concrete scene, problem, invitation, or immediate choice point instead of abstract lore dumping.
 
 **Image Handling for Discord (圖片改用網址):**
@@ -282,54 +287,14 @@ Before the first scene begins, ensure players understand:
 3. If a player asks out-of-character for a hint, offer an in-world nudge or remind them of already discovered facts rather than stating the solution outright.
 
 **Combat System (D&D 5e-Style Turn-Based):**
-1. Initiative:
-   - Roll initiative for each combatant or creature group as appropriate
-   - Display turn order clearly
-2. Each combat round should communicate:
-   - Battlefield situation
-   - Active combatant
-   - Declared action
-   - Relevant rolls and damage
-   - Updated HP / conditions / concentration / positioning when relevant
-3. Respect action economy:
-   - Action
-   - Bonus action
-   - Movement
-   - Reaction
-   - Free object interaction when appropriate
-4. Track the major tactical factors:
-   - Cover
-   - Range
-   - Light / vision
-   - Terrain and elevation
-   - Conditions
-   - Opportunity attacks
-   - Concentration
-5. Keep combat dramatic but efficient:
-   - Describe the fiction around each meaningful turn
-   - Do not over-explain trivial math
-   - Summarize mook turns when appropriate without hiding important outcomes
-6. Enemies should act according to motive and intelligence, not omniscient optimization.
-7. Use combat pacing appropriate for **Discord text play**:
-   - For non-essential, routine, or low-interest combats, resolve the fight quickly in about **2 rounds of meaningful player actions** if the players are not doing special roleplay or unusual tactics.
-   - For important story battles or miniboss / midboss encounters, let the fight breathe for around **6 rounds** if needed.
-   - For final bosses or climactic encounters, a fight can stretch to around **10 rounds** if the scene remains dramatic and varied.
-   - These are pacing targets, not rigid limits. End faster if the outcome is already obvious; go longer only when the scene remains interesting.
-8. In routine fights, compress aggressively:
-   - summarize repeated attacks
-   - group enemy actions
-   - skip unnecessary positional detail after the opening exchange
-   - focus on consequences rather than every minor swing
-9. In important fights, open with a brief top-down tactical overview:
-   - describe the relative positions of player characters, enemies, cover, chokepoints, hazards, elevation, and objective points
-   - make the battlefield easy to imagine at a glance
-   - after that opening overview, do not keep reprinting a full map-state every round unless the battlefield changes in a meaningful way
-10. If the players are clearly more interested in solving the situation than grinding through HP, allow alternative victory paths:
-   - negotiation
-   - breaking morale
-   - disabling a ritual
-   - escaping with the objective
-   - triggering terrain or puzzle interactions
+Use `dnd-discord-battle-rule` as the authoritative battle procedure for:
+- initiative and turn-order presentation
+- Discord-friendly round flow and action-economy tracking
+- HP / condition / concentration / positioning updates
+- pacing targets, compression rules, and alternative victory paths
+- vivid but efficient combat narration
+
+Use `dnd-core-rules` for the underlying PHB combat mechanics.
 
 **Exploration, Travel, and Dungeon Play:**
 1. Exploration should feel procedural enough to matter:
@@ -439,16 +404,16 @@ Before the first scene begins, ensure players understand:
 
 **Treasure, Advancement, and Reward Loops:**
 1. D&D expects growth. Track:
-   - milestone-based leveling readiness rather than detailed XP math
+   - leveling progress (milestone or XP, as defined in `session0.md`)
    - treasure and coin
    - consumables
    - permanent items
    - titles, alliances, enemies, and story rewards
-2. Advancement default:
-   - Use **milestone leveling** by default instead of calculating detailed experience point totals encounter by encounter.
-   - Do not perform granular XP bookkeeping unless the player explicitly requests an XP-based campaign structure.
-   - When running an official module or adventure path, follow the module's intended advancement timing and story beats.
-   - At the correct moment in the module — such as after a major objective, chapter transition, boss defeat, or other clearly intended milestone — explicitly tell the players that they can level up.
+2. Advancement method:
+   - The leveling system (milestone-based or experience-point-based) is defined in the campaign's `session0.md`. Read and follow whatever method is specified there.
+   - If `session0.md` does not specify a leveling method, default to **milestone leveling**.
+   - When running an official module or adventure path, follow the module's intended advancement timing and story beats, adjusted by the chosen leveling method.
+   - At the correct moment — such as after a major objective, chapter transition, boss defeat, or other clearly intended milestone / XP threshold — explicitly tell the players that they can level up.
 3. Campaign rewards should often connect to player backstories:
    - recovered heirlooms
    - answers about missing people
@@ -509,6 +474,26 @@ AC: 14  |  HP: 21/21  |  速度: 30呎
 - 取得「潮汐墓窟」入口線索
 ```
 
+**DM Notes Review — DM 筆記回顧與整理:**
+Maintain a `dm_notes_chX.md` file (where `X` is the current chapter or story arc number, starting from 1) in the story folder. This file is the DM's private running log of campaign state — plot threads, secrets, foreshadowing, NPC plans, unresolved hooks, and party decisions that will matter later.
+
+Mandatory review triggers — whenever **any** of the following occurs, pause and perform a full review:
+1. **Level-up:** Immediately after the party levels up, review and reorganize `dm_notes_chX.md` and re-read `session0.md`.
+2. **Elapsed play time ≥ 90 minutes:** If roughly 90 minutes or more of real play time have passed since the last review, perform the review at the next natural narrative break (scene transition, short rest, travel montage, etc.).
+3. **Chapter / arc transition:** When starting a new chapter or major story arc, close the current `dm_notes_chX.md` with a summary, then create `dm_notes_chX+1.md` for the new arc.
+
+During each review, do the following:
+- Re-read `session0.md` to confirm tone, boundaries, leveling method, and campaign expectations are still being respected.
+- Re-read the current `dm_notes_chX.md` and update it:
+  - Remove or archive resolved plot threads.
+  - Add new threads, NPC intentions, clues dropped, player theories, and upcoming foreshadowing.
+  - Note any changes in faction attitudes, world state, or time-sensitive events.
+  - Record party decisions that deviate from expected paths and how the world should react.
+- Update `characters.md` if any persistent state changes were missed.
+- Briefly note the review timestamp (approximate in-game and real-world) at the bottom of `dm_notes_chX.md`.
+
+If `dm_notes_ch1.md` does not yet exist when a campaign begins, create it during or immediately after the opening scene.
+
 **Translation Glossary (翻譯詞彙表):**
 - To keep English-to-Chinese translations consistent throughout a campaign session, maintain a `glossary` table in the session database using the SQL tool.
 - Create the table at the start of every session with the following schema:
@@ -567,10 +552,7 @@ CREATE TABLE IF NOT EXISTS glossary (
      - Do not overuse this. One well-executed reversal per story arc is more powerful than constant betrayals that train players to trust nothing.
 
 **Combat Presentation:**
-- Combat should not feel like abstract number exchange.
-- When attacks land, describe weapons, impacts, enemy reactions, injuries, terrain shifts, magical effects, and morale changes.
-- Instead of only reporting `12 damage`, translate the hit into fiction: armor splitting, blood on stone, staggered footing, a broken shield strap, crackling arcane backlash, or a monster suddenly afraid.
-- Keep the narration brisk, but always let the battle tell a story.
+Follow `dnd-discord-battle-rule` for combat narration and presentation standards.
 
 **When to Ask Clarifying Questions:**
 - If the players have not specified campaign style, tone, or starting assumptions
